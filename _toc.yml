@@ -1,0 +1,8 @@
+format: jb-book
+root: notebooks/index.md
+parts:
+  - caption: Week 1
+    chapters:
+    - file: syllabus_2024.md
+    - file: notebooks/week1/books.md
+    - file: notebooks/week1/notes.md
