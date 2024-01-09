@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>notes &#8212; ATSC 405 2024</title>
+    <title>Week 1 notes &#8212; ATSC 405 2024</title>
   
   
   
@@ -62,13 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week1/notes';</script>
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week1/notes.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="books" href="books.html" />
+    <link rel="prev" title="Installing Python" href="../../python_install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,7 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="../index.html">
+<a class="navbar-brand logo" href="../../index.html">
   
   
   
@@ -167,16 +165,19 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    ATSC 405: Cloud physics and chemistry 2024 index**
+                <a class="reference internal" href="../../index.html">
+                    ATSC 405: Cloud physics and chemistry
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../schedule.html">Weekly schedule (subject to change)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_install.html">Installing Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../syllabus_2024.html">ATSC 405: Cloud physics and chemistry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="books.html">books</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">notes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 1 notes</a></li>
 </ul>
 
     </div>
@@ -313,7 +314,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>notes</h1>
+    <h1>Week 1 notes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -327,105 +328,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="notes">
-<h1>notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
-<p><strong>ATSC 405: Cloud physics and chemistry</strong></p>
-<p><strong>Time:</strong></p>
-<p>Term 2, 2016, MWF 9-10am, EOSC Main 203</p>
-<p><span class="math notranslate nohighlight">\(~\)</span></p>
-<p><strong>Homepage:</strong></p>
-<ul class="simple">
-<li><p>For quizzes, announcements, and assignments, log onto
-<a class="reference external" href="http://elearning.ubc.ca/connect/">**Connect**</a></p></li>
-<li><p>For lecture notes and matlab code bookmark the main site is
-<a class="reference external" href="http://clouds.eos.ubc.ca/~phil/courses/atsc405">http://clouds.eos.ubc.ca/~phil/courses/atsc405</a></p></li>
-</ul>
-<p><span class="math notranslate nohighlight">\(~\)</span></p>
-<p><em>Catalog entry</em>: Atmospheric thermodynamics, cloud chemistry and
-microphysics. Computer modeling of droplet growth, convection, and
-mixing. Application of differential equations to atmospheric problems.</p>
-<p><em>Description</em>: This course focuses on how to observe and understand
-cloud processes, including mixing and convection, rain formation,
-thunderstorms and cloud/climate interactions. It also introduces Python
-programming and the use of numerical methods to solve simple
-differential equations. If you need a computer lab account, see the main
-office for a handout on how to pay the $25 lab fee.</p>
-<p><em>Pre or co-requisites</em>: Classical thermodynamics (PHYS 203 or CHEM 205)
-and introductory ordinary differential equations (MATH 215). and
-familiarity with a programming language.</p>
-<p><span class="math notranslate nohighlight">\(~\)</span></p>
-<p>Phil Austin (</p>
-<p><a class="reference external" href="mailto:paustin&#37;&#52;&#48;eos&#46;ubc&#46;ca">paustin<span>&#64;</span>eos<span>&#46;</span>ubc<span>&#46;</span>ca</a></p>
-<p>, 822-2175),</p>
-<p>Office: EOS South 157</p>
-<p>Office hours: TBD</p>
-<p>Written assignments will make extensive use of code written in Python</p>
-<p>Handouts will be posted – the main main text is Adrian Thompkins’ <a class="reference external" href="http://users.ictp.it/~tompkins/diploma.html">ICTP
-Cloud Physics notes</a></p>
-<p>Stull, R. B., 2015: <a class="reference external" href="http://www.eos.ubc.ca/books/Practical_Meteorology/">Stull: Practical
-Meteorology</a></p>
-<p>Wallace, J. M. and P. V. Hobbs, 2006:</p>
-<p><em>Atmospheric Science, an
-Introductory Survey, 2nd edition</em></p>
-<p>Bohren, C. F. and B. A. Albrecht, 1998:</p>
-<p><em>Atmospheric thermodynamics</em></p>
-<p>Rogers, R. R. and M. K. Yau, 1996:</p>
-<p><em>A short course in cloud physics</em></p>
-<p>Schroeder, D. V., 2000:</p>
-<p><em>An introduction to thermal physics</em></p>
-<p>Problem sets/in-class work-sheets: 30%</p>
-<p>Pre-class quizzes 10%</p>
-<p>Mid-term(s): 25%</p>
-<p>Final: 35%</p>
-<p><span class="math notranslate nohighlight">\(~\)</span></p>
-<p><strong>Tentative schedule with lecture topics (subject to change)</strong></p>
-<p><span class="math notranslate nohighlight">\(~\)</span></p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Week</p></th>
-<th class="head"><p>Dates</p></th>
-<th class="head"><p>Topics</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week</p></td>
-<td><p>Dates</p></td>
-<td><p>Topics</p></td>
-</tr>
-<tr class="row-even"><td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>```{raw} latex</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>\endfoot</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-<div class="highlight-Week notranslate"><div class="highlight"><pre><span></span>| Week 2                            | 11/01 $-$ 15/01 | Hydrostatic equation, first law                                                            |
-| Week 3                            | 18/01 $-$ 22/01 | Heat capacities, enthalpy, potential temperature, adiabatic processes                      |
-| Week 4                            | 25/01 $-$ 29/01 | Stability, Buoyancy and                                                                    |
-| Week 5                            | 1/02 $-$ 04/02  | Water vapor, moist static energy, thermodynamic diagrams, CAPE                             |
-| Week 6                            | 8/02 $-$ 12/02  | Convection: Boundary layer and single cell deep convection                                 |
-| Break                             | 15/02 $-$ 18/02 | Mid-term break                                                                             |
-| Week 7                            | 22/02 $-$ 27/02 | Plume models, large eddy simulations and cloud observations.                               |
-| **Mid-term on Friday, Feb 27th.** |                 |                                                                                            |
-| Week 8                            | 29/03 $-$ 04/03 | Entrainment and mixing, aerosols                                                           |
-| Week 9                            | 07/03 $-$ 11/03 | Nucleation and the droplet growth equation (W&amp;H chapter 6)                                 |
-| Week 10                           | 14/03 $-$ 18/03 | Collision coalescence and cold clouds                                                      |
-| Week 11                           | 21/03 $-$ 25/03 | Shear and severe weather and threat indices                                                |
-| Week 12                           | 28/03 $-$ 01/04 | Clouds and global climate                                                                  |
-| Week 13                           | 04/04 $-$ 08/04 | Class review                                                                               |
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="week-1-notes">
+<h1>Week 1 notes<a class="headerlink" href="#week-1-notes" title="Permalink to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -459,12 +363,12 @@ Introductory Survey, 2nd edition</em></p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="books.html"
+       href="../../python_install.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">books</p>
+        <p class="prev-next-title">Installing Python</p>
       </div>
     </a>
 </div>

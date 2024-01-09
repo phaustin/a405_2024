@@ -1,4 +1,4 @@
-# ATSC 405: Cloud physics and chemistry
+# ATSC 405 syllabus
 
 - Logistics
   - Instructor:  Phil Austin EOS South Room 157
@@ -18,6 +18,8 @@
   - [Stull, R. B., 2015: Practical
 Meteorology](http://www.eos.ubc.ca/books/Practical_Meteorology/)
 
+
+  - [Intro to Python](https://www.dropbox.com/scl/fi/2eflyvz31e1vq3nryhqa2/python-setup_macos_2024.pdf?rlkey=rxbbl8pwdevxyry0toumolh6t&dl=0)
 
 - **Catalog entry**: Atmospheric thermodynamics, cloud chemistry and
 microphysics. Computer modeling of droplet growth, convection, and
