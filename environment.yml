@@ -13,6 +13,7 @@ dependencies:
   - pyresample
   - netcdf4
   - zarr
+  - git
   - jupyterlab
   - jupytext
   - pythia-datasets
