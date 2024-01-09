@@ -1,0 +1,4 @@
+[console_scripts]
+killjobs = a405.utils.killjobs:main
+killprocs = a405.utils.killprocs:main
+pyncdump = a405.utils.ncdump:main
