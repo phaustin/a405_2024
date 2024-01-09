@@ -37,7 +37,7 @@ and introductory ordinary differential equations (MATH 215). and
 familiarity with a programming language.
 
 
-- Evalueation
+- Evaluation
 
   - Problem sets/in-class work-sheets: 30%
 
