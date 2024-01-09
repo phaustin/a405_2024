@@ -4,6 +4,9 @@
 
 - Read Lohmann chapter 1 and scan the questions at the end of the chapter
 
+## Lecture 3, week 1, Friday
+
+- Read Lohmann Thompkins through page 8
 
 ## Weekly schedule (subject to change)
 
