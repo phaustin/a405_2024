@@ -6,6 +6,8 @@
   - Term 2, Jan 2024, Tuesday 1-1:50pm, Thursday 5-5:50 pm, Friday 2-2:50pm
   - Room: EOS Main 107
 
+- [Learning goals](sec:learning-goals)
+
 - Main course homepage: [phaustin.github.io/a405_2024](https://phaustin.github.io/a405_2024)
 
 - [Canvas website](https://canvas.ubc.ca/courses/129111) (for handins, grades, emails)
@@ -48,3 +50,4 @@ familiarity with a programming language.
 - [Topic schedule](schedule.md)
 
 
+- [Python links](sec:python)

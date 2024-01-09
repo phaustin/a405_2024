@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Week 1 notes" href="notebooks/week1/notes.html" />
-    <link rel="prev" title="Weekly schedule (subject to change)" href="schedule.html" />
+    <link rel="prev" title="Learning goals" href="learning_goals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,13 +167,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    ATSC 405: Cloud physics and chemistry
+                    ATSC 405 syllabus
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="schedule.html">Weekly schedule (subject to change)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schedule.html">Course schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_goals.html">Learning goals</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Python links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
@@ -204,25 +205,16 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="bd-article-container">
               
               <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
     </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
+    <div class="header-article__right">
 
 
 <div class="dropdown dropdown-download-buttons">
@@ -268,9 +260,6 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
 </div>
 
-
-
-
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -283,36 +272,11 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 
 </button>
-
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
-  
-</div>
-</div>
+</div></div>
               
               
 
@@ -328,6 +292,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laptop-installs">Laptop installs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eoas-jupyterhub">EOAS jupyterhub</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-tutorials">Python tutorials</a></li>
 </ul>
             </nav>
@@ -341,12 +306,18 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-links">
-<h1>Python links<a class="headerlink" href="#python-links" title="Permalink to this heading">#</a></h1>
+<span id="sec-python"></span><h1>Python links<a class="headerlink" href="#python-links" title="Permalink to this heading">#</a></h1>
 <section id="laptop-installs">
 <h2>Laptop installs<a class="headerlink" href="#laptop-installs" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/2eflyvz31e1vq3nryhqa2/python-setup_macos_2024.pdf?rlkey=rxbbl8pwdevxyry0toumolh6t&amp;dl=0">Mac instructions</a></p></li>
 <li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/ad98xclbhpy32rlnfzemk/python-setup_windows_2024.pdf?rlkey=lo90foqd9roahppi0qd8kzlif&amp;dl=0">Windows instructions</a></p></li>
+</ul>
+</section>
+<section id="eoas-jupyterhub">
+<h2>EOAS jupyterhub<a class="headerlink" href="#eoas-jupyterhub" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubc-eoas.2i2c.cloud/">2i2c hub</a>  – use e211 environment for now</p></li>
 </ul>
 </section>
 <section id="python-tutorials">
@@ -388,12 +359,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="schedule.html"
+       href="learning_goals.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Weekly schedule (subject to change)</p>
+        <p class="prev-next-title">Learning goals</p>
       </div>
     </a>
     <a class="right-next"
@@ -422,6 +393,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laptop-installs">Laptop installs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eoas-jupyterhub">EOAS jupyterhub</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-tutorials">Python tutorials</a></li>
 </ul>
   </nav></div>
@@ -447,7 +419,7 @@ By Philip Austin
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

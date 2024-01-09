@@ -1,4 +1,11 @@
-# Weekly schedule (subject to change)
+#  Course schedule
+
+## Lecture 2, week 1, Thursday:  
+
+- Read Lohmann chapter 1 and scan the questions at the end of the chapter
+
+
+## Weekly schedule (subject to change)
 
 ```{list-table}
 :header-rows: 1
