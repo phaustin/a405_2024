@@ -1,10 +1,12 @@
-# ATSC 405: Cloud physics and chemistry
+# ATSC 405 syllabus
 
 - Logistics
   - Instructor:  Phil Austin EOS South Room 157
   - TA: Luke Brown
   - Term 2, Jan 2024, Tuesday 1-1:50pm, Thursday 5-5:50 pm, Friday 2-2:50pm
   - Room: EOS Main 107
+
+- [Learning goals](sec:learning-goals)
 
 - Main course homepage: [phaustin.github.io/a405_2024](https://phaustin.github.io/a405_2024)
 
@@ -18,6 +20,8 @@
   - [Stull, R. B., 2015: Practical
 Meteorology](http://www.eos.ubc.ca/books/Practical_Meteorology/)
 
+
+  - [Intro to Python](https://www.dropbox.com/scl/fi/2eflyvz31e1vq3nryhqa2/python-setup_macos_2024.pdf?rlkey=rxbbl8pwdevxyry0toumolh6t&dl=0)
 
 - **Catalog entry**: Atmospheric thermodynamics, cloud chemistry and
 microphysics. Computer modeling of droplet growth, convection, and
@@ -35,7 +39,7 @@ and introductory ordinary differential equations (MATH 215). and
 familiarity with a programming language.
 
 
-- Evalueation
+- Evaluation
 
   - Problem sets/in-class work-sheets: 30%
 
@@ -46,3 +50,4 @@ familiarity with a programming language.
 - [Topic schedule](schedule.md)
 
 
+- [Python links](sec:python)

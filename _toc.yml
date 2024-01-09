@@ -1,8 +1,12 @@
 format: jb-book
-root: notebooks/index.md
+root: index.md
 parts:
-  - caption: Week 1
+  - caption: Logistics
     chapters:
-    - file: syllabus_2024.md
-    - file: notebooks/week1/books.md
+    - file: schedule.md
+    - file: learning_goals.md
+    - file: python_install.md
+  - caption: Weekly topics      
+    chapters:
     - file: notebooks/week1/notes.md
+
