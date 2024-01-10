@@ -6,7 +6,7 @@
 
 ## Lecture 3, week 1, Friday
 
-- Read Lohmann Thompkins through page 8
+- Read Thompkins through page 8
 
 ## Weekly schedule (subject to change)
 
