@@ -8,5 +8,5 @@ parts:
     - file: python_install.md
   - caption: Weekly topics      
     chapters:
-    - file: notebooks/week1/notes.md
+    - file: notebooks/week1/worksheet1.ipynb
 
