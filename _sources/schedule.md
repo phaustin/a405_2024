@@ -4,6 +4,13 @@
 
 - Read Lohmann chapter 1 and scan the questions at the end of the chapter
 
+### Learning objectives
+
+  - Identify principal cloud types
+  - Explain how clouds can both heat and cool the planet
+  - 
+
+
 ## Lecture 3, week 1, Friday
 
 - Read Thompkins through page 8
