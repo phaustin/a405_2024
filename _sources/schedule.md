@@ -12,10 +12,15 @@
   - Explain how clouds can both heat and cool the planet
   - Work some simple scaling problems about clouds
 
-
 ## Lecture 3, week 1, Friday
 
-- Read Thompkins through page 8
+- Thompkins through page 8
+- Finish {ref}`worksheet1`
+- For Lecture 4 next Tuesday
+  - Read Thompkins through page 14
+  - Read my notes on [kinetic temperature](https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0)
+  - Do the adiabatic box assignment (due Friday)
+
 
 ## Weekly schedule (subject to change)
 

@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -68,6 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week1/worksheet1.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Adiabatic Box – preliminary" href="adiabatic_box.html" />
     <link rel="prev" title="Python links" href="../../python_install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -175,12 +176,15 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../schedule.html">Course schedule</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../learning_goals.html">Learning goals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_install.html">Python links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 1 worksheet</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="adiabatic_box.html">Adiabatic Box – preliminary</a></li>
 </ul>
 
     </div>
@@ -206,16 +210,25 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="bd-article-container">
               
               <div class="bd-header-article">
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
-            <span class="fa-solid fa-bars"></span>
-        </label>
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 
 
 <div class="dropdown dropdown-download-buttons">
@@ -261,6 +274,9 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
 </div>
 
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -274,8 +290,33 @@ const thebe_selector_output = ".output, .cell_output"
 
 </button>
 
-    </div>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
 </div></div>
+      
+    </div>
+  
+</div>
+</div>
               
               
 
@@ -295,15 +336,13 @@ const thebe_selector_output = ".output, .cell_output"
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="week-1-worksheet">
-<h1>Week 1 worksheet<a class="headerlink" href="#week-1-worksheet" title="Permalink to this heading">#</a></h1>
+<span id="worksheet1"></span><h1>Week 1 worksheet<a class="headerlink" href="#week-1-worksheet" title="Permalink to this heading">#</a></h1>
 <p>Three problems from Lohmann Chapter 1</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Assume a low level cloud with the following properties: vertical extent 1.5 km, horizontal
 extent 1 km, cloud droplet number concentration 90 <span class="math notranslate nohighlight">\(cm^{−3}\)</span> air and mean diameter 10
 μm. Estimate the mass of the cloud by assuming that all the cloud droplets are spherical
 and have the same size. Take 1000 <span class="math notranslate nohighlight">\(kg\,m^{−3}\)</span> to be the density of water.</p></li>
-</ol>
-<ol class="arabic" start="2">
 <li><p>Imagine a pure water cloud which consists of cloud droplets of uniform size with <span class="math notranslate nohighlight">\(R_d\)</span>
 =5 μm. Assume a uniform spacing of the cloud droplets, with a number concentration of
 Nc = 170 <span class="math notranslate nohighlight">\(cm^{-3}\)</span></p>
@@ -357,6 +396,15 @@ atmosphere.</p></li>
         <p class="prev-next-title">Python links</p>
       </div>
     </a>
+    <a class="right-next"
+       href="adiabatic_box.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Adiabatic Box – preliminary</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -385,7 +433,7 @@ By Philip Austin
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
