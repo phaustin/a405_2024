@@ -6,7 +6,7 @@
   - Term 2, Jan 2024, Tuesday 1-1:50pm, Thursday 5-5:50 pm, Friday 2-2:50pm
   - Room: EOS Main 107
 
-- [Learning goals](sec:learning-goals)
+- {ref}`sec:learning-goals`
 
 - Main course homepage: [phaustin.github.io/a405_2024](https://phaustin.github.io/a405_2024)
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Week 1 worksheet &#8212; ATSC 405 2024</title>
+    <title>Week 1 worksheet solutions &#8212; ATSC 405 2024</title>
   
   
   
@@ -47,6 +47,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -64,11 +65,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week1/worksheet1';</script>
-    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week1/worksheet1.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week1/worksheet1_solution';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week1/worksheet1_solution.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Python links" href="../../python_install.html" />
+    <link rel="next" title="Adiabatic Box – preliminary" href="../../assignments/adiabatic_box.html" />
+    <link rel="prev" title="Week notes test" href="../../week_notes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,12 +177,16 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../schedule.html">Course schedule</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../learning_goals.html">Learning goals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_install.html">Python links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 1 worksheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week_notes.html">Week notes test</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 1 worksheet solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
 </ul>
 
     </div>
@@ -226,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/week1/worksheet1.md" target="_blank"
+      <li><a href="../../_sources/notebooks/week1/worksheet1_solution.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -280,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Week 1 worksheet</h1>
+    <h1>Week 1 worksheet solutions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -294,8 +300,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="week-1-worksheet">
-<h1>Week 1 worksheet<a class="headerlink" href="#week-1-worksheet" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="week-1-worksheet-solutions">
+<h1>Week 1 worksheet solutions<a class="headerlink" href="#week-1-worksheet-solutions" title="Permalink to this heading">#</a></h1>
 <p>Three problems from Lohmann Chapter 1</p>
 <ol class="arabic simple">
 <li><p>Assume a low level cloud with the following properties: vertical extent 1.5 km, horizontal
@@ -303,6 +309,32 @@ extent 1 km, cloud droplet number concentration 90 <span class="math notranslate
 μm. Estimate the mass of the cloud by assuming that all the cloud droplets are spherical
 and have the same size. Take 1000 <span class="math notranslate nohighlight">\(kg\,m^{−3}\)</span> to be the density of water.</p></li>
 </ol>
+<ol class="arabic simple">
+<li><p>Answer</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cloud_diameter</span><span class="o">=</span><span class="mi">1000</span> <span class="c1">#m</span>
+<span class="n">cloud_height</span> <span class="o">=</span> <span class="mi">1500</span> <span class="c1">#m</span>
+<span class="n">drop_density</span> <span class="o">=</span> <span class="mf">90e6</span> <span class="c1"># /m^3</span>
+<span class="n">drop_diameter</span> <span class="o">=</span> <span class="mf">10.e-6</span>  <span class="c1">#m</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1">#kg/m^3</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1416</span>
+<span class="n">cloud_volume</span> <span class="o">=</span> <span class="n">cloud_height</span><span class="o">*</span><span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">cloud_diameter</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span>
+<span class="n">drop_volume</span> <span class="o">=</span> <span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">drop_diameter</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span><span class="o">**</span><span class="mf">3.</span>
+<span class="n">total_number</span> <span class="o">=</span> <span class="n">cloud_volume</span><span class="o">*</span><span class="n">drop_density</span>
+<span class="n">total_mass</span> <span class="o">=</span> <span class="n">total_number</span><span class="o">*</span><span class="n">drop_volume</span><span class="o">*</span><span class="n">rho</span> <span class="c1">#kg</span>
+<span class="n">total_mass_tonnes</span> <span class="o">=</span> <span class="n">total_mass</span><span class="o">/</span><span class="mf">1000.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Answer: </span><span class="si">{</span><span class="n">total_mass_tonnes</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> tonnes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Answer: 222.1 tonnes
+</pre></div>
+</div>
+</div>
+</div>
 <ol class="arabic" start="2">
 <li><p>Imagine a pure water cloud which consists of cloud droplets of uniform size with <span class="math notranslate nohighlight">\(R_d\)</span>
 =5 μm. Assume a uniform spacing of the cloud droplets, with a number concentration of
@@ -311,11 +343,57 @@ Nc = 170 <span class="math notranslate nohighlight">\(cm^{-3}\)</span></p>
 <p>(b) What would happen to the distance if the number concentration was trippled?</p>
 </li>
 </ol>
+<ol class="arabic simple" start="2">
+<li><p>Answer</p></li>
+</ol>
+<p>Assume that each drop gets its own cube inside the 1  <span class="math notranslate nohighlight">\(cm^{3}\)</span> of air.  How many cubes does it take to pack a cm?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mf">170.</span>
+<span class="n">drop_cube_volume</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">N</span>
+<span class="n">drop_cube_size</span> <span class="o">=</span> <span class="n">drop_cube_volume</span><span class="o">**</span><span class="mf">0.3333</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">drop_cube_size</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> cm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.18 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p>So if the drop diameter is 10 microns, then there are about 180 drop diameters between droplets</p>
 <ol class="arabic simple" start="3">
 <li><p>The average pressure at Earth’s surface is 985 hPa. Knowing the radius of the Earth
 <span class="math notranslate nohighlight">\(r_{Earth}\)</span> = 6370 km and using the definition of pressure, estimate the total mass of the
 atmosphere.</p></li>
 </ol>
+<ol class="arabic simple" start="3">
+<li><p>Answer</p></li>
+</ol>
+<ul class="simple">
+<li><p>pressure = force of gravity per unit area</p></li>
+<li><p>force of gravity = mass <span class="math notranslate nohighlight">\(\times\)</span> acceleration</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pressure</span> <span class="o">=</span> <span class="mi">98500</span>  <span class="c1">#pascals</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># m/s/s</span>
+<span class="n">mass_m2</span> <span class="o">=</span> <span class="n">pressure</span><span class="o">/</span><span class="n">g</span>
+<span class="n">r_earth</span> <span class="o">=</span> <span class="mf">6370e3</span>  <span class="c1">#m</span>
+<span class="n">earth_area</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r_earth</span><span class="o">**</span><span class="mf">2.</span>
+<span class="n">mass_atm</span> <span class="o">=</span> <span class="n">mass_m2</span><span class="o">*</span><span class="n">earth_area</span> <span class="c1">#kg</span>
+<span class="n">mass_atm_gtonne</span> <span class="o">=</span> <span class="n">mass_atm</span><span class="o">/</span><span class="mf">1.e12</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mass_atm_gtonne</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> gtonnes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5125071.2 gtonnes
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -349,13 +427,22 @@ atmosphere.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../python_install.html"
+       href="../../week_notes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Python links</p>
+        <p class="prev-next-title">Week notes test</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../../assignments/adiabatic_box.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Adiabatic Box – preliminary</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
