@@ -47,3 +47,6 @@
     
   - the enthalpy version of the first law depends on temperature and pressure.  This is the most useful for atmospheric scientists, because we can easily measure both those state variables
 
+## Lecture 4
+
+- Thompkins through page 14
