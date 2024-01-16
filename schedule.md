@@ -17,6 +17,7 @@
 
 - Read Thompkins through page 8
 
+
 ## Weekly schedule (subject to change)
 
 ```{list-table}

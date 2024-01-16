@@ -7,7 +7,8 @@ parts:
     - file: python_install.md
   - caption: Weekly topics      
     chapters:
-    - file: notebooks/week1/notes.md
+    - file: week_notes.md
+    - file: notebooks/week1/worksheet1_solution.md
   - caption: Assignments
     chapters:
     - file: assignments/adiabatic_box.md
