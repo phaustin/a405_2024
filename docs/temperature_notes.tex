@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,fancyhdr,xr,hyperref,ifpdf,amsmath,rcs,indentfirst}
+\usepackage{lastpage,longtable,Ventry,url,paunits,shortcuts,smallsec,color,tightlist,float}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+\usepackage[stable]{footmisc}
+
+\pagestyle{fancy} 
+
+\RCS $Revision: 1.5 $
+\RCS $Date: 2002/01/09 03:50:54 $
+
+\fancypagestyle{first}{
+\lhead{Temperature and the kinetic theory of gasses}
+\chead{}
+\rhead{page~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+
+
+\begin{document}
+\newcommand{\vect}[1]{\boldsymbol{\vec{#1}}}
+\pagestyle{first}
+
+
+\section{Kinetic theory of gasses}
+
+\textit{This is a simpler version of the derivation that appears on p. 188 of the PHYS 203 text}
+
+
+What is temperature?  For an ideal dilute (i.e. no intermolecular attraction) 
+ monotomic gas, it turns out that
+temperature is proportional to the kinetic energy of the atoms.  To see this
+start with  the ideal gas law (taken as experimental fact):
+
+  \begin{equation}
+    \label{eq:state}
+    pV= nR^* T
+  \end{equation}
+where $p$ is the pressure, $V$ the volume, $n$ the number of moles, $R^*$ the
+universal gas constant (8314 \un{J\,Kmole^{-1}\,K^{-1}}).
+
+But where does (\ref{eq:state}) come from?
+
+Suppose we have a
+container of length $L$, area $A$ and therefore volume $V=AL$, filled
+with several moles of hydrogen atoms traveling with velocity
+$\vec{v}=v_x \vec{i} + v_y \vec{j} + v_z \vec{k}$.
+
+\par 
+
+If the volume is large enough so that the atoms occupy a negligible fraction 
+(\textbf{why this restriction?}), 
+then
+in the x dimension for a single molecule Newton's second law gives:
+\begin{subequations}
+  \label{eq:second}
+\begin{eqnarray}
+  F_x &=& \frac{d((mv)_x)}{dt} \approx \frac{\Delta((mv)_x)}{\Delta t}\label{eq:seconda}\\
+  \Delta (mv)_x &=& mv_x - m(-v_x) = 2mv_x \label{eq:secondb}\\
+\Delta t &=& \frac{2 L}{v_x}
+\end{eqnarray}
+\end{subequations}
+where $m$ is the mass of a molecule. \textbf{Why is $2L$ the appropriate length here?}
+
+Now use (\ref{eq:secondb})  to get the force in the x direction, averaged over all
+molecules.  We want to do an \textit{ensemble} (or probability) average.
+It can be shown that the molecular speeds $v$ follow
+\textit{Maxwell's distribution}:
+
+\begin{equation}
+  \label{eq:maxwell}
+  f(v) = C  v^2 \exp(-m v^2 /(2 k T))
+\end{equation}
+where $k$ is Boltzman's constant, $T$ is the temperature and $C=\sqrt{\frac{2}{\pi}\left(\frac{m}{kT}\right)^3}$
+and $f(v)dv$ is the probability that a speed is in the range
+$v \rightarrow v + dv$.
+
+So use this to define the ensemble average speed as:
+
+\begin{equation}
+  \label{eq:ensemble}
+  \left < v \right > = \int_0^\infty v f(v) dv
+\end{equation}
+
+Note that
+(\ref{eq:ensemble}) is one-sided (it gives the distribution of molecular speeds,
+not velocities and speed is never negative).  We assume the speed distribution
+speed distribution is both \textit{isotropic} (independent of direction) and
+\textit{homogeneous} (independent of position).
+
+For one molecule of mass $m$ the average force during a collision with a wall is:
+
+\begin{equation}
+  \label{eq:avg}
+    \left < F_x \right > = \left < \frac{2 m v_x}{2\frac{L}{v_x}} \right > 
+                = \left < \frac{m(v_x)^2}{L} \right > 
+\end{equation}
+
+And for n moles with $N_A$ molecules per mole we get the total force and
+the force/area (pressure) because we have averaged over a long enough time
+for every molecule to hit the right wall exactly once.  \textbf{Question:
+but what about collisions with other molecules?}:
+
+\begin{subequations}
+\begin{eqnarray}
+  \label{eq:rms}
+  \sum \left < F_x \right > &=& \frac{n N_A m \left < (v_x)^2 \right >}{L} \\
+  p &=& \frac{\sum \left < F_x \right > }{A} = \frac{nN_A m \left < (v_x)^2 \right >}{V}\label{eq:press1}
+\end{eqnarray}
+\end{subequations}
+You should be able to use  (\ref{eq:ensemble}) to show that:
+
+\begin{equation}
+  \label{eq:3comp}
+  \left < v^2 \right > =   \left < v_x^2 + v_y^2 + v_z^2 \right > = 
+    \left < v_x^2 \right >  +  \left < v_y^2 \right > + \left < v_z^2 \right > = 3 \left < v_x^2 \right >
+\end{equation}
+
+
+Inserting (\ref{eq:3comp}) into (\ref{eq:press1}) and rearranging gives:
+
+\begin{subequations}
+\label{pv2}
+  \begin{eqnarray}
+    pV &=& \frac{1}{3} n N_A m \left < v^2  \right > = \frac{2}{3} n N_A 
+             (\frac{1}{2} m \left < v^2 \right >) \label{eq:pv2a} \\
+   &=& \frac{2}{3} n N_A \left < KE \right >
+  \end{eqnarray}
+\end{subequations}
+where KE is the kinetic energy and we've just got the ideal gas law in disguise.
+
+\par 
+
+Substituting (\ref{eq:state}) into (\ref{eq:pv2a}) gives
+
+\begin{subequations}
+  \begin{eqnarray}
+    \label{eq:pv3}
+     \frac{2}{3} n N_A \left < KE \right > &=& n R^* T\label{eq:pv3a} \\
+    \left < KE \right > &=& \frac{3}{2} \frac {R^*}{N_A} T = \frac{ 3}{2} kT
+  \end{eqnarray}
+\end{subequations}
+$k$ is \textit{Boltzman's constant (again)}.
+The smallest unit of thermal energy that our system can have
+is $\frac{ 1}{2} k T$
+
+According to \eqref{eq:pv3}, temperature is proportional to
+the translational kinetic energy for this monotomic gas.  We've connected
+thermal energy with Newton's 2nd law.  How does this
+compare with other definitions?
+
+\begin{itemize}
+
+\item Temperature: (A measure of the tendency of an object to spontaneously
+give up energy to its surroundings)
+\item Heat: (Spontaneous flow of energy from one object to another
+caused by a difference in temperature)
+\item Work: (Any transfer of energy into or out of a system not due to temperature differences)
+
+\end{itemize}
+
+These three definitions are correct, but make no mention of the fact
+that the gas is made of atoms.  This is the difference between
+\textit{statistical mechanics} and \textit{classical thermodynamics}.
+
+A final point:  we've only counted translational kinetic energy, because our atoms can't store
+energy by rotating or vibrating.  We'll account for those two forms of internal energy
+later on.
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,fancyhdr,xr,hyperref,ifpdf,amsmath,rcs,shortcuts}
+\usepackage{lastpage,longtable,color,paunits,smallsec}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+
+
+\pagestyle{fancy} 
+
+\RCS $Revision: 1.1 $
+\RCS $Date: 2006/01/15 23:38:01 $
+
+\fancypagestyle{first}{
+\lhead{A405: Entropy -- notes on Thompkins Sec. 1.9}
+\chead{\textbf{}}
+\rhead{page~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+
+\begin{document}
+\pagestyle{first}
+
+\begin{center}
+Atsc405: Discussion of Thompkins Section 1.9\\
+\end{center}
+
+
+\section{2nd law}
+\label{sec:2nd-law-continued}
+
+First law in pressure coords:
+
+\begin{equation}
+  \label{eq:poten1}
+  q_t dt = c_p dT - \frac{R_d T}{p} dp
+\end{equation}
+Instead of
+setting $q_t=0$ we could also have divided (\ref{eq:poten1}) by the
+temperature $T$ and gotten:
+
+\begin{equation}
+  \label{eq:poten2}
+  \frac{q_t dt}{T} = c_p \frac{dT}{T} - R_d \frac{dp }{p}
+\end{equation}
+Note the connection between (\ref{eq:poten2}) and the second law:
+
+\begin{equation}
+  \label{eq:2nd}
+  d\phi \geq \frac{q_t dt}{T}
+\end{equation}
+where the $=$ sign holds if the process is reversible.
+
+You should be able to show to show using the definition of $\theta$
+that:
+
+\begin{equation}
+  \label{eq:diffTheta}
+  c_p \frac{d\theta}{\theta} = c_p \frac{dT}{T} - R_d \frac{ dp }{p}
+\end{equation}
+
+Putting (\ref{eq:diffTheta}) together with (\ref{eq:poten2}) and (\ref{eq:2nd})
+we have the atmospheric version of the 2nd law of thermodynamics for dry air:
+
+\begin{equation}
+  \label{eq:atsc2nd}
+d\phi=  c_p d \log\theta = c_p \frac{dT}{T} - \frac{R_d }{p} dp \geq \frac{q_t dt}{T}
+\end{equation}
+or integrating between two states 0 and 1:
+
+\begin{equation}
+  \label{eq:atsc3rd}
+\phi_1 - \phi_0=  c_p  \log \frac{\theta_1}{\theta_0}
+\end{equation}
+In other words, (\ref{eq:atsc2nd}) is saying that \textit{the potential temperature 
+$\theta$ is just another name for the entropy of dry air}.  It's important to note that
+I can do this integration even if the physical process linking state 0 to state 1
+was irreversible (why?). Another way of saying this is to note that the rhs of (\ref{eq:poten2}) is always
+equal to $d\phi$, while the lhs=$d\phi$ only for reversible processes.  We'll come
+back to this point later in the course.
+
+
+
+\end{document}
