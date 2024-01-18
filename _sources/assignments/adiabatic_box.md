@@ -37,7 +37,7 @@ def eqstate(Temp,Press):
 The figure below represents an insulated box with two
 compartments A and B, each containing dry air. They are separated by
 an insulating and perfectly flexible wall, so that the pressure is
-equal on the two sides. Initially each compartment measure one and
+equal on the two sides. Initially each compartment measures one $m^3$ and
 the gas is at a pressure of 100 kPa and a temperature of 273 K. Heat
 is then supplied to the gas in box A using a resistor, until the
 pressure in both compartments rises to 300 kPa. Calculate:

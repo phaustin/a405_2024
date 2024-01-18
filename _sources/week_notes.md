@@ -15,7 +15,7 @@
 ## Lecture 3, week 1, Friday
 
 - Thompkins through page 8
-- Finish {ref}`worksheet1`
+- Finish {ref}`worksheet1_solution`
 - Do the adiabatic box assignment (due Friday)
 
 ### Lecture 3 Reading notes
@@ -32,11 +32,11 @@
 - Thompkins equation 1.9 -- first law for internal energy
 
     \begin{align}
-    du &= dq + dw = q_t dt + w_t dt \\
+    du &= dq + dw \\
     du &= dq - p\,dv
     \end{align}
 
-  - heating and working are verbs not nouns -- they are path dependent processes, while internal energy, temperature, pressure, entropy etc. are path independent state variables with perfect differentials.  The integral of a state variable is path independent and can be written as a perfect differential like $du$.  To remind us that we can't do this for heating and working, I've rewritten them as functions of time:  $q_t\,dt$ and $w_t\,dt$ which can't be integrated without more information about the time dependence of the heating and working.
+  - heating and working are verbs not nouns -- they are path dependent processes, while internal energy, temperature, pressure, entropy etc. are path independent state variables with perfect differentials.  The integral of a state variable is path independent.
 
 - Thompkins equation 1.25 first law for enthalpy
 
@@ -65,5 +65,4 @@
 - Read the [the first law of thermodynamics](https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&dl=0) and the [entropy and potential temperature](https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&dl=0) notes
 
 - Work on the adiabatic box assignment
-
 

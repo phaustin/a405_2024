@@ -1,4 +1,4 @@
-(sec:learning-goals)=
+(sec:learning_goals)=
 # Learning goals
 
 - ATSC 405 covers questions like:

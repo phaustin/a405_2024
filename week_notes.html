@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -47,7 +47,6 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -69,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/week_notes.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Week 1 worksheet solutions" href="notebooks/week1/worksheet1_solution.html" />
+    <link rel="next" title="Adiabatic Box – preliminary" href="assignments/adiabatic_box.html" />
     <link rel="prev" title="Python links" href="python_install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -174,19 +173,32 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics 2</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="learning_goals.html">Learning goals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="schedule.html">Course schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_install.html">Python links</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&amp;dl=0">Thompkins text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Week notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/week1/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&amp;dl=0">Kinetic Temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&amp;dl=0">First law of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&amp;dl=0">Entropy and potential temperature</a></li>
 </ul>
 
     </div>
@@ -212,16 +224,25 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="bd-article-container">
               
               <div class="bd-header-article">
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
-            <span class="fa-solid fa-bars"></span>
-        </label>
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 
 
 <div class="dropdown dropdown-download-buttons">
@@ -267,6 +288,9 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
 </div>
 
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -279,11 +303,36 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 
 </button>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
-            <span class="fa-solid fa-list"></span>
-        </label>
-    </div>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
+      
+    </div>
+  
+</div>
+</div>
               
               
 
@@ -343,15 +392,15 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Lecture 3, week 1, Friday<a class="headerlink" href="#lecture-3-week-1-friday" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Thompkins through page 8</p></li>
-<li><p>Finish <span class="xref std std-ref">worksheet1</span></p></li>
+<li><p>Finish <a class="reference internal" href="notebooks/worksheets/worksheet1_solution.html#worksheet1-solution"><span class="std std-ref">Week 1 worksheet solutions</span></a></p></li>
 <li><p>Do the adiabatic box assignment (due Friday)</p></li>
 </ul>
 <section id="lecture-3-reading-notes">
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b81cc275-c7a8-404a-a1d3-8d8a4b43a011">
-<span class="eqno">(1)<a class="headerlink" href="#equation-b81cc275-c7a8-404a-a1d3-8d8a4b43a011" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bc8809a3-638f-44b8-8f84-698249423a79">
+<span class="eqno">(1)<a class="headerlink" href="#equation-bc8809a3-638f-44b8-8f84-698249423a79" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -360,18 +409,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-637acfca-b53e-4229-8d1e-1aea0ea5b42d">
-<span class="eqno">(2)<a class="headerlink" href="#equation-637acfca-b53e-4229-8d1e-1aea0ea5b42d" title="Permalink to this equation">#</a></span>\[\begin{align}
-    du &amp;= dq + dw = q_t dt + w_t dt \\
+<div class="amsmath math notranslate nohighlight" id="equation-27ecf967-a41b-44fd-b3f3-ab262d4172ac">
+<span class="eqno">(2)<a class="headerlink" href="#equation-27ecf967-a41b-44fd-b3f3-ab262d4172ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+    du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
 <ul class="simple">
-<li><p>heating and working are verbs not nouns – they are path dependent processes, while internal energy, temperature, pressure, entropy etc. are path independent state variables with perfect differentials.  The integral of a state variable is path independent and can be written as a perfect differential like <span class="math notranslate nohighlight">\(du\)</span>.  To remind us that we can’t do this for heating and working, I’ve rewritten them as functions of time:  <span class="math notranslate nohighlight">\(q_t\,dt\)</span> and <span class="math notranslate nohighlight">\(w_t\,dt\)</span> which can’t be integrated without more information about the time dependence of the heating and working.</p></li>
+<li><p>heating and working are verbs not nouns – they are path dependent processes, while internal energy, temperature, pressure, entropy etc. are path independent state variables with perfect differentials.  The integral of a state variable is path independent.</p></li>
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fd02851a-17b8-41f0-a88e-5778aa99c954">
-<span class="eqno">(3)<a class="headerlink" href="#equation-fd02851a-17b8-41f0-a88e-5778aa99c954" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-57cba54e-dd3a-4be8-9c19-925f32164e32">
+<span class="eqno">(3)<a class="headerlink" href="#equation-57cba54e-dd3a-4be8-9c19-925f32164e32" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -446,11 +495,11 @@ const thebe_selector_output = ".output, .cell_output"
       </div>
     </a>
     <a class="right-next"
-       href="notebooks/week1/worksheet1_solution.html"
+       href="assignments/adiabatic_box.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Week 1 worksheet solutions</p>
+        <p class="prev-next-title">Adiabatic Box – preliminary</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -507,7 +556,7 @@ By Philip Austin
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
