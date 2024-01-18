@@ -50,4 +50,19 @@
 ## Lecture 4, week 2, Tuesday
 
 - Thompkins through page 14
-- My notes on [kinetic temperature](https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0)
+- Review my notes on [kinetic temperature](https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0)
+
+- Introduce my notes on [the first law of thermodynamics](https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&dl=0)
+
+- Introduce my notes on [entropy and potential temperature](https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&dl=0)
+
+### Worksheet 2
+
+- Download here: [worksheet2](https://www.dropbox.com/scl/fi/fbd17mi8zicladk2f9ubl/worksheet2.ipynb?rlkey=3id3nusgybporoz2o2r3qk3cc&dl=0)
+
+### For Thursday
+
+- Read the [the first law of thermodynamics](https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&dl=0) and the [entropy and potential temperature](https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&dl=0) notes
+
+- Work on the adiabatic box assignment
+
