@@ -1,5 +1,6 @@
 ---
 jupytext:
+  formats: ipynb,md:myst
   text_representation:
     extension: .md
     format_name: myst
@@ -13,6 +14,7 @@ kernelspec:
 
 +++ {"user_expressions": []}
 
+(worksheet1_solution)=
 # Week 1 worksheet solutions
 
 Three problems from Lohmann Chapter 1

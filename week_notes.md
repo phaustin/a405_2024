@@ -15,7 +15,7 @@
 ## Lecture 3, week 1, Friday
 
 - Thompkins through page 8
-- Finish {ref}`worksheet1`
+- Finish {ref}`worksheet1_solution`
 - Do the adiabatic box assignment (due Friday)
 
 ### Lecture 3 Reading notes

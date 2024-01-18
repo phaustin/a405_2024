@@ -3,13 +3,25 @@ root: index.md
 parts:
   - caption: Logistics
     chapters:
+    - file: learning_goals.md
     - file: schedule.md
     - file: python_install.md
+    - url:   https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&dl=0
+      title: Thompkins text
+    - url: https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&SS_jc=TC0001980404&title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate
+      title: Lohmann et al. text
   - caption: Weekly topics      
     chapters:
     - file: week_notes.md
-    - file: notebooks/week1/worksheet1_solution.md
   - caption: Assignments
     chapters:
     - file: assignments/adiabatic_box.md
+  - caption: Worksheets
+    chapters:
+    - file: notebooks/worksheets/worksheet1_solution.ipynb
+    - file: notebooks/worksheets/worksheet2_solution.ipynb
+  - caption: Readings
+    chapters:
+    - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
+      title: Kinetic Temperature notes
 
