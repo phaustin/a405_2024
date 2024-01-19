@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Week 1 worksheet solutions &#8212; ATSC 405 2024</title>
+    <title>Week2: Hydrostatic balance &#8212; ATSC 405 2024</title>
   
   
   
@@ -64,12 +64,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/worksheets/worksheet1_solution';</script>
-    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/worksheets/worksheet1_solution.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week2/hydrostat';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week2/hydrostat.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Week 2 worksheet 2 solutions" href="worksheet2_solution.html" />
-    <link rel="prev" title="Adiabatic Box – preliminary" href="../../assignments/adiabatic_box.html" />
+    <link rel="next" title="Adiabatic Box – preliminary" href="../../assignments/adiabatic_box.html" />
+    <link rel="prev" title="Week notes" href="../../week_notes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,9 +182,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../week_notes.html">Week notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../week2/hydrostat.html">Week2: Hydrostatic balance</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../week_notes.html">Week notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Week2: Hydrostatic balance</a></li>
 </ul>
 </li>
 </ul>
@@ -193,9 +193,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 1 worksheet solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -256,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/worksheets/worksheet1_solution.md" target="_blank"
+      <li><a href="../../_sources/notebooks/week2/hydrostat.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -266,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.rst</span>
 </a>
 </li>
       
@@ -327,7 +327,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -338,11 +340,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Week 1 worksheet solutions</h1>
+    <h1>Week2: Hydrostatic balance</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-heights">Scale Heights</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -352,100 +362,89 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="week-1-worksheet-solutions">
-<span id="worksheet1-solution"></span><h1>Week 1 worksheet solutions<a class="headerlink" href="#week-1-worksheet-solutions" title="Permalink to this heading">#</a></h1>
-<p>Three problems from Lohmann Chapter 1</p>
-<ol class="arabic simple">
-<li><p>Assume a low level cloud with the following properties: vertical extent 1.5 km, horizontal
-extent 1 km, cloud droplet number concentration 90 <span class="math notranslate nohighlight">\(cm^{−3}\)</span> air and mean diameter 10
-μm. Estimate the mass of the cloud by assuming that all the cloud droplets are spherical
-and have the same size. Take 1000 <span class="math notranslate nohighlight">\(kg\,m^{−3}\)</span> to be the density of water.</p></li>
-</ol>
-<ol class="arabic simple">
-<li><p>Answer</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cloud_diameter</span><span class="o">=</span><span class="mi">1000</span> <span class="c1">#m</span>
-<span class="n">cloud_height</span> <span class="o">=</span> <span class="mi">1500</span> <span class="c1">#m</span>
-<span class="n">drop_density</span> <span class="o">=</span> <span class="mf">90e6</span> <span class="c1"># /m^3</span>
-<span class="n">drop_diameter</span> <span class="o">=</span> <span class="mf">10.e-6</span>  <span class="c1">#m</span>
-<span class="n">rho</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1">#kg/m^3</span>
-<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1416</span>
-<span class="n">cloud_volume</span> <span class="o">=</span> <span class="n">cloud_height</span><span class="o">*</span><span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">cloud_diameter</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span>
-<span class="n">drop_volume</span> <span class="o">=</span> <span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">drop_diameter</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span><span class="o">**</span><span class="mf">3.</span>
-<span class="n">total_number</span> <span class="o">=</span> <span class="n">cloud_volume</span><span class="o">*</span><span class="n">drop_density</span>
-<span class="n">total_mass</span> <span class="o">=</span> <span class="n">total_number</span><span class="o">*</span><span class="n">drop_volume</span><span class="o">*</span><span class="n">rho</span> <span class="c1">#kg</span>
-<span class="n">total_mass_tonnes</span> <span class="o">=</span> <span class="n">total_mass</span><span class="o">/</span><span class="mf">1000.</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Answer: </span><span class="si">{</span><span class="n">total_mass_tonnes</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> tonnes&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Answer: 222.1 tonnes
-</pre></div>
-</div>
-</div>
-</div>
-<ol class="arabic" start="2">
-<li><p>Imagine a pure water cloud which consists of cloud droplets of uniform size with <span class="math notranslate nohighlight">\(R_d\)</span>
-=5 μm. Assume a uniform spacing of the cloud droplets, with a number concentration of
-Nc = 170 <span class="math notranslate nohighlight">\(cm^{-3}\)</span></p>
-<p>(a) Calculate the average distance between the cloud droplets</p>
-<p>(b) What would happen to the distance if the number concentration was trippled?</p>
+  <section id="week2-hydrostatic-balance">
+<span id="hydro"></span><h1>Week2: Hydrostatic balance<a class="headerlink" href="#week2-hydrostatic-balance" title="Permalink to this heading">#</a></h1>
+<p>One major simplification for atmospheric thermodyamics is the fact that on timescales lareger
+than 30 minute or so the environment
+is in
+<em>hydrostatic balance</em>, which is the statement that the vertical
+pressure differential across a layer provides exactly the amount of
+force necessary to balance gravity, so the atmosphere is not rising or sinking:</p>
+<figure class="align-default" id="hydrofig">
+<a class="reference internal image-reference" href="../../_images/hydrostat.png"><img alt="../../_images/hydrostat.png" src="../../_images/hydrostat.png" style="width: 443.0px; height: 352.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Hydrostatic balance for a 1 <span class="math notranslate nohighlight">\(m^2\)</span> cross section of a layer</span><a class="headerlink" href="#hydrofig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In symbols, the balance shown by <a class="reference internal" href="#hydrofig"><span class="std std-numref">Fig. 1</span></a> implies that:</p>
+<div class="math notranslate nohighlight" id="equation-hydro-eq">
+<span class="eqno">(4)<a class="headerlink" href="#equation-hydro-eq" title="Permalink to this equation">#</a></span>\[  dp = - \rho g dz\]</div>
+<p><strong>Question: is this the same pressure p as the local pressure given by
+the equation of state</strong>: <span class="math notranslate nohighlight">\(p=\rho R_d T\)</span>?</p>
+<section id="scale-heights">
+<h2>Scale Heights<a class="headerlink" href="#scale-heights" title="Permalink to this heading">#</a></h2>
+<p>On page 10 equation 1.30 Thompkins integrates the hydrostatic equation to get
+the pressure as a function of height, assuming that temperature is constant with height.  That’s
+not a great assumption.  Here’s how to do a better job by defining a height-averaged temperature
+that gives the exact answer. We want to find the <strong>pressure scale height</strong> <span class="math notranslate nohighlight">\(H_p\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[p = p_0 \exp \left ( \frac{-z}{H_p} \right )\]</div>
+<p>In words – <span class="math notranslate nohighlight">\(H_p\)</span> gives the height at which gravity wins out over the kinetic energy of the air molecules – warmer atmospheres take longer to decrease their pressure by a factor of <span class="math notranslate nohighlight">\(\exp(-H_p/H_p) = \exp(-1)\)</span> (the e-folding height) because the air molecules have more energy to travel higher.</p>
+<ol class="arabic">
+<li><p>Do pressure first: Rewrite <a class="reference internal" href="#equation-hydro-eq">(4)</a> using the ideal gas law:</p>
+<div class="math notranslate nohighlight" id="equation-hydro1">
+<span class="eqno">(5)<a class="headerlink" href="#equation-hydro1" title="Permalink to this equation">#</a></span>\[   dp = - \rho g dz = - \frac{p}{R_d T}  g dz = \frac{p}{H_p}\]</div>
+<p>where <span class="math notranslate nohighlight">\(H_p=R_d T/g\)</span> is the pressure scale height.</p>
+<div class="math notranslate nohighlight">
+\[d\ln p = - \frac{dz }{H_p}\]</div>
+<div class="math notranslate nohighlight">
+\[\int_{p_0}^{p}\!\,d \ln p =  - \int_{0 }^{z}\!\frac{1}{H_p} dz^\prime\]</div>
+<p>Since  temperature (and gravity) are changing with height, we need to know profiles of g(z) and T(z)
+to go any further.  If we don’t have those profiles, then a useful approximation is to define a vertically averaged <span class="math notranslate nohighlight">\(H_p\)</span>, since
+the average involves a large mass of air (about 10 metric tons/cubic meter), it will vary more slowly than the temperature at any one level on any given day, and we can still get a useful profile of pressure vs. height without having a specific sounding:</p>
+<div class="math notranslate nohighlight" id="equation-pressavg">
+<span class="eqno">(6)<a class="headerlink" href="#equation-pressavg" title="Permalink to this equation">#</a></span>\[\frac{ 1}{\overline{H_p}} = \overline{ \left ( \frac{1 }{H_p} \right )} = \frac{\int_{0 }^{z}\!\frac{1}{H_p} dz^\prime  }{z-0}\]</div>
+<p>Now we can replace the z integral by the average:</p>
+<div class="math notranslate nohighlight">
+\[\int_{p_0}^{p}\!\,d \ln p =  - \int_{0 }^{z}\!\frac{1}{H_p} dz^\prime = -\frac{z}{\overline{H_p}}\]</div>
+<p>and  integrating the left-hand side:</p>
+<div class="math notranslate nohighlight">
+\[\ln p/p_0 = - \frac{z }{\overline{H_p}}\]</div>
+<p>Taking exp of both sides gives the pressure with height:</p>
+<div class="math notranslate nohighlight">
+\[p = p_0 \exp \left ( - \frac{z }{\overline H_p} \right )\]</div>
+<p>Values for <span class="math notranslate nohighlight">\(\overline{H_p}\)</span> are relatively constant for a particular climate regime, like midlatitude winter.</p>
+</li>
+<li><p>Now repeat this for density <span class="math notranslate nohighlight">\(\rho\)</span>.  We need to use the chain rule for the equation of state:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dp }{dz}  = \frac{d }{dz}  (\rho R_d T) = R_d \left ( \frac{d\rho }{dz} T
++ \rho \frac{ dT}{dz} \right )  = - \rho g\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{d\rho }{dz}  = -\frac{\rho }{T}  \left ( \frac{g }{R_d} + \frac{ dT}{dz} \right ) = - \rho \left ( \frac{1 }{H} +  \frac{1 }{T} \frac{dT }{dz} \right ) = - \frac{\rho}{H_\rho}\]</div>
+<p>Bottom line – with this definition of the density scale height we’ve got an equation that looks like <a class="reference internal" href="#equation-hydro1">(5)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-densavg">
+<span class="eqno">(7)<a class="headerlink" href="#equation-densavg" title="Permalink to this equation">#</a></span>\[  \frac{d\rho }{\rho} = - \left ( \frac{1 }{H} +
+                   \frac{1 }{T} \frac{dT }{dz} \right ) dz = - \frac{dz }{H_\rho}\]</div>
+<p>Pull the same trick for the vertical average:</p>
+<div class="math notranslate nohighlight" id="equation-denstrick">
+<span class="eqno">(8)<a class="headerlink" href="#equation-denstrick" title="Permalink to this equation">#</a></span>\[\frac{ 1}{\overline{H_\rho}} = \overline{ \left ( \frac{1 }{H_\rho} \right )} = \frac{\int_{0 }^{z}\!\frac{1}{H_\rho} dz^\prime  }{z-0}\]</div>
+<p>We use this vertical average  in exactly the same way as before to
+get the density profile:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \ln \rho/\rho_0 =&amp; - \frac{z }{\overline{H_\rho }} \\
+  \rho =&amp; \rho_0 \exp \left ( - \frac{z }{\overline H_\rho} \right )\end{aligned}\end{split}\]</div>
+<p>In the hydrostatic.ipynb notebook I show that the midlatitude summer sounding gives
+<span class="math notranslate nohighlight">\(H_p\approx7.8\)</span> km and <span class="math notranslate nohighlight">\(H_\rho \approx 9.5\)</span> km.  We can use the equations:</p>
+<div class="math notranslate nohighlight">
+\[p = p_o \exp ( -z/H_p)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\rho = \rho_0 \exp ( -z/H_\rho)\]</div>
+<p>To calculate the optical depth for various atmospheric conditions.</p>
 </li>
 </ol>
-<ol class="arabic simple" start="2">
-<li><p>Answer</p></li>
-</ol>
-<p>Assume that each drop gets its own cube inside the 1  <span class="math notranslate nohighlight">\(cm^{3}\)</span> of air.  How many cubes does it take to pack a cm?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mf">170.</span>
-<span class="n">drop_cube_volume</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">N</span>
-<span class="n">drop_cube_size</span> <span class="o">=</span> <span class="n">drop_cube_volume</span><span class="o">**</span><span class="mf">0.3333</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">drop_cube_size</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> cm&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.18 cm
-</pre></div>
-</div>
-</div>
-</div>
-<p>So if the drop diameter is 10 microns, then there are about 180 drop diameters between droplets</p>
-<ol class="arabic simple" start="3">
-<li><p>The average pressure at Earth’s surface is 985 hPa. Knowing the radius of the Earth
-<span class="math notranslate nohighlight">\(r_{Earth}\)</span> = 6370 km and using the definition of pressure, estimate the total mass of the
-atmosphere.</p></li>
-</ol>
-<ol class="arabic simple" start="3">
-<li><p>Answer</p></li>
-</ol>
-<ul class="simple">
-<li><p>pressure = force of gravity per unit area</p></li>
-<li><p>force of gravity = mass <span class="math notranslate nohighlight">\(\times\)</span> acceleration</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pressure</span> <span class="o">=</span> <span class="mi">98500</span>  <span class="c1">#pascals</span>
-<span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># m/s/s</span>
-<span class="n">mass_m2</span> <span class="o">=</span> <span class="n">pressure</span><span class="o">/</span><span class="n">g</span>
-<span class="n">r_earth</span> <span class="o">=</span> <span class="mf">6370e3</span>  <span class="c1">#m</span>
-<span class="n">earth_area</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r_earth</span><span class="o">**</span><span class="mf">2.</span>
-<span class="n">mass_atm</span> <span class="o">=</span> <span class="n">mass_m2</span><span class="o">*</span><span class="n">earth_area</span> <span class="c1">#kg</span>
-<span class="n">mass_atm_gtonne</span> <span class="o">=</span> <span class="n">mass_atm</span><span class="o">/</span><span class="mf">1.e12</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mass_atm_gtonne</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> gtonnes&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5125071.2 gtonnes
-</pre></div>
-</div>
-</div>
-</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -461,7 +460,7 @@ atmosphere.</p></li>
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/worksheets"
+            path: "./notebooks/week2"
         },
         predefinedOutput: true
     }
@@ -479,20 +478,20 @@ atmosphere.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../assignments/adiabatic_box.html"
+       href="../../week_notes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Adiabatic Box – preliminary</p>
+        <p class="prev-next-title">Week notes</p>
       </div>
     </a>
     <a class="right-next"
-       href="worksheet2_solution.html"
+       href="../../assignments/adiabatic_box.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Week 2 worksheet 2 solutions</p>
+        <p class="prev-next-title">Adiabatic Box – preliminary</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -503,7 +502,20 @@ atmosphere.</p></li>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-heights">Scale Heights</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -66,3 +66,13 @@
 
 - Work on the adiabatic box assignment
 
+## Lecture 5, week 2, Thursday
+
+- Questions on the adiabatic box assignment
+- Review my notes on the first law of thermodynamcis
+- Review my notes on entropy and potential temperature
+- Introduce my notes on {ref}`hydro`
+
+## For Friday
+
+- Read Thompkins section 1.10 on thermodynamic charts
