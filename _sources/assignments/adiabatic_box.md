@@ -56,5 +56,14 @@ that the total volume of the combined compartments A and B has to stay constant 
 
 +++
 
-```{image} images/insulated_box.png
+```{figure} images/insulated_box.png
+---
+width: 80% 150px
+name: figure1
+---
+Insulated box with two compartments
+```
+
+```{code-cell} ipython3
+
 ```
