@@ -60,7 +60,7 @@ Link to {ref}`figure1`
 
 ```{figure} images/insulated_box.png
 ---
-width: 250px
+width: 650px
 name: figure1
 ---
 Insulated box with two compartments
