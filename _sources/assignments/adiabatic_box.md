@@ -54,11 +54,13 @@ pressure in both compartments rises to 300 kPa. Calculate:
 Hint: use the fact that entropy (and therefore $\theta$ ) is conserved for an adiabatic process and therefore can't change in compartment B, and
 that the total volume of the combined compartments A and B has to stay constant at 2 $m^3$.
 
+Link to {ref}`figure1`
+
 +++
 
 ```{figure} images/insulated_box.png
 ---
-width: 80% 150px
+width: 250px
 name: figure1
 ---
 Insulated box with two compartments
