@@ -13,6 +13,8 @@ parts:
   - caption: Weekly topics      
     chapters:
     - file: week_notes.md
+      sections:
+        - file: notebooks/week2/hydrostat.rst
   - caption: Assignments
     chapters:
     - file: assignments/adiabatic_box.md
