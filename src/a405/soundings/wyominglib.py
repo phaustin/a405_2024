@@ -332,7 +332,20 @@ def read_soundings(soundingdir):
     #pdb.set_trace()
     
     return meta_dict
+
+def test_lib():
+    values=dict(region='samer',year='2013',month='2',start='0100',stop='2800',station='82965')
+    write_soundings(values, 'soundingdir')
+    soundingdir = 'soundingdir'
+    out=read_soundings(soundingdir)
     
+
+
+
+
+
+    
+
 if __name__ == "__main__":
     #
     # some sample input dictionaries

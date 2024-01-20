@@ -15,9 +15,12 @@ parts:
     - file: week_notes.md
       sections:
         - file: notebooks/week2/hydrostat.rst
+        - file: notebooks/week2/skew_coords.md
   - caption: Assignments
     chapters:
     - file: assignments/adiabatic_box.md
+    - url: https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&dl=0
+      title: adiabatic_box_handin.in -- download link for ipynb
   - caption: Worksheets
     chapters:
     - file: notebooks/worksheets/worksheet1_solution.ipynb
