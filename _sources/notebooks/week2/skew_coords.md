@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(skew_coords)=
 # Week2: Theromodynamic diagrams
 
 +++
