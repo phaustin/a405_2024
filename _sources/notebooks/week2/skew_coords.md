@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Theromodynamic diagrams
+# Week2: Theromodynamic diagrams
 
 +++
 
@@ -240,7 +240,7 @@ ax,skew = makeSkewDry(ax)
 
 ### 5 Adding information to the plot
 
-use the dispay finction to redraw the axis after you modify it
+use the display finction to redraw the axis after you modify it
 
 ```{code-cell} ipython3
 ax.set(title='new title')
@@ -274,14 +274,47 @@ display(fig)
 
 In cells below, add the temperature and dewpoint soundings for the Feb 1, 2013 brazil sounding to this plot
 
-+++
+```{code-cell} ipython3
+press,temp = the_sound['pres'].to_numpy(), the_sound['temp'].to_numpy()
+dewpoint= the_sound['dwpt'].to_numpy()
+```
+
+```{code-cell} ipython3
+hit = dewpoint < -10
+dewpoint[hit] = np.nan
+```
+
+```{code-cell} ipython3
+skew=30
+skewtemp=convertTempToSkew(temp,press,skew)
+skewdewpoint = convertTempToSkew(dewpoint,press,skew)
+fig,ax =plt.subplots(1,1,figsize=(8,8))
+ax,skew = makeSkewDry(ax,skew=skew)
+ax.plot(skewtemp,press,'r-')
+ax.plot(skewdewpoint,press,'g-')
+skewLimits = convertTempToSkew([15, 25], 1.e3, skew)
+out=ax.set(xlim=skewLimits,ylim=(1000.,400.))
+```
 
 ### If you have extra time
 
 Repeat this using the [metpy skewT library](https://unidata.github.io/MetPy/latest/examples/plots/Simple_Sounding.html#sphx-glr-examples-plots-simple-sounding-py)
 
 ```{code-cell} ipython3
-
+from metpy.plots import SkewT
+from metpy.units import units
+fig,ax =plt.subplots(1,1,figsize=(8,8))
+fig.clf()
+skew_plot = SkewT(fig)
+skew_plot.ax.set_title("metpy example")
+skew_plot.ax.set(xlim=(0,25),ylim=(1000,600))
+theta = np.array([0,10,20,30,40,50,60]) + 273.15
+theta = theta*units("K")
+skew_plot.plot_dry_adiabats(t0=theta)
+skew_plot.plot_moist_adiabats()
+skew_plot.plot_mixing_lines()
+skew_plot.plot(press,temp,'r')
+skew_plot.plot(press,dewpoint,'g');
 ```
 
 ```{code-cell} ipython3
