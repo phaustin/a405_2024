@@ -73,6 +73,11 @@
 - Review my notes on entropy and potential temperature
 - Introduce my notes on {ref}`hydro`
 
-## For Friday
+## Lecture 6, week 2, Friday
 
-- Read Thompkins section 1.10 on thermodynamic charts
+- Covered Thompkins section 1.10 on thermodynamic charts
+- Went over the {ref}`skew_coords` notebook
+
+### For Tuesday
+
+Read the rest of Thompkins Chapter 1 on bouyancy

@@ -15,7 +15,6 @@ parts:
     - file: week_notes.md
       sections:
         - file: notebooks/week2/hydrostat.rst
-        - file: notebooks/week2/skew_coords.md
   - caption: Assignments
     chapters:
     - file: assignments/adiabatic_box.md
@@ -25,6 +24,10 @@ parts:
     chapters:
     - file: notebooks/worksheets/worksheet1_solution.ipynb
     - file: notebooks/worksheets/worksheet2_solution.ipynb
+    - file: notebooks/week2/skew_coords.md
+      sections:
+        - url: https://www.dropbox.com/scl/fi/9ds2xyr8meiy9jzb50jxi/skew_coords.ipynb?rlkey=5ounvufrj4tv2eh1byyak2ucb&dl=0
+          title: Download skew_coords.ipynb
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
