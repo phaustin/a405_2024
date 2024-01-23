@@ -76,7 +76,7 @@
 ## Lecture 6, week 2, Friday
 
 - Covered Thompkins section 1.10 on thermodynamic charts
-- Went over the {ref}`skew_coords` notebook
+- Went over the {ref}`skew_coords_solution` notebook
 
 ### For Tuesday
 
