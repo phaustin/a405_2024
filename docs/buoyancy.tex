@@ -1,0 +1,210 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,fancyhdr,xr,hyperref,ifpdf,amsmath,rcs,indentfirst}
+\usepackage{lastpage,longtable,Ventry,url,paunits,shortcuts,smallsec,color,tightlist,float}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+\usepackage[stable]{footmisc}
+
+\pagestyle{fancy} 
+
+\RCS $Revision: 1.5 $
+\RCS $Date: 2002/01/09 03:50:54 $
+
+\fancypagestyle{first}{
+\lhead{Buoyancy and Taylor's series}
+\chead{}
+\rhead{page~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26} 
+\begin{document}
+\newcommand{\vect}[1]{\boldsymbol{\vec{#1}}}
+\pagestyle{first}
+
+
+\section{Bouyancy}
+\label{sec:bouyancy}
+
+
+
+
+\begin{itemize}
+\item this is a slightly more detailed derivation of Thompkins 1.11.1
+\item Here's a short review of Taylor's series if you need a refresher: \href{https://blogs.ubc.ca/infiniteseriesmodule/units/unit-3-power-series/taylor-series/the-taylor-series}{https://blogs.ubc.ca/infiniteseriesmodule/units/unit-3-power-series/taylor-series/the-taylor-series}
+\end{itemize}
+
+
+
+One problem with the derivation of buoyancy on in most intro texts is
+that it relies on the idea of a \textit{coherent air parcel}, which is a
+little artificial in a turbulent atmosphere.  How do I know how big
+my ``container'' is, so I can calculate the ``ambient air density'' $\rho$
+and the ``parcel density'' $\rho^\prime$ in the equation
+
+\begin{equation}
+  \label{eq:container}
+  F = \left (\rho - \rho^\prime \right ) g
+\end{equation}
+if the air isn't in a balloon? Here's another way to get to the same place
+without invoking the idea of some kind of package of air.  This definition of buoyancy is
+used in the 3-dimensional cloud model we will work with in class.
+
+Start with Newton's second law:
+\begin{equation}
+  \label{eq:newton}
+F= ma
+\end{equation}
+Rewrite this in terms of the vertical velocity derivative for the acceleration, 
+and the pressure gradient force and gravity for the force per kg:
+
+\begin{equation}
+  \label{eq:newton2}
+ - \frac{\partial p}{\partial z} - \rho g = \rho \frac{dw}{dt}
+\end{equation}
+
+
+Now define a horizontally uniform base state with pressure $\overline{p}$ and density
+$\overline{\rho}$ that satisfy hydrostatic balance:
+
+\begin{equation}
+  \label{eq:hydro}
+  d \overline{p} = \overline{\rho} g dz
+\end{equation}
+or equivalently, since there is no $x$ or $y$ dependence (uniform in horizontal),
+we can substitute a partial for the total derivitive.
+
+\begin{equation}
+  \label{eq:hydro2}
+- \frac{1}{\overline{\rho}} \frac{\partial \overline{p}}{\partial z} -  g  = 0
+\end{equation}
+
+
+
+Without approximation we can write the pressure and density as the sum
+of a perturbation and these base state values:  $p=\overline{p} +
+p^\prime$, $\rho=\overline{\rho} + \rho^\prime$.  
+Stick these $p,\rho$ values into
+(\ref{eq:newton2}):
+
+  \begin{equation}
+  \label{eq:newton3}
+ \frac{dw}{dt} = -\frac{1}{(\overline{\rho} + \rho^\prime)}
+ \frac{\partial }{\partial z}
+(\overline{p} + p^\prime) -  g
+\end{equation}
+
+Now expand the density term in a Taylor series (Thompkins eq. 1.57):
+
+
+\begin{equation}
+  \label{eq:taylor}
+  \frac{1}{(\overline{\rho} + \rho^\prime)} = 
+\frac{1}{(\overline{\rho})} 
+  \left ( \frac{1}{1 + \rho^\prime/\overline{\rho}} \right ) =
+\frac{1}{(\overline{\rho})} \left [ 1 -
+  \frac{\rho^\prime}{\overline{\rho}} + 
+\left ( \frac{\rho^\prime}{\overline{\rho}} \right )^2 + \ldots \right  ]
+\end{equation}
+
+If we drop all but first order terms in (\ref{eq:taylor})  and plug it
+into (\ref{eq:newton3}), again dropping  squared term
+$p^\prime p^\prime$ we get:
+
+\begin{equation}
+  \label{eq:big}
+\frac{dw}{dt} = -\frac{1}{\overline{\rho}} \frac{\partial
+  \overline{p}}{\partial z}
+-g - \frac{1}{\overline{\rho}} \frac{\partial p^\prime}{\partial z}  
++ \frac{1}{\overline{\rho}} \frac{\partial \overline{p}}{\partial z} 
+\left ( \frac{\rho^\prime}{\overline{\rho}} \right )
+\end{equation} 
+
+
+  Now I can use (\ref{eq:hydro2}) twice on (\ref{eq:big}): once to
+cancel the first two terms on the rhs, and once to replace the final density
+term with $g$. This gives:
+
+\begin{equation}
+  \label{eq:newton4}
+ \frac{dw}{dt} = -\frac{1}{\overline{\rho}} \frac{\partial p^\prime}{\partial z}
+- g \left ( \frac{\rho^\prime}{\overline{\rho}} \right )
+\end{equation}
+The first term on the rhs is the non-hydrostatic pressure gradient acceleration, which can
+be neglected under some conditions.  The 
+last term on the rhs of (\ref{eq:newton4}) is the buoyancy $B$:
+
+\begin{equation}
+  \label{eq:buoyancy}
+  B = - g \left ( \frac{\rho^\prime}{\overline{\rho}} \right )
+\end{equation}
+
+
+  As I show in class, if we differentiate the equation of state:
+
+\begin{equation}
+  \label{eq:state}
+  p=\rho R_d T
+\end{equation}
+about the hydrostatic reference state, we get:
+
+\begin{equation}
+  \label{eq:state2}
+  \frac{\rho^\prime}{\overline{\rho}}  = \frac{p^\prime}{\overline{p}}
+  - \frac{T^\prime}{\overline{T}}
+ \end{equation}
+
+
+If we neglect the pressure perturbation in (\ref{eq:newton4}) then
+we should drop it from  (\ref{eq:state2}) also and 
+we get:
+
+\begin{equation}
+  \label{eq:state3}
+  \frac{\rho^\prime}{\overline{\rho}}  \approx
+  - \frac{T^\prime}{\overline{T}}
+ \end{equation}
+and
+
+\begin{equation}
+  \label{eq:buoyancy2}
+  B \approx  g \left ( \frac{T^\prime}{\overline{T}} \right )
+\end{equation}
+which is the same as Thompkins eq. 1.61.  Note that they use $T$ for the
+temperature of the environment, which I have called $\overline{T}$ here.
+
+So what does say about the spatial extent of the buoyancy perturbation?  Suppose we
+have a model that splits the atmosphere up in 25 meter x 25 meter x 25 meter cubes
+over a domain that is 1 km x 1 km x 1 km.  The to calculate $\overline{\rho}$ at
+any height just average over the 40 x 40 grid at that level.  To calculate 
+$\overline{\rho^\prime}$ for each cell at a every height just do:
+
+\begin{equation}
+  \label{eq:rhop}
+  \rho^\prime(x,y,z) = \rho(x,y,z) - \overline{\rho}(z)
+\end{equation}
+So the ``containers'' are the 25 m x 25 m x 25 m cubes.  Question:  would I get a different answer
+if I enlarged the cubes to 50 m x 50 m x 50 m ?
+
+
+\end{document}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
