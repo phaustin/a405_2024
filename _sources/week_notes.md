@@ -81,3 +81,19 @@
 ### For Tuesday
 
 Read the rest of Thompkins Chapter 1 on bouyancy
+
+## Lecture 7, week 3, Tuesday
+
+- Go over {ref}`skew_coords_solution` with metpy skewT
+- More on Thompkins hydrostatic balance (p. 10) 
+  Connect weighted averages and scale heights with the [weighted averages onte](https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&dl=0)
+- Review numpy integration and differentiation with {ref}`derivs_ints`
+- Start on {ref}`assign2_hydro`
+
+### For Thursday
+
+- Read Thompkins Chapter 2 through p. 30
+- Read my [buoyancy notes](https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&dl=0)
+- Work on Assignment 2
+
+

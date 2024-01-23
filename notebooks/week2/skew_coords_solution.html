@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Week2: Theromodynamic diagrams &#8212; ATSC 405 2024</title>
+    <title>Week2: Theromodynamic diagrams worksheet – solution &#8212; ATSC 405 2024</title>
   
   
   
@@ -62,8 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week2/skew_coords';</script>
-    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week2/skew_coords.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week2/skew_coords_solution';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week2/skew_coords_solution.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Week 2 worksheet 2 solutions" href="../worksheets/worksheet2_solution.html" />
@@ -170,7 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics 2</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics check2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../learning_goals.html">Learning goals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../schedule.html">Course schedule</a></li>
@@ -180,22 +180,23 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../week_notes.html">Week notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="hydrostat.html">Week2: Hydrostatic balance</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../week_notes.html">Week notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hydrostat.html">Week2: Hydrostatic balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week3/derivs_and_ints.html">week3: working with numpy arrays</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&amp;dl=0">adiabatic_box_handin.in -- download link for ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/hydrostatic_2024.html">Assign 2: Scale heights for typical atmospheric soundings</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/92e1b9qej4rstf2g6unsw/hydrostatic_2024.ipynb?rlkey=7pkws9w63zheq9kwoa0uoe38c&amp;dl=0">Assignment 2 download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Week2: Theromodynamic diagrams</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/9ds2xyr8meiy9jzb50jxi/skew_coords.ipynb?rlkey=5ounvufrj4tv2eh1byyak2ucb&amp;dl=0">Download skew_coords.ipynb</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Week2: Theromodynamic diagrams worksheet – solution</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&amp;dl=0">Download skew_coords_solution.ipynb</a></li>
 </ul>
 </li>
 </ul>
@@ -204,6 +205,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&amp;dl=0">Kinetic Temperature notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&amp;dl=0">First law of thermodynamics</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&amp;dl=0">Entropy and potential temperature</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&amp;dl=0">Weighted averages and scale heights</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&amp;dl=0">Buoyancy</a></li>
 </ul>
 
     </div>
@@ -258,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/week2/skew_coords.md" target="_blank"
+      <li><a href="../../_sources/notebooks/week2/skew_coords_solution.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +345,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Week2: Theromodynamic diagrams</h1>
+    <h1>Week2: Theromodynamic diagrams worksheet – solution</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,8 +392,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="week2-theromodynamic-diagrams">
-<span id="skew-coords"></span><h1>Week2: Theromodynamic diagrams<a class="headerlink" href="#week2-theromodynamic-diagrams" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="week2-theromodynamic-diagrams-worksheet-solution">
+<span id="skew-coords-solution"></span><h1>Week2: Theromodynamic diagrams worksheet – solution<a class="headerlink" href="#week2-theromodynamic-diagrams-worksheet-solution" title="Permalink to this heading">#</a></h1>
 <section id="the-university-of-wyoming-upperair-archive">
 <h2>The University of Wyoming Upperair archive<a class="headerlink" href="#the-university-of-wyoming-upperair-archive" title="Permalink to this heading">#</a></h2>
 <p>The University of Wyoming maintains a public archive of balloon sounding data at <a class="reference external" href="https://weather.uwyo.edu/upperair/sounding.html">https://weather.uwyo.edu/upperair/sounding.html</a></p>
@@ -966,6 +969,9 @@ and the upper boundary stops at 600 hPa</p>
 <span class="n">skew_plot</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;metpy example&quot;</span><span class="p">)</span>
 <span class="n">skew_plot</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">600</span><span class="p">))</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">])</span> <span class="o">+</span> <span class="mf">273.15</span>
+<span class="c1">#</span>
+<span class="c1"># note metpy variables need units </span>
+<span class="c1">#</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span><span class="o">*</span><span class="n">units</span><span class="p">(</span><span class="s2">&quot;K&quot;</span><span class="p">)</span>
 <span class="n">skew_plot</span><span class="o">.</span><span class="n">plot_dry_adiabats</span><span class="p">(</span><span class="n">t0</span><span class="o">=</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">skew_plot</span><span class="o">.</span><span class="n">plot_moist_adiabats</span><span class="p">()</span>

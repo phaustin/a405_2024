@@ -12,14 +12,14 @@ kernelspec:
   name: python3
 ---
 
-(skew_coords)=
-# Week2: Theromodynamic diagrams
+(skew_coords_solution)=
+# Week2: Theromodynamic diagrams worksheet -- solution
 
-+++
+
 
 ## The University of Wyoming Upperair archive
 
-+++
+
 
 The University of Wyoming maintains a public archive of balloon sounding data at [https://weather.uwyo.edu/upperair/sounding.html](https://weather.uwyo.edu/upperair/sounding.html)
 
@@ -310,6 +310,9 @@ skew_plot = SkewT(fig)
 skew_plot.ax.set_title("metpy example")
 skew_plot.ax.set(xlim=(0,25),ylim=(1000,600))
 theta = np.array([0,10,20,30,40,50,60]) + 273.15
+#
+# note metpy variables need units 
+#
 theta = theta*units("K")
 skew_plot.plot_dry_adiabats(t0=theta)
 skew_plot.plot_moist_adiabats()
