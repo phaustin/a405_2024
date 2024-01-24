@@ -92,7 +92,7 @@ skew_plot.plot(press,dewpoint,'g');
 
 +++
 
-Here is equation 14 of the [hydrostatic balance notes](https://clouds.eos.ubc.ca/~phil/courses/atsc405/docs/hydro.pdf)
+Here is equation 14 of the [hydrostatic balance notes](https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&dl=0)
 
 +++
 
@@ -121,7 +121,7 @@ b.  Use this to find the pressure scale height in meters  as a scalar variable n
 
 ### 4. Calculate the density scale height
 
-Similarly, equation (23) of the [hydrostatic balance notes](https://clouds.eos.ubc.ca/~phil/courses/atsc500/docs/hydro.pdf)
+Similarly, equation (23) of the [hydrostatic balance notes](https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&dl=0)
 is:
 
 $$\frac{d\rho }{\rho} = - \left ( \frac{1 }{H} + 
