@@ -92,9 +92,16 @@ We will show later that away from active convection we also can expect $\frac{\D
 
 Userful reference:  [xarray plotting](https://docs.xarray.dev/en/latest/user-guide/plotting.html)
 
-Hint for finding a level closest to 500 meters:
+Hint for finding a level closest to 500 meters. Make sure you understand why this works:
 
-
+```{code-cell} ipython3
+import numpy as np
+from matplotlib import pyplot as plt
+heights = the_ds['z'].data
+height_diff = heights - 500
+the_lev = np.argmin(np.abs(height_diff))
+print(f"{the_lev=} and {heights[the_lev]=}")
+```
 
 ```{code-cell} ipython3
 
