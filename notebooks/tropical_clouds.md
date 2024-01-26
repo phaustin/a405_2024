@@ -67,10 +67,8 @@ to second order:
 
 
 $$
-\frac{\Delta p}{p_0} = \frac{\Delta T}{T}
-$$ (eq:taylor2)
-
-where we have {eq}`eq:taylor2`
+\frac{\Delta p}{p_0} = \frac{\Delta T}{T_0} + \frac{\Delta \rho}{\rho_0} + \frac{\Delta T \Delta \rho}{T_0 \rho_0}
+$$ (eq:full)
 
 Note that $\Delta p$, $\Delta T$, and $\Delta \rho$ are all functions of
 (t,x,y,z).
@@ -79,7 +77,7 @@ If the atmosphere is close to hydrostatic balance, then we can expect the $\Delt
 $\frac{ \Delta T \Delta \rho}{T_0 \rho_0}$ term and write
 
 $$
-\frac{\Delta p }{p_0}
+\frac{\Delta p}{p_0} = \frac{\Delta T}{T_0} + \frac{\Delta \rho}{\rho_0}
 $$
 
 We will show later that away from active convection we also can expect $\frac{\Delta p }{p_0}$ to be small.
@@ -90,7 +88,13 @@ We will show later that away from active convection we also can expect $\frac{\D
 
 
 1.  find the index of the vertical level that is closes to 500 m
-2.   For that level calculate all of the quantities in {eq}`eq:taylor`.  How much larger are rthe temperature and density terms that the pressure term?
+2.   For that plot calculate histograms of all of the quantities in {eq}`eq:full`.  How much larger are the temperature and density terms that the pressure term?  How about the second order density x pressure term?
+
+Userful reference:  [xarray plotting](https://docs.xarray.dev/en/latest/user-guide/plotting.html)
+
+Hint for finding a level closest to 500 meters:
+
+
 
 ```{code-cell} ipython3
 
