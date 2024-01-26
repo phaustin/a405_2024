@@ -1,6 +1,12 @@
 (sec:python)=
 # Python links
 
+## environment files
+
+* [environment.yml](https://www.dropbox.com/scl/fi/0lyi3vcmujrfke29izmvd/environment.yml?rlkey=q29cdpjcdlrzgsbmdhvfhd0x7&dl=0)
+* [requirements.txt](https://www.dropbox.com/scl/fi/j7bg8p1hha8d21itoj1i0/requirements.txt?rlkey=g3ovng95fpw1skex969i81o76&dl=0)
+
+
 ## Laptop installs
 
 - [Mac instructions](https://www.dropbox.com/scl/fi/2eflyvz31e1vq3nryhqa2/python-setup_macos_2024.pdf?rlkey=rxbbl8pwdevxyry0toumolh6t&dl=0)

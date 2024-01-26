@@ -31,12 +31,12 @@ parts:
       sections:
         - url: https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&dl=0
           title: Download skew_coords_solution.ipynb
-    - file: notebooks/xarray-intro.ipynb
+    - file: notebooks/xarray-intro.md
     - url: https://www.dropbox.com/scl/fi/ze49m63z5gbnombcgk2gh/xarray-intro.ipynb?rlkey=sa86yjsi3l05bq8v54j6yxjtz&dl=0
       title: download xarray-intro.ipynb
     - url: https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&dl=0
       title: tropical_subset.nc download
-    - file:  notebooks/tropical_clouds.ipynb
+    - file:  notebooks/tropical_clouds.md
     - url: https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&dl=0
       title: tropical_clouds.ipynb download
   - caption: Readings
