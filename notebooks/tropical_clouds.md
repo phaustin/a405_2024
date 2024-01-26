@@ -1,10 +1,11 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.0
+    jupytext_version: 1.14.5
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -45,21 +46,53 @@ the_ds
 the_ds['p'].data
 ```
 
-## todo
+## Taylor's series expansion of the equation of state
 
 +++
 
-Thompson uses a Taylor series to expand the equation of state
+Consider this equation from the
+[Wikipedia entry on Taylor series](http://en.wikipedia.org/wiki/Taylor_series)
 
 $$
-  \frac{\rho^\prime}{\overline{\rho}}  = \frac{p^\prime}{\overline{p}}
-  - \frac{T^\prime}{\overline{T}}
+\begin{align}
+f(x,y) & \approx f(a,b) +(x-a)\, f_x(a,b) +(y-b)\, f_y(a,b)\nonumber \\
+&  + \frac{1}{2!}\left[ (x-a)^2\,f_{xx}(a,b) + 2(x-a)(y-b)\,f_{xy}(a,b) +(y-b)^2\, f_{yy}(a,b) \right]
+\end{align}
+$$ (eq:taylor)
+where $f_{xy} = \frac{ \partial^2 f}{\partial x \partial y }$, etc. You should be able to show
+that if you expand $f=p=\rho R_d T$ about the point 
+$p_0(z) = \rho_0(z) R_d T_0(z)$ where $p_0,\ \rho_0,\ T_0$ are the pressure,
+density and temperature at height $z$ for a hydrostatic atmosphere.  Using {eq}`eq:taylor` with $a=\rho_0$ and $b=T_0$ you should be able to show that
+to second order: 
+
+
+$$
+\begin{align}
+f(x,y) & \approx f(a,b) +(x-a)\, f_x(a,b) +(y-b)\, f_y(a,b)\nonumber \\
+&  + \frac{1}{2!}\left[ (x-a)^2\,f_{xx}(a,b) + 2(x-a)(y-b)\,f_{xy}(a,b) +(y-b)^2\, f_{yy}(a,b) \right]
+\end{align}
+$$ (eq:taylor2)
+
+
+Note that $\Delta p$, $\Delta T$, and $\Delta \rho$ are all functions of
+(t,x,y,z).
+
+If the atmosphere is close to hydrostatic balance, then we can expect the $\Delta$ differences to be small if $p_0$ is the hydrostatic pressure, and we can drop the
+$\frac{ \Delta T \Delta \rho}{T_0 \rho_0}$ term and write
+
+$$
+\frac{\Delta p }{p_0}
 $$
 
-+++
+We will show later that away from active convection we also can expect $\frac{\Delta p }{p_0}$ to be small.
+
+
+
+## Todo
+
 
 1.  find the index of the vertical level that is closes to 500 m
-2.   For that level calculate all of the quantities in (1).  How much larger are rthe temperature and density terms that the pressure term?
+2.   For that level calculate all of the quantities in {eq}`eq:full`.  How much larger are rthe temperature and density terms that the pressure term?
 
 ```{code-cell} ipython3
 
