@@ -101,4 +101,11 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Work through the {ref}`xarray_intro` notebook
 - Tomorrow we'll use xarray to do the {ref}`tropical_clouds` notebook
 
+## Lecture 9, week 3, Friday
+
+- Do the {ref}`tropical_clouds` worksheet
+- For Tuesday read the Lohamnn text Section 2.4 on phase transitions -- this covers the same material as Thompkins but in more detail
+- For Tuesday finish Assignment 2 -- will release the hand in notebook this weekend
+
+
 

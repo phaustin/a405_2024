@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -47,6 +47,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -240,25 +241,16 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="bd-article-container">
               
               <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
     </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
+    <div class="header-article__right">
 
 
 <div class="dropdown dropdown-download-buttons">
@@ -304,9 +296,6 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
 </div>
 
-
-
-
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -319,36 +308,11 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 
 </button>
-
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
-  
-</div>
-</div>
+</div></div>
               
               
 
@@ -386,6 +350,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-8-week-3-thursday">Lecture 8, week 3, Thursday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-week-3-friday">Lecture 9, week 3, Friday</a></li>
 </ul>
             </nav>
         </div>
@@ -425,8 +390,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-660fa9fb-c8b2-43e8-98fe-04a4b1fe8bea">
-<span class="eqno">(1)<a class="headerlink" href="#equation-660fa9fb-c8b2-43e8-98fe-04a4b1fe8bea" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-600ebaef-6dde-4e8b-8ce4-7ad8aa330d89">
+<span class="eqno">(1)<a class="headerlink" href="#equation-600ebaef-6dde-4e8b-8ce4-7ad8aa330d89" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -435,8 +400,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d609ca6-ac63-4f76-abf3-10edbc079195">
-<span class="eqno">(2)<a class="headerlink" href="#equation-5d609ca6-ac63-4f76-abf3-10edbc079195" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7bd70b71-2c5a-4d8e-ae9b-9e4a1b0e6011">
+<span class="eqno">(2)<a class="headerlink" href="#equation-7bd70b71-2c5a-4d8e-ae9b-9e4a1b0e6011" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -445,8 +410,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b94e28c5-78cf-46aa-a5f2-96978d3d05c5">
-<span class="eqno">(3)<a class="headerlink" href="#equation-b94e28c5-78cf-46aa-a5f2-96978d3d05c5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-23dd066e-2623-457c-a49f-7754522d765f">
+<span class="eqno">(3)<a class="headerlink" href="#equation-23dd066e-2623-457c-a49f-7754522d765f" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -522,6 +487,14 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <ul class="simple">
 <li><p>Work through the <a class="reference internal" href="notebooks/xarray-intro.html#xarray-intro"><span class="std std-ref">Introduction to Xarray</span></a> notebook</p></li>
 <li><p>Tomorrow we’ll use xarray to do the <a class="reference internal" href="notebooks/tropical_clouds.html#tropical-clouds"><span class="std std-ref">Week 3 worksheet: Tropical clouds</span></a> notebook</p></li>
+</ul>
+</section>
+<section id="lecture-9-week-3-friday">
+<h2>Lecture 9, week 3, Friday<a class="headerlink" href="#lecture-9-week-3-friday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Do the <a class="reference internal" href="notebooks/tropical_clouds.html#tropical-clouds"><span class="std std-ref">Week 3 worksheet: Tropical clouds</span></a> worksheet</p></li>
+<li><p>For Tuesday read the Lohamnn text Section 2.4 on phase transitions – this covers the same material as Thompkins but in more detail</p></li>
+<li><p>For Tuesday finish Assignment 2 – will release the hand in notebook this weekend</p></li>
 </ul>
 </section>
 </section>
@@ -613,6 +586,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-8-week-3-thursday">Lecture 8, week 3, Thursday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-week-3-friday">Lecture 9, week 3, Friday</a></li>
 </ul>
   </nav></div>
 
@@ -637,7 +611,7 @@ By Philip Austin
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
