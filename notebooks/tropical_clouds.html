@@ -339,7 +339,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -355,6 +357,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo">todo</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -921,6 +931,19 @@ Data variables:
 </div>
 </div>
 </div>
+<section id="todo">
+<h2>todo<a class="headerlink" href="#todo" title="Permalink to this heading">#</a></h2>
+<p>Thompson uses a Taylor series to expand the equation of state</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{\rho^\prime}{\overline{\rho}}  = \frac{p^\prime}{\overline{p}}
+  - \frac{T^\prime}{\overline{T}}
+\]</div>
+<ol class="arabic simple">
+<li><p>find the index of the vertical level that is closes to 500 m</p></li>
+<li><p>For that level calculate all of the quantities in (1).  How much larger are rthe temperature and density terms that the pressure term?</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -969,7 +992,20 @@ Data variables:
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo">todo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

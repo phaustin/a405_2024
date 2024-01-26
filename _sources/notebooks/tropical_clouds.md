@@ -45,6 +45,22 @@ the_ds
 the_ds['p'].data
 ```
 
+## todo
+
++++
+
+Thompson uses a Taylor series to expand the equation of state
+
+$$
+  \frac{\rho^\prime}{\overline{\rho}}  = \frac{p^\prime}{\overline{p}}
+  - \frac{T^\prime}{\overline{T}}
+$$
+
++++
+
+1.  find the index of the vertical level that is closes to 500 m
+2.   For that level calculate all of the quantities in (1).  How much larger are rthe temperature and density terms that the pressure term?
+
 ```{code-cell} ipython3
 
 ```

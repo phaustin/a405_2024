@@ -99,6 +99,6 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 ## Lecture 8, week 3, Thursday
 
 - Work through the {ref}`xarray_intro` notebook
-- Tomorrow we'll use xarray to do the `tropical_clouds` notebook
+- Tomorrow we'll use xarray to do the {ref}`tropical_clouds` notebook
 
 
