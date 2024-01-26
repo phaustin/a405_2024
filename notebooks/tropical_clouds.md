@@ -73,6 +73,7 @@ f(x,y) & \approx f(a,b) +(x-a)\, f_x(a,b) +(y-b)\, f_y(a,b)\nonumber \\
 \end{align}
 $$ (eq:taylor2)
 
+where we have {eq}`eq:taylor2`
 
 Note that $\Delta p$, $\Delta T$, and $\Delta \rho$ are all functions of
 (t,x,y,z).
@@ -92,7 +93,7 @@ We will show later that away from active convection we also can expect $\frac{\D
 
 
 1.  find the index of the vertical level that is closes to 500 m
-2.   For that level calculate all of the quantities in {eq}`eq:full`.  How much larger are rthe temperature and density terms that the pressure term?
+2.   For that level calculate all of the quantities in {eq}`eq:taylor`.  How much larger are rthe temperature and density terms that the pressure term?
 
 ```{code-cell} ipython3
 
