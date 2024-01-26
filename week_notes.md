@@ -96,4 +96,9 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Read my [buoyancy notes](https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&dl=0)
 - Work on Assignment 2
 
+## Lecture 8, week 3, Thursday
+
+- Work through the {ref}`xarray_intro` notebook
+- Tomorrow we'll use xarray to do the `tropical_clufs` notebook
+
 
