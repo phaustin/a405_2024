@@ -67,10 +67,7 @@ to second order:
 
 
 $$
-\begin{align}
-f(x,y) & \approx f(a,b) +(x-a)\, f_x(a,b) +(y-b)\, f_y(a,b)\nonumber \\
-&  + \frac{1}{2!}\left[ (x-a)^2\,f_{xx}(a,b) + 2(x-a)(y-b)\,f_{xy}(a,b) +(y-b)^2\, f_{yy}(a,b) \right]
-\end{align}
+\frac{\Delta p}{p_0} = \frac{\Delta T}{T}
 $$ (eq:taylor2)
 
 where we have {eq}`eq:taylor2`
