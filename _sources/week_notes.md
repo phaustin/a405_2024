@@ -117,5 +117,8 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Read for Thursday
 
   - My notes on the [Clausius Clapyron equation](https://www.dropbox.com/scl/fi/o7d278acumkgmwe4y6qlu/clausius.pdf?rlkey=ktd5fvdwaz7ishuxozwmf6kwa&dl=0) 
-  - From Shroeder's textbook:  3 pages on [free energy](https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&dl=0)
+  - From Schroeder's textbook:  3 pages on [free energy](https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&dl=0)
+  - Finish the [rootfind noteboo](https://www.dropbox.com/scl/fi/4y602g5lnw5mt4r9u5yx4/rootfind.ipynb?rlkey=46wu08wkxjnydozvolzbs7hz1&dl=0)
+  - Read the [virtual temperature notes](https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&dl=0)
+  
   
