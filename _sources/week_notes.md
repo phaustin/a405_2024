@@ -108,7 +108,7 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - For Tuesday finish Assignment 2 -- will release the hand in notebook this weekend
 
 
-## Lecture 10, week 4, Monday
+## Lecture 10, week 4, Tuesday
 
 - Background/detail on free energy, thermodynamic potentials and the Clausius-Clapyron equation  (Lohmann Section 2.4, Thompson pp. 25-27.
 
