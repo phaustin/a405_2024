@@ -16,6 +16,8 @@ dependencies:
   - git
   - jupyterlab
   - jupytext
+  - jupyter-book
+  - ghp-import
   - pythia-datasets
   - eofs
   - intake-esm
