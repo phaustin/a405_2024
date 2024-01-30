@@ -108,4 +108,14 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - For Tuesday finish Assignment 2 -- will release the hand in notebook this weekend
 
 
+## Lecture 10, week 4, Monday
 
+- Background/detail on free energy, thermodynamic potentials and the Clausius-Clapyron equation  (Lohmann Section 2.4, Thompson pp. 25-27.
+
+- Go over my notes on [Maxwell relationships](https://www.dropbox.com/scl/fi/puuzbbzszhue73nrew726/maxwell.pdf?rlkey=fntdkgs90o4otc3s6lme85mz3&dl=0)
+
+- Read for Thursday
+
+  - My notes on the [Clausius Clapyron equation](https://www.dropbox.com/scl/fi/o7d278acumkgmwe4y6qlu/clausius.pdf?rlkey=ktd5fvdwaz7ishuxozwmf6kwa&dl=0) 
+  - From Shroeder's textbook:  3 pages on [free energy](https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&dl=0)
+  
