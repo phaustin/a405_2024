@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Week 3 worksheet: Using a rootfinder to solve implicit equations &#8212; ATSC 405 2024</title>
+    <title>Week 4 worksheet: Using a rootfinder to solve implicit equations &#8212; ATSC 405 2024</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/worksheets/rootfind';</script>
-    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/worksheets/rootfind.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/worksheets/rootfind_week4';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/worksheets/rootfind_week4.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Week 3 worksheet: Tropical clouds" href="../tropical_clouds.html" />
@@ -200,7 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 3 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/4y602g5lnw5mt4r9u5yx4/rootfind.ipynb?rlkey=46wu08wkxjnydozvolzbs7hz1&amp;dl=0">rootfind.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
@@ -268,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/worksheets/rootfind.md" target="_blank"
+      <li><a href="../../_sources/notebooks/worksheets/rootfind_week4.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +352,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Week 3 worksheet:  Using a rootfinder to solve implicit equations</h1>
+    <h1>Week 4 worksheet:  Using a rootfinder to solve implicit equations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -363,7 +363,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cell-below-shows-how-to-use-a-rootfinder-to-solve-the-equation">The cell below shows how to use a rootfinder to solve the equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-part-of-this-weeks-assignment">Problem (part of this weeks assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-part-of-this-weeks-assignment">Problem (part of this weeks assignment)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-code-here">Test your code here</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3">Part 3</a></li>
 </ul>
             </nav>
         </div>
@@ -375,8 +380,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="week-3-worksheet-using-a-rootfinder-to-solve-implicit-equations">
-<h1>Week 3 worksheet:  Using a rootfinder to solve implicit equations<a class="headerlink" href="#week-3-worksheet-using-a-rootfinder-to-solve-implicit-equations" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="week-4-worksheet-using-a-rootfinder-to-solve-implicit-equations">
+<span id="week4-rootfinder"></span><h1>Week 4 worksheet:  Using a rootfinder to solve implicit equations<a class="headerlink" href="#week-4-worksheet-using-a-rootfinder-to-solve-implicit-equations" title="Permalink to this heading">#</a></h1>
 <p>We’ll need this to solve equations like finding the lifting condensation level where the dewpoint=temperature</p>
 <p>Documentation is here <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.brentq.html">scipy.optimize.brentq</a></p>
 <section id="the-cell-below-shows-how-to-use-a-rootfinder-to-solve-the-equation">
@@ -422,7 +427,7 @@ cos(x) - 0.75 = 0
 </div>
 </section>
 <section id="problem-part-of-this-weeks-assignment">
-<h2>Problem (part of this weeks assignment<a class="headerlink" href="#problem-part-of-this-weeks-assignment" title="Permalink to this heading">#</a></h2>
+<h2>Problem (part of this weeks assignment)<a class="headerlink" href="#problem-part-of-this-weeks-assignment" title="Permalink to this heading">#</a></h2>
 <p>Given an the Clausius Clapyron equation and a saturation vapor pressure in <span class="math notranslate nohighlight">\(es\)</span> in Pa, find the dewpoint temperature in Kelvin, i.e. the teperature where:</p>
 <p>es = find_esat(Tdewpoint)</p>
 <div class="cell docutils container">
@@ -435,6 +440,82 @@ cos(x) - 0.75 = 0
 </div>
 </div>
 </div>
+<section id="test-your-code-here">
+<h3>Test your code here<a class="headerlink" href="#test-your-code-here" title="Permalink to this heading">#</a></h3>
+<p>Use <a class="reference external" href="https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.find_esat">find_esat</a> from the a405 thermo library to check that your dewpoint temperature produces the correct vapor press.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a405.thermo</span> <span class="kn">import</span> <span class="n">thermlib</span> <span class="k">as</span> <span class="n">tl</span>
+<span class="n">help</span><span class="p">(</span><span class="n">tl</span><span class="o">.</span><span class="n">find_esat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function find_esat in module a405.thermo.thermlib:
+
+find_esat(temp)
+    Calculates the saturation water vapor pressure over a flat
+    surface of water at temperature &#39;temp&#39;.
+    
+    Parameters
+    ----------
+    
+    temp : float or array_like
+           Temperature of parcel (K).
+    
+    Returns
+    -------
+    
+    esatOut : float or list
+        Saturation water vapour pressure (Pa).
+    
+    Examples
+    --------
+    
+    &gt;&gt;&gt; find_esat(300.)
+    3534.5196668891358
+    &gt;&gt;&gt; find_esat([300., 310.])
+    array([ 3534.5197,  6235.5322])
+    
+    References
+    ----------
+    Emanuel 4.4.14 p. 117
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tl</span><span class="o">.</span><span class="n">find_esat</span><span class="p">(</span><span class="mi">270</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>484.8517674917865
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2">
+<h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this heading">#</a></h2>
+<p>Adapt your function so it finds the dewpoint given <span class="math notranslate nohighlight">\(r_s\)</span>, the saturation mixing ratio defined
+in Thompkins equation 2.21</p>
+<ul>
+<li><p>That is, find T such that</p>
+<div class="math notranslate nohighlight">
+\[
+    r_s(T,p) = \frac{e_s}{p - e_s}
+  \]</div>
+<p>You can use Thompkins 2.21 to check your answer, or look at my <a class="reference external" href="https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.find_rsat">find_rsat</a></p>
+</li>
+</ul>
+</section>
+<section id="part-3">
+<h2>Part 3<a class="headerlink" href="#part-3" title="Permalink to this heading">#</a></h2>
+<p>Use the metpy skewT library to draw two points on a skewT diagram with the same <span class="math notranslate nohighlight">\(r_s\)</span> value at different pressure levels.   A line connecting the two points should run parallel to the constant <span class="math notranslate nohighlight">\(r_d\)</span> lines that
+are on the diagram for my <a class="reference external" href="https://phaustin.github.io/a405_2024/notebooks/week2/skew_coords_solution.html#if-you-have-extra-time">metpy example</a>.  Use this to identify the values for the constant mixing ratio lines on the plot</p>
 </section>
 </section>
 
@@ -494,7 +575,12 @@ cos(x) - 0.75 = 0
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cell-below-shows-how-to-use-a-rootfinder-to-solve-the-equation">The cell below shows how to use a rootfinder to solve the equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-part-of-this-weeks-assignment">Problem (part of this weeks assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-part-of-this-weeks-assignment">Problem (part of this weeks assignment)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-code-here">Test your code here</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3">Part 3</a></li>
 </ul>
   </nav></div>
 

@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&amp;dl=0">adiabatic_box_handin.in -- download link for ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignments/hydrostatic_2024_handin.html">Assign 2: Scale heights for typical atmospheric soundings</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
@@ -200,8 +201,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/rootfind.html">Week 3 worksheet:  Using a rootfinder to solve implicit equations</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/4y602g5lnw5mt4r9u5yx4/rootfind.ipynb?rlkey=46wu08wkxjnydozvolzbs7hz1&amp;dl=0">rootfind.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -387,6 +388,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-8-week-3-thursday">Lecture 8, week 3, Thursday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-week-3-friday">Lecture 9, week 3, Friday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-week-4-tuesday">Lecture 10, week 4, Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-11-week-4-thursday">Lecture 11, week 4, Thursday</a></li>
 </ul>
             </nav>
         </div>
@@ -426,8 +428,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c183107-d318-495f-b9e0-0491d298cf8d">
-<span class="eqno">(1)<a class="headerlink" href="#equation-3c183107-d318-495f-b9e0-0491d298cf8d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe297f70-9d90-4eac-9e38-90b30da86f43">
+<span class="eqno">(1)<a class="headerlink" href="#equation-fe297f70-9d90-4eac-9e38-90b30da86f43" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -436,8 +438,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-852c0c27-dc51-4d19-8d39-0c8a20fe7ecd">
-<span class="eqno">(2)<a class="headerlink" href="#equation-852c0c27-dc51-4d19-8d39-0c8a20fe7ecd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7a6f359a-a13b-4203-bc22-64c4a97a92c7">
+<span class="eqno">(2)<a class="headerlink" href="#equation-7a6f359a-a13b-4203-bc22-64c4a97a92c7" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -446,8 +448,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-95456523-5d96-4a60-97fa-d0c1d36b52e7">
-<span class="eqno">(3)<a class="headerlink" href="#equation-95456523-5d96-4a60-97fa-d0c1d36b52e7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ce144706-8574-4e10-884f-9485628b164d">
+<span class="eqno">(3)<a class="headerlink" href="#equation-ce144706-8574-4e10-884f-9485628b164d" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -548,6 +550,14 @@ Connect weighted averages and scale heights with the <a class="reference externa
 </li>
 </ul>
 </section>
+<section id="lecture-11-week-4-thursday">
+<h2>Lecture 11, week 4, Thursday<a class="headerlink" href="#lecture-11-week-4-thursday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Download the new version of the <span class="xref std std-ref">week4_rootfind</span>  notebook and work on parts 2 and 3</p></li>
+<li><p>For Friday: Read the rest of Thompkins Chapter 2</p></li>
+<li><p>For Tuesday:  Read my <a class="reference external" href="https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&amp;dl=0">moist static energy notes</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -639,6 +649,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-8-week-3-thursday">Lecture 8, week 3, Thursday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-week-3-friday">Lecture 9, week 3, Friday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-week-4-tuesday">Lecture 10, week 4, Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-11-week-4-thursday">Lecture 11, week 4, Thursday</a></li>
 </ul>
   </nav></div>
 

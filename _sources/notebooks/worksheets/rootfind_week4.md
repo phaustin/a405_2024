@@ -1,5 +1,6 @@
 ---
 jupytext:
+  formats: ipynb,md:myst
   text_representation:
     extension: .md
     format_name: myst
@@ -11,7 +12,8 @@ kernelspec:
   name: python3
 ---
 
-# Week 3 worksheet:  Using a rootfinder to solve implicit equations
+(week4_rootfinder)=
+# Week 4 worksheet:  Using a rootfinder to solve implicit equations
 
 +++
 
@@ -63,7 +65,7 @@ yvals=np.cos(xvals)
 ax.plot(xvals,yvals,'ro',markersize=20);
 ```
 
-## Problem (part of this weeks assignment
+## Problem (part of this weeks assignment)
 
 Given an the Clausius Clapyron equation and a saturation vapor pressure in $es$ in Pa, find the dewpoint temperature in Kelvin, i.e. the teperature where:
 
@@ -74,4 +76,45 @@ def find_esat(temp):
     Tc = temp - 273.15
     esatOut = 611.2 * np.exp(17.67 * Tc / (Tc + 243.5))
     return esatOut
+```
+
+### Test your code here
+
+Use [find_esat](https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.find_esat) from the a405 thermo library to check that your dewpoint temperature produces the correct vapor press.
+
+```{code-cell} ipython3
+from a405.thermo import thermlib as tl
+help(tl.find_esat)
+```
+
+```{code-cell} ipython3
+tl.find_esat(270)
+```
+
+## Part 2
+
++++
+
+Adapt your function so it finds the dewpoint given $r_s$, the saturation mixing ratio defined
+in Thompkins equation 2.21
+
+- That is, find T such that
+
+  $$
+    r_s(T,p) = \frac{e_s}{p - e_s}
+  $$
+
+  You can use Thompkins 2.21 to check your answer, or look at my [find_rsat](https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.find_rsat)
+
++++
+
+## Part 3
+
++++
+
+Use the metpy skewT library to draw two points on a skewT diagram with the same $r_s$ value at different pressure levels.   A line connecting the two points should run parallel to the constant $r_d$ lines that
+are on the diagram for my [metpy example](https://phaustin.github.io/a405_2024/notebooks/week2/skew_coords_solution.html#if-you-have-extra-time).  Use this to identify the values for the constant mixing ratio lines on the plot
+
+```{code-cell} ipython3
+
 ```

@@ -121,4 +121,12 @@ Read the rest of Thompkins Chapter 1 on bouyancy
   - Finish the [rootfind noteboo](https://www.dropbox.com/scl/fi/4y602g5lnw5mt4r9u5yx4/rootfind.ipynb?rlkey=46wu08wkxjnydozvolzbs7hz1&dl=0)
   - Read the [virtual temperature notes](https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&dl=0)
   
+## Lecture 11, week 4, Thursday
+
+- Download the new version of the {ref}`week4_rootfind`  notebook and work on parts 2 and 3
+
+- For Friday: Read the rest of Thompkins Chapter 2
+
+- For Tuesday:  Read my [moist static energy notes](https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&dl=0)
+
   
