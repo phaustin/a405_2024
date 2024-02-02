@@ -17,9 +17,17 @@
 
 - [2i2c hub](https://ubc-eoas.2i2c.cloud/)  -- use e211 environment for now
 
-## Python tutorials 
+## A405 python code
+
+- [A405 library documentation](https://phaustin.github.io/a405_lib/full_listing.html)
+
+(python_tutorials)=
+## Python tutorials
 
 - [Problem solving with python](https://phaustin.github.io/Problem-Solving-with-Python/)
-
+- [Python programming for data science](https://www.tomasbeuzen.com/python-programming-for-data-science/README.html)
+- [An introduction ot earch and environmental data science](https://earth-env-data-science.github.io/intro.html)
+- [Project pythia foundations](
+https://foundations.projectpythia.org/landing-page.html)
 
 

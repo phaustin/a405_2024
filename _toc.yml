@@ -39,9 +39,9 @@ parts:
     - file:  notebooks/tropical_clouds.md
     - url: https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&dl=0
       title: tropical_clouds.ipynb download
-    - file:  notebooks/worksheets/rootfind.md
-    - url:   https://www.dropbox.com/scl/fi/4y602g5lnw5mt4r9u5yx4/rootfind.ipynb?rlkey=46wu08wkxjnydozvolzbs7hz1&dl=0
-      title: rootfind.ipynb download
+    - file:  notebooks/worksheets/rootfind_week4.md
+    - url:   https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&dl=0
+      title: rootfind_week4.ipynb download
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
@@ -62,6 +62,9 @@ parts:
       title: Schroeder pp. 159-162
     - url: https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&dl=0
       title: virtural temperature notes
+    - url: https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&dl=0
+      title: Moist static energy notes
+      
       
       
       
