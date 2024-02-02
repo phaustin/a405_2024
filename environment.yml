@@ -15,6 +15,7 @@ dependencies:
   - zarr
   - git
   - jupyterlab
+  - jupyterlab-myst
   - jupytext
   - jupyter-book
   - ghp-import

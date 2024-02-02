@@ -42,6 +42,9 @@ parts:
     - file:  notebooks/worksheets/rootfind_week4.md
     - url:   https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&dl=0
       title: rootfind_week4.ipynb download
+    - file: notebooks/week4/tropical_clouds_profiles.md
+    - url: https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&dl=0
+      title: tropical_cloud_profiles.ipynb download
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
