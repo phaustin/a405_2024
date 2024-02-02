@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tropical cloud profiles &#8212; ATSC 405 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week4/tropical_clouds_profiles';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week4/tropical_clouds_profiles.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Week 4 worksheet: Using a rootfinder to solve implicit equations" href="../worksheets/rootfind_week4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ATSC 405 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    ATSC 405 syllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics check2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../learning_goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../schedule.html">Course schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_install.html">Python links</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&amp;dl=0">Thompkins text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week_notes.html">Week notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week2/hydrostat.html">Week2: Hydrostatic balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week3/derivs_and_ints.html">week3: working with numpy arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&amp;dl=0">adiabatic_box_handin.in -- download link for ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/hydrostatic_2024_handin.html">Assign 2: Scale heights for typical atmospheric soundings</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../week2/skew_coords_solution.html">Week2: Theromodynamic diagrams worksheet – solution</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&amp;dl=0">Download skew_coords_solution.ipynb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ze49m63z5gbnombcgk2gh/xarray-intro.ipynb?rlkey=sa86yjsi3l05bq8v54j6yxjtz&amp;dl=0">download xarray-intro.ipynb</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worksheets/rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tropical cloud profiles</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&amp;dl=0">Week2 - Kinetic Temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&amp;dl=0">First law of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&amp;dl=0">Entropy and potential temperature</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&amp;dl=0">Weighted averages and scale heights</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&amp;dl=0">Buoyancy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/puuzbbzszhue73nrew726/maxwell.pdf?rlkey=fntdkgs90o4otc3s6lme85mz3&amp;dl=0">Maxwell relation notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/o7d278acumkgmwe4y6qlu/clausius.pdf?rlkey=ktd5fvdwaz7ishuxozwmf6kwa&amp;dl=0">Clausius-Clapyron notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&amp;dl=0">Schroeder pp. 159-162</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&amp;dl=0">virtural temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&amp;dl=0">Moist static energy notes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/week4/tropical_clouds_profiles.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tropical cloud profiles</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-file">Reading the file</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-the-time-dimension-only-one-timestep-using-squeeze">remove the time dimension (only one timestep) using squeeze</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-liquid-water-is-in-the-domain">How much liquid water is in the domain?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-and-vapor-mixing-ratio-profiles">Temperature and vapor mixing ratio profiles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-bottom-1-km">zoom in on bottom 1 km</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-active-cloud-gridcells-at-500-meters">Find the active cloud gridcells at 500 meters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-x-y-coordinates-of-the-strongest-updrafts">find the x,y coordinates of the strongest updrafts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zip-the-y-x-arrays-together-to-get-y-x-pairs">zip the y,x arrays together to get (y,x) pairs</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tropical-cloud-profiles">
+<span id="tropical-profiles"></span><h1>Tropical cloud profiles<a class="headerlink" href="#tropical-cloud-profiles" title="Permalink to this heading">#</a></h1>
+<p>This notebook shows how to locate clouds in the tropical_subset.nc netcdf file and plot their temperature and liquid water profiles</p>
+<section id="reading-the-file">
+<h2>Reading the file<a class="headerlink" href="#reading-the-file" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">the_file</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;Dropbox/phil_files/a405/data/tropical_subset.nc&quot;</span>
+<span class="n">the_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">the_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="remove-the-time-dimension-only-one-timestep-using-squeeze">
+<h3>remove the time dimension (only one timestep) using squeeze<a class="headerlink" href="#remove-the-time-dimension-only-one-timestep-using-squeeze" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;TABS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">the_temp</span> <span class="o">=</span> <span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;TABS&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="n">the_height</span><span class="o">=</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="n">xvals</span><span class="o">=</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="n">yvals</span><span class="o">=</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">the_height</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">the_press</span><span class="o">=</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="n">the_press</span><span class="o">=</span><span class="n">the_press</span><span class="o">*</span><span class="mf">100.</span>  <span class="c1">#convert to Pa</span>
+<span class="n">wvel</span><span class="o">=</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;W&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>  <span class="c1">#m/s</span>
+<span class="n">qv</span><span class="o">=</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;QV&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>  <span class="c1">#vapor g/kg</span>
+<span class="n">ql</span><span class="o">=</span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;QN&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>  <span class="c1">#liquid  g/kg</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ql</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the_ds[&#39;TABS&#39;].shape=(1, 112, 110, 100)
+the_height.shape=(112,)
+ql.shape=(112, 110, 100)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-much-liquid-water-is-in-the-domain">
+<h3>How much liquid water is in the domain?<a class="headerlink" href="#how-much-liquid-water-is-in-the-domain" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">out</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">ql</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;histogram of cloud lwc (g/kg)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/fcae3d07de4e5d8cdad2f3cb10db0701c738954d39b8b82278e3e358f0863ac9.png" src="../../_images/fcae3d07de4e5d8cdad2f3cb10db0701c738954d39b8b82278e3e358f0863ac9.png" />
+</div>
+</div>
+</section>
+<section id="temperature-and-vapor-mixing-ratio-profiles">
+<h3>Temperature and vapor mixing ratio profiles<a class="headerlink" href="#temperature-and-vapor-mixing-ratio-profiles" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+<span class="n">meter2km</span><span class="o">=</span><span class="mf">1.e-3</span>
+<span class="n">g2kg</span> <span class="o">=</span> <span class="mf">1.e-3</span>
+<span class="c1">#</span>
+<span class="c1"># three random columns</span>
+<span class="c1">#</span>
+<span class="n">random_xy</span><span class="o">=</span><span class="p">[(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">80</span><span class="p">,</span><span class="mi">40</span><span class="p">),(</span><span class="mi">25</span><span class="p">,</span><span class="mi">75</span><span class="p">)]</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">random_xy</span><span class="p">:</span>
+    <span class="n">temp_profile</span><span class="o">=</span><span class="n">the_temp</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span>
+    <span class="n">qv_profile</span><span class="o">=</span><span class="n">qv</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span>
+    <span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temp_profile</span><span class="p">,</span><span class="n">the_height</span><span class="o">*</span><span class="n">meter2km</span><span class="p">)</span> 
+    <span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qv_profile</span><span class="p">,</span><span class="n">the_height</span><span class="o">*</span><span class="n">meter2km</span><span class="p">)</span> 
+<span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;temperature (K)&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;height (km)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;temperature (K)&#39;</span><span class="p">)</span>
+<span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;vapor mixing ratio (g/kg)&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;height (km)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;vapor mixing ratio&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/91f63fc13155c92553d17a72c5b473a5396a39f7e5bb6d97b3143f31f35b9547.png" src="../../_images/91f63fc13155c92553d17a72c5b473a5396a39f7e5bb6d97b3143f31f35b9547.png" />
+</div>
+</div>
+</section>
+<section id="zoom-in-on-bottom-1-km">
+<h3>zoom in on bottom 1 km<a class="headerlink" href="#zoom-in-on-bottom-1-km" title="Permalink to this heading">#</a></h3>
+<p>Note the change in the temperature and water vapor profiles near the surface – this is atmospheric boundary layer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># plot 3 arbitrary columns to compare</span>
+<span class="c1">#</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">meter2km</span><span class="o">=</span><span class="mf">1.e-3</span>
+<span class="n">lv</span><span class="o">=</span><span class="mf">2.5e6</span>
+<span class="n">g</span><span class="o">=</span><span class="mf">9.8</span>
+<span class="n">cpd</span><span class="o">=</span><span class="mf">1004.</span>
+<span class="n">random_xy</span><span class="o">=</span><span class="p">[(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">80</span><span class="p">,</span><span class="mi">40</span><span class="p">),(</span><span class="mi">25</span><span class="p">,</span><span class="mi">75</span><span class="p">)]</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">random_xy</span><span class="p">:</span>
+    <span class="n">temp_profile</span><span class="o">=</span><span class="n">the_temp</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span>
+    <span class="n">qv_profile</span><span class="o">=</span><span class="n">qv</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span>
+    <span class="n">hm_profile</span> <span class="o">=</span> <span class="n">cpd</span><span class="o">*</span><span class="n">temp_profile</span> <span class="o">+</span> <span class="n">lv</span><span class="o">*</span><span class="n">qv_profile</span><span class="o">*</span><span class="n">g2kg</span> <span class="o">+</span> <span class="n">g</span><span class="o">*</span><span class="n">the_height</span>
+    <span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temp_profile</span><span class="p">,</span><span class="n">the_height</span><span class="o">*</span><span class="n">meter2km</span><span class="p">)</span> 
+    <span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qv_profile</span><span class="p">,</span><span class="n">the_height</span><span class="o">*</span><span class="n">meter2km</span><span class="p">)</span> 
+<span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;temperature (K)&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;height (km)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;temperature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">290</span><span class="p">,</span><span class="mi">300</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">18</span><span class="p">))</span>
+<span class="n">out</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;vapor mixing ratio (g/kg)&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;height (km)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;water vapor&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">the_ax</span> <span class="ow">in</span> <span class="n">ax</span><span class="p">:</span>
+    <span class="n">the_ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.7</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/b33762a907392b00a287392de8c9168e336fdf4ee381fb321f99c47a4cb90a45.png" src="../../_images/b33762a907392b00a287392de8c9168e336fdf4ee381fb321f99c47a4cb90a45.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="find-the-active-cloud-gridcells-at-500-meters">
+<h2>Find the active cloud gridcells at 500 meters<a class="headerlink" href="#find-the-active-cloud-gridcells-at-500-meters" title="Permalink to this heading">#</a></h2>
+<p>Locate all grid cells near 500 meters with liquid water and find their
+vertical velocity.  We want to look at the most bouyant gridcells.</p>
+<p>Use searchsorted to find  that the index closest to 500 meters is 10, which puts the height at 525 meters</p>
+<p>Use ravel to flatten the x,y grid to one dimension</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_500</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">the_height</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index_500</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">the_height</span><span class="p">[</span><span class="n">index_500</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">hit_cloud_cells_500</span>  <span class="o">=</span> <span class="p">(</span><span class="n">ql</span><span class="p">[</span><span class="n">index_500</span><span class="p">,:,:]</span> <span class="o">&gt;</span> <span class="mf">0.</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">wvel_cloud</span> <span class="o">=</span> <span class="n">wvel</span><span class="p">[</span><span class="n">index_500</span><span class="p">,:,:]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">wvel_cloud</span> <span class="o">=</span> <span class="n">wvel_cloud</span><span class="p">[</span><span class="n">hit_cloud_cells_500</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">wvel_cloud</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;vertical velocity (m/s)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>index_500=10
+the_height[index_500].data=array(525., dtype=float32)
+</pre></div>
+</div>
+<img alt="../../_images/ad84a66b9b7663b4648a20c796666ac1344238b3a1e705eae20d052e5e0ab89e.png" src="../../_images/ad84a66b9b7663b4648a20c796666ac1344238b3a1e705eae20d052e5e0ab89e.png" />
+</div>
+</div>
+<section id="find-the-x-y-coordinates-of-the-strongest-updrafts">
+<h3>find the x,y coordinates of the strongest updrafts<a class="headerlink" href="#find-the-x-y-coordinates-of-the-strongest-updrafts" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">ql</span><span class="p">[</span><span class="n">index_500</span><span class="p">,:,:]</span> <span class="o">&gt;</span> <span class="mf">0.</span><span class="p">,</span><span class="n">wvel</span><span class="p">[</span><span class="n">index_500</span><span class="p">,:,:]</span><span class="o">&gt;</span><span class="mf">1.5</span><span class="p">))</span>
+<span class="n">out</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([41, 50, 55, 76, 93]), array([56, 84, 32, 56, 55]))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="zip-the-y-x-arrays-together-to-get-y-x-pairs">
+<h3>zip the y,x arrays together to get (y,x) pairs<a class="headerlink" href="#zip-the-y-x-arrays-together-to-get-y-x-pairs" title="Permalink to this heading">#</a></h3>
+<p>We have two separate vectors, out[0] (y values) and out[1] (xvalues)</p>
+<p>Below I use the zip itterator to zipper them together, and the ‘*’ operator (see <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-use-args-and-kwargs-in-python-3">this article</a> for list and keyword expansion.)</p>
+<p>The problem with iterators is that you can only use them once – see <a class="reference external" href="https://stackoverflow.com/questions/25653996/what-is-the-difference-between-list-and-iterator-in-python#:~:text=A%20list%20is%20a%20data,time%2C%20via%20the%20next%20function.&amp;text=One%20way%20to%20see%20the,iterators%20from%20a%20single%20list.&amp;text=iter%20returns%20an%20iterator.">this stack overflow answer</a>  Iterators are actually functions, not data structures.  So I “drain the interator” by converting it into a list in case I might need to use it again.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">updraft_list</span> <span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">out</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">y</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="n">updraft_list</span><span class="p">:</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">the_temp</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">],</span><span class="n">the_height</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qv</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">],</span><span class="n">the_height</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wvel</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">],</span><span class="n">the_height</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ql</span><span class="p">[:,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">],</span><span class="n">the_height</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">290</span><span class="p">,</span><span class="mi">300</span><span class="p">),</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;TABS (K)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;temperature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">18</span><span class="p">),</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;qv (g/kg)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;vapor mixing ratio&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;wvel (m/s)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;vertical velocity&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">.6</span><span class="p">),</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;ql (g/kg)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;liquid water content&#39;</span><span class="p">)</span>
+<span class="n">out</span><span class="o">=</span><span class="p">[</span><span class="n">the_ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span> <span class="k">for</span> <span class="n">the_ax</span> <span class="ow">in</span> <span class="n">ax</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/da2388e10fe4b593f43251cd364fca42875a98491b9e2012585f0710d48e0328.png" src="../../_images/da2388e10fe4b593f43251cd364fca42875a98491b9e2012585f0710d48e0328.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/week4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../worksheets/rootfind_week4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Week 4 worksheet:  Using a rootfinder to solve implicit equations</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-file">Reading the file</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-the-time-dimension-only-one-timestep-using-squeeze">remove the time dimension (only one timestep) using squeeze</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-liquid-water-is-in-the-domain">How much liquid water is in the domain?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-and-vapor-mixing-ratio-profiles">Temperature and vapor mixing ratio profiles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-bottom-1-km">zoom in on bottom 1 km</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-active-cloud-gridcells-at-500-meters">Find the active cloud gridcells at 500 meters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-x-y-coordinates-of-the-strongest-updrafts">find the x,y coordinates of the strongest updrafts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zip-the-y-x-arrays-together-to-get-y-x-pairs">zip the y,x arrays together to get (y,x) pairs</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Philip Austin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
