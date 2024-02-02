@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-(week4_rootfinder)=
+(week4_rootfind)=
 # Week 4 worksheet:  Using a rootfinder to solve implicit equations
 
 +++

@@ -124,11 +124,8 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 ## Lecture 11, week 4, Thursday
 
 - Three new {ref}`python_tutorials`
-
 - Download the new version of the {ref}`week4_rootfind`  notebook and work on parts 2 and 3
-
 - For Friday: Read the rest of Thompkins Chapter 2
-
 - For Tuesday:  Read my [moist static energy notes](https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&dl=0)
 
   
