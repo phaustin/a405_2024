@@ -45,6 +45,9 @@ parts:
     - file: notebooks/week4/tropical_clouds_profiles.md
     - url: https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&dl=0
       title: tropical_cloud_profiles.ipynb download
+    - file:  notebooks/week5/moist_adiabats.md
+    - url: https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&dl=0
+      title: Moist adiabat notebook ipynb download
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
@@ -67,7 +70,8 @@ parts:
       title: virtural temperature notes
     - url: https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&dl=0
       title: Moist static energy notes
-      
+    - url: https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&dl=0
+      title: carnot cycle notes
       
       
       

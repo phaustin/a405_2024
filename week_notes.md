@@ -140,18 +140,36 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 
   - Emphasis 
   
-    - How we get Equations 38 and 40 for the moist and liquid static energies:  
+    - How we get Equations 39 and 41 for the moist and liquid static energies:  
   
         $$
         \begin{align}
-        s_v &= c_p T + l_v r_s + gz \\
+        s_v &= c_p T + l_v r_v + gz \\
         s_l & = c_p T - l_v r_l + gz 
         \end{align}
         $$
     
-    - How we get Equation 53 and 54  for the equivalent potential temperature and liquid water potential temperature
+    - How we get Equation 54 and 55  for the equivalent potential temperature and liquid water potential temperature
     
        $$
-       
+        \begin{align}
+         \theta_e &= \theta \exp \left ( \frac{l_v r_{sat}}{c_p T} \right )\\
+         \theta_l &= \theta \exp \left ( - \frac{l_v r_l}{c_p T} \right )
+        \end{align}
        $$
   
+    - Note that $s_v$, $s_l$, $\theta_v$ and $theta_l$ all label approximately label the same moist adiabat on a tephigram, because they are all approximately conserved for adiabatic ascent and descent
+    
+* Tephigram review
+
+  - How to find the lifting condensation level, the level of free convection, and the moist adiabat through cloudbase.  The demo notebook:  {ref}`moist_adiabats`
+
+  - How to use "Normand's construction"  (Thompkins Figure 2.19) to find the wet bulb temperature
+
+- For Thursday:
+
+  - Read my notes on the [Carnot cycle](https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&dl=0)  (this expands on Section 2.2.4 in the Lohmann et al. textbook)
+  
+  - Finish the {ref}`week4_rootfind` which will be due Friday midnight
+  
+- Next week:  On Friday we'll start working on mid-term problems, which will be the last assignment before break
