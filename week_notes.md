@@ -134,7 +134,24 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Introduce the {ref}`tropical_profiles` notebook
 - For Tuesday -- Read my moist static energy notes
 
+## Lecture 13, week 5, Tuesday
 
+* Go over my [moist static energy notes](https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&dl=0) 
 
-
+  - Emphasis 
+  
+    - How we get Equations 38 and 40 for the moist and liquid static energies:  
+  
+        $$
+        \begin{align}
+        s_v &= c_p T + l_v r_s + gz \\
+        s_l & = c_p T - l_v r_l + gz 
+        \end{align}
+        $$
+    
+    - How we get Equation 53 and 54  for the equivalent potential temperature and liquid water potential temperature
+    
+       $$
+       
+       $$
   
