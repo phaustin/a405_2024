@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+
 (assign2_hydro)=
 # Assign 2: Scale heights for typical atmospheric soundings
 
@@ -64,7 +65,7 @@ Your **figures** will be graded by hand using the `.pdf` we request in the next 
 
 +++
 
-### 1. Getting a sounding
+## 1. Getting a sounding
 
 In the cell below, change the region, year, month and station to get a unique sounding for analysis (i.e. I'd like to spread out the soundings among regions and seasons).  The url for the Wyoming page is:  [https://weather.uwyo.edu/upperair/sounding.html](https://weather.uwyo.edu/upperair/sounding.html)
 
@@ -105,7 +106,7 @@ height_km = height/1000.
 the_sounding
 ```
 
-###  2. Plot the sounding
+##  2. Plot the sounding
 
 ```{code-cell} ipython3
 from metpy.plots import SkewT
@@ -130,7 +131,8 @@ skew_plot.plot(press, dewpoint, 'g');
 # your sounding plot here
 ```
 
-### 3. Calculate the pressure scale height
+
+## 3. Calculate the pressure scale height
 
 +++
 
@@ -190,13 +192,13 @@ def calc_scale_height(T,p,z):
     return Hbar
 ```
 
-### 3. Answer
+## 3. Answer
 
 ```{code-cell} ipython3
 # evaluate calc_scale_height with your inputs
 ```
 
-### 4. Calculate the density scale height
+## 4. Calculate the density scale height
 
 Similarly, equation (23) of the [hydrostatic balance notes](https://clouds.eos.ubc.ca/~phil/courses/atsc500/docs/hydro.pdf)
 is:
@@ -245,13 +247,15 @@ def calc_dense_height(T,p,z):
     return Hbar
 ```
 
-### 4. Answer
+
+## 4. Answer
 
 ```{code-cell} ipython3
 # evaluate calc_dense_height with your inputs
 ```
 
-### 5. How does the hydrostatic profile compare to the observed pressure sounding?
+
+## 5. How does the hydrostatic profile compare to the observed pressure sounding?
 
 +++
 
@@ -263,7 +267,8 @@ vs. the actual sounding p(T):
 
 +++
 
-### 5. Answer
+
+## 5. Answer
 
 ```{code-cell} ipython3
 #
