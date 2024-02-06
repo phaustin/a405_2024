@@ -5,14 +5,15 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.5
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-(hydrostatic_handin)=
+
+(assign2_hydro)=
 # Assign 2: Scale heights for typical atmospheric soundings
 
 Due (upload to canvas) Tuesday, Jan 30 before midnight
@@ -84,6 +85,8 @@ if write:
     write_soundings(values, sounding_dir)
 ```
 
+## Plot your sounding here -- change the date to match your key
+
 ```{code-cell} ipython3
 from a405.soundings.wyominglib import read_soundings
 wyoming_dict = read_soundings(sounding_dir)
@@ -127,6 +130,7 @@ skew_plot.plot(press, dewpoint, 'g');
 ```{code-cell} ipython3
 # your sounding plot here
 ```
+
 
 ## 3. Calculate the pressure scale height
 
@@ -243,11 +247,13 @@ def calc_dense_height(T,p,z):
     return Hbar
 ```
 
+
 ## 4. Answer
 
 ```{code-cell} ipython3
 # evaluate calc_dense_height with your inputs
 ```
+
 
 ## 5. How does the hydrostatic profile compare to the observed pressure sounding?
 
@@ -260,6 +266,7 @@ $$p(z) = p_0 \exp \left (-z/\overline{H}_p \right )$$
 vs. the actual sounding p(T):
 
 +++
+
 
 ## 5. Answer
 
