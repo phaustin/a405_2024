@@ -37,7 +37,7 @@ from matplotlib import pyplot as plt
 Set get_data = True to fetch the Wyoming sounding data from the website and store it.
 
 ```{code-cell} ipython3
-get_data = False
+get_data = True
 values=dict(region='naconf',year='2012',month='7',start='0100',stop='3000',station='72340')
 if get_data:
     write_soundings(values, 'littlerock')
