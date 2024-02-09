@@ -48,6 +48,9 @@ parts:
     - file:  notebooks/week5/moist_adiabats.md
     - url: https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&dl=0
       title: Moist adiabat notebook ipynb download
+    - file: notebooks/worksheets/tropical_engine.md
+    - url: https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&dl=0
+      title: tropical_engine.ipynb download
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0

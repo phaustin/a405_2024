@@ -173,3 +173,13 @@ Read the rest of Thompkins Chapter 1 on bouyancy
   - Finish the {ref}`week4_rootfind` which will be due Friday midnight
   
 - Next week:  On Friday we'll start working on mid-term problems, which will be the last assignment before break
+
+## Lecture 14, week 5, Thursday
+
+### Note worksheet correction 
+
+- Added $\epsilon$ to the definition of $r_s$ in  {ref}`week4_rootfind`
+
+  - due date  is Monday
+  
+- Today -- work through the {ref}`tropical_engine` notebook

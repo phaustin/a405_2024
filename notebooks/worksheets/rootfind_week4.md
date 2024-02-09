@@ -72,7 +72,21 @@ Given an the Clausius Clapyron equation and a saturation vapor pressure in $es$ 
 es = find_esat(Tdewpoint)
 
 ```{code-cell} ipython3
-def find_esat(temp):
+from numpy.typing import ArrayLike as array
+def find_esat(temp: (int, float, array)) -> (float,array):
+    """
+    Calculate the saturation vapor pressure at temperature temp
+
+    Parameters
+    ----------
+
+    temp (K): temperature of liquid water
+
+    Returns
+    -------
+
+    esatout (Pa): saturationvapor pressure
+    """
     Tc = temp - 273.15
     esatOut = 611.2 * np.exp(17.67 * Tc / (Tc + 243.5))
     return esatOut
@@ -101,8 +115,10 @@ in Thompkins equation 2.21
 - That is, find T such that
 
   $$
-    r_s(T,p) = \frac{e_s}{p - e_s}
-  $$
+    r_s(T,p) = \epsilon \frac{e_s}{p - e_s}
+  $$(rs)
+  where $\epsilon = \frac{R_d}{R_v}$ = 0.622
+
 
   You can use Thompkins 2.21 to check your answer, or look at my [find_rsat](https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.find_rsat)
 
