@@ -158,7 +158,7 @@ Read the rest of Thompkins Chapter 1 on bouyancy
         \end{align}
        $$
   
-    - Note that $s_v$, $s_l$, $\theta_v$ and $theta_l$ all label approximately label the same moist adiabat on a tephigram, because they are all approximately conserved for adiabatic ascent and descent
+    - Note that $s_v$, $s_l$, $\theta_v$ and $\theta_l$ all label approximately label the same moist adiabat on a tephigram, because they are all approximately conserved for adiabatic ascent and descent
     
 * Tephigram review
 

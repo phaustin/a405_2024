@@ -208,6 +208,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Moist adiabats and the LCL</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -419,11 +420,77 @@ document.write(`
 <p>Set get_data = True to fetch the Wyoming sounding data from the website and store it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_data</span> <span class="o">=</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_data</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">values</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;naconf&#39;</span><span class="p">,</span><span class="n">year</span><span class="o">=</span><span class="s1">&#39;2012&#39;</span><span class="p">,</span><span class="n">month</span><span class="o">=</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;0100&#39;</span><span class="p">,</span><span class="n">stop</span><span class="o">=</span><span class="s1">&#39;3000&#39;</span><span class="p">,</span><span class="n">station</span><span class="o">=</span><span class="s1">&#39;72340&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">get_data</span><span class="p">:</span>
     <span class="n">write_soundings</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;littlerock&#39;</span><span class="p">)</span>
 <span class="n">soundings</span><span class="o">=</span> <span class="n">read_soundings</span><span class="p">(</span><span class="s1">&#39;littlerock&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>687501
+header is:  72340 LZK Little Rock Observations at 00Z 01 Jul 2012
+here is the day:  120701
+here is the day:  120701
+here is the day:  120702
+here is the day:  120702
+here is the day:  120703
+here is the day:  120703
+here is the day:  120704
+here is the day:  120704
+here is the day:  120705
+here is the day:  120705
+here is the day:  120706
+here is the day:  120706
+here is the day:  120707
+here is the day:  120707
+here is the day:  120708
+here is the day:  120708
+here is the day:  120709
+here is the day:  120709
+here is the day:  120710
+here is the day:  120710
+here is the day:  120711
+here is the day:  120711
+here is the day:  120712
+here is the day:  120712
+here is the day:  120713
+here is the day:  120713
+here is the day:  120714
+here is the day:  120714
+here is the day:  120715
+here is the day:  120715
+here is the day:  120716
+here is the day:  120716
+here is the day:  120717
+here is the day:  120717
+here is the day:  120718
+here is the day:  120718
+here is the day:  120719
+here is the day:  120719
+here is the day:  120720
+here is the day:  120720
+here is the day:  120721
+here is the day:  120721
+here is the day:  120722
+here is the day:  120722
+here is the day:  120723
+here is the day:  120723
+here is the day:  120724
+here is the day:  120724
+here is the day:  120725
+here is the day:  120725
+here is the day:  120726
+here is the day:  120726
+here is the day:  120727
+here is the day:  120727
+here is the day:  120728
+here is the day:  120728
+here is the day:  120729
+here is the day:  120729
+here is the day:  120730
+files written to littlerock
 </pre></div>
 </div>
 </div>
@@ -553,7 +620,7 @@ units: {&#39;drct&#39;: &#39;deg&#39;,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ae853ba63b0e4ab98f0e36398437a793e050801085372e29716a5dc71552a990.png" src="../../_images/ae853ba63b0e4ab98f0e36398437a793e050801085372e29716a5dc71552a990.png" />
+<img alt="../../_images/2c59ec9dc943c9e3eb2e31814ed9331b9ce0535500c617bd5ec6b1427a1f3dcb.png" src="../../_images/2c59ec9dc943c9e3eb2e31814ed9331b9ce0535500c617bd5ec6b1427a1f3dcb.png" />
 </div>
 </div>
 </section>
@@ -647,7 +714,7 @@ units: {&#39;drct&#39;: &#39;deg&#39;,
   s = cp * np.log(T) - c.Rd * np.log(pd) + lv * rv / T - vapor_term
 </pre></div>
 </div>
-<img alt="../../_images/6245c42e3dc7149fba0d14d57360ec87c8d7b4c3258dc0c7fc2faedba21a38e3.png" src="../../_images/6245c42e3dc7149fba0d14d57360ec87c8d7b4c3258dc0c7fc2faedba21a38e3.png" />
+<img alt="../../_images/7bd191dcc2798fc4e66e4ba8c7d9ba3dbd980c4710a4c99c5ac730a73898870f.png" src="../../_images/7bd191dcc2798fc4e66e4ba8c7d9ba3dbd980c4710a4c99c5ac730a73898870f.png" />
 </div>
 </div>
 </section>
