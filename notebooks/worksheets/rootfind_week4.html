@@ -205,7 +205,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../week4/tropical_clouds_profiles.html">Tropical cloud profiles</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../week5/moist_adiabats.html">Cape Part 2 - Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week5/moist_adiabats.html">Moist adiabats and the LCL</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tropical_engine.html">Tropical Heat Engine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -219,6 +221,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&amp;dl=0">Schroeder pp. 159-162</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&amp;dl=0">virtural temperature notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&amp;dl=0">Moist static energy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
 </ul>
 
     </div>
@@ -437,7 +440,21 @@ cos(x) - 0.75 = 0
 <p>es = find_esat(Tdewpoint)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_esat</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.typing</span> <span class="kn">import</span> <span class="n">ArrayLike</span> <span class="k">as</span> <span class="n">array</span>
+<span class="k">def</span> <span class="nf">find_esat</span><span class="p">(</span><span class="n">temp</span><span class="p">:</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">array</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span><span class="n">array</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the saturation vapor pressure at temperature temp</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    temp (K): temperature of liquid water</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    esatout (Pa): saturationvapor pressure</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">Tc</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span>
     <span class="n">esatOut</span> <span class="o">=</span> <span class="mf">611.2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">17.67</span> <span class="o">*</span> <span class="n">Tc</span> <span class="o">/</span> <span class="p">(</span><span class="n">Tc</span> <span class="o">+</span> <span class="mf">243.5</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">esatOut</span>
@@ -509,10 +526,11 @@ find_esat(temp)
 in Thompkins equation 2.21</p>
 <ul>
 <li><p>That is, find T such that</p>
-<div class="math notranslate nohighlight">
-\[
-    r_s(T,p) = \frac{e_s}{p - e_s}
+<div class="math notranslate nohighlight" id="equation-rs">
+<span class="eqno">(12)<a class="headerlink" href="#equation-rs" title="Permalink to this equation">#</a></span>\[
+    r_s(T,p) = \epsilon \frac{e_s}{p - e_s}
   \]</div>
+<p>where <span class="math notranslate nohighlight">\(\epsilon = \frac{R_d}{R_v}\)</span> = 0.622</p>
 <p>You can use Thompkins 2.21 to check your answer, or look at my <a class="reference external" href="https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.find_rsat">find_rsat</a></p>
 </li>
 </ul>

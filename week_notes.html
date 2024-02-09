@@ -206,7 +206,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="notebooks/week4/tropical_clouds_profiles.html">Tropical cloud profiles</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/week5/moist_adiabats.html">Moist adiabats and the LCL</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -397,6 +398,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-11-week-4-thursday">Lecture 11, week 4, Thursday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-12-week-4-friday">Lecture 12, week 4, Friday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-13-week-5-tuesday">Lecture 13, week 5, Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-14-week-5-thursday">Lecture 14, week 5, Thursday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-worksheet-correction">Note worksheet correction</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -436,8 +441,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9b2f3628-c279-44a5-a904-329b16022ed8">
-<span class="eqno">(1)<a class="headerlink" href="#equation-9b2f3628-c279-44a5-a904-329b16022ed8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e5d9e441-8dc7-4c5b-bcd3-1d39d4e90b13">
+<span class="eqno">(1)<a class="headerlink" href="#equation-e5d9e441-8dc7-4c5b-bcd3-1d39d4e90b13" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -446,8 +451,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-804e2214-a338-4722-a1b7-543952b0b3cb">
-<span class="eqno">(2)<a class="headerlink" href="#equation-804e2214-a338-4722-a1b7-543952b0b3cb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e823172c-cb30-46be-b917-22bf0582cc7d">
+<span class="eqno">(2)<a class="headerlink" href="#equation-e823172c-cb30-46be-b917-22bf0582cc7d" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -456,8 +461,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d2ffffd0-fef8-4c9b-b1f7-6425cb75c46c">
-<span class="eqno">(3)<a class="headerlink" href="#equation-d2ffffd0-fef8-4c9b-b1f7-6425cb75c46c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1b00f58d-d628-4d8b-8e36-e3d6bedabeda">
+<span class="eqno">(3)<a class="headerlink" href="#equation-1b00f58d-d628-4d8b-8e36-e3d6bedabeda" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -622,6 +627,20 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>Next week:  On Friday we’ll start working on mid-term problems, which will be the last assignment before break</p></li>
 </ul>
 </section>
+<section id="lecture-14-week-5-thursday">
+<h2>Lecture 14, week 5, Thursday<a class="headerlink" href="#lecture-14-week-5-thursday" title="Permalink to this heading">#</a></h2>
+<section id="note-worksheet-correction">
+<h3>Note worksheet correction<a class="headerlink" href="#note-worksheet-correction" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added <span class="math notranslate nohighlight">\(\epsilon\)</span> to the definition of <span class="math notranslate nohighlight">\(r_s\)</span> in  <a class="reference internal" href="notebooks/worksheets/rootfind_week4.html#week4-rootfind"><span class="std std-ref">Week 4 worksheet:  Using a rootfinder to solve implicit equations</span></a></p>
+<ul>
+<li><p>due date  is Monday</p></li>
+</ul>
+</li>
+<li><p>Today – work through the <a class="reference internal" href="notebooks/worksheets/tropical_engine.html#tropical-engine"><span class="std std-ref">Tropical Heat Engine</span></a> notebook</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -716,6 +735,10 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-11-week-4-thursday">Lecture 11, week 4, Thursday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-12-week-4-friday">Lecture 12, week 4, Friday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-13-week-5-tuesday">Lecture 13, week 5, Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-14-week-5-thursday">Lecture 14, week 5, Thursday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-worksheet-correction">Note worksheet correction</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
