@@ -187,8 +187,8 @@ def rlderiv(var_vec,deriv_vec,cloud_tup,nvars=3):
 
 if __name__ == "__main__":
 
-    from pathlib import Path
-    import importlib_resources as ir
+    from pabthlib import Path
+    import importlib.resources as ir
     import pprint
     pp = pprint.PrettyPrinter(indent=4)
     with ir.open_text('a405.data','dropgrow.json') as f:

@@ -51,6 +51,10 @@ from a405.thermo.constants import constants as c
 from a405.utils.helper_funs import make_tuple
 ```
 
+```{code-cell} ipython3
+help(make_tuple)
+```
+
 ## A. get the surface enthalpy in the tropics (point A)
 
 ```{code-cell} ipython3
