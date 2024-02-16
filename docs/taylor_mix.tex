@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,fancyhdr,xr,hyperref,ifpdf,amsmath,rcs,indentfirst}
+\usepackage{lastpage,longtable,Ventry,url,paunits,shortcuts,smallsec,color,tightlist,float}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+\usepackage[stable]{footmisc}
+
+\pagestyle{fancy} 
+
+\RCS $Revision: 1.5 $
+\RCS $Date: 2002/01/09 03:50:54 $
+
+\fancypagestyle{first}{
+\lhead{Mixing entropies}
+\chead{}
+\rhead{page~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+
+
+\begin{document}
+\newcommand{\vect}[1]{\boldsymbol{\vec{#1}}}
+\pagestyle{first}
+
+On p. 57, Thompkins shows that the moist static energy mixies linearly.
+Show that that is also roughly true for $\theta_e$ by doing the following:
+
+
+\begin{enumerate}
+\item Recall that, if we neglect the increase in entropy due to irreversible mixing,
+that the entropies of two components will sum to give the entropy of the mixture:
+
+\begin{equation}
+  \label{eq:entrop}
+  s_{mix} = f s_{env}  + (1-f) s_{cld}
+\end{equation}
+where $f$ and $(1-f)$ are the mass fractions of the environment and cloudy air and $s_{env}$ and $s_{cld}$ are the specific entropies
+of each component in J/kg/K.
+
+We also know that, if we neglect the effect of liquid and vapor on the heat capacities:
+
+\begin{equation}
+  \label{eq:S2}
+  s = c_p \log \theta_e
+\end{equation}
+so we can rewrite (\ref{eq:entrop}) as
+
+\begin{equation}
+  \label{eq:s3}
+ \log \theta_{mix} \approx f \log \theta_{env} + (1 - f) \log \theta_{cld}
+\end{equation}
+or equivalently, taking $\exp$ of each side:
+
+\begin{equation}
+  \label{eq:s4}
+ \theta_{emix} = \theta_{eenv}^f \theta_{ecld}^{1-f}
+\end{equation}
+
+Use a Taylor series expansion to show that if $(\theta_{ecld} - \theta_{eenv})/\theta_{eenv} = \delta \ll 1$ 
+then (\ref{eq:s4}) is approximately equivalent to:
+
+\begin{equation}
+  \label{eq:s5}
+ \theta_{emix} \approx f \theta_{eenv} + (1 -f) \theta_{ecld}
+\end{equation}
+
+
+\end{enumerate}
+
+Hint:  you can rewrite $\theta_{ecld}/\theta_{env}$ as $(\theta_{eenv} + (\theta_{ecld} - \theta_{env}))/\theta_{env}$ and
+show by expanding in a Taylor series that:
+
+\begin{equation}
+  \label{eq:taylor}
+  (1 + \delta)^f \approx 1 + f \delta
+\end{equation}
+
+
+and
+
+\begin{equation}
+  \label{eq:taylor2}
+  f + (1-f) = 1
+\end{equation}
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

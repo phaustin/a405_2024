@@ -1,0 +1,258 @@
+
+
+\documentclass[hyperref={colorlinks=true,linkcolor=blue,urlcolor=blue},numbers]{beamer}
+\usepackage{amsmath,paunits,shortcuts}
+%\usepackage[usenames]{color}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate
+    {footline}
+    {\quad\strut\insertsection
+      \hfill\insertframenumber/\inserttotalframenumber\strut\quad} 
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercovered{transparent}
+
+
+\begin{document}
+
+
+\begin{frame}
+  \frametitle{Maxwell's relations -- why does $g_l = g_v$ for phase change}
+
+Here's some extra perspective on Lohmann Chapter 2, specifically the fact that 2 phases of water in equilibrium must have equal Gibbs free energies.
+
+Start with the basic first law using $u$ and $\alpha$:
+
+  \begin{subequations}
+  \begin{gather}
+    \text{Physics -- first law, reversible: }\nonumber \\
+Tds = du  + p d \alpha \label{eq:firstA}\\
+\text{Math -- total differential of two variables: } \nonumber\\
+ds = \left ( \frac{\partial s }{\partial u}   \right )_\alpha du + 
+\left (  \frac{ \partial s}{ \partial \alpha}  \right )_u d\alpha \label{eq:mathA}\\
+\text{line up the terms: for (\ref{eq:firstA}) and (\ref{eq:mathA})} \nonumber\\
+\left ( \frac{\partial s }{\partial u}   \right )_\alpha = \frac{ 1}{T} \label{eq:temp}\\
+\left (  \frac{ \partial s}{ \partial \alpha}  \right )_u = \frac{p }{T}\label{eq:press} 
+  \end{gather}
+  \end{subequations}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Thermal contact means equal temperatures}
+Now use them:  consider two containers in thermal contact which
+allows them to exchange internal energy $u$ but not volume $\alpha$:
+
+For the total system a + b, $u_{T} = u_a + u_b$ is a constant and
+
+\begin{gather*}
+  ds_{T} = \left ( \frac{\partial s_T }{\partial u_A}   \right ) du_a
++ \left ( \frac{\partial s_T }{\partial u_b} \right ) du_b
+\end{gather*}
+
+We know that energy is conserved, so $du_a = -du_b$.  We also know that
+at equilibrium the total entropy is maximum, so $ds_T = 0$ and:
+
+\begin{gather}
+  \left ( \frac{\partial s_T }{\partial u_A} \right ) 
+= \left ( \frac{\partial s_T }{\partial u_b} \right )\nonumber\\
+\text{or using (\ref{eq:temp}): } \frac{ 1}{T_a}  = \frac{ 1}{T_b} 
+\label{eq:thetemp}
+\end{gather}
+\textit{\textbf{So two systems in thermal contact have the same temperature}}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mechanical contact means equal pressures}
+Now flip this:  consider two containers in mechanical contact at the
+same temperature so they can exchange volume $\alpha$:
+
+For the total system a + b, $\alpha_{T} = \alpha_a + \alpha_b$ is a constant and
+
+\begin{gather*}
+  ds_{T} = \left ( \frac{\partial s_T }{\partial \alpha_A}   \right ) d\alpha_a
++ \left ( \frac{\partial s_T }{\partial \alpha_b} \right ) d\alpha_b
+\end{gather*}
+
+We know that volume is conserved, so $d\alpha_a = -d\alpha_b$.  
+We also know that
+at equilibrium the total entropy is maximum, so $ds_T = 0$ and:
+
+\begin{gather}
+  \left ( \frac{\partial s_T }{\partial \alpha_A} \right ) 
+= \left ( \frac{\partial s_T }{\partial \alpha_b} \right )\nonumber\\
+\text{or using (\ref{eq:press}): } \frac{ p_a}{T}  = \frac{ p_b}{T}
+\label{eq:press} 
+\end{gather}
+
+\textit{\textbf{So two systems in mechanical contact have the same pressure}}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Diffusive contact means equal (specific) Gibbs free energies/kg}
+
+  \begin{itemize}
+  \item But what if your systems are simultaneously exchanging volume and energy?
+This isn't a problem, because $s$ is a state variable and path independent.
+So take system through two steps: one changing energy at constant
+volume, and one change volume at constant energy.
+
+\item What if we are exchanging molecules as well?  Now we need to add the
+variation of number of water molecules to
+the differential.  First, take a look at the first law if we
+are adding  $dN$ molecules, each with energy $\mu$:
+
+\begin{equation}
+\label{eq:chem}
+  dU = T dS - PdV + \mu dN
+\end{equation}
+$\mu$ is called the ``chemical potential''.  Note the capital letters, from here on
+we need to track extensive variables because we are tracking movement of molecules.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Diffusive equilibrium II}
+
+If there are several
+different types of molecule, each with a different  $\mu_i$, then
+
+\begin{equation}
+\label{eq:chem2}
+  dU = T dS - PdV + \sum \mu_i dN_i
+\end{equation}
+
+
+Rearranging (\ref{eq:chem2}):
+
+\begin{gather}
+\text{physics: } dS = \frac{1 }{T} dU + \frac{ P}{T} dV - \frac{ \mu}{T} dN\\
+  \text{Math: } dS = \left ( \frac{\partial S }{\partial U} \right ) dU +
+\left ( \frac{\partial S }{\partial V} \right ) dV +
+\left ( \frac{\partial S }{\partial N} \right ) dN
+\end{gather}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Diffusive equilibrium III}
+
+  \begin{subequations}
+  \begin{gather}
+\text{As before, line up the terms and read off: } \nonumber\\
+ \left ( \frac{\partial S }{\partial U}   \right )_{V,N} = \frac{ 1}{T} \\
+ \left (  \frac{ \partial S}{ \partial V}  \right )_{U,N} = \frac{p }{T} \\
+ \left (  \frac{ \partial S}{ \partial N}  \right )_{U,V} = -\frac{\mu }{T}
+\label{eq:diff3}
+\end{gather}
+  \end{subequations}
+
+Using the same approach as with thermal and mechanical contact, we can show
+that vapor and liquid separated by an interface at constant U and V will
+maximize entropy when $\mu_v = \mu_l$.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Change to Gibbs free energy for constant T and P}
+
+  \begin{subequations}
+  \begin{gather}
+\text{physics: }    G = H - TS\  \text{(definition)}\label{eq:one}\\
+\text{math: }     dG = dH - T dS - S dT \text{ (differential of G)} \label{eq:two}\\
+\text{physics: } T dS = dH - V dP - \mu dN \text{ (first law (reversible))} \label{eq:three}\\
+\text{math: } dG = V dP - S dT + \mu dN\ \text(sub\ (\ref{eq:three})\ into 
+\ (\ref{eq:two}))\\
+  \text{Math: } dG = \left ( \frac{\partial G }{\partial P} \right ) dP +
+\left ( \frac{\partial G }{\partial T} \right ) dT +
+\left ( \frac{\partial G }{\partial N} \right ) dN 
+  \end{gather}
+  \end{subequations}
+
+  \begin{gather}
+\text{As before, line up the terms and read off: } \nonumber\\
+ \left ( \frac{\partial G }{\partial P}   \right )_{T,N} = V \\
+ \left (  \frac{ \partial G}{ \partial T}  \right )_{P,N} = -S\\
+ \left (  \frac{ \partial G}{ \partial N}  \right )_{T,P} = \mu \label{eq:gibbsn}
+\end{gather}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Diffusive equilibrium and Gibbs free energy}
+
+  \begin{itemize}
+  \item Note that (\ref{eq:gibbsn}) says that the chemical potential $\mu$
+for a single species  is the Gibbs free energy per molecule.
+
+
+\item Finally, look at two compartments separated by a membrane
+that allows thermal, mechanical and diffusive contact.  From
+the results above, we know that to maximize the entropy the
+systems will adjust to the same temperate and pressure.  At constant
+temperature and pressure, we have as before:
+
+\begin{gather}
+dS_T = \text{0 at maximum so: }\nonumber\\
+0 =  \left ( \frac{\partial S_A }{\partial N_A} \right ) dN_A + 
+ \left ( \frac{\partial S_B }{\partial N_B} \right ) dN_B\nonumber\\
+\text{or using (\ref{eq:diff3}): and $dN_A = -dN_B$}\nonumber\\
+-\frac{\mu_A }{T}  = - \frac{\mu_B }{T} \label{eq:mufinal}
+\end{gather}
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Diffusive equilibrium and Gibbs free energy II}
+
+Now put this all together:
+\begin{itemize}
+\item From (\ref{eq:press}), (\ref{eq:thetemp}), and (\ref{eq:mufinal}) 
+we know that across the liquid/gas
+interface T, p, and $\mu$ are all equal in vapor and liquid
+\item Since $\mu$ is the Gibbs free energy per molecule, if
+  \begin{gather*}
+    \mu_v = \mu_l\\
+\text{then multiply by the $N_A M_w$, where $N_A$ is Avogadro's number}\\
+\text{and $M_w$ is the molecular weight of water to get}\\
+g_l = g_v
+  \end{gather*}
+
+
+   \item \textit{textbf{So two systems in diffusive, mechanical and
+thermal  contact have the same Gibbs free energy/kg}}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Summary}
+
+\begin{itemize}
+\item Liquid and vapor are at the same temperature because otherwise the
+system could increase its entropy by moving energy from 
+the hotter to colder component.
+\item Liquid and vapor are at the same pressure because otherwise
+the system could increase its entropy by expanding the component at higher
+pressure  and shrinking the component at lower pressure
+\item Liquid and vapor are at the same g because otherwise the
+system could increase its entropy by moving mass from the higher g to
+the lower g component
+\item This last point means that $g_v = g_l$ in equilibrium.  Since
+$g_v$ and $g_l$ are both only functions of temperature and pressure,
+the volume of the container doesn't enter into the problem, as long
+as there is enough water to maintain the equilibrium vapor pressure.
+\end{itemize}
+
+
+\end{frame}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

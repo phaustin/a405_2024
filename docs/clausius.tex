@@ -1,0 +1,264 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,fancyhdr,xr,hyperref,ifpdf,amsmath,rcs,indentfirst}
+\usepackage{lastpage,longtable,Ventry,url,paunits,shortcuts,smallsec,color,tightlist,float}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+\usepackage[stable]{footmisc}
+
+\pagestyle{fancy} 
+
+\RCS $Revision: 1.5 $
+\RCS $Date: 2002/01/09 03:50:54 $
+
+\fancypagestyle{first}{
+\lhead{Clausius Clapyron equation}
+\chead{}
+\rhead{page~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26} 
+\begin{document}
+\newcommand{\vect}[1]{\boldsymbol{\vec{#1}}}
+\pagestyle{first}
+
+
+\section{Clausius-Clapyron equation}
+\label{sec:day-8-continued}
+
+\textit{trying to use $\phi$ for entropy below to match Thompkins}.
+
+In my
+\href{https://www.dropbox.com/scl/fi/puuzbbzszhue73nrew726/maxwell.pdf?rlkey=fntdkgs90o4otc3s6lme85mz3&dl=0}%
+{Maxwell relation notes}
+I had demonstrated that for a vapor-liquid mixture thermal, mechanical and diffusive contact
+we will increase the entropy by moving between liquid and vapor at constant pressure and temperature until we satisfy:
+
+\begin{equation}
+  \label{eq:gibbs1}
+  g_v = g_l
+\end{equation}
+which is one form of the Clausius-Clapyron equation.  To make contact with Thompkins, remember that
+
+\begin{equation}
+  \label{eq:gdef}
+  g = h - T \phi = u + ev - T\phi
+\end{equation}
+where we're calling the entropy by the British $\phi$ instead of the American and Canadian $s$ and using $e$ for the
+vapor pressure.
+
+Our objective is to get a function that will tell us $e$ as a function of the temperature $T$.  To extract this from
+\eqref{eq:gdef}, start by going back to the first law at constant pressure:
+
+\begin{equation}
+  \label{eq:first}
+  q dt = dh
+\end{equation}
+
+and recall the second law (reversible) is:
+
+\begin{equation}
+  \label{eq:second}
+  q dt = T d \phi
+\end{equation}
+
+In phase equilibrium the heating $q dt$ is being used to move water molecules
+from the liquid phase, with entropy/mass $\phi_l$ and enthalpy/mass $h_l$, 
+to the saturated vapor phase
+with entropy/mass $\phi_v^*$ and enthalpy/mass $h_v$, where the $^*$ 
+reminds us that we are saturated with respect
+to liquid water.  Also remember that phase change occurs at constant temperature.
+
+If we write the total energy needed to move a unit mass 
+of liquid to vapor as $Q=q \Delta t$, then the
+first law at constant pressure and temperature
+is $q \Delta t$ = $Q$ = $\Delta h$ 
+for the phase change of 1 unit mass is just the enthalpy
+difference between liquid (before) and vapor (after):
+
+\begin{equation}
+  \label{eq:firstb}
+  Q = h_v - h_l = l_v
+\end{equation}
+where $l_v \approx 2.5 \times 10^6\ J/kg$ is called the \textit{enthalpy of evaporation} or \textit{the latent heat}.
+
+The second law (reversible) at contant temperature and pressurue
+is:
+
+\begin{equation}
+  \label{eq:seconda}
+  \frac{ q \Delta t}{T} = \Delta s = \phi_{vapor} - \phi_{liquid}
+\end{equation}
+
+Since the vapor is in saturated equilibrium, we will use 
+an asterisk (*) superscript to remind us that we are
+undergoing a phase transition, and then (\ref{eq:seconda})
+can be rewritten as:
+
+\begin{equation}
+  \label{eq:secondb}
+  Q  = (\phi_v^* - \phi_l ) T
+\end{equation}
+and equating $Q$ in (\ref{eq:firstb}) and (\ref{eq:secondb})
+and using using $l_v = h_v - h_l$:
+
+\begin{equation}
+  \label{eq:secondd}
+   l_v  =  (\phi_v^* - \phi_l) T
+\end{equation}
+which is Thompkins (2.5).
+
+
+\section{Finding the saturation vapor pressure}
+\label{sec:find-vapor-press}
+
+\subsection{Entropy of the vapor}
+\label{sec:entropy-vapor}
+
+
+How does this give us the saturation vapor pressure $p$  (commonly denoted $e_s$) as a function of T?  We need to be able
+to write $\phi_v^*$ in terms  of the vapor pressure $e_s$ and temperature $T$.   Water vapor is an ideal gas, so the
+approach is exactly the same as that we took for dry air in the 
+\href{https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&dl=0}%
+{Day 5 entropy notes}
+
+Repeating that approach with the specific heat and gas constant for water vapor:
+
+\begin{equation}
+\label{eq:sderiv}
+  d\phi_v  = c_{pv}    \frac{dT^\prime}{T^\prime} -   R_v\frac{ de^\prime}{e^\prime} 
+\end{equation}
+
+Integrate this from the triple point, where $T_p=273.16\ K$, $e_p = 6.11$ hPa
+= $e_{s0}$,  $l_v=2.501 \times 10^6$ J/kg= $l_{v0}$ to a new saturated vapor pressure
+$e_{sat}$ at temperature $T$, to get the saturated entropy $\phi_v^*$:
+
+\begin{equation}
+  \label{eq:int}
+\phi_v^* = c_{pv} \log \frac{T }{T_p} - R_v \log \frac{ e_{sat} }{e_{s0}} + \phi_0
+\end{equation}
+where the integration constant $\phi_0 = \frac{Q }{T_p}  = \frac{l_{v0} }{T_p}$ is the
+entropy required to move a kg of water to vapor at the triple point.
+
+\subsection{Entropy of liquid}
+\label{sec:entropy-liquid}
+
+For the liquid, water is incompressible so volume doesn't change and integrating \eqref{eq:sderiv} gives:
+
+\begin{equation}
+\label{eq:sl}
+  \phi_l = c_l \log \frac{T }{T_p} 
+\end{equation}
+(note that there's no extra constant of integration for $\phi_l$ since our reference state is liquid water
+at the triple point).
+
+\subsection{Temperature dependence of $l_v$}
+\label{sec:temp-depend-l_v}
+
+The last thing we need in order to be able to use \eqref{eq:secondd} is the dependence of $l_v$ on temperature.
+Thompkins derives this in equation 2.18.  Since $l_v = h_v - l_l$:
+
+\begin{equation}
+  \label{eq:lvtemp}
+  l_v = h_v - h_l = c_{pv}T  - c_l T
+\end{equation}
+We know that at $T_0$ =0 \degc (273.15 K), $l_v = l_0 = 2.501 \times 10^{6}$ J/kg, so rewrite \eqref{eq:lvtemp} as:
+
+\begin{equation}
+  \label{eq:lvtemp2}
+  l_v = h_v - h_l = (c_{pv} - c_l) (T - T_0) + l_0
+\end{equation}
+where as Thompkins notes, $c_{pv} = 1870\ J\,kg^{-1}\,K^{-1}$ and $c_l=4187\ J\,kg^{-1}\,K^{-1}$.  So for a particular temperature T,
+we can insert \eqref{eq:lvtemp2},  \eqref{eq:sl} and \eqref{eq:int} into \eqref{eq:secondd} 
+and use a rootfinder to solve for the vapor pressure $e_s$ that makes \eqref{eq:secondd} true.
+
+
+\subsection{Thompkins version}
+\label{sec:thompkins-version}
+
+In equations (2.7) - (2.11) Thompkins takes the differential of $g$ to get (2.9):
+
+\begin{equation}
+  \label{eq:diffg}
+  dg = v de_s - \phi dT
+\end{equation}
+and uses the fact that if $g_l = g_v$ then $dg_l = dg_v$ to get (2.10):
+
+\begin{equation}
+  \label{eq:dgvequal}
+  v_l de_s - \phi_l dT = v_v de_s = \phi_v dT
+\end{equation}
+and rearranging:
+
+\begin{equation}
+  \label{eq:derives}
+  \frac{de_s}{dT} = \frac{\phi_v - \phi_l}{v_v - v_l} = \frac{l_v}{T} \frac{1}{v_v -v_l}
+\end{equation}
+where we've used \eqref{eq:second}.
+
+In (2.12) and (2.13) he integrates that to get the usual form of the Clausius-Clapyron equation (c.f. 
+\href{https://www.eoas.ubc.ca/books/Practical_Meteorology}%
+{Stull} (3.65d)):
+
+\begin{equation}
+  \label{eq:ccfinal}
+  e_s = e_{s0} \exp \left [ \frac{l_v}{R_v} \left ( \frac{1}{T_0} - \frac{1}{T} \right ) \right ]
+\end{equation}
+
+\section{An alternative derivation}
+\label{sec:entropy-mixture}
+
+Here's a way to get \eqref{eq:derives} straight from (\ref{eq:secondd}):
+
+
+\begin{equation*}
+\frac{l_v }{T}  = c_{pv} \log \frac{T }{T_p} - R_v \log \frac{ e_{sat} }{e_{s0}} + \phi_0 - c_l \log \frac{T }{T_p} 
+\end{equation*}
+
+Now rearrange to show $e_{sat}$:
+
+\begin{equation}
+\label{eq:esatlog}
+\log \frac{ e_{sat} }{e_{s0}} = \left (  c_{pv} \log \frac{T }{T_p}  + \phi_0 - c_l \log \frac{T }{T_p} - \frac{l_v }{T}  \right )/R_v 
+\end{equation}
+
+\begin{equation}
+\label{eq:esatfull}
+e_{sat}  = e_{s0} \exp \left [ \left (  c_{pv} \log \frac{T }{T_p}  + \phi_0 - c_l \log \frac{T }{T_p} - \frac{l_v }{T}  \right )/R_v \right ]
+\end{equation}
+
+Almost done.  To get (\ref{eq:derives}) just take the log and then
+differentiate wrt T (and remember that $l_v$ is a function of T
+so you need the chain rule on the last term):
+
+\begin{gather*}
+\frac{1 }{e_{sat}} \frac{d e_{sat} }{dT} =  \frac{1 }{R_V} \left (   c_{pv}  \frac{1 }{T}  - c_l  \frac{1 }{T} - \frac{ d}{dT} 
+\left (\frac{l_v }{T} \right )  \right ) \\
+ = \frac{1 }{R_V} \left (   c_{pv}  \frac{1 }{T}  - c_l  \frac{1 }{T} - 
+\left (\frac{c_{pv} - c_l }{T} - \frac{l_v }{T^2}  \right )  \right ) \\
+= \frac{ l_v}{R_v T^2} 
+\end{gather*}
+which is the same as Thompkins 2.12 or Lohmann 2.59
+
+
+\end{document}
+
+
+v
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

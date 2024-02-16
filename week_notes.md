@@ -183,3 +183,15 @@ Read the rest of Thompkins Chapter 1 on bouyancy
   - due date  is Monday
   
 - Today -- work through the {ref}`tropical_engine` notebook
+
+## Lecture 15, week 5, Friday
+
+- New material:  mixing lines -- Thompkins Section 3.2.3 on p. 57
+
+- Notebook:  {ref}`mixing_line`
+
+- For Tuesday 
+  
+  - Read Thompkins Section 3.2
+  - Read [my entrainment notes](https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&dl=0)
+  - Do the [Taylor series question for upload Tuesday morning](https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&dl=0)
