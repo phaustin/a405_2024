@@ -24,7 +24,7 @@ parts:
     - url: https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&dl=0
       title: Assignment 2 download
     - url: https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&dl=0
-      title: Taylor series problem due Tues. Feb 13 before class
+      title: Assignment 3 -- Taylor series problem due Sunday midnight
   - caption: Worksheets
     chapters:
     - file: notebooks/worksheets/worksheet1_solution.ipynb
@@ -83,7 +83,16 @@ parts:
       title: carnot cycle notes
     - url: https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&dl=0
       title: entrainment notes
-      
+  - caption: Mid term s
+    chapters:
+    - file: notebooks/thompkins_practice.ipynb
+    - url: https://www.dropbox.com/scl/fi/xkyzaeqr7fmyk9weci8ny/thompkins_practice.ipynb?rlkey=3ngg8tk7ynxsftlp57ov0wxtp&dl=0
+      title: Thompkins practice problems 
+    - url: https://www.dropbox.com/scl/fi/bpultkh57v6ycw9rd3xpa/mid_2016.pdf?rlkey=6t51qiicztdxq0izxdda0o8oy&dl=0
+      title: 2016 midterm
+    - url: https://www.dropbox.com/scl/fi/nywsb60z8rl87d49ath97/midterm_2012.pdf?rlkey=39g743y9m90a4ikyrtxmdkjur&dl=0
+      title: 2012 midterm
+        
       
       
       
