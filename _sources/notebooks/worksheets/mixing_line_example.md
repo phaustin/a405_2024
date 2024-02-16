@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
++++ {"jupyter": {"outputs_hidden": false}}
 
 (mixing_line)=
 # Mixing line example
@@ -52,7 +53,6 @@ ax.set_title("mixing line example");
 
 ## Add mixing line points
 
-
 +++
 
 ### Find coords of lower point at its LCL
@@ -62,7 +62,6 @@ ax.set_title("mixing line example");
 jupyter:
   outputs_hidden: false
 ---
-
 pa2hpa=1.e-2
 kg2g = 1.e3
 press=860.e2 #Pa  LCL
@@ -150,4 +149,18 @@ xplot=convertTempToSkew(Temp_700 - c.Tc,press*pa2hPa,skew)
 bot=ax.plot(xplot, press*pa2hPa, 'ko', markersize=14, markerfacecolor='k')
 display(fig)
 fig.savefig('mid-tephi.pdf')
+```
+
+```{code-cell} ipython3
+#x=
+#y=
+w=13.3
+z=8.3
+#thetae_mix = 0.5*x + 0.5*y
+rv_mix = 0.5*w + 0.5*z
+rv_mix
+```
+
+```{code-cell} ipython3
+
 ```

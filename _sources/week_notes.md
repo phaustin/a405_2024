@@ -195,3 +195,25 @@ Read the rest of Thompkins Chapter 1 on bouyancy
   - Read Thompkins Section 3.2
   - Read [my entrainment notes](https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&dl=0)
   - Do the [Taylor series question for upload Tuesday morning](https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&dl=0)
+
+## Lecture 16, week 6, Tuesday
+
+- Work through the {ref}`cape_part1` notebook
+- Introduce {ref}`thompkins_practice`
+
+## Lecture 17, week 6, Thursday
+
+- Discussed hings on the [Taylor series question](https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&dl=0)
+- Midterm review
+
+## Lecture 18, week 6 Friday
+
+- Go over {ref}`thompkins_practice`
+- Modeling and [entraining plume](https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&dl=0) in Python
+
+### For the break
+
+- Hand in Assignments 3 and 4
+- Finish Thompkins Chapter 3
+- Read Thompkins Chapter 4: sections 4.1 and 4.2
+

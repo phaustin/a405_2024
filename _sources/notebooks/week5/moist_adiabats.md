@@ -107,7 +107,7 @@ def label_fun():
 ```
 
 ```{code-cell} ipython3
-fig,ax =plt.subplots(1,1,figsize=(8,8))
+fig,ax =plt.subplots(1,1,figsize=(12,12))
 corners = [10, 35]
 ax, skew = makeSkewWet(ax, corners=corners, skew=skew,label_fun=label_fun)
 #ax,skew = makeSkewWet(ax,corners=corners,skew=skew)
