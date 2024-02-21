@@ -879,6 +879,8 @@ def find_resid_thetae(Tguess, thetaeVal, rT, press):
     return thetaeVal - find_thetaet(tdGuess, rT, Tguess, press)
 
 
+
+
 def find_buoy(adia_Tv, env_Tv):
     """
     Calculates the buoyancy given an parcel and environment virtural temp
