@@ -36,10 +36,9 @@ alt: pha
 
 +++
 
-## 
+##
 
 +++
-
 
 2. Find
 
@@ -71,8 +70,6 @@ alt: pha
         
        Convectively unstable because if the layer was lifted until the top was at 700 the entire
        layer would be along its thetae sounding, where the temperature decreases with height.
-       
-
 
 +++
 
@@ -133,10 +130,6 @@ Find the following (you can use $l_v = l_{v0}$ and $c_p = c_{pd}$) :
 
 +++
 
-
-
-+++
-
 ```{figure} prob1.jpg
 ---
 width: 50%
@@ -147,8 +140,6 @@ Heat Engine Solution
 ```
 
 +++
-
-
 
 Equivalent potential temperatures:
 
@@ -247,16 +238,15 @@ a total water mixing ratio of 3 g/kg.  Using the tephigram
 - The LCL and $\theta_e$ of the environment and the cloudy air.
 -  The temperature and liquid water mixing ratio (g/kg) of the mixture at 700 hPa
 
-
 +++
 
-```{figure} mid_2012_mix.png
+```{figure} mid_2012_mixing_skewT.png
 ---
 width: 70%
 name: directive-fig
 alt: pha
 ---
-2012 mixing problem
+2012 mixing problem 3
 ```
 
 ```{code-cell} ipython3

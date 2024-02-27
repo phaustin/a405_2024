@@ -219,7 +219,10 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 
 ## Lecture 19, week 7 Tuesday
 
-* {ref}`tropical_heat_solution`
+- Solutiions posted
 
-* Go over midterm solutions
+  - {ref}`tropical_heat_solution`
+  - 
+
+* Go over midterm solutions {ref}`assign4_midterm_sol`
 
