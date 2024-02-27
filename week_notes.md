@@ -217,3 +217,9 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Finish Thompkins Chapter 3
 - Read Thompkins Chapter 4: sections 4.1 and 4.2
 
+## Lecture 19, week 7 Tuesday
+
+* {ref}`tropical_heat_solution`
+
+* Go over midterm solutions
+

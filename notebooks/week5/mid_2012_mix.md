@@ -37,7 +37,7 @@ from matplotlib import pyplot as plt
 Set get_data = True to fetch the Wyoming sounding data from the website and store it.
 
 ```{code-cell} ipython3
-get_data = True
+get_data = False
 values=dict(region='naconf',year='2012',month='7',start='0100',stop='3000',station='72340')
 if get_data:
     write_soundings(values, 'littlerock')
@@ -101,25 +101,26 @@ def label_fun():
     #
     # change the temperature and rs grids to get a finer mesh
     #
-    tempLabels = range(-40, 50, 2)
-    rsLabels = [0.1, 0.25, 0.5, 1, 2, 3] + list(np.arange(4, 28, 2)) 
+    tempLabels = range(-10, 25, 5)
+    rsLabels = list(np.arange(4, 28, 2)) 
     return tempLabels,rsLabels, thetaLabels, thetaeLabels
 ```
 
 ```{code-cell} ipython3
 fig,ax =plt.subplots(1,1,figsize=(12,12))
-corners = [10, 35]
+corners = [-5, 25]
 ax, skew = makeSkewWet(ax, corners=corners, skew=skew,label_fun=label_fun)
-#ax,skew = makeSkewWet(ax,corners=corners,skew=skew)
-out=ax.set(title=title_string)
+ax,skew = makeSkewWet(ax,corners=corners,skew=skew)
+out=ax.set(title="mid 2012 mixing")
 xcorners=find_corners(corners,skew=skew)
-ax.set(xlim=xcorners,ylim=[1000,400]);
-l1,=ax.plot(xcoord_T,sounding['pres'],color='k',label='temp')
-l2,=ax.plot(xcoord_Td,sounding['pres'],color='g',label='dew')
-[line.set(linewidth=3) for line in [l1,l2]];
+ax.set(xlim=xcorners,ylim=[800,500])
+fig.savefig("mid_2012_mix.png")
+# l1,=ax.plot(xcoord_T,sounding['pres'],color='k',label='temp')
+# l2,=ax.plot(xcoord_Td,sounding['pres'],color='g',label='dew')
+# [line.set(linewidth=3) for line in [l1,l2]];
 ```
 
-## Find the $\theta_{es}$ of the  LCL
+# Find the $\theta_{es}$ of the  LCL
 
 The thermo.thermlib docs are [here](https://phaustin.github.io/a405_lib/full_listing.html#module-a405.thermo.thermlib)
 

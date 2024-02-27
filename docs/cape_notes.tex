@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,fancyhdr,xr,hyperref,ifpdf,amsmath,rcs,indentfirst}
+\usepackage{lastpage,longtable,Ventry,url,paunits,shortcuts,smallsec,color,tightlist,float}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+\usepackage[stable]{footmisc}
+
+\pagestyle{fancy} 
+
+\RCS $Revision: 1.5 $
+\RCS $Date: 2002/01/09 03:50:54 $
+
+\fancypagestyle{first}{
+\lhead{Maximum vertical velocity and CAPE}
+\chead{}
+\rhead{page~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26} 
+\begin{document}
+\newcommand{\vect}[1]{\boldsymbol{\vec{#1}}}
+\pagestyle{first}
+
+
+\section{CAPE and w(z)}
+\label{sec:cape}
+
+Some notes on convective available potential energy, building Thompkins and \href{https://www.eoas.ubc.ca/books/Practical_Meteorology/}{Stull: Practical Meteorology}
+Chapter 14 pp. 503-508
+
+Recall the equation for vertical velocity from the \href{https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&dl=0}{buoyancy notes}
+
+\begin{equation}
+  \label{eq:newton4}
+ \frac{dw}{dt} = -\frac{1}{\overline{\rho}} \frac{\partial p^\prime}{\partial z}
+- g \left ( \frac{\rho^\prime}{\overline{\rho}} \right )
+\end{equation}
+where we'll neglect the pressure acceleration term and define the second term as the
+the buoyancy $B$:
+
+\begin{equation}
+  \label{eq:buoyancy}
+  B = - g \left ( \frac{\rho^\prime}{\overline{\rho}} \right )
+\end{equation}
+
+Suppose I can follow a parcel as it ascends from the surface, and measure the vertical velocity $w$ as a function of height and time.   I can then use the chain rule on (\ref{eq:newton4}) and get:
+
+\begin{equation}
+  \label{eq:newton5}
+ \frac{dw(z)}{dt} = \frac{dw}{dz} \frac{dz}{dt} = B
+\end{equation}
+
+
+But $\frac{dz}{dt} = w$ so rearranging:
+
+\begin{equation}
+  \label{eq:newton6}
+ \frac{dw(z)}{dt} = w \frac{dw}{dz} = B
+\end{equation}
+which can be rewritten as:
+
+\begin{equation}
+  \label{eq:newton7}
+  w\,dw  = B dz
+\end{equation}
+
+Integrating (\ref{eq:newton7}) from the surface where $w = 0$ to a height $z^\prime$ gives:
+
+\begin{equation}
+  \label{eq:newton7}
+  \frac{1}{2} w^2 =  \int_0^{z^\prime} B dz = \text{CAPE}
+\end{equation}
+
+So
+
+\begin{equation}
+  \label{eq:cape}
+  w(z^\prime) =  \sqrt{2\,\text{CAPE}}
+\end{equation}
+
+It's also true that $B\,dz$ is force $\times$ distance = work,  and $(1/2) w^2$ is the kinetic energy per kg, so that (\ref{eq:cape}) is assuming that every bit of work done by buoyancy on the parcel is used to accelerate it to velocity $w(z^\prime)$.
+
+
+\end{document}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

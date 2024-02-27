@@ -55,7 +55,9 @@ parts:
     - file: notebooks/worksheets/tropical_engine.md
     - url: https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&dl=0
       title: tropical_engine.ipynb download
-<<<<<<< HEAD
+    - file: notebooks/worksheets/tropical_engine_solution.md
+    - url: https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&dl=0
+      title: tropical_engine_solution.ipynb download
     - file: notebooks/worksheets/mixing_line_example.md
     - url: https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&dl=0
       title: mixing_line_example.ipynb download

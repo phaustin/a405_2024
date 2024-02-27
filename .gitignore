@@ -16,3 +16,6 @@ solutions/
 *out
 _version*
 *egg-info*
+*.nav
+*.snm
+*.toc
