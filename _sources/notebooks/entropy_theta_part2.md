@@ -30,7 +30,7 @@ $$
 $$
 for dry air.
 
-The same relationship hollds quantities conserved under reversible moist adiabatic processes. As we assume reversibility, the heterogeneous system must be in phase equilibrium at all times. In this case the total entropy $(s)$ is conserved.
+The same relationship holds for quantities conserved under reversible moist adiabatic processes. As we assume reversibility, the heterogeneous system must be in phase equilibrium at all times. In this case the total entropy $\phi$ is conserved.
 
 We can find total specific entropy (entropy per unit mass of dry air) for a mixture of dry air, water vapor and liquid water by adding the individual entropies:
 
