@@ -217,3 +217,13 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Finish Thompkins Chapter 3
 - Read Thompkins Chapter 4: sections 4.1 and 4.2
 
+## Lecture 19, week 7 Tuesday
+
+- Notes on entropy for a air/vapor/liquid/mixture -  {ref}`entropy_part2`
+
+- Solutiions posted
+
+  - {ref}`tropical_heat_solution`
+  -  [taylor mixing solution](https://www.dropbox.com/scl/fi/6qs2cqcy07lmod49o4cyw/taylor_mix_answer.pdf?rlkey=2bfovdzckdzau5spysyrky3cb&dl=0)
+  - Go over midterm solutions {ref}`assign4_midterm_sol`
+

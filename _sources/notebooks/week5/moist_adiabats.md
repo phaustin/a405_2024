@@ -37,7 +37,7 @@ from matplotlib import pyplot as plt
 Set get_data = True to fetch the Wyoming sounding data from the website and store it.
 
 ```{code-cell} ipython3
-get_data = True
+get_data = False
 values=dict(region='naconf',year='2012',month='7',start='0100',stop='3000',station='72340')
 if get_data:
     write_soundings(values, 'littlerock')
@@ -107,7 +107,7 @@ def label_fun():
 ```
 
 ```{code-cell} ipython3
-fig,ax =plt.subplots(1,1,figsize=(12,12))
+fig,ax =plt.subplots(1,1,figsize=(8,8))
 corners = [10, 35]
 ax, skew = makeSkewWet(ax, corners=corners, skew=skew,label_fun=label_fun)
 #ax,skew = makeSkewWet(ax,corners=corners,skew=skew)

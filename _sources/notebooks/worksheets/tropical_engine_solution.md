@@ -12,8 +12,8 @@ kernelspec:
   name: python3
 ---
 
-(tropical_engine)=
-# Tropical Heat Engine
+(tropical_heat_solution)=
+# Tropical Heat Engine - Solution
 
 ## This notebook calculate the efficiency of the following Carnot engine
 
@@ -49,10 +49,6 @@ from a405.thermo.thermlib import find_lv, find_rsat
 from a405.thermo.thermlib import convertTempToSkew
 from a405.thermo.constants import constants as c
 from a405.utils.helper_funs import make_tuple
-```
-
-```{code-cell} ipython3
-help(make_tuple)
 ```
 
 ## A. get the surface enthalpy in the tropics (point A)
@@ -118,7 +114,7 @@ A_tup = calc_enthalpy(A_dict)
 print(format_tup(A_tup))
 ```
 
-## B. Lift to 400 hPa and remove 80% of the liqued water
+## B. Lift to 400 hPa and remove 80% of the liquid water
 
 ```{code-cell} ipython3
 fig,ax = plt.subplots(1,1,figsize=[10,8])
@@ -189,3 +185,48 @@ In the cell below find:
 - the heating in and out $Q_{in}$ and $Q_out$  (see equation 17 in my [Carnot cycle notes](https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&dl=0)
 - the total work/kg done by the heat engine
 - the efficiency of the heat engine
+
++++
+
+## Solution
+
++++
+
+### Enthalpy change from D to A
+
+```{code-cell} ipython3
+deltaT_AD = A_tup.temp - D_tup.temp
+deltaRv_AD = A_tup.rv - D_tup.rv
+print(f'from D to A, temp increases by {deltaT_AD:5.3f} K, vapor by {deltaRv_AD*1.e3:5.3f} g/kg')
+```
+
+### $\Delta Q_{in}$
+
+```{code-cell} ipython3
+deltaQin = A_tup.enthalpy - D_tup.enthalpy
+```
+
+### Enthalpy change from B to C
+
+```{code-cell} ipython3
+deltaT_BC = B_tup.temp - C_tup.temp
+deltaRv_BC = B_tup.rv - C_tup.rv
+print(f'from B to C, temp decreases by {deltaT_BC:5.3f} K, vapor by {deltaRv_BC*1.e3:5.3f} g/kg')
+```
+
+### $\Delta Q_{out}$ and heat engine efficiency
+
+```{code-cell} ipython3
+deltaQout = B_tup.enthalpy - C_tup.enthalpy
+print(f"deltaQin {deltaQin:6.4g} J/kg\ndeltaQout {deltaQout:6.4g}  J/kg")
+deltaQinVap = 2.5e6*(A_tup.rv - D_tup.rv)
+deltaQoutVap = 2.5e6*(B_tup.rv - C_tup.rv)
+print(f"deltaQin due to vapor= {deltaQinVap:6.4g} J/kg = {deltaQinVap/deltaQin*100:6.2f}%")
+print(f"deltaQout due to vapor= {deltaQoutVap:6.4g} J/kg = {deltaQoutVap/deltaQout*100.:6.2f}%")
+efficiency = (deltaQin - deltaQout)/deltaQin
+print(f'heat engine efficiency is {efficiency*100:6.3g} %')
+```
+
+```{code-cell} ipython3
+
+```
