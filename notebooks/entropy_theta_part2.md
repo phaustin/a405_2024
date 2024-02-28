@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(entropy_part2)=
 # Entropy and potential temperature -- including liquid and vapor
 
 This derivation follows the book [Atmospheric Convection](https://webcat.library.ubc.ca/vwebv/holdingsInfo?bibId=980430), 1995, Chapter 4
@@ -29,7 +30,7 @@ $$
 $$
 for dry air.
 
-The same relationship hollds quantities conserved under reversible moist adiabatic processes. As we assume reversibility, the heterogeneous system must be in phase equilibrium at all times. In this case the total entropy $(s)$ is conserved.
+The same relationship holds for quantities conserved under reversible moist adiabatic processes. As we assume reversibility, the heterogeneous system must be in phase equilibrium at all times. In this case the total entropy $\phi$ is conserved.
 
 We can find total specific entropy (entropy per unit mass of dry air) for a mixture of dry air, water vapor and liquid water by adding the individual entropies:
 
@@ -87,7 +88,7 @@ where $\mathcal{H}= e/e^ *$ is the relative humidity.
 
 +++
 
-Note that the last term vanishes when the air is saturated $(\mathcal{H}=1)$ and also in the limit of $r_v \rightarrow 0$, reaching its maximum magnitude for intermediate $\mathcal{H}$. The quantity $\phi$, defined by (4.5.9), is conserved under reversible moist adiabatic transformations.
+Note that the last term vanishes when the air is saturated $(\mathcal{H}=1)$ and also in the limit of $r_v \rightarrow 0$, reaching its maximum magnitude for intermediate $\mathcal{H}$. The quantity $\phi$, defined by {eq}`eq:fullphi`, is conserved under reversible moist adiabatic transformations.
 
 In the atmospheric sciences it's traditional to express entropy in terms of an equivalent potential temperature $\theta_e$, which is defined so that
 
@@ -99,8 +100,8 @@ where $p_0$ is a reference pressure. Substituting {eq}`eq:fullphi` into {eq}`eq:
 
 $$
 \begin{aligned}
-& \theta_e=T\left(\frac{p_0}{p_d}\right)^{R_{t l} /\left(c_{p l}+c_l r_t\right)} 
-&(\mathcal{H})^{-r_v R_v /\left(c_{p, l}+c_l r_t\right)} \exp \left[\frac{l_v r_v}{\left(c_{p d}+c_l r_t\right) T}\right]
+& \theta_e=T\left(\frac{p_0}{p_d}\right)^{R_{t l} /\left(c_{pd}+c_l r_t\right)} 
+&(\mathcal{H})^{-r_v R_v /\left(c_{pd}+c_l r_t\right)} \exp \left[\frac{l_v r_v}{\left(c_{p d}+c_l r_t\right) T}\right]
 \end{aligned}
 $$(eq:thetaet)
 

@@ -12,7 +12,8 @@ kernelspec:
   name: python3
 ---
 
-# Tompkins practice quesitons
+(thompkins_answers)=
+# Tompkins practice quesitons -- solutions
 
 +++
 

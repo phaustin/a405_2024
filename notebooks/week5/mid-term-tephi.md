@@ -118,6 +118,7 @@ ax.set(xlim=xcorners,ylim=[1000,400]);
 #l2,=ax.plot(xcoord_Td,sounding['pres'],color='g',label='dew')
 #[line.set(linewidth=3) for line in [l1,l2]];
 fig.savefig("midterm_skewT.pdf")
+fig.savefig("midterm_skewT.png")
 ```
 
 ## Find the $\theta_{es}$ of the  LCL

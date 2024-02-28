@@ -28,7 +28,7 @@ The attached tephigram shows the temperature (circle) and dewpoint (diamond) for
 ```{figure}  mid_2016_tephi_sol.png
 ---
 width: 60%
-name: directive-fig
+name: tephi_2016
 alt: pha
 ---
 2016 tephigram
@@ -101,7 +101,7 @@ LCL of the mixture is 791 hPa
 ```{figure} mid_2016_mixing.png
 ---
 width: 70%
-name: directive-fig
+name: mixing_2016
 alt: pha
 ---
 Mid 2016 mixing problem
@@ -133,7 +133,7 @@ Find the following (you can use $l_v = l_{v0}$ and $c_p = c_{pd}$) :
 ```{figure} prob1.jpg
 ---
 width: 50%
-name: directive-fig
+name: heat_engine
 alt: pha
 ---
 Heat Engine Solution
@@ -155,7 +155,7 @@ moist static energy since we are at constant pressure but not constant
 temperature:
 
 \begin{equation}
-  \label{eq:firstI}
+  \label{eq:firstIa}
   \Delta Q_{in} = \Delta h_m = c_p \Delta T  + l_v \Delta q_v
 \end{equation}
 
@@ -219,10 +219,10 @@ Is there convective overturning?
 ```{figure} mid_2012_stability.jpg
 ---
 width: 50%
-name: directive-fig
+name: stability
 alt: pha
 ---
-Stability problem
+2012 Stability problem
 ```
 
 +++

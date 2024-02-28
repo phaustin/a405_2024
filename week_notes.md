@@ -219,10 +219,18 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 
 ## Lecture 19, week 7 Tuesday
 
+- Notes on entropy for a air/vapor/liquid/mixture -  {ref}`entropy_part2`
+
 - Solutiions posted
 
   - {ref}`tropical_heat_solution`
-  - 
+  -  [taylor mixing solution](https://www.dropbox.com/scl/fi/6qs2cqcy07lmod49o4cyw/taylor_mix_answer.pdf?rlkey=2bfovdzckdzau5spysyrky3cb&dl=0)
+  - Go over midterm solutions {ref}`assign4_midterm_sol`
+  - {ref}`thompkins_answers`
+  
+- For Thursday
 
-* Go over midterm solutions {ref}`assign4_midterm_sol`
+  - do the 2012 midterm problems 2 and 3 posted at the bottom of {ref}`assign4_midterm_sol`
+
+  - Two box mixing -- given two compartments of dry air with different pressures and temperatures, find the final pressure, temperature and entropy when the membrane separating the box is broken.  Is the entropy conserved?
 
