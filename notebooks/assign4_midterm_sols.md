@@ -218,11 +218,33 @@ Is there convective overturning?
 
 ```{figure} mid_2012_stability.jpg
 ---
-width: 50%
+width: 70%
 name: stability
 alt: pha
 ---
 2012 Stability problem
+```
+
++++
+
+```{figure} images/page1_convec.png
+---
+width: 70%
+name: hand_drawn
+alt: pha
+---
+2012 Stability problem
+```
+
++++
+
+```{figure} images/convec_2012_solution.png
+---
+width: 70%
+name: computer_solution
+alt: pha
+---
+2012 final answer
 ```
 
 +++
@@ -240,9 +262,20 @@ a total water mixing ratio of 3 g/kg.  Using the tephigram
 
 +++
 
+```{figure} images/page2_mix.jpg
+---
+width: 90%
+name: directive-fig
+alt: pha
+---
+2012 mixing problem 3
+```
+
++++
+
 ```{figure} mid_2012_mixing_skewT.png
 ---
-width: 70%
+width: 90%
 name: directive-fig
 alt: pha
 ---

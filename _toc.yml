@@ -65,6 +65,7 @@ parts:
     - file: notebooks/cape_part1.md
     - url: https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&dl=0
       title: cape notebook download
+    - file: notebooks/convec_instability.md
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
