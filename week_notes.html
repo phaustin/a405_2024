@@ -218,6 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/cape_part1.html">Cape Part 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/cape_part1.html">Cape Part 1</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/convec_instability.html">Convective instability – lifting demo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -235,6 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrainment notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&amp;dl=0">wet bulb temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mid term</span></p>
 <ul class="nav bd-sidenav">
@@ -431,6 +434,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-week-7-tuesday">Lecture 19, week 7 Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-week-7-thursday">Lecture 20, week 7 Thursday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-tuesday-read-my-koehler-notes-and-lohmann-chapter-6-sections-6-1-6-4">For Tuesday – read my Koehler notes and  Lohmann Chapter 6 sections 6.1-6.4</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -470,8 +477,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-353d8144-8930-492c-ba3d-b1068e712818">
-<span class="eqno">(1)<a class="headerlink" href="#equation-353d8144-8930-492c-ba3d-b1068e712818" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b111cb3-9f38-421c-9b24-9fa4a7480c8b">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7b111cb3-9f38-421c-9b24-9fa4a7480c8b" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -480,8 +487,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-be188cf8-5bbc-4b2a-9adb-1a1b34d4ff83">
-<span class="eqno">(2)<a class="headerlink" href="#equation-be188cf8-5bbc-4b2a-9adb-1a1b34d4ff83" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e8bc6e0b-d7b4-4090-8713-8130a3ec4d3a">
+<span class="eqno">(2)<a class="headerlink" href="#equation-e8bc6e0b-d7b4-4090-8713-8130a3ec4d3a" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -490,8 +497,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-56354888-c1dc-480e-aa2e-52fc60290b29">
-<span class="eqno">(3)<a class="headerlink" href="#equation-56354888-c1dc-480e-aa2e-52fc60290b29" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b0dcac5-9a9e-4741-abcc-6d0e16ff6fd9">
+<span class="eqno">(3)<a class="headerlink" href="#equation-7b0dcac5-9a9e-4741-abcc-6d0e16ff6fd9" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -719,7 +726,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>Notes on entropy for a air/vapor/liquid/mixture -  <a class="reference internal" href="notebooks/entropy_theta_part2.html#entropy-part2"><span class="std std-ref">Entropy and potential temperature – including liquid and vapor</span></a></p></li>
 <li><p>Solutiions posted</p>
 <ul>
-<li><p><a class="reference internal" href="notebooks/worksheets/tropical_engine_solution.html#tropical-heat-solution"><span class="std std-ref">Tropical Heat Engine - Solution</span></a></p></li>
+<li><p><span class="xref std std-ref">tropical_heat_solution</span></p></li>
 <li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/6qs2cqcy07lmod49o4cyw/taylor_mix_answer.pdf?rlkey=2bfovdzckdzau5spysyrky3cb&amp;dl=0">taylor mixing solution</a></p></li>
 <li><p>Go over midterm solutions <a class="reference internal" href="notebooks/assign4_midterm_sols.html#assign4-midterm-sol"><span class="std std-ref">Assignment 4: midterm solutions</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/thompkins_practice_answers.html#thompkins-answers"><span class="std std-ref">Tompkins practice quesitons – solutions</span></a></p></li>
@@ -732,6 +739,17 @@ Connect weighted averages and scale heights with the <a class="reference externa
 </ul>
 </li>
 </ul>
+</section>
+<section id="lecture-20-week-7-thursday">
+<h2>Lecture 20, week 7 Thursday<a class="headerlink" href="#lecture-20-week-7-thursday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Clouds in the news:  <a class="reference external" href="https://www.nytimes.com/2024/02/27/climate/scientists-are-freaking-out-about-ocean-temperatures.html">NYTimes article from Feb. 27 on North Atlantic temperatures</a></p></li>
+<li><p><span class="xref std std-ref">convective_instability</span></p></li>
+<li><p><a class="reference internal" href="notebooks/assign4_midterm_sols.html#assign4-midterm-sol"><span class="std std-ref">Assignment 4: midterm solutions</span></a></p></li>
+</ul>
+<section id="for-tuesday-read-my-koehler-notes-and-lohmann-chapter-6-sections-6-1-6-4">
+<h3>For Tuesday – read <a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">my Koehler notes</a> and  Lohmann Chapter 6 sections 6.1-6.4<a class="headerlink" href="#for-tuesday-read-my-koehler-notes-and-lohmann-chapter-6-sections-6-1-6-4" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 </section>
 
@@ -839,6 +857,10 @@ Connect weighted averages and scale heights with the <a class="reference externa
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-week-7-tuesday">Lecture 19, week 7 Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-week-7-thursday">Lecture 20, week 7 Thursday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-tuesday-read-my-koehler-notes-and-lohmann-chapter-6-sections-6-1-6-4">For Tuesday – read my Koehler notes and  Lohmann Chapter 6 sections 6.1-6.4</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/assign4_midterm_sols.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tompkins practice quesitons" href="thompkins_practice_answers.html" />
+    <link rel="next" title="Tompkins practice quesitons – solutions" href="thompkins_practice_answers.html" />
     <link rel="prev" title="Entropy and potential temperature – including liquid and vapor" href="entropy_theta_part2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -218,6 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="worksheets/cape_part1.html">Cape Part 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cape_part1.html">Cape Part 1</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convec_instability.html">Convective instability – lifting demo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -235,6 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrainment notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&amp;dl=0">wet bulb temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mid term</span></p>
 <ul class="current nav bd-sidenav">
@@ -242,7 +245,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/27kzivl2a0vt0qmw9hg7k/a405_mid_2016.pdf?rlkey=10rdsl2p1jgm5qefu1g0jbt6g&amp;dl=0">2016 midterm</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 4: midterm solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
 </ul>
 
     </div>
@@ -422,7 +425,7 @@ document.write(`
 <figure class="align-default" id="tephi-2016">
 <a class="reference internal image-reference" href="../_images/mid_2016_tephi_sol.png"><img alt="pha" src="../_images/mid_2016_tephi_sol.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">2016 tephigram</span><a class="headerlink" href="#tephi-2016" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">2016 tephigram</span><a class="headerlink" href="#tephi-2016" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -486,7 +489,7 @@ air at that level.</p>
 <figure class="align-default" id="mixing-2016">
 <a class="reference internal image-reference" href="../_images/mid_2016_mixing.png"><img alt="pha" src="../_images/mid_2016_mixing.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Mid 2016 mixing problem</span><a class="headerlink" href="#mixing-2016" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Mid 2016 mixing problem</span><a class="headerlink" href="#mixing-2016" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -511,7 +514,7 @@ stages:</p>
 <figure class="align-default" id="heat-engine">
 <a class="reference internal image-reference" href="../_images/prob1.jpg"><img alt="pha" src="../_images/prob1.jpg" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Heat Engine Solution</span><a class="headerlink" href="#heat-engine" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Heat Engine Solution</span><a class="headerlink" href="#heat-engine" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Equivalent potential temperatures:</p>
@@ -525,39 +528,39 @@ stages:</p>
 <p>To find <span class="math notranslate nohighlight">\(Q_{in}\)</span> from <span class="math notranslate nohighlight">\(C \rightarrow A\)</span> we need to use the first law and
 moist static energy since we are at constant pressure but not constant
 temperature:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c140ee8d-2b36-47c5-9b9a-2df8eb2d5549">
-<span class="eqno">(19)<a class="headerlink" href="#equation-c140ee8d-2b36-47c5-9b9a-2df8eb2d5549" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e934b57c-adf9-4d29-9b0f-df71f7f8145c">
+<span class="eqno">(19)<a class="headerlink" href="#equation-e934b57c-adf9-4d29-9b0f-df71f7f8145c" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstIa}
   \Delta Q_{in} = \Delta h_m = c_p \Delta T  + l_v \Delta q_v
 \end{equation}\]</div>
 <p>At  point C we have <span class="math notranslate nohighlight">\(q_{vC} = q_{sat}\)</span> = 8.86 g/kg, tempC=10.44 deg C and at point A
 <span class="math notranslate nohighlight">\(q_{vA} = q_T\)</span>=14 g/kg, tempA=25 deg C.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f1c897c-25c1-4c9d-9cf9-243a82f0b15e">
-<span class="eqno">(20)<a class="headerlink" href="#equation-6f1c897c-25c1-4c9d-9cf9-243a82f0b15e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1c7fb66b-d782-4900-9b06-31a4da6a7050">
+<span class="eqno">(20)<a class="headerlink" href="#equation-1c7fb66b-d782-4900-9b06-31a4da6a7050" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstI}
   \Delta Q_{in} = 1004 (25 - 10.44) + 2.5 \times 10^6 (14 - 8.86) \times 10^{-3} = 27468\ J/kg
 \end{equation}\]</div>
 <p>For <span class="math notranslate nohighlight">\(\Delta Q_{out}\)</span> we can use the fact that on a reversible isotherm the second law says:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f33ccfb0-e7f7-4484-84bf-96ccced21c86">
-<span class="eqno">(21)<a class="headerlink" href="#equation-f33ccfb0-e7f7-4484-84bf-96ccced21c86" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-12adeda9-26af-460f-a62c-46c905bbe808">
+<span class="eqno">(21)<a class="headerlink" href="#equation-12adeda9-26af-460f-a62c-46c905bbe808" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:secondI}
 \Delta s =   \frac{ \Delta q_{out} }{T}
 \end{equation}\]</div>
 <p>We know that:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d542936-be18-4b3f-bb47-1718e2630064">
-<span class="eqno">(22)<a class="headerlink" href="#equation-3d542936-be18-4b3f-bb47-1718e2630064" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-76a99259-bb96-4d75-8d85-65c48c755524">
+<span class="eqno">(22)<a class="headerlink" href="#equation-76a99259-bb96-4d75-8d85-65c48c755524" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelate}
   \Delta s = c_{p} \Delta \log \theta_e = 1004*(\log(317.69) - \log(349.726)) = -96.66
 \end{equation}\]</div>
 <p>and since the isotherm is 10.44 \degc = 283.59 K</p>
-<div class="amsmath math notranslate nohighlight" id="equation-02077db4-da88-4eb3-af89-8341ff67c0bb">
-<span class="eqno">(23)<a class="headerlink" href="#equation-02077db4-da88-4eb3-af89-8341ff67c0bb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b999a42d-fd60-41f6-86f3-33e000c12b3e">
+<span class="eqno">(23)<a class="headerlink" href="#equation-b999a42d-fd60-41f6-86f3-33e000c12b3e" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelateI}
 \Delta q_{out} = T \Delta s = 283.59 \times  -96.66 = -27411.80
 \end{equation}\]</div>
 <p>and the efficiency is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-02d95506-b089-42f4-a787-4f0f5b17d6a1">
-<span class="eqno">(24)<a class="headerlink" href="#equation-02d95506-b089-42f4-a787-4f0f5b17d6a1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9dd7d020-5407-4ed4-86d6-01d23b5114e7">
+<span class="eqno">(24)<a class="headerlink" href="#equation-9dd7d020-5407-4ed4-86d6-01d23b5114e7" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:efficiency}
 \eta =  \frac{ |Q_{in} | - |Q_{out}| }{|Q_{in}|} = \frac{ 27468 - 27411}{27468}  = 0.2\%
 \end{equation}\]</div>
@@ -583,9 +586,21 @@ temperature:</p>
 Is there convective overturning?</p></li>
 </ul>
 <figure class="align-default" id="stability">
-<a class="reference internal image-reference" href="../_images/mid_2012_stability.jpg"><img alt="pha" src="../_images/mid_2012_stability.jpg" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/mid_2012_stability.jpg"><img alt="pha" src="../_images/mid_2012_stability.jpg" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">2012 Stability problem</span><a class="headerlink" href="#stability" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">2012 Stability problem</span><a class="headerlink" href="#stability" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="hand-drawn">
+<a class="reference internal image-reference" href="../_images/page1_convec.png"><img alt="pha" src="../_images/page1_convec.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">2012 Stability problem</span><a class="headerlink" href="#hand-drawn" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="computer-solution">
+<a class="reference internal image-reference" href="../_images/convec_2012_solution.png"><img alt="pha" src="../_images/convec_2012_solution.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">2012 final answer</span><a class="headerlink" href="#computer-solution" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -599,11 +614,40 @@ a total water mixing ratio of 3 g/kg.  Using the tephigram
 <ul class="simple">
 <li><p>The LCL and <span class="math notranslate nohighlight">\(\theta_e\)</span> of the environment and the cloudy air.</p></li>
 <li><p>The temperature and liquid water mixing ratio (g/kg) of the mixture at 700 hPa</p></li>
+<li><p>The LCL and  <span class="math notranslate nohighlight">\(\theta_e\)</span> of the environment and the cloudy air.</p>
+<ul>
+<li><p>From the  figure:</p>
+<ul>
+<li><p>environment LCL=530 hPa, cloud LCL=800 hPa</p></li>
+<li><p>environment  <span class="math notranslate nohighlight">\(\theta_e\)</span> =323.4 K,</p></li>
+<li><p>cloud  <span class="math notranslate nohighlight">\(\theta_2\)</span>=332 K</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>The LCL, <span class="math notranslate nohighlight">\(r_T\)</span> and  <span class="math notranslate nohighlight">\(\theta_e\)</span> of the 50/50 mixture mixture</p>
+<ul>
+<li><p>A 50/50 mixture has <span class="math notranslate nohighlight">\(r_T\)</span> = 6.5 g/kg
+and <span class="math notranslate nohighlight">\(\theta_e\)</span>=327.8 K and an LCL of 675 hPa</p></li>
+</ul>
+</li>
+<li><p>The temperature and liquid water mixing ratio (g/kg) of the mixture at 700 hPa</p>
+<ul>
+<li><p>At 700 hPa the mixture has a temperature of 4.7  C, the saturated vapor mixing ratio
+is bigger than 6.5 g/kg so there is no liquid water in the mixture.</p></li>
+</ul>
+</li>
 </ul>
 <figure class="align-default" id="directive-fig">
-<a class="reference internal image-reference" href="../_images/mid_2012_mixing_skewT.png"><img alt="pha" src="../_images/mid_2012_mixing_skewT.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/page2_mix.jpg"><img alt="pha" src="../_images/page2_mix.jpg" style="width: 90%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">2012 mixing problem 3</span><a class="headerlink" href="#directive-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">2012 mixing problem 3</span><a class="headerlink" href="#directive-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/mid_2012_mixing_skewT.png"><img alt="pha" src="../_images/mid_2012_mixing_skewT.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">2012 mixing problem 3</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -653,7 +697,7 @@ a total water mixing ratio of 3 g/kg.  Using the tephigram
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tompkins practice quesitons</p>
+        <p class="prev-next-title">Tompkins practice quesitons – solutions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

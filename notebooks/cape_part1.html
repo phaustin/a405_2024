@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/cape_part1.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="entropy_theta_part2.html" />
+    <link rel="next" title="Convective instability – lifting demo" href="convec_instability.html" />
     <link rel="prev" title="Cape Part 1" href="worksheets/cape_part1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -218,6 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="worksheets/cape_part1.html">Cape Part 1</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Cape Part 1</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convec_instability.html">Convective instability – lifting demo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -235,6 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrainment notes</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&amp;dl=0">wet bulb temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">Notes on the Kohler equation  (Thompkins Section 4.2)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mid term</span></p>
 <ul class="nav bd-sidenav">
@@ -242,7 +245,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/27kzivl2a0vt0qmw9hg7k/a405_mid_2016.pdf?rlkey=10rdsl2p1jgm5qefu1g0jbt6g&amp;dl=0">2016 midterm</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assign4_midterm_sols.html">Assignment 4: midterm solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
 </ul>
 
     </div>
@@ -515,7 +518,9 @@ here is the day:  120728
 here is the day:  120729
 here is the day:  120729
 here is the day:  120730
-files written to littlerock
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>files written to littlerock
 </pre></div>
 </div>
 </div>
@@ -646,7 +651,7 @@ units: {&#39;drct&#39;: &#39;deg&#39;,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/50e5909625b10178595bf1d7d09cdc311b965e76c70b539c14bdc594f1e1d0f8.png" src="../_images/50e5909625b10178595bf1d7d09cdc311b965e76c70b539c14bdc594f1e1d0f8.png" />
+<img alt="../_images/0fe49c6b2964eeefe5441c85876adb3cfdacc70136ab431894d37c8211090dc8.png" src="../_images/0fe49c6b2964eeefe5441c85876adb3cfdacc70136ab431894d37c8211090dc8.png" />
 </div>
 </div>
 <section id="turn-off-log-0-warning">
@@ -764,7 +769,7 @@ B = g\left(\frac{T_{v,a}-T_{v,env}}{T_{v,env}}\right)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/50b2e12429d5c470cf8df51dc8ff4d1f31a1969120ea85e5b794accd33e1f518.png" src="../_images/50b2e12429d5c470cf8df51dc8ff4d1f31a1969120ea85e5b794accd33e1f518.png" />
+<img alt="../_images/30242e8084872d7ddc3f8962f9f2902be85c5aaf56ba3268f3885617abe28e45.png" src="../_images/30242e8084872d7ddc3f8962f9f2902be85c5aaf56ba3268f3885617abe28e45.png" />
 </div>
 </div>
 </section>
@@ -928,11 +933,11 @@ w_{max} = \sqrt{2 \,\text{CAPE}}\tag{AT3.4}
       </div>
     </a>
     <a class="right-next"
-       href="entropy_theta_part2.html"
+       href="convec_instability.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
+        <p class="prev-next-title">Convective instability – lifting demo</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

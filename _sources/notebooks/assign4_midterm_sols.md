@@ -218,11 +218,33 @@ Is there convective overturning?
 
 ```{figure} mid_2012_stability.jpg
 ---
-width: 50%
+width: 70%
 name: stability
 alt: pha
 ---
 2012 Stability problem
+```
+
++++
+
+```{figure} images/page1_convec.png
+---
+width: 70%
+name: hand_drawn
+alt: pha
+---
+2012 Stability problem
+```
+
++++
+
+```{figure} images/convec_2012_solution.png
+---
+width: 70%
+name: computer_solution
+alt: pha
+---
+2012 final answer
 ```
 
 +++
@@ -238,11 +260,29 @@ a total water mixing ratio of 3 g/kg.  Using the tephigram
 - The LCL and $\theta_e$ of the environment and the cloudy air.
 -  The temperature and liquid water mixing ratio (g/kg) of the mixture at 700 hPa
 
+- The LCL and  $\theta_e$ of the environment and the cloudy air.  - From the  figure:    - environment LCL=530 hPa, cloud LCL=800 hPa    - environment  $\theta_e$ =323.4 K,
+    - cloud  $\theta_2$=332 K
+    - The LCL, $r_T$ and  $\theta_e$ of the 50/50 mixture mixture  - A 50/50 mixture has $r_T$ = 6.5 g/kg
+    and $\theta_e$=327.8 K and an LCL of 675 hPa
+- The temperature and liquid water mixing ratio (g/kg) of the mixture at 700 hPa  - At 700 hPa the mixture has a temperature of 4.7  C, the saturated vapor mixing ratio
+    is bigger than 6.5 g/kg so there is no liquid water in the mixture.
+
++++
+
+```{figure} images/page2_mix.jpg
+---
+width: 90%
+name: directive-fig
+alt: pha
+---
+2012 mixing problem 3
+```
+
 +++
 
 ```{figure} mid_2012_mixing_skewT.png
 ---
-width: 70%
+width: 90%
 name: directive-fig
 alt: pha
 ---
