@@ -234,3 +234,8 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 
   - Two box mixing -- given two compartments of dry air with different pressures and temperatures, find the final pressure, temperature and entropy when the membrane separating the box is broken.  Is the entropy conserved?
 
+## Lecture 20, week 7 Thursday
+
+- {ref}`convective_instability`
+
+

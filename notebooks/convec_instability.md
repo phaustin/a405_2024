@@ -1,9 +1,22 @@
+---
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.16.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
+(convec_instability)=
 # Convective instability -- lifting demo
 
 This notebook shows how to obtain Thompkins Figure 3.47, p. 64 in stages, by lifting
 a convectively unstable layer 
-
-````python
 
 ```{code-cell} ipython3
 #calculate thermodynamic variables
@@ -15,7 +28,6 @@ from a405.thermo.thermlib import convertTempToSkew
 from a405.thermo.thermlib import find_Tmoist
 import numpy as np
 import matplotlib.pyplot as plt
-import pdb
 
 pa2hPa = 1.e-2
 hPa2pa = 100.
@@ -25,16 +37,20 @@ np.seterr(all='ignore');
 # # Reproduce the convective instability plot of Thompkins p. 64
 ```
 
-```{code-cell} ipython3
-
-
-from IPython.display import Image
-Image('images/convective_instability.jpg')
+```{figure}  images/convective_instability.jpg
+---
+width: 60%
+name: thompkins_layer
+alt: pha
+---
+Thompkins Figure 3.47
 ```
 
++++
+
+## Define functions to plot and lift soundings
+
 ```{code-cell} ipython3
-
-
 def makePlot(ax,Temp=None,Tdew=None,Tpseudo=None,press=None,
              Tlcl=None,plcl=None,botLabel='LCL bot (835 hPa)',
              topLabel='LCL top (768 hPa)',skew=35):
@@ -65,14 +81,20 @@ def makePlot(ax,Temp=None,Tdew=None,Tpseudo=None,press=None,
 ```
 
 ```{code-cell} ipython3
-
-
 def lift_sounding(rTotal,theThetae,press):
-  #
-  # rTotal in kg/kg, theThetae in K press in hPa
-  #
-  # return temp,dewpoint and Tspeudo soundings for an rT,thetae sounding at pressure levels press
-  #
+  '''
+  this function lifts a thetae sounding (rTotal,the_Thetae)
+  to pressure level press
+
+  Parameters
+  ----------
+    
+  rTotal in kg/kg, theThetae in K press in hPa
+
+  Returns
+  -------
+  temp,dewpoint and Tspeudo soundings for an rT,thetae sounding at pressure levels press
+  '''
   Temp_rv_rl = apply(theThetae,rTotal,press*hPa2pa,the_fun=tinvert_thetae)
   Temp = np.array([item[0] for item in Temp_rv_rl])
   rv =  np.array([item[1] for item in Temp_rv_rl])
@@ -81,12 +103,9 @@ def lift_sounding(rTotal,theThetae,press):
   return Tdew,Temp,Tpseudo
 ```
 
+## construct a 100 hPa thick layer with a convectively unstable sounding
+
 ```{code-cell} ipython3
-
-
-#
-# construct a 100 hPa thick layer with a convectively unstable sounding
-#
 Tbot = 20.
 Ttop = 17.5
 Tdewbot = 15
@@ -107,7 +126,6 @@ Temp_soundK = Temp_sound + c.Tc
 ```
 
 ```{code-cell} ipython3
-
 
 def apply(*args,the_fun=None):
     """
@@ -137,7 +155,6 @@ def apply(*args,the_fun=None):
 
 ```{code-cell} ipython3
 
-
 #
 #figure 1: plot the T,Tdew profile only
 #
@@ -162,7 +179,6 @@ ax.plot(cs(Temp_sound[:-1],press0[:-1],skew),press0[:-1],'bo',markersize=15);
 ```
 
 ```{code-cell} ipython3
-
 
 #
 # figure 2, add thetae sounding and LCL for layer top and bottom
@@ -191,12 +207,11 @@ fig_dict=dict(press=press0,Tpseudo=Tpseudo_sound,Temp=Temp_soundK,
 xcorners=find_corners(corners,skew=skew)
 ax.set(xlim=xcorners,ylim=[1000, 600])
 ax = makePlot(ax,**fig_dict);  
-#fig.savefig('base900_thetae.png')
-#fig.savefig('base900_thetae.pdf')
 ```
 
-```{code-cell} ipython3
+## Now lift the layer gradually
 
+```{code-cell} ipython3
 
 # #figure 3: lift cloud base by 50 hPa to 850 hPa
 
@@ -207,11 +222,9 @@ fig, ax = plt.subplots(1, 1, figsize=(10, 10))
 ax, skew = makeSkewWet(ax,corners=corners,skew=skew)
 ax = makePlot(ax,**fig_dict) 
 ax.set(xlim=xcorners,ylim=[1000, 600])
-fig.savefig('base850_thetae.png')
 ```
 
 ```{code-cell} ipython3
-
 
 #
 # figure 4 -- lift by 14.7 hPa to 835.3
@@ -224,12 +237,9 @@ fig, ax = plt.subplots(1, 1, figsize=(10, 10))
 ax, skew = makeSkewWet(ax,corners=corners,skew=skew)
 ax = makePlot(ax,**fig_dict)   
 ax.set(xlim=xcorners,ylim=[1000, 600])
-fig.savefig('base835_thetae.png')
-fig.savefig('base835_thetae.pdf')
 ```
 
 ```{code-cell} ipython3
-
 
 #
 # figure 5 -- lift by 10.3 hPa to 825
@@ -243,12 +253,9 @@ fig, ax = plt.subplots(1, 1, figsize=(10, 10))
 ax, skew = makeSkewWet(ax,corners=corners,skew=skew)
 ax = makePlot(ax,**fig_dict) 
 ax.set(xlim=xcorners,ylim=[1000, 600])
-fig.savefig('base825_thetae.png')
-fig.savefig('base825_thetae.pdf')
 ```
 
 ```{code-cell} ipython3
-
 
 #
 # figure 6 -- lift by 25 hPa to 800 hPa
@@ -263,12 +270,9 @@ fig, ax = plt.subplots(1, 1, figsize=(10, 10))
 ax, skew = makeSkewWet(ax,corners=corners,skew=skew)
 ax = makePlot(ax,**fig_dict) 
 ax.set(xlim=xcorners,ylim=[1000, 600])
-fig.savefig('base800_thetae.png')
-fig.savefig('base800_thetae.pdf')
 ```
 
 ```{code-cell} ipython3
-
 
 #
 # figure 7 -- lift by 32.25 to 768 hPa
@@ -284,7 +288,4 @@ fig, ax = plt.subplots(1, 1, figsize=(10, 10))
 ax, skew = makeSkewWet(ax,corners=corners,skew=skew)
 ax = makePlot(ax,**fig_dict)   
 ax.set(xlim=xcorners,ylim=[1000, 600])
-fig.savefig('base768_thetae.png')
-fig.savefig('base768_thetae.pdf')
 ```
-````

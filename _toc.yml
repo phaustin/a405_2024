@@ -66,6 +66,8 @@ parts:
     - url: https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&dl=0
       title: cape notebook download
     - file: notebooks/convec_instability.md
+    - url: https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&dl=0
+      title: convective_instability.ipynb download
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
@@ -95,6 +97,8 @@ parts:
       title: entrainment notes
     - url: https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&dl=0
       title: wet bulb temperature notes
+    - url: https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0
+      title: Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)
   - caption: Mid term
     chapters:
     - file: notebooks/thompkins_practice.md
