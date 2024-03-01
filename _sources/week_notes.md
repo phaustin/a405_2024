@@ -239,7 +239,7 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Clouds in the news:  [NYTimes article from Feb. 27 on North Atlantic temperatures](https://www.nytimes.com/2024/02/27/climate/scientists-are-freaking-out-about-ocean-temperatures.html)
 
 - {ref}`convec_instab`
-
 - {ref}`assign4_midterm_sol`
+- {ref}`two_compartments`
 
 - For Tuesday -- read [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0) and  Lohmann Chapter 6 sections 6.1-6.4
