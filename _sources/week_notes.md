@@ -255,7 +255,8 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 
 ## Lecture 23, week 8 Thursday
 
-- Review Lohmann Chapter 6, Thompkins section 4.2 and [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0)
+- Review Lohmann Chapter 6, [Thompkins section 4.2](https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&SS_jc=TC0001980404&title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate
+) and [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0)
 
 - - {ref}`assignment_5`
 
