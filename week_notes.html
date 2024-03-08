@@ -190,6 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/kohler_probs.html">Assignment 5  – Due Friday March 15 midnight</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&amp;dl=0">kohler_problem.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +226,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/a405_mid_2024_solution.html">2024 midterm solutions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/kohler_students.html">Kohler Problem</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -443,6 +445,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-21-week-7-midterm">Lecture 21, week 7 midterm</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-week-8-tuesday">Lecture 22, week 8 Tuesday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-23-week-8-thursday">Lecture 23, week 8 Thursday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-24-week-8-friday">Lecture 24, week 8 Friday</a></li>
 </ul>
             </nav>
         </div>
@@ -482,8 +485,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-59cd12da-2923-4a31-93cf-dec35003a6c0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-59cd12da-2923-4a31-93cf-dec35003a6c0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18b21e2f-a14c-48b6-8581-e275cd31d3bb">
+<span class="eqno">(1)<a class="headerlink" href="#equation-18b21e2f-a14c-48b6-8581-e275cd31d3bb" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -492,8 +495,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eb076cba-6948-4960-b38a-45311be06d1b">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eb076cba-6948-4960-b38a-45311be06d1b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-27243936-d611-43e8-9e46-8801f4eb65e0">
+<span class="eqno">(2)<a class="headerlink" href="#equation-27243936-d611-43e8-9e46-8801f4eb65e0" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -502,8 +505,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e7947c25-796d-48e5-948b-be743f6c281f">
-<span class="eqno">(3)<a class="headerlink" href="#equation-e7947c25-796d-48e5-948b-be743f6c281f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5035bf9f-41ea-4975-bf63-1112b0250498">
+<span class="eqno">(3)<a class="headerlink" href="#equation-5035bf9f-41ea-4975-bf63-1112b0250498" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -777,6 +780,13 @@ Connect weighted averages and scale heights with the <a class="reference externa
 </li>
 </ul>
 </section>
+<section id="lecture-24-week-8-friday">
+<h2>Lecture 24, week 8 Friday<a class="headerlink" href="#lecture-24-week-8-friday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Worksheet: <a class="reference internal" href="notebooks/worksheets/kohler_students.html#kohler-problem"><span class="std std-ref">Kohler Problem</span></a></p></li>
+<li><p>Download <a class="reference external" href="https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&amp;dl=0">kohler_problem.ipynb</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -887,6 +897,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-21-week-7-midterm">Lecture 21, week 7 midterm</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-week-8-tuesday">Lecture 22, week 8 Tuesday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-23-week-8-thursday">Lecture 23, week 8 Thursday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-24-week-8-friday">Lecture 24, week 8 Friday</a></li>
 </ul>
   </nav></div>
 

@@ -260,3 +260,8 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 
 - - {ref}`assignment_5`
 
+## Lecture 24, week 8 Friday
+
+- Worksheet: {ref}`kohler_problem`
+- Download [kohler_problem.ipynb](https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0)
+

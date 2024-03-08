@@ -189,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kohler_probs.html">Assignment 5a  – Due Friday</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kohler_probs.html">Assignment 5  – Due Friday March 15 midnight</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a405_mid_2024_solution.html">2024 midterm solutions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/kohler_students.html">Kohler Problem</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -533,39 +534,39 @@ stages:</p>
 <p>To find <span class="math notranslate nohighlight">\(Q_{in}\)</span> from <span class="math notranslate nohighlight">\(C \rightarrow A\)</span> we need to use the first law and
 moist static energy since we are at constant pressure but not constant
 temperature:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5e1fc003-2071-4356-9cc9-b3ca93abab64">
-<span class="eqno">(19)<a class="headerlink" href="#equation-5e1fc003-2071-4356-9cc9-b3ca93abab64" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-48eeeffc-4f43-47fe-9a34-83ce176721fe">
+<span class="eqno">(19)<a class="headerlink" href="#equation-48eeeffc-4f43-47fe-9a34-83ce176721fe" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstIa}
   \Delta Q_{in} = \Delta h_m = c_p \Delta T  + l_v \Delta q_v
 \end{equation}\]</div>
 <p>At  point C we have <span class="math notranslate nohighlight">\(q_{vC} = q_{sat}\)</span> = 8.86 g/kg, tempC=10.44 deg C and at point A
 <span class="math notranslate nohighlight">\(q_{vA} = q_T\)</span>=14 g/kg, tempA=25 deg C.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b0cecee-fce1-479e-8740-807b4bf68c9a">
-<span class="eqno">(20)<a class="headerlink" href="#equation-5b0cecee-fce1-479e-8740-807b4bf68c9a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0517c770-d606-48c8-b327-1e1becf4ad66">
+<span class="eqno">(20)<a class="headerlink" href="#equation-0517c770-d606-48c8-b327-1e1becf4ad66" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstI}
   \Delta Q_{in} = 1004 (25 - 10.44) + 2.5 \times 10^6 (14 - 8.86) \times 10^{-3} = 27468\ J/kg
 \end{equation}\]</div>
 <p>For <span class="math notranslate nohighlight">\(\Delta Q_{out}\)</span> we can use the fact that on a reversible isotherm the second law says:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-77a928c9-cb85-43f1-a36f-cb302b66b035">
-<span class="eqno">(21)<a class="headerlink" href="#equation-77a928c9-cb85-43f1-a36f-cb302b66b035" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-62f1626b-fb9d-40fc-8d89-a71a2e0b6e54">
+<span class="eqno">(21)<a class="headerlink" href="#equation-62f1626b-fb9d-40fc-8d89-a71a2e0b6e54" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:secondI}
 \Delta s =   \frac{ \Delta q_{out} }{T}
 \end{equation}\]</div>
 <p>We know that:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-88df9ac8-b985-4def-a6ea-330f71dfb18f">
-<span class="eqno">(22)<a class="headerlink" href="#equation-88df9ac8-b985-4def-a6ea-330f71dfb18f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0cb3dc9d-32f8-44bb-a470-40b02d6dec8b">
+<span class="eqno">(22)<a class="headerlink" href="#equation-0cb3dc9d-32f8-44bb-a470-40b02d6dec8b" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelate}
   \Delta s = c_{p} \Delta \log \theta_e = 1004*(\log(317.69) - \log(349.726)) = -96.66
 \end{equation}\]</div>
 <p>and since the isotherm is 10.44 \degc = 283.59 K</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d4505fe-3e20-4149-a260-93313884f6c0">
-<span class="eqno">(23)<a class="headerlink" href="#equation-3d4505fe-3e20-4149-a260-93313884f6c0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-86fbf9df-c9d2-4729-83bd-24e708990a94">
+<span class="eqno">(23)<a class="headerlink" href="#equation-86fbf9df-c9d2-4729-83bd-24e708990a94" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelateI}
 \Delta q_{out} = T \Delta s = 283.59 \times  -96.66 = -27411.80
 \end{equation}\]</div>
 <p>and the efficiency is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5ae37b14-32aa-44ad-bdf2-355d58c3fff5">
-<span class="eqno">(24)<a class="headerlink" href="#equation-5ae37b14-32aa-44ad-bdf2-355d58c3fff5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2bb37ed2-c843-4f6a-a10a-83c7ec134dbb">
+<span class="eqno">(24)<a class="headerlink" href="#equation-2bb37ed2-c843-4f6a-a10a-83c7ec134dbb" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:efficiency}
 \eta =  \frac{ |Q_{in} | - |Q_{out}| }{|Q_{in}|} = \frac{ 27468 - 27411}{27468}  = 0.2\%
 \end{equation}\]</div>
