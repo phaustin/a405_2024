@@ -243,3 +243,19 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - {ref}`two_compartments`
 
 - For Tuesday -- read [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0) and  Lohmann Chapter 6 sections 6.1-6.4
+
+## Lecture 21, week 7 midterm
+
+- {ref}`midterm_solutions_2024`
+
+
+## Lecture 22, week 8 Tuesday
+
+- Machine learning seminar
+
+## Lecture 23, week 8 Thursday
+
+- Review Lohmann Chapter 6, Thompkins section 4.2 and [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0)
+
+- - {ref}`assignment_5`
+

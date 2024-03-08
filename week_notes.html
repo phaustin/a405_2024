@@ -189,6 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/kohler_probs.html">Assignment 5  – Due Friday March 15 midnight</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="nav bd-sidenav">
@@ -222,6 +223,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/two_compartments.html">Two compartment problem`</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/a405_mid_2024_solution.html">2024 midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -437,6 +440,9 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-week-7-tuesday">Lecture 19, week 7 Tuesday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-week-7-thursday">Lecture 20, week 7 Thursday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-21-week-7-midterm">Lecture 21, week 7 midterm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-week-8-tuesday">Lecture 22, week 8 Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-23-week-8-thursday">Lecture 23, week 8 Thursday</a></li>
 </ul>
             </nav>
         </div>
@@ -476,8 +482,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-27bbfab4-e4b8-4599-a69f-ffa0304f9d3f">
-<span class="eqno">(1)<a class="headerlink" href="#equation-27bbfab4-e4b8-4599-a69f-ffa0304f9d3f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7bdd16d3-e5d5-494a-9ab4-08370d715733">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7bdd16d3-e5d5-494a-9ab4-08370d715733" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -486,8 +492,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2d2be0a1-878b-4bfa-976d-ac775ece28c9">
-<span class="eqno">(2)<a class="headerlink" href="#equation-2d2be0a1-878b-4bfa-976d-ac775ece28c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-62ee969c-b895-4b2d-8fc8-f16d3eeeb41e">
+<span class="eqno">(2)<a class="headerlink" href="#equation-62ee969c-b895-4b2d-8fc8-f16d3eeeb41e" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -496,8 +502,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-683f7b35-8045-4805-b51e-e898610ed7bf">
-<span class="eqno">(3)<a class="headerlink" href="#equation-683f7b35-8045-4805-b51e-e898610ed7bf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9cd43378-99bb-4fac-9a28-a9c113de34f6">
+<span class="eqno">(3)<a class="headerlink" href="#equation-9cd43378-99bb-4fac-9a28-a9c113de34f6" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -749,6 +755,28 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>For Tuesday – read <a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">my Koehler notes</a> and  Lohmann Chapter 6 sections 6.1-6.4</p></li>
 </ul>
 </section>
+<section id="lecture-21-week-7-midterm">
+<h2>Lecture 21, week 7 midterm<a class="headerlink" href="#lecture-21-week-7-midterm" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="notebooks/a405_mid_2024_solution.html#midterm-solutions-2024"><span class="std std-ref">2024 midterm solutions</span></a></p></li>
+</ul>
+</section>
+<section id="lecture-22-week-8-tuesday">
+<h2>Lecture 22, week 8 Tuesday<a class="headerlink" href="#lecture-22-week-8-tuesday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Machine learning seminar</p></li>
+</ul>
+</section>
+<section id="lecture-23-week-8-thursday">
+<h2>Lecture 23, week 8 Thursday<a class="headerlink" href="#lecture-23-week-8-thursday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Review Lohmann Chapter 6, Thompkins section 4.2 and <a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">my Koehler notes</a></p></li>
+<li><ul>
+<li><p><a class="reference internal" href="notebooks/kohler_probs.html#assignment-5"><span class="std std-ref">Assignment 5  – Due Friday March 15 midnight</span></a></p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -856,6 +884,9 @@ Connect weighted averages and scale heights with the <a class="reference externa
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-week-7-tuesday">Lecture 19, week 7 Tuesday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-week-7-thursday">Lecture 20, week 7 Thursday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-21-week-7-midterm">Lecture 21, week 7 midterm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-week-8-tuesday">Lecture 22, week 8 Tuesday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-23-week-8-thursday">Lecture 23, week 8 Thursday</a></li>
 </ul>
   </nav></div>
 

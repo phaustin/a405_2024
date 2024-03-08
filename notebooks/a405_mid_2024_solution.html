@@ -1,0 +1,1104 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2024 midterm solutions &#8212; ATSC 405 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/a405_mid_2024_solution';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/a405_mid_2024_solution.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="entropy_theta_part2.html" />
+    <link rel="prev" title="Two compartment problem`" href="two_compartments.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ATSC 405 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    ATSC 405 syllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics check2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../learning_goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html">Course schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_install.html">Python links</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&amp;dl=0">Thompkins text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_notes.html">Week notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2/hydrostat.html">Week2: Hydrostatic balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3/derivs_and_ints.html">week3: working with numpy arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&amp;dl=0">adiabatic_box_handin.in -- download link for ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/hydrostatic_2024_handin.html">Assign 2: Scale heights for typical atmospheric soundings</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kohler_probs.html">Assignment 5a  – Due Friday</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="week2/skew_coords_solution.html">Week2: Theromodynamic diagrams worksheet – solution</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&amp;dl=0">Download skew_coords_solution.ipynb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ze49m63z5gbnombcgk2gh/xarray-intro.ipynb?rlkey=sa86yjsi3l05bq8v54j6yxjtz&amp;dl=0">download xarray-intro.ipynb</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4/tropical_clouds_profiles.html">Tropical cloud profiles</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5/moist_adiabats.html">Moist adiabats and the LCL</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&amp;dl=0">tropical_engine_solution.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/mixing_line_example.html">Mixing line example</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&amp;dl=0">mixing_line_example.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/cape_part1.html">Cape Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cape_part1.html">Cape Part 1</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convec_instability.html">Convective instability – lifting demo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="two_compartments.html">Two compartment problem`</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2024 midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&amp;dl=0">Week2 - Kinetic Temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&amp;dl=0">First law of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&amp;dl=0">Entropy and potential temperature</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&amp;dl=0">Weighted averages and scale heights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy_theta_part2.html">Entropy and potential temperature – including liquid and vapor</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&amp;dl=0">Buoyancy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/puuzbbzszhue73nrew726/maxwell.pdf?rlkey=fntdkgs90o4otc3s6lme85mz3&amp;dl=0">Maxwell relation notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/o7d278acumkgmwe4y6qlu/clausius.pdf?rlkey=ktd5fvdwaz7ishuxozwmf6kwa&amp;dl=0">Clausius-Clapyron notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&amp;dl=0">Schroeder pp. 159-162</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&amp;dl=0">virtural temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&amp;dl=0">Moist static energy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrainment notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&amp;dl=0">wet bulb temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mid term</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/xkyzaeqr7fmyk9weci8ny/thompkins_practice.ipynb?rlkey=3ngg8tk7ynxsftlp57ov0wxtp&amp;dl=0">Thompkins practice problems download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/27kzivl2a0vt0qmw9hg7k/a405_mid_2016.pdf?rlkey=10rdsl2p1jgm5qefu1g0jbt6g&amp;dl=0">2016 midterm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assign4_midterm_sols.html">Assignment 4: midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/a405_mid_2024_solution.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2024 midterm solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-cooling">Question 1: cooling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-taylor-series-problem-9-points">Question 2: Taylor series problem (9 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-answer">Question 2 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-mixing-12-points">Question 3: Mixing (12 points):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-cooling-code">Question 1 cooling code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-temperature-at-700hpa-blue-diamond">Find temperature at 700hPa (blue diamond)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-lcl-prior-cooling">Find the lcl prior cooling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-theta-e-hasn-t-changed">Check that <span class="math notranslate nohighlight">\(\theta_e\)</span> hasn’t changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-cool-by-6-k">now cool by 6 K</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-new-lcl">Find the new lcl</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-mixing-code-12-points">Question 3 mixing code (12 points):</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-theta-e-of-the-surface-air">get <span class="math notranslate nohighlight">\(\theta_e\)</span> of the surface air</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-t-td-and-the-lcl">Plot T, Td and the lcl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lift-to-800">Lift to 800</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-environment">add the environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-mixture">add the mixture</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="midterm-solutions">
+<span id="midterm-solutions-2024"></span><h1>2024 midterm solutions<a class="headerlink" href="#midterm-solutions" title="Permalink to this heading">#</a></h1>
+<section id="question-1-cooling">
+<h2>Question 1: cooling<a class="headerlink" href="#question-1-cooling" title="Permalink to this heading">#</a></h2>
+<p>For air at 700 hPa with 7 g/kg of vapor (saturated) and 1 g/kg of liquid.</p>
+<ul>
+<li><p>(4 points)  Find:</p></li>
+<li><p>The LCL of this air: <strong>755 hPa</strong></p></li>
+<li><p>The approximate temperature if it was brought adiabatically to a pressure of 1000 hPa.</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(\theta\)</span> at LCL = 303 K</strong></p></li>
+</ul>
+</li>
+<li><p>(8 points)  Suppose this air was cooled by 6 degrees C at a constant pressure of 700 hPa.  Find:</p>
+<ul>
+<li><p>The amount of liquid water condensed by the cooling (g/kg)</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(r_{vafter}\)</span> = 4.5 g/kg so now 3.5 g/kg of liquid, an extra 2.5 g/kg has been condensed</strong></p></li>
+</ul>
+</li>
+<li><p>The new LCL, assuming no precipitation: <strong>914 hPa</strong></p></li>
+<li><p>The amount of energy <span class="math notranslate nohighlight">\(\Delta q_{out}\)</span> (J/kg) shed to the environment during the cooling.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \begin{align}
+    \Delta h &amp;= c_p \Delta T + l_v \Delta r_v\\
+             &amp;= -(1004 \times 6) + -(2.5 \times 10^6 \times 2.5 \times 10^{-3}) \\
+             &amp;= -6024 + -6250  = -12274\ J/kg
+    \end{align}
+    \end{split}\]</div>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="align-default" id="figure1">
+<a class="reference internal image-reference" href="../_images/question1_answer.png"><img alt="../_images/question1_answer.png" src="../_images/question1_answer.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Question 1 cooling problem</span><a class="headerlink" href="#figure1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="question-2-taylor-series-problem-9-points">
+<h2>Question 2: Taylor series problem (9 points)<a class="headerlink" href="#question-2-taylor-series-problem-9-points" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>(3 points)  Use a Taylor series to expand the following expression with respect to a temperature perturbation (this should yield 3 terms)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+d  \left ( \frac{l_v(T) r_s(T)}{c_p T} \right ) 
+\]</div>
+<ul class="simple">
+<li><p>(6 points) Use the attached tephigram to estimate the size of each of the three terms for a 2 deg C  temperature perturbation at a pressure of 900 hPa and a temperature of 10 deg C.  To first order, what is error in percent caused by dropping two of those terms in the following approximation?  (Hint: get <span class="math notranslate nohighlight">\(dr_s/dT\)</span> from the tephigram, not the C-C equation)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+d  \left ( \frac{l_v(T) r_s(T)}{c_p T} \right ) \approx  \left ( \frac{l_v(T) }{c_p T} \right ) dr_s
+\]</div>
+<section id="question-2-answer">
+<h3>Question 2 answer<a class="headerlink" href="#question-2-answer" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; f=\frac{l_v r_s}{c_p T} \\
+&amp; \frac{d f}{d T}=\frac{l_v r_s}{c_p} \\
+&amp; \frac{d f}{d T}=\frac{l_v}{c_p T} \frac{d r_s}{d T}+\frac{r_s}{c_p T} \frac{d l_v}{d T}-\frac{l_v r_s}{c_p T^2}
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Put in some numbers:  at 10 deg C and 900 hPa the tephigram says</p>
+<ul>
+<li><p>T = 283.15 K</p></li>
+<li><p><span class="math notranslate nohighlight">\(r_s\)</span> = 8.6 g/kg</p></li>
+<li><p><span class="math notranslate nohighlight">\(l_v\)</span> = 2.5e6 J/kg</p></li>
+<li><p><span class="math notranslate nohighlight">\(c_p\)</span> = 1004 J/kg/K</p></li>
+<li><p><span class="math notranslate nohighlight">\(dr_s/dT\)</span> \approx (9.2 - 8) <span class="math notranslate nohighlight">\(g\,kg^{-1}\)</span>/2 K = 1.2e-3/2 = 0.6e-3 kg/kg/K</p></li>
+<li><p><span class="math notranslate nohighlight">\(dl_v/dT\)</span> = <span class="math notranslate nohighlight">\(c_{pv} - c_l\)</span> = 1870 - 4190 = -2320  J/kg/K</p></li>
+</ul>
+</li>
+</ul>
+<p>Putting in numbers shows the second and third terms contribute about 6% to the total</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a405.thermo.thermlib</span> <span class="kn">import</span> <span class="n">find_rsat</span><span class="p">,</span> <span class="n">find_theta</span>
+<span class="n">lv</span><span class="o">=</span><span class="mf">2.5e6</span>
+<span class="n">cp</span> <span class="o">=</span> <span class="mi">1004</span> 
+<span class="n">T</span> <span class="o">=</span> <span class="mf">283.15</span>
+<span class="n">rs</span> <span class="o">=</span> <span class="mf">8.6e-3</span>
+<span class="n">drs_dT</span> <span class="o">=</span> <span class="mf">0.6e-3</span>
+<span class="n">dlv_dT</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2320</span>
+<span class="n">term1</span> <span class="o">=</span> <span class="n">lv</span><span class="o">*</span><span class="n">drs_dT</span><span class="o">/</span><span class="n">cp</span><span class="o">/</span><span class="n">T</span>
+<span class="n">term2</span> <span class="o">=</span> <span class="n">rs</span><span class="o">*</span><span class="n">dlv_dT</span><span class="o">/</span><span class="n">cp</span><span class="o">/</span><span class="n">T</span>
+<span class="n">term3</span> <span class="o">=</span> <span class="o">-</span><span class="n">lv</span><span class="o">*</span><span class="n">rs</span><span class="o">/</span><span class="n">cp</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mf">2.</span>
+<span class="n">allterms</span> <span class="o">=</span> <span class="p">(</span><span class="n">term1</span> <span class="o">+</span> <span class="n">term2</span> <span class="o">+</span> <span class="n">term3</span><span class="p">)</span>
+<span class="n">term1</span><span class="o">/</span><span class="n">allterms</span><span class="o">*</span><span class="mf">100.</span><span class="p">,</span><span class="n">term2</span><span class="o">/</span><span class="n">allterms</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">term3</span><span class="o">/</span><span class="n">allterms</span><span class="o">*</span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(106.82874135156415, -1.4209646982976056, -5.407776653266536)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_rsat</span><span class="p">(</span><span class="mf">283.15</span><span class="p">,</span><span class="mf">900.e2</span><span class="p">),</span> <span class="n">find_rsat</span><span class="p">(</span><span class="mf">284.15</span><span class="p">,</span><span class="mf">900.e2</span><span class="p">),</span> <span class="n">find_rsat</span><span class="p">(</span><span class="mf">282.15</span><span class="p">,</span><span class="mf">900.e2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.008598345770613811, 0.009200106277360903, 0.008032147416648249)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-3-mixing-12-points">
+<h2>Question 3: Mixing (12 points):<a class="headerlink" href="#question-3-mixing-12-points" title="Permalink to this heading">#</a></h2>
+<p>Surface air at 1000 hPa with a temperature of 20 deg C and a dewpoint of 16 deg C is lifted adiabatically to 800 hPa, where it mixes 50/50 with air that has a <span class="math notranslate nohighlight">\(\theta_e\)</span> of 307 K and a mixing ratio of 4 g/kg.  Use the tephigram to find:</p>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\(\theta_e\)</span> and LCL of the of the surface air</p>
+<ul>
+<li><p>324.4 K</p></li>
+<li><p><span class="math notranslate nohighlight">\(r_t\)</span> = 7.8 g/kg</p></li>
+<li><p>942 hPa</p></li>
+</ul>
+</li>
+<li><p>The <span class="math notranslate nohighlight">\(\theta_e\)</span>, <span class="math notranslate nohighlight">\(r_v\)</span> and <span class="math notranslate nohighlight">\(r_l\)</span> of the mixture</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\theta_e\)</span> = 315.7 K</p></li>
+<li><p><span class="math notranslate nohighlight">\(r_v\)</span> = 7 g/kg</p></li>
+<li><p><span class="math notranslate nohighlight">\(r_l\)</span> = 0.8 g/kg</p></li>
+</ul>
+</li>
+<li><p>The LCL of the mixture</p>
+<ul>
+<li><p>850 hPa</p></li>
+</ul>
+</li>
+<li><p>The temperature of the mixture at 800 hPa</p>
+<ul>
+<li><p>5.3 deg C</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/question3_answer.png"><img alt="../_images/question3_answer.png" src="../_images/question3_answer.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Question 3 mixing problem</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="question-1-cooling-code">
+<h2>Question 1 cooling code<a class="headerlink" href="#question-1-cooling-code" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a405.soundings.wyominglib</span> <span class="kn">import</span> <span class="n">read_soundings</span>
+<span class="kn">from</span> <span class="nn">a405.skewT.skewlib</span> <span class="kn">import</span> <span class="n">makeSkewDry</span>
+<span class="kn">from</span> <span class="nn">a405.thermo.thermlib</span> <span class="kn">import</span> <span class="n">convertTempToSkew</span><span class="p">,</span> <span class="n">find_lcl</span><span class="p">,</span> <span class="n">find_thetaet</span><span class="p">,</span> <span class="n">find_Td</span><span class="p">,</span> <span class="n">tinvert_thetae</span>
+<span class="kn">from</span> <span class="nn">a405.thermo.thermlib</span> <span class="kn">import</span> <span class="n">find_rsat</span><span class="p">,</span> <span class="n">find_theta</span>
+<span class="kn">from</span> <span class="nn">a405.thermo.constants</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
+<span class="kn">from</span> <span class="nn">a405.skewT.fullskew</span> <span class="kn">import</span> <span class="n">makeSkewWet</span><span class="p">,</span><span class="n">find_corners</span><span class="p">,</span><span class="n">make_default_labels</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">pytz</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">label_fun</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    override the default rs labels with a tighter mesh</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">arange</span>
+    <span class="c1">#</span>
+    <span class="c1"># get the default labels</span>
+    <span class="c1">#</span>
+    <span class="n">tempLabels</span><span class="p">,</span><span class="n">rsLabels</span><span class="p">,</span> <span class="n">thetaLabels</span><span class="p">,</span> <span class="n">thetaeLabels</span> <span class="o">=</span> <span class="n">make_default_labels</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># change the temperature and rs grids</span>
+    <span class="c1">#</span>
+    <span class="n">tempLabels</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">rsLabels</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> 
+    <span class="n">thetaeLabels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">295</span><span class="p">,</span><span class="mi">335</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tempLabels</span><span class="p">,</span><span class="n">rsLabels</span><span class="p">,</span> <span class="n">thetaLabels</span><span class="p">,</span> <span class="n">thetaeLabels</span>
+
+<span class="n">pa2hPa</span> <span class="o">=</span> <span class="mf">1.e-2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="n">skew</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">corners</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">ax</span><span class="p">,</span> <span class="n">skew</span> <span class="o">=</span> <span class="n">makeSkewWet</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="n">corners</span><span class="p">,</span> <span class="n">skew</span><span class="o">=</span><span class="n">skew</span><span class="p">,</span><span class="n">label_fun</span><span class="o">=</span><span class="n">label_fun</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cooling problem&#39;</span><span class="p">)</span>
+
+<span class="n">xcorners</span><span class="o">=</span><span class="n">find_corners</span><span class="p">(</span><span class="n">corners</span><span class="p">,</span><span class="n">skew</span><span class="o">=</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="n">xcorners</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">1000</span><span class="p">,</span><span class="mi">600</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;cooling.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/144c423c1c1b4c8d53547d351b767217f7da5ba08b973cc23e4d1e2acd3af263.png" src="../_images/144c423c1c1b4c8d53547d351b767217f7da5ba08b973cc23e4d1e2acd3af263.png" />
+</div>
+</div>
+<section id="find-temperature-at-700hpa-blue-diamond">
+<h3>Find temperature at 700hPa (blue diamond)<a class="headerlink" href="#find-temperature-at-700hpa-blue-diamond" title="Permalink to this heading">#</a></h3>
+<p>Saturated parcel, so plot either temperature or dewpoint</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">press_700</span> <span class="o">=</span> <span class="mf">700e2</span>
+<span class="n">rv</span><span class="o">=</span><span class="mf">7e-3</span>
+<span class="n">rl</span> <span class="o">=</span> <span class="mf">1.e-3</span>
+<span class="n">rt_cloud</span> <span class="o">=</span> <span class="n">rv</span> <span class="o">+</span> <span class="n">rl</span>
+<span class="c1">#find_thetaet(Td, rt, T, p)</span>
+<span class="n">Td_700</span> <span class="o">=</span> <span class="n">find_Td</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span><span class="n">press_700</span><span class="p">)</span>
+<span class="n">temp_700</span> <span class="o">=</span> <span class="n">Td_700</span>
+<span class="n">thetae_before</span> <span class="o">=</span> <span class="n">find_thetaet</span><span class="p">(</span><span class="n">Td_700</span><span class="p">,</span> <span class="n">rt_cloud</span><span class="p">,</span> <span class="n">temp_700</span><span class="p">,</span><span class="n">press_700</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="n">temp_700</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">)</span><span class="si">=:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> deg C&quot;</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1"># plot the dewpoint temperature</span>
+<span class="c1">#</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">Td_700</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_700</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">bot</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_700</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span> <span class="s1">&#39;bd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;before cooling&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(temp_700 - c.Tc)=3.4 deg C
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-the-lcl-prior-cooling">
+<h3>Find the lcl prior cooling<a class="headerlink" href="#find-the-lcl-prior-cooling" title="Permalink to this heading">#</a></h3>
+<p>Plot as a green diamond</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">press_900</span> <span class="o">=</span> <span class="mf">900.e2</span>
+<span class="n">Temp_900</span><span class="p">,</span><span class="n">rv_900</span><span class="p">,</span><span class="n">rl_900</span><span class="o">=</span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="n">thetae_before</span><span class="p">,</span><span class="n">rt_cloud</span><span class="p">,</span><span class="n">press_900</span><span class="p">)</span>
+<span class="c1"># find lcl</span>
+<span class="n">Td_900</span> <span class="o">=</span> <span class="n">find_Td</span><span class="p">(</span><span class="n">rv_900</span><span class="p">,</span> <span class="n">press_900</span><span class="p">)</span>
+<span class="n">T_lcl</span><span class="p">,</span> <span class="n">press_lcl</span> <span class="o">=</span> <span class="n">find_lcl</span><span class="p">(</span><span class="n">Td_900</span><span class="p">,</span><span class="n">Temp_900</span><span class="p">,</span><span class="n">press_900</span><span class="p">)</span>
+<span class="n">xplot</span> <span class="o">=</span> <span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">T_lcl</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_lcl</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">lcl</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_lcl</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span> <span class="s1">&#39;bd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;original lcl&quot;</span><span class="p">)</span>
+<span class="n">theta_lcl</span> <span class="o">=</span> <span class="n">find_theta</span><span class="p">(</span><span class="n">T_lcl</span><span class="p">,</span><span class="n">press_lcl</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LCL potential temperature </span><span class="si">{</span><span class="n">theta_lcl</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> K&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LCL pressure </span><span class="si">{</span><span class="n">press_lcl</span><span class="o">*</span><span class="n">pa2hPa</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> hPa&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LCL potential temperature 302.8 K
+LCL pressure 755.4 hPa
+</pre></div>
+</div>
+<img alt="../_images/574a47622c1f3bbe6109cd8909cf83a7a285e6ba0c380bce748794f62fd158a7.png" src="../_images/574a47622c1f3bbe6109cd8909cf83a7a285e6ba0c380bce748794f62fd158a7.png" />
+</div>
+</div>
+</section>
+<section id="check-that-theta-e-hasn-t-changed">
+<h3>Check that <span class="math notranslate nohighlight">\(\theta_e\)</span> hasn’t changed<a class="headerlink" href="#check-that-theta-e-hasn-t-changed" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thetae_check</span><span class="o">=</span> <span class="n">find_thetaet</span><span class="p">(</span><span class="n">Td_900</span><span class="p">,</span> <span class="n">rt_cloud</span><span class="p">,</span> <span class="n">Temp_900</span><span class="p">,</span><span class="n">press_900</span><span class="p">)</span>
+<span class="n">thetae_check</span><span class="p">,</span> <span class="n">thetae_before</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(325.4053028098543, 325.405302809854)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="now-cool-by-6-k">
+<h3>now cool by 6 K<a class="headerlink" href="#now-cool-by-6-k" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_temp</span> <span class="o">=</span> <span class="n">temp_700</span> <span class="o">-</span> <span class="mi">6</span>
+<span class="n">thetae_after</span> <span class="o">=</span> <span class="n">find_thetaet</span><span class="p">(</span><span class="n">Td_700</span><span class="p">,</span> <span class="n">rt_cloud</span><span class="p">,</span> <span class="n">new_temp</span><span class="p">,</span><span class="n">press_700</span><span class="p">)</span>
+<span class="n">Temp_after</span><span class="p">,</span><span class="n">rv_after</span><span class="p">,</span><span class="n">rl_after</span><span class="o">=</span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="n">thetae_after</span><span class="p">,</span><span class="n">rt_cloud</span><span class="p">,</span><span class="n">press_700</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="n">thetae_before</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">thetae_after</span><span class="p">)</span><span class="si">=}</span><span class="s2"> K&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;New rv </span><span class="si">{</span><span class="n">rv_after</span><span class="o">*</span><span class="mf">1.e3</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> g/kg&quot;</span><span class="p">)</span>
+<span class="n">xplot</span> <span class="o">=</span> <span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">Temp_after</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_700</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">lcl</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_700</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span> <span class="s1">&#39;bd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;after 6K cooling&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(thetae_before - thetae_after)=14.023693303587152 K
+New rv 4.5 g/kg
+</pre></div>
+</div>
+<img alt="../_images/5f781c7623d33e997e4e09f0ed86af6177bbc12bc3e45f76c259c3324a2caf4e.png" src="../_images/5f781c7623d33e997e4e09f0ed86af6177bbc12bc3e45f76c259c3324a2caf4e.png" />
+</div>
+</div>
+</section>
+<section id="find-the-new-lcl">
+<h3>Find the new lcl<a class="headerlink" href="#find-the-new-lcl" title="Permalink to this heading">#</a></h3>
+<p>Go down to the surface in case lcl is below 900</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rv_after</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.004517141515720101
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">press_1000</span><span class="o">=</span><span class="mf">1.e5</span> <span class="c1"># Pa</span>
+<span class="n">Temp_1000</span><span class="p">,</span><span class="n">rv_1000</span><span class="p">,</span><span class="n">rl_1000</span><span class="o">=</span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="n">thetae_after</span><span class="p">,</span><span class="n">rt_cloud</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="n">Td_1000</span> <span class="o">=</span> <span class="n">find_Td</span><span class="p">(</span><span class="n">rt_cloud</span><span class="p">,</span> <span class="n">press_1000</span><span class="p">)</span>
+<span class="n">T_lcl</span><span class="p">,</span> <span class="n">press_lcl</span> <span class="o">=</span> <span class="n">find_lcl</span><span class="p">(</span><span class="n">Td_1000</span><span class="p">,</span><span class="n">Temp_1000</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="n">T_lcl</span><span class="p">,</span><span class="w"> </span><span class="n">press_lcl</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">xplot</span> <span class="o">=</span> <span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">T_lcl</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_lcl</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">lcl</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_lcl</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span> <span class="s1">&#39;cd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;new lcl&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;images/question1_answer.png&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(T_lcl, press_lcl)=(282.3148670679394, 91406.57516902333)
+</pre></div>
+</div>
+<img alt="../_images/83fc114d65b5a64c0ffc37a3134f21e15169691aceb440960dd34d520f5f3d74.png" src="../_images/83fc114d65b5a64c0ffc37a3134f21e15169691aceb440960dd34d520f5f3d74.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="question-3-mixing-code-12-points">
+<h2>Question 3 mixing code (12 points):<a class="headerlink" href="#question-3-mixing-code-12-points" title="Permalink to this heading">#</a></h2>
+<p>Surface air at 1000 hPa with a temperature of 20 deg C and a dewpoint of 16 deg C is lifted adiabatically to 800 hPa, where it mixes 50/50 with air that has a <span class="math notranslate nohighlight">\(\theta_e\)</span> of 307 K and a mixing ratio of 4 g/kg.  Use the tephigram to find:</p>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\(\theta_e\)</span> and LCL of the of the surface air</p></li>
+<li><p>The <span class="math notranslate nohighlight">\(\theta_e\)</span>, <span class="math notranslate nohighlight">\(r_v\)</span> and <span class="math notranslate nohighlight">\(r_l\)</span> of the mixture</p></li>
+<li><p>The LCL of the mixture</p></li>
+<li><p>The temperature of the mixture at 800 hPa</p></li>
+</ul>
+<section id="get-theta-e-of-the-surface-air">
+<h3>get <span class="math notranslate nohighlight">\(\theta_e\)</span> of the surface air<a class="headerlink" href="#get-theta-e-of-the-surface-air" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_1000</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span>
+<span class="n">press_1000</span> <span class="o">=</span> <span class="mf">1.e5</span> 
+<span class="n">Td_1000</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span>
+<span class="n">rt_cloud</span> <span class="o">=</span> <span class="n">find_rsat</span><span class="p">(</span><span class="n">Td_1000</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="n">thetae_cloud</span> <span class="o">=</span> <span class="n">find_thetaet</span><span class="p">(</span><span class="n">Td_1000</span><span class="p">,</span> <span class="n">rt_cloud</span><span class="p">,</span> <span class="n">temp_1000</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="n">T_lcl</span><span class="p">,</span> <span class="n">press_lcl</span> <span class="o">=</span> <span class="n">find_lcl</span><span class="p">(</span><span class="n">Td_1000</span><span class="p">,</span><span class="n">temp_1000</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;thetae: </span><span class="si">{</span><span class="n">thetae_cloud</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> K, lcl_press </span><span class="si">{</span><span class="n">press_lcl</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> Pa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>thetae: 324.4 K, lcl_press 94207.8 Pa
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-t-td-and-the-lcl">
+<h3>Plot T, Td and the lcl<a class="headerlink" href="#plot-t-td-and-the-lcl" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="n">skew</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">corners</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">21</span><span class="p">]</span>
+<span class="n">ax</span><span class="p">,</span> <span class="n">skew</span> <span class="o">=</span> <span class="n">makeSkewWet</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">corners</span><span class="o">=</span><span class="n">corners</span><span class="p">,</span> <span class="n">skew</span><span class="o">=</span><span class="n">skew</span><span class="p">,</span><span class="n">label_fun</span><span class="o">=</span><span class="n">label_fun</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;mixing problem&#39;</span><span class="p">)</span>
+<span class="n">xcorners</span><span class="o">=</span><span class="n">find_corners</span><span class="p">(</span><span class="n">corners</span><span class="p">,</span><span class="n">skew</span><span class="o">=</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="n">xcorners</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">1005</span><span class="p">,</span><span class="mi">600</span><span class="p">])</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">temp_1000</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_1000</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_1000</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span> <span class="s1">&#39;gd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;temp_sfc&quot;</span><span class="p">)</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">Td_1000</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_1000</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_1000</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;bd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;dewpoint_sfc&quot;</span><span class="p">)</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">T_lcl</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_lcl</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_lcl</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;kd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;lcl_cloud&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d421f53def65c31b7c811eb049213fdf74b2ae14de32688b7d884da103f389db.png" src="../_images/d421f53def65c31b7c811eb049213fdf74b2ae14de32688b7d884da103f389db.png" />
+</div>
+</div>
+</section>
+<section id="lift-to-800">
+<h3>Lift to 800<a class="headerlink" href="#lift-to-800" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">press_800</span> <span class="o">=</span> <span class="mf">8.e4</span> <span class="c1">#Pa</span>
+<span class="n">Temp_800</span><span class="p">,</span><span class="n">rv_800</span><span class="p">,</span><span class="n">rl_800</span><span class="o">=</span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="n">thetae_cloud</span><span class="p">,</span><span class="n">rt_cloud</span><span class="p">,</span><span class="n">press_800</span><span class="p">)</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">Temp_800</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;rd&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;cloud_800&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5fc16991e11e92e0ec4fbfd81d9e36833566afd501b9b448dc51332fdbec8f39.png" src="../_images/5fc16991e11e92e0ec4fbfd81d9e36833566afd501b9b448dc51332fdbec8f39.png" />
+</div>
+</div>
+</section>
+<section id="add-the-environment">
+<h3>add the environment<a class="headerlink" href="#add-the-environment" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rt_env</span> <span class="o">=</span> <span class="mf">4.e-3</span>
+<span class="n">thetae_env</span> <span class="o">=</span> <span class="mf">307.</span>
+<span class="n">Td_env</span> <span class="o">=</span>  <span class="n">find_Td</span><span class="p">(</span><span class="n">rt_env</span><span class="p">,</span> <span class="n">press_800</span><span class="p">)</span>
+<span class="n">Temp_env</span><span class="p">,</span><span class="n">rv_env</span><span class="p">,</span><span class="n">rl_env</span><span class="o">=</span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="n">thetae_env</span><span class="p">,</span><span class="n">rt_env</span><span class="p">,</span><span class="n">press_800</span><span class="p">)</span>
+<span class="n">T_lclenv</span><span class="p">,</span> <span class="n">press_lclenv</span> <span class="o">=</span> <span class="n">find_lcl</span><span class="p">(</span><span class="n">Td_env</span><span class="p">,</span><span class="n">Temp_env</span><span class="p">,</span><span class="n">press_800</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">Temp_env</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;gs&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;temp_env&quot;</span><span class="p">)</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">Td_env</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;bs&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Td_env&quot;</span><span class="p">)</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">T_lclenv</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_lclenv</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_lclenv</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;ks&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;lcl_env&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/462a5584b339a6fd1411c5675b103da878581b78775330e416be61692769fb6c.png" src="../_images/462a5584b339a6fd1411c5675b103da878581b78775330e416be61692769fb6c.png" />
+</div>
+</div>
+</section>
+<section id="add-the-mixture">
+<h3>add the mixture<a class="headerlink" href="#add-the-mixture" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thetae_env</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>307.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thetae_mix</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">thetae_env</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">thetae_cloud</span>
+<span class="n">rt_mix</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">rt_env</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">rt_cloud</span>
+<span class="n">Temp_mix</span><span class="p">,</span><span class="n">rv_mix</span><span class="p">,</span><span class="n">rl_mix</span><span class="o">=</span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="n">thetae_mix</span><span class="p">,</span><span class="n">rt_mix</span><span class="p">,</span><span class="n">press_800</span><span class="p">)</span>
+<span class="n">Temp_1000</span><span class="p">,</span><span class="n">rv_1000</span><span class="p">,</span><span class="n">rl_1000</span><span class="o">=</span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="n">thetae_mix</span><span class="p">,</span><span class="n">rt_mix</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="n">Td_1000</span> <span class="o">=</span> <span class="n">find_Td</span><span class="p">(</span><span class="n">rv_1000</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="n">T_lclmix</span><span class="p">,</span> <span class="n">press_lclmix</span> <span class="o">=</span> <span class="n">find_lcl</span><span class="p">(</span><span class="n">Td_1000</span><span class="p">,</span><span class="n">Temp_1000</span><span class="p">,</span><span class="n">press_1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">thetae_mix</span><span class="si">=:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> K, </span><span class="si">{</span><span class="n">rt_mix</span><span class="si">=:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2"> kg/kg&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Temp_mix</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="si">=:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> K, </span><span class="si">{</span><span class="n">rv_mix</span><span class="si">=:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2"> kg/kg, </span><span class="si">{</span><span class="n">rl_mix</span><span class="si">=:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2"> kg/kg&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">press_lclmix</span><span class="si">=:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> Pa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>thetae_mix=315.7 K, rt_mix=0.0078 kg/kg
+Temp_mix - c.Tc=5.3 K, rv_mix=0.0070 kg/kg, rl_mix=0.0008 kg/kg
+press_lclmix=84920.7 Pa
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">Temp_mix</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_800</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;mixture&quot;</span><span class="p">)</span>
+<span class="n">xplot</span><span class="o">=</span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="n">T_lclmix</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press_lclmix</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="n">skew</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xplot</span><span class="p">,</span> <span class="n">press_lclmix</span><span class="o">*</span><span class="n">pa2hPa</span><span class="p">,</span><span class="s1">&#39;cs&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span>
+           <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;mixture lcl&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;images/question3_answer.png&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/67880da1b58e03f45c0edc722f4f71a55b18626a2c9c6a9221917dc29672a664.png" src="../_images/67880da1b58e03f45c0edc722f4f71a55b18626a2c9c6a9221917dc29672a664.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="two_compartments.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Two compartment problem`</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="entropy_theta_part2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-cooling">Question 1: cooling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-taylor-series-problem-9-points">Question 2: Taylor series problem (9 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-answer">Question 2 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-mixing-12-points">Question 3: Mixing (12 points):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-cooling-code">Question 1 cooling code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-temperature-at-700hpa-blue-diamond">Find temperature at 700hPa (blue diamond)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-lcl-prior-cooling">Find the lcl prior cooling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-theta-e-hasn-t-changed">Check that <span class="math notranslate nohighlight">\(\theta_e\)</span> hasn’t changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-cool-by-6-k">now cool by 6 K</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-new-lcl">Find the new lcl</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-mixing-code-12-points">Question 3 mixing code (12 points):</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-theta-e-of-the-surface-air">get <span class="math notranslate nohighlight">\(\theta_e\)</span> of the surface air</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-t-td-and-the-lcl">Plot T, Td and the lcl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lift-to-800">Lift to 800</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-environment">add the environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-mixture">add the mixture</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Philip Austin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
