@@ -239,7 +239,29 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Clouds in the news:  [NYTimes article from Feb. 27 on North Atlantic temperatures](https://www.nytimes.com/2024/02/27/climate/scientists-are-freaking-out-about-ocean-temperatures.html)
 
 - {ref}`convec_instab`
-
 - {ref}`assign4_midterm_sol`
+- {ref}`two_compartments`
 
 - For Tuesday -- read [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0) and  Lohmann Chapter 6 sections 6.1-6.4
+
+## Lecture 21, week 7 midterm
+
+- {ref}`midterm_solutions_2024`
+
+
+## Lecture 22, week 8 Tuesday
+
+- Machine learning seminar
+
+## Lecture 23, week 8 Thursday
+
+- Review Lohmann Chapter 6, [Thompkins section 4.2](https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&SS_jc=TC0001980404&title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate
+) and [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0)
+
+- - {ref}`assignment_5`
+
+## Lecture 24, week 8 Friday
+
+- Worksheet: {ref}`kohler_problem`
+- Download [kohler_problem.ipynb](https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0)
+

@@ -77,6 +77,7 @@ def derivs(t, y, entrain_rate, interpTenv, interpTdEnv, interpPress):
     thetae_cloud = y[2]
     rT_cloud = y[3]
     #yp[0] is the acceleration, in this case the buoyancy 
+    print(f"{height=}")
     yp[0] = calcBuoy(height, thetae_cloud, interpTenv, interpTdEnv, interpPress)
     press = interpPress(height)*100. #Pa
     Tdenv = interpTdEnv(height) + c.Tc #K
@@ -136,12 +137,11 @@ def calcBuoy(height, thetae0, interpTenv, interpTdEnv, interpPress):
     TvDiff=Tvcloud - Tvenv
     buoy = c.g0*(TvDiff/Tvenv)
     return buoy
-
 ```
 
 ## Integrator 
 
-Use [scipy.itegrate.ode](http://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html) to integrate our system of 4 odes 
+Use [scipy.itegrate.ode](http://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html) to integrate our system of 4 odes
 
 ```{code-cell} ipython3
 def integ_entrain(df_sounding,entrain_rate):
@@ -209,7 +209,6 @@ def integ_entrain(df_sounding,entrain_rate):
     df_out=pd.DataFrame.from_records(var_out,columns=colnames)
     df_out['time'] = time_out
     return df_out,interpPress
-
 ```
 
 ## Read in a sounding to set the environment

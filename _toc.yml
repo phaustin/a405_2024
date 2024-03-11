@@ -27,6 +27,9 @@ parts:
       title: Assignment 3 -- Taylor series problem due Sunday midnight
     - url: https://canvas.ubc.ca/courses/129111/assignments/1794948
       title: Assignment 4 --  Midterm review questions -- credit/no credit
+    - file: notebooks/kohler_probs.md
+    - url: https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0
+      title: kohler_problem.ipynb download
   - caption: Worksheets
     chapters:
     - file: notebooks/worksheets/worksheet1_solution.ipynb
@@ -68,6 +71,13 @@ parts:
     - file: notebooks/convec_instability.md
     - url: https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&dl=0
       title: convective_instability.ipynb download
+    - file: notebooks/two_compartments.md
+    - url: https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&dl=0
+      title: two_compartment.ipynb download
+    - file: notebooks/a405_mid_2024_solution.md
+    - url: https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&dl=0
+      title: a405 midterm solutons download
+    - file: notebooks/worksheets/kohler_students.md
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
