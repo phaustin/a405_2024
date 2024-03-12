@@ -265,3 +265,48 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Worksheet: {ref}`kohler_problem`
 - Download [kohler_problem.ipynb](https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0)
 
+## Lecture 25, week 9 Monday
+
+Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
+
+- Review some edits to  [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0)
+
+- New [Kohler stability notes](https://www.dropbox.com/scl/fi/oqlh8x24lh02jyhbwdgvf/kohler_stability.pdf?rlkey=rd1a4plyfglt54wg6u5xz8riu&dl=0)
+
+- Assignment 6:
+
+    - Due Tuesday March 19 midnight:  upload written solutions to these two problems:
+
+      1. Given the critical supersaturation from the kohler notes:
+
+         $$
+         SS=S^* - 1= \left ( \frac{4 a^3}{27b} \right )^{1/2}
+         $$
+
+        show that this implies, for $(NH_4)_2 SO_4$, density $\rho_{aer}$ = 1775
+        ${kg}\,{m^{-3}}$ , van hoft i=3, that:
+
+        $$
+        S^* -1 \approx 1.54 \times 10^{-12}~ m_{aer}^{-0.5}
+        $$
+
+        where $m_{aer}$ is the ammonium sulphate aerosol mass in kg.
+
+        Note that this is why a cloud chamber can get the aerosol mass distribution from a series of
+        saturation and light scattering measurements as smaller and smaller aerosols are pushed over
+       their critical supersaturation and activated.
+
+  2. Show that the expression for second derivative of the thermodynamic potential derived in the
+     kohler stability notes:
+
+     $$
+     \frac{\delta ^2G}{\delta r^2} = - 4 \pi R_v T \rho_l \left [ 2 a - r^2 \left ( 1 +
+           \frac{b}{r^3} \right ) \frac{3b}{r^4}  \right ] + 8 \pi \sigma
+     $$
+
+     Changes sign from stable (positive) to unstable (negative) at $r_{crit}$.
+
+     Hint -- first show that the second derivative is zero at the critical radius.  Then show that
+     the third derivative is negative above and below the critical radius, which means that
+     there has to be a sign change from + to -.
+
