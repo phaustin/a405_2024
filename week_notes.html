@@ -227,6 +227,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="notebooks/a405_mid_2024_solution.html">2024 midterm solutions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/kohler_students.html">Kohler Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/entraining_plume.html">Modeling an entraining cloud updraft</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&amp;dl=0">entraining_plume.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -446,6 +448,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-week-8-tuesday">Lecture 22, week 8 Tuesday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-23-week-8-thursday">Lecture 23, week 8 Thursday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-24-week-8-friday">Lecture 24, week 8 Friday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-25-week-9-monday">Lecture 25, week 9 Monday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">For Thursday</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -485,8 +491,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-18b21e2f-a14c-48b6-8581-e275cd31d3bb">
-<span class="eqno">(1)<a class="headerlink" href="#equation-18b21e2f-a14c-48b6-8581-e275cd31d3bb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b1da53a7-8c84-4ec4-b99a-89da100ef839">
+<span class="eqno">(1)<a class="headerlink" href="#equation-b1da53a7-8c84-4ec4-b99a-89da100ef839" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -495,8 +501,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-27243936-d611-43e8-9e46-8801f4eb65e0">
-<span class="eqno">(2)<a class="headerlink" href="#equation-27243936-d611-43e8-9e46-8801f4eb65e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-69bb26ad-9a02-4db7-9ddc-00425627b9f3">
+<span class="eqno">(2)<a class="headerlink" href="#equation-69bb26ad-9a02-4db7-9ddc-00425627b9f3" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -505,8 +511,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5035bf9f-41ea-4975-bf63-1112b0250498">
-<span class="eqno">(3)<a class="headerlink" href="#equation-5035bf9f-41ea-4975-bf63-1112b0250498" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9a15c06f-9919-4dc0-b80b-4e16238dfaa2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-9a15c06f-9919-4dc0-b80b-4e16238dfaa2" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -787,6 +793,60 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>Download <a class="reference external" href="https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&amp;dl=0">kohler_problem.ipynb</a></p></li>
 </ul>
 </section>
+<section id="lecture-25-week-9-monday">
+<h2>Lecture 25, week 9 Monday<a class="headerlink" href="#lecture-25-week-9-monday" title="Permalink to this heading">#</a></h2>
+<p>Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)</p>
+<ul>
+<li><p>Review some edits to  <a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">my Koehler notes</a></p></li>
+<li><p>New <a class="reference external" href="https://www.dropbox.com/scl/fi/oqlh8x24lh02jyhbwdgvf/kohler_stability.pdf?rlkey=rd1a4plyfglt54wg6u5xz8riu&amp;dl=0">Kohler stability notes</a></p></li>
+<li><p>Assignment 6:</p>
+<ul>
+<li><p>Due Tuesday March 19 midnight:  upload written solutions to these two problems:</p>
+<ol class="arabic">
+<li><p>Given the critical supersaturation from the kohler notes:</p>
+<div class="math notranslate nohighlight">
+\[
+         SS=S^* - 1= \left ( \frac{4 a^3}{27b} \right )^{1/2}
+         \]</div>
+</li>
+</ol>
+<p>show that this implies, for <span class="math notranslate nohighlight">\((NH_4)_2 SO_4\)</span>, density <span class="math notranslate nohighlight">\(\rho_{aer}\)</span> = 1775
+<span class="math notranslate nohighlight">\({kg}\,{m^{-3}}\)</span> , van hoft i=3, that:</p>
+<div class="math notranslate nohighlight">
+\[
+        S^* -1 \approx 1.54 \times 10^{-12}~ m_{aer}^{-0.5}
+        \]</div>
+<p>where <span class="math notranslate nohighlight">\(m_{aer}\)</span> is the ammonium sulphate aerosol mass in kg.</p>
+<p>Note that this is why a cloud chamber can get the aerosol mass distribution from a series of
+saturation and light scattering measurements as smaller and smaller aerosols are pushed over
+their critical supersaturation and activated.</p>
+</li>
+</ul>
+<ol class="arabic" start="2">
+<li><p>Show that the expression for second derivative of the thermodynamic potential derived in the
+kohler stability notes:</p>
+<div class="math notranslate nohighlight">
+\[
+     \frac{\delta ^2G}{\delta r^2} = - 4 \pi R_v T \rho_l \left [ 2 a - r^2 \left ( 1 +
+           \frac{b}{r^3} \right ) \frac{3b}{r^4}  \right ] + 8 \pi \sigma
+     \]</div>
+<p>Changes sign from stable (positive) to unstable (negative) at <span class="math notranslate nohighlight">\(r_{crit}\)</span>.</p>
+<p>Hint – first show that the second derivative is zero at the critical radius.  Then show that
+the third derivative is negative above and below the critical radius, which means that
+there has to be a sign change from + to -.</p>
+</li>
+</ol>
+</li>
+<li><p>Run the <a class="reference internal" href="notebooks/entraining_plume.html#entraining-plume"><span class="std std-ref">Modeling an entraining cloud updraft</span></a> notebook. <a class="reference external" href="https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&amp;dl=0">Dowload link</a> The Thursday worksheet will ask you to use the output to make a plot of the cloud and environment temperature as a function of height.</p></li>
+</ul>
+<section id="id2">
+<h3>For Thursday<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Read <a class="reference external" href="https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&amp;dl=0">my droplet growth notes</a> and finish Thompkins Chapter 4.</p></li>
+<li><p>Work on Assignment 5 (due Friday) and Assignment 6 (due Tuesday)</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -898,6 +958,10 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-week-8-tuesday">Lecture 22, week 8 Tuesday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-23-week-8-thursday">Lecture 23, week 8 Thursday</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-24-week-8-friday">Lecture 24, week 8 Friday</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-25-week-9-monday">Lecture 25, week 9 Monday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">For Thursday</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -1,0 +1,2601 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modeling an entraining cloud updraft &#8212; ATSC 405 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/entraining_plume';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/entraining_plume.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="entropy_theta_part2.html" />
+    <link rel="prev" title="Kohler Problem" href="worksheets/kohler_students.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ATSC 405 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    ATSC 405 syllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics check2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../learning_goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html">Course schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_install.html">Python links</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&amp;dl=0">Thompkins text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_notes.html">Week notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2/hydrostat.html">Week2: Hydrostatic balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3/derivs_and_ints.html">week3: working with numpy arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&amp;dl=0">adiabatic_box_handin.in -- download link for ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/hydrostatic_2024_handin.html">Assign 2: Scale heights for typical atmospheric soundings</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kohler_probs.html">Assignment 5  – Due Friday March 15 midnight</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&amp;dl=0">kohler_problem.ipynb download</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="week2/skew_coords_solution.html">Week2: Theromodynamic diagrams worksheet – solution</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&amp;dl=0">Download skew_coords_solution.ipynb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ze49m63z5gbnombcgk2gh/xarray-intro.ipynb?rlkey=sa86yjsi3l05bq8v54j6yxjtz&amp;dl=0">download xarray-intro.ipynb</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4/tropical_clouds_profiles.html">Tropical cloud profiles</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5/moist_adiabats.html">Moist adiabats and the LCL</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&amp;dl=0">tropical_engine_solution.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/mixing_line_example.html">Mixing line example</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&amp;dl=0">mixing_line_example.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/cape_part1.html">Cape Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cape_part1.html">Cape Part 1</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convec_instability.html">Convective instability – lifting demo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="two_compartments.html">Two compartment problem`</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a405_mid_2024_solution.html">2024 midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/kohler_students.html">Kohler Problem</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modeling an entraining cloud updraft</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&amp;dl=0">entraining_plume.ipynb download</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&amp;dl=0">Week2 - Kinetic Temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&amp;dl=0">First law of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&amp;dl=0">Entropy and potential temperature</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&amp;dl=0">Weighted averages and scale heights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy_theta_part2.html">Entropy and potential temperature – including liquid and vapor</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&amp;dl=0">Buoyancy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/puuzbbzszhue73nrew726/maxwell.pdf?rlkey=fntdkgs90o4otc3s6lme85mz3&amp;dl=0">Maxwell relation notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/o7d278acumkgmwe4y6qlu/clausius.pdf?rlkey=ktd5fvdwaz7ishuxozwmf6kwa&amp;dl=0">Clausius-Clapyron notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&amp;dl=0">Schroeder pp. 159-162</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&amp;dl=0">virtural temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&amp;dl=0">Moist static energy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrainment notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&amp;dl=0">wet bulb temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mid term</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/xkyzaeqr7fmyk9weci8ny/thompkins_practice.ipynb?rlkey=3ngg8tk7ynxsftlp57ov0wxtp&amp;dl=0">Thompkins practice problems download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/27kzivl2a0vt0qmw9hg7k/a405_mid_2016.pdf?rlkey=10rdsl2p1jgm5qefu1g0jbt6g&amp;dl=0">2016 midterm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assign4_midterm_sols.html">Assignment 4: midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/entraining_plume.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modeling an entraining cloud updraft</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-derivatives-wrt-time-of-each-of-the-4-variables">Find the derivatives wrt time of each of the 4 variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-buoyancy-from-the-cloud-and-environment-theta-e-and-r-t">Find the buoyancy from the cloud and environment <span class="math notranslate nohighlight">\(\theta_e\)</span> and <span class="math notranslate nohighlight">\(r_T\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrator">Integrator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-a-sounding-to-set-the-environment">Read in a sounding to set the environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-integration">Do the integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-the-dataframe-to-xarray">Convert the dataframe to xarray</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-units-to-the-variables-plus-dataset-attributes">Add units to the variables plus dataset attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-the-dataset-to-netcdf">write the dataset to netcdf</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modeling-an-entraining-cloud-updraft">
+<span id="entraining-plume"></span><h1>Modeling an entraining cloud updraft<a class="headerlink" href="#modeling-an-entraining-cloud-updraft" title="Permalink to this heading">#</a></h1>
+<p>This notebook calculates the time evolution of four variables:</p>
+<p>[velocity, height, <span class="math notranslate nohighlight">\(\theta_{ecld}\)</span>, <span class="math notranslate nohighlight">\(r_{Tcloud}\)</span> ]</p>
+<p>in a rising, entraining cloud with constant entrainment rate.  The environment is specified from a Wyoming sounding,
+and interpolated each timestep using <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html">scipy.interpolate.interp1d</a></p>
+<p>The variables are intergrated with respect to time using <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.RK45.html">scipy.integrate.RK45</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+<span class="kn">from</span> <span class="nn">a405.thermo.constants</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
+<span class="kn">from</span> <span class="nn">a405.thermo.thermlib</span> <span class="kn">import</span> <span class="n">find_Tmoist</span><span class="p">,</span><span class="n">find_rsat</span><span class="p">,</span><span class="n">find_thetaep</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">RK45</span>
+<span class="kn">from</span> <span class="nn">a405.soundings.wyominglib</span> <span class="kn">import</span> <span class="n">write_soundings</span><span class="p">,</span> <span class="n">read_soundings</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">a405.skewT.nudge</span> <span class="kn">import</span> <span class="n">nudge</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="find-the-derivatives-wrt-time-of-each-of-the-4-variables">
+<h2>Find the derivatives wrt time of each of the 4 variables<a class="headerlink" href="#find-the-derivatives-wrt-time-of-each-of-the-4-variables" title="Permalink to this heading">#</a></h2>
+<p>See <a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrain.pdf</a>  notes.</p>
+<p>For the entrainment calculation, we need environmental temperature, dewpoint and pressure at arbitrary heights.  Use <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html">scipy.interpolate.interp1d</a> for this</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">derivs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">entrain_rate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tinterp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tdinterp</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pinterp</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function that computes the derivative vector for the ode integrator</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    </span>
+<span class="sd">    t: float</span>
+<span class="sd">       time (s)</span>
+<span class="sd">    y: vector</span>
+<span class="sd">       4-vector containing wvel (m/s), height (m), thetae (K), rt (kg/kg)</span>
+<span class="sd">    entrain_rate: float</span>
+<span class="sd">                  1/m dm/dt (s-1)</span>
+<span class="sd">    tinterp: func</span>
+<span class="sd">                interp1d function for environmental temperature T(z) </span>
+<span class="sd">    tdinterp: func</span>
+<span class="sd">                interp1d function for environmental dewpoint temperature Td(z)</span>
+<span class="sd">    pinterp: func</span>
+<span class="sd">                interp1d function for presusure  p(z)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    yp: vector</span>
+<span class="sd">       4-vector containing time derivatives of wvel (m/s^2), height (m/s), thetae (K/s), rt (kg/kg/s)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#print(f&quot;inside derivs&quot;)</span>
+    <span class="c1">#print(f&quot;{y=}&quot;)</span>
+    <span class="n">yp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,),</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">thetae_cloud</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">rt_cloud</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="c1">#</span>
+    <span class="c1"># fill the yp (yprime) vector with the derivatives</span>
+    <span class="c1">#</span>
+    <span class="c1"># yp[0] is the acceleration, in this case the buoyancy </span>
+    <span class="c1">#</span>
+    <span class="n">yp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcBuoy</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">thetae_cloud</span><span class="p">,</span> <span class="n">tinterp</span><span class="p">,</span> <span class="n">tdinterp</span><span class="p">,</span> <span class="n">pinterp</span><span class="p">)</span>
+    <span class="n">press</span> <span class="o">=</span> <span class="n">pinterp</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="o">*</span><span class="mf">100.</span> <span class="c1">#Pa</span>
+    <span class="n">Tdenv</span> <span class="o">=</span> <span class="n">tdinterp</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span> <span class="c1">#K</span>
+    <span class="n">Tenv</span> <span class="o">=</span> <span class="n">tinterp</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span> <span class="c1">#K</span>
+    <span class="n">rtenv</span> <span class="o">=</span> <span class="n">find_rsat</span><span class="p">(</span><span class="n">Tdenv</span><span class="p">,</span> <span class="n">press</span><span class="p">)</span> <span class="c1">#kg/kg</span>
+    <span class="n">thetaeEnv</span> <span class="o">=</span> <span class="n">find_thetaep</span><span class="p">(</span><span class="n">Tdenv</span><span class="p">,</span><span class="n">Tenv</span><span class="p">,</span> <span class="n">press</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># yp[1] is the rate of change of height</span>
+    <span class="c1">#</span>
+    <span class="n">yp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">velocity</span>
+    <span class="c1">#</span>
+    <span class="c1"># yp[2] is the rate of change of thetae_cloud</span>
+    <span class="c1">#</span>
+    <span class="n">yp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">entrain_rate</span><span class="o">*</span><span class="p">(</span><span class="n">thetaeEnv</span> <span class="o">-</span> <span class="n">thetae_cloud</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># yp[3] is the rate of change of rt_cloud</span>
+    <span class="c1">#</span>
+    <span class="n">yp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">entrain_rate</span><span class="o">*</span><span class="p">(</span><span class="n">rtenv</span> <span class="o">-</span> <span class="n">rt_cloud</span><span class="p">)</span>
+    <span class="c1">#print(f&quot; derivs returning&quot;)</span>
+    <span class="c1">#print(f&quot;{yp=}&quot;)</span>
+    <span class="k">return</span> <span class="n">yp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-the-buoyancy-from-the-cloud-and-environment-theta-e-and-r-t">
+<h2>Find the buoyancy from the cloud and environment <span class="math notranslate nohighlight">\(\theta_e\)</span> and <span class="math notranslate nohighlight">\(r_T\)</span><a class="headerlink" href="#find-the-buoyancy-from-the-cloud-and-environment-theta-e-and-r-t" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcBuoy</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">thetae0</span><span class="p">,</span> <span class="n">tinterp</span><span class="p">,</span> <span class="n">tdinterp</span><span class="p">,</span> <span class="n">pinterp</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;function to calculate buoyant acceleration for an ascending saturated parcel</span>
+<span class="sd">       this version neglects liquid water loading</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    </span>
+<span class="sd">    height: float</span>
+<span class="sd">            parcel height (m)</span>
+<span class="sd">    thetae0: float</span>
+<span class="sd">            parcel thetae (K)</span>
+
+<span class="sd">    tinterp: func</span>
+<span class="sd">                interp1d function for environmental temperature T(z) </span>
+<span class="sd">    tdinterp: func</span>
+<span class="sd">                interp1d function for environmental dewpoint temperature Td(z)</span>
+<span class="sd">    pinterp: func</span>
+<span class="sd">                interp1d function for presusure  p(z)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    buoy: float</span>
+<span class="sd">          buoyancy (m/s/s)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#input: height (m), thetae0 (K), plus function handles for</span>
+    <span class="c1">#T,Td, press soundings</span>
+    <span class="c1">#output: Bout = buoyant acceleration in m/s^2</span>
+    <span class="c1">#neglect liquid water loading in the virtual temperature</span>
+    
+    <span class="n">press</span><span class="o">=</span><span class="n">pinterp</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="o">*</span><span class="mf">100.</span><span class="c1">#%Pa</span>
+    <span class="n">Tcloud</span><span class="o">=</span><span class="n">find_Tmoist</span><span class="p">(</span><span class="n">thetae0</span><span class="p">,</span><span class="n">press</span><span class="p">)</span> <span class="c1">#K</span>
+    <span class="n">rvcloud</span><span class="o">=</span><span class="n">find_rsat</span><span class="p">(</span><span class="n">Tcloud</span><span class="p">,</span><span class="n">press</span><span class="p">);</span> <span class="c1">#kg/kg</span>
+    <span class="n">Tvcloud</span><span class="o">=</span><span class="n">Tcloud</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">eps</span><span class="o">*</span><span class="n">rvcloud</span><span class="p">)</span>
+    <span class="n">Tenv</span><span class="o">=</span><span class="n">tinterp</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span>
+    <span class="n">Tdenv</span><span class="o">=</span><span class="n">tdinterp</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span>
+    <span class="c1">#print(f&quot;inside buoy {(height,Tenv,Tdenv,press)=}&quot;)</span>
+    <span class="n">rvenv</span><span class="o">=</span><span class="n">find_rsat</span><span class="p">(</span><span class="n">Tdenv</span><span class="p">,</span><span class="n">press</span><span class="p">);</span> <span class="c1">#kg/kg</span>
+    <span class="n">Tvenv</span><span class="o">=</span><span class="n">Tenv</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">eps</span><span class="o">*</span><span class="n">rvenv</span><span class="p">)</span>
+    <span class="n">TvDiff</span><span class="o">=</span><span class="n">Tvcloud</span> <span class="o">-</span> <span class="n">Tvenv</span>
+    <span class="n">buoy</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">g0</span><span class="o">*</span><span class="p">(</span><span class="n">TvDiff</span><span class="o">/</span><span class="n">Tvenv</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">buoy</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="integrator">
+<h2>Integrator<a class="headerlink" href="#integrator" title="Permalink to this heading">#</a></h2>
+<p>Use <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.RK45.html">scipy.integrate.RK45</a> to integrate our system of 4 odes.  Since RK45 requires that the derivs function has the signature</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   derivs(time, yvals)
+</pre></div>
+</div>
+<p>we need find a way to supply the three interpolators and the entrainment.  We can do this using <a class="reference external" href="https://www.learnpython.org/en/Partial_functions">functools.partial</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">integ_entrain</span><span class="p">(</span><span class="n">df_sounding</span><span class="p">,</span><span class="n">entrain_rate</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;integrate an ascending parcel given a constant entrainment rate</span>
+<span class="sd">       this version hardwired to start parcel at 800 hPa with cloud base</span>
+<span class="sd">       values of environment at 900 hPa</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    df_sounding: pandas dataframe </span>
+<span class="sd">               : cloumns are temperature, dewpoint, height, press</span>
+
+<span class="sd">    entrain_rate: float</span>
+<span class="sd">                  1/m dm/dt (s-1)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    df_out: dataframe</span>
+<span class="sd">          dataframe containing wvel (m/s) ,cloud_height (m) , thetae (K), rt (kg/kg) for assending parcel</span>
+
+<span class="sd">   interpPress: func</span>
+<span class="sd">              interp1d function for presusure  p(z) (used for plotting)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">press</span> <span class="o">=</span> <span class="n">df_sounding</span><span class="p">[</span><span class="s1">&#39;pres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">df_sounding</span><span class="p">[</span><span class="s1">&#39;hght&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">df_sounding</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">dewpoint</span> <span class="o">=</span> <span class="n">df_sounding</span><span class="p">[</span><span class="s1">&#39;dwpt&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="c1">#</span>
+    <span class="c1"># </span>
+    <span class="c1">#</span>
+    <span class="n">envHeight</span><span class="o">=</span> <span class="n">nudge</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+
+    <span class="n">interpTenv</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">envHeight</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+    <span class="n">interpTdEnv</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">envHeight</span><span class="p">,</span><span class="n">dewpoint</span><span class="p">)</span>
+    <span class="n">interpPress</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">envHeight</span><span class="p">,</span><span class="n">press</span><span class="p">)</span>
+
+    <span class="n">args</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">entrain_rate</span> <span class="o">=</span> <span class="n">entrain_rate</span><span class="p">,</span>
+              <span class="n">tinterp</span><span class="o">=</span><span class="n">interpTenv</span><span class="p">,</span>
+              <span class="n">tdinterp</span><span class="o">=</span><span class="n">interpTdEnv</span><span class="p">,</span>
+              <span class="n">pinterp</span><span class="o">=</span><span class="n">interpPress</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># use functools.partial to supply the extra arguments to the derivs function</span>
+    <span class="c1"># this changes the derivs function signature from</span>
+    <span class="c1">#</span>
+    <span class="c1"># derivs(t, y, entrain_rate=None, tinterp=None, tdinterp = None, pinterp=None)</span>
+    <span class="c1">#</span>
+    <span class="c1"># to </span>
+    <span class="c1">#</span>
+    <span class="c1"># the_derivs(t,y) </span>
+    <span class="c1">#</span>
+    <span class="c1"># as required by the RK45 integrator</span>
+    <span class="c1"># </span>
+    <span class="c1">#</span>
+    <span class="n">the_derivs</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">derivs</span><span class="p">,</span><span class="o">**</span><span class="n">args</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># set cloudbase (dewpoint=temperature) at 900 hPa</span>
+    <span class="c1">#</span>
+    <span class="n">p900_level</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">press</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">press</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mf">900.</span><span class="p">)</span>
+    <span class="n">rtcloud</span> <span class="o">=</span> <span class="n">find_rsat</span><span class="p">(</span><span class="n">dewpoint</span><span class="p">[</span><span class="n">p900_level</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span> <span class="n">press</span><span class="p">[</span><span class="n">p900_level</span><span class="p">]</span><span class="o">*</span><span class="mf">100.</span><span class="p">)</span>
+    <span class="n">thetaeVal</span><span class="o">=</span><span class="n">find_thetaep</span><span class="p">(</span><span class="n">dewpoint</span><span class="p">[</span><span class="n">p900_level</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span>
+                           <span class="n">temp</span><span class="p">[</span><span class="n">p900_level</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">press</span><span class="p">[</span><span class="n">p900_level</span><span class="p">]</span><span class="o">*</span><span class="mf">100.</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># start parcel at 800 hPa by keeping thetae and rtcloud at cloudbase</span>
+    <span class="c1"># values (i.e. assume parcel has risen adiabatically from 900 to 800 hPa</span>
+    <span class="c1">#</span>
+    <span class="n">p800_level</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">press</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">press</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mf">800.</span><span class="p">)</span>
+    <span class="n">height_800</span><span class="o">=</span><span class="n">height</span><span class="p">[</span><span class="n">p800_level</span><span class="p">]</span>
+    <span class="n">winit</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#initial velocity (m/s)</span>
+    <span class="n">yinit</span> <span class="o">=</span> <span class="p">[</span><span class="n">winit</span><span class="p">,</span> <span class="n">height_800</span><span class="p">,</span> <span class="n">thetaeVal</span><span class="p">,</span> <span class="n">rtcloud</span><span class="p">]</span>  
+    <span class="n">tinit</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1">#seconds</span>
+    <span class="n">tfin</span> <span class="o">=</span> <span class="mi">2500</span>  <span class="c1">#seconds</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#seconds</span>
+    <span class="n">tspan</span> <span class="o">=</span> <span class="p">(</span><span class="n">tinit</span><span class="p">,</span> <span class="n">tfin</span><span class="p">)</span>
+    <span class="n">output_times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">tinit</span><span class="p">,</span> <span class="n">tfin</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># want to integrate derivs using dopr15 runge kutta described at</span>
+    <span class="c1"># http://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html</span>
+    <span class="c1">#</span>
+    <span class="n">init_vals</span> <span class="o">=</span> <span class="p">(</span><span class="n">yinit</span><span class="p">,</span> <span class="n">tinit</span><span class="p">)</span>
+    <span class="n">rk45</span> <span class="o">=</span> <span class="n">RK45</span><span class="p">(</span><span class="n">the_derivs</span><span class="p">,</span> <span class="n">tinit</span><span class="p">,</span> <span class="n">yinit</span><span class="p">,</span> <span class="n">t_bound</span><span class="o">=</span><span class="n">tfin</span><span class="p">,</span> <span class="n">max_step</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+    <span class="n">yout</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">rk45</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;running&quot;</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="c1"># stop if wvel &lt; 0</span>
+        <span class="c1">#</span>
+        <span class="k">if</span> <span class="n">rk45</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">press</span> <span class="o">=</span> <span class="n">interpPress</span><span class="p">(</span><span class="n">rk45</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="mf">100.</span>
+        <span class="n">yvals</span><span class="o">=</span> <span class="p">[</span><span class="n">rk45</span><span class="o">.</span><span class="n">t</span><span class="p">,</span><span class="n">press</span><span class="p">]</span>
+        <span class="n">yvals</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">rk45</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">yout</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">yvals</span><span class="p">)</span>
+        <span class="n">rk45</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># convert the output into a pandas dataframe</span>
+    <span class="c1">#</span>
+    <span class="n">colnames</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;press&#39;</span><span class="p">,</span><span class="s1">&#39;wvel&#39;</span><span class="p">,</span><span class="s1">&#39;cloud_height&#39;</span><span class="p">,</span><span class="s1">&#39;thetae_cloud&#39;</span><span class="p">,</span><span class="s1">&#39;rt_cloud&#39;</span><span class="p">]</span>
+    <span class="n">df_out</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">yout</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">colnames</span><span class="p">)</span>
+    <span class="n">df_out</span> <span class="o">=</span> <span class="n">df_out</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_out</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="read-in-a-sounding-to-set-the-environment">
+<h2>Read in a sounding to set the environment<a class="headerlink" href="#read-in-a-sounding-to-set-the-environment" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">write</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">sounding_dir</span> <span class="o">=</span> <span class="s1">&#39;littlerock&#39;</span>
+<span class="n">station</span> <span class="o">=</span> <span class="mi">72340</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2012</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">if</span> <span class="n">write</span><span class="p">:</span>
+    <span class="n">values</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;naconf&#39;</span><span class="p">,</span><span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">,</span><span class="n">month</span><span class="o">=</span><span class="n">month</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;0100&#39;</span><span class="p">,</span><span class="n">stop</span><span class="o">=</span><span class="s1">&#39;3000&#39;</span><span class="p">,</span><span class="n">station</span><span class="o">=</span><span class="n">station</span><span class="p">)</span>
+    <span class="n">write_soundings</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">sounding_dir</span><span class="p">)</span>
+    <span class="n">soundings</span><span class="o">=</span> <span class="n">read_soundings</span><span class="p">(</span><span class="n">sounding_dir</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">soundings</span><span class="o">=</span> <span class="n">read_soundings</span><span class="p">(</span><span class="n">sounding_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">hour</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">the_time</span><span class="o">=</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="n">day</span><span class="p">,</span><span class="n">hour</span><span class="p">)</span>
+<span class="n">sounding</span><span class="o">=</span><span class="n">soundings</span><span class="p">[</span><span class="s1">&#39;sounding_dict&#39;</span><span class="p">][</span><span class="n">the_time</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="do-the-integration">
+<h2>Do the integration<a class="headerlink" href="#do-the-integration" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">entrain_rate</span> <span class="o">=</span> <span class="mf">2.e-4</span>  <span class="c1">#s^{-1}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">integ_entrain</span><span class="p">(</span><span class="n">sounding</span><span class="p">,</span><span class="n">entrain_rate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/phil/mini310/envs/a405/lib/python3.11/site-packages/a405/thermo/thermlib.py:469: RuntimeWarning: invalid value encountered in log
+  s = cp * np.log(T) - c.Rd * np.log(pd) + lv * rv / T - vapor_term
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time</th>
+      <th>press</th>
+      <th>wvel</th>
+      <th>cloud_height</th>
+      <th>thetae_cloud</th>
+      <th>rt_cloud</th>
+    </tr>
+    <tr>
+      <th>time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0.000000</th>
+      <td>0.000000</td>
+      <td>79310.000000</td>
+      <td>0.500000</td>
+      <td>2134.000000</td>
+      <td>346.552571</td>
+      <td>0.014049</td>
+    </tr>
+    <tr>
+      <th>0.343993</th>
+      <td>0.343993</td>
+      <td>79308.418593</td>
+      <td>0.500719</td>
+      <td>2134.172120</td>
+      <td>346.552654</td>
+      <td>0.014049</td>
+    </tr>
+    <tr>
+      <th>3.783925</th>
+      <td>3.783925</td>
+      <td>79292.474311</td>
+      <td>0.508383</td>
+      <td>2135.907492</td>
+      <td>346.553483</td>
+      <td>0.014049</td>
+    </tr>
+    <tr>
+      <th>13.783925</th>
+      <td>13.783925</td>
+      <td>79244.568623</td>
+      <td>0.535688</td>
+      <td>2141.121537</td>
+      <td>346.555825</td>
+      <td>0.014046</td>
+    </tr>
+    <tr>
+      <th>23.783925</th>
+      <td>23.783925</td>
+      <td>79193.800282</td>
+      <td>0.570767</td>
+      <td>2146.647152</td>
+      <td>346.558063</td>
+      <td>0.014044</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>703.783925</th>
+      <td>703.783925</td>
+      <td>13838.788551</td>
+      <td>23.989843</td>
+      <td>14728.909939</td>
+      <td>345.933539</td>
+      <td>0.012997</td>
+    </tr>
+    <tr>
+      <th>713.783925</th>
+      <td>713.783925</td>
+      <td>13350.812421</td>
+      <td>18.927640</td>
+      <td>14943.866987</td>
+      <td>345.971263</td>
+      <td>0.012971</td>
+    </tr>
+    <tr>
+      <th>723.783925</th>
+      <td>723.783925</td>
+      <td>12999.611882</td>
+      <td>13.476301</td>
+      <td>15106.164206</td>
+      <td>346.012060</td>
+      <td>0.012945</td>
+    </tr>
+    <tr>
+      <th>733.783925</th>
+      <td>733.783925</td>
+      <td>12769.594643</td>
+      <td>7.745733</td>
+      <td>15212.460052</td>
+      <td>346.055080</td>
+      <td>0.012919</td>
+    </tr>
+    <tr>
+      <th>743.783925</th>
+      <td>743.783925</td>
+      <td>12668.138791</td>
+      <td>1.858507</td>
+      <td>15260.550048</td>
+      <td>346.099355</td>
+      <td>0.012894</td>
+    </tr>
+  </tbody>
+</table>
+<p>77 rows × 6 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="convert-the-dataframe-to-xarray">
+<h2>Convert the dataframe to xarray<a class="headerlink" href="#convert-the-dataframe-to-xarray" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">the_ds</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_xarray</span><span class="p">()</span>
+<span class="n">the_ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:       (time: 77)
+Coordinates:
+  * time          (time) float64 0.0 0.344 3.784 13.78 ... 723.8 733.8 743.8
+Data variables:
+    press         (time) float64 7.931e+04 7.931e+04 ... 1.277e+04 1.267e+04
+    wvel          (time) float64 0.5 0.5007 0.5084 0.5357 ... 13.48 7.746 1.859
+    cloud_height  (time) float64 2.134e+03 2.134e+03 ... 1.521e+04 1.526e+04
+    thetae_cloud  (time) float64 346.6 346.6 346.6 346.6 ... 346.0 346.1 346.1
+    rt_cloud      (time) float64 0.01405 0.01405 0.01405 ... 0.01292 0.01289</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-5194b0d5-e2dc-4789-b879-af268cb1d3d3' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-5194b0d5-e2dc-4789-b879-af268cb1d3d3' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 77</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-20bada1d-6eaa-41c3-988c-8bb105b71e0d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-20bada1d-6eaa-41c3-988c-8bb105b71e0d' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.344 3.784 ... 733.8 743.8</div><input id='attrs-9db857ab-dd74-49ea-ad37-e577733181c0' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9db857ab-dd74-49ea-ad37-e577733181c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-31039350-374c-46f6-a55e-3ede33b13dbc' class='xr-var-data-in' type='checkbox'><label for='data-31039350-374c-46f6-a55e-3ede33b13dbc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.000000e+00, 3.439932e-01, 3.783925e+00, 1.378393e+01, 2.378393e+01,
+       3.378393e+01, 4.378393e+01, 5.378393e+01, 6.378393e+01, 7.378393e+01,
+       8.378393e+01, 9.378393e+01, 1.037839e+02, 1.137839e+02, 1.237839e+02,
+       1.337839e+02, 1.437839e+02, 1.537839e+02, 1.637839e+02, 1.737839e+02,
+       1.837839e+02, 1.937839e+02, 2.037839e+02, 2.137839e+02, 2.237839e+02,
+       2.337839e+02, 2.437839e+02, 2.537839e+02, 2.637839e+02, 2.737839e+02,
+       2.837839e+02, 2.937839e+02, 3.037839e+02, 3.137839e+02, 3.237839e+02,
+       3.337839e+02, 3.437839e+02, 3.537839e+02, 3.637839e+02, 3.737839e+02,
+       3.837839e+02, 3.937839e+02, 4.037839e+02, 4.137839e+02, 4.237839e+02,
+       4.337839e+02, 4.437839e+02, 4.537839e+02, 4.637839e+02, 4.737839e+02,
+       4.837839e+02, 4.937839e+02, 5.037839e+02, 5.137839e+02, 5.237839e+02,
+       5.337839e+02, 5.437839e+02, 5.537839e+02, 5.637839e+02, 5.737839e+02,
+       5.837839e+02, 5.937839e+02, 6.037839e+02, 6.137839e+02, 6.237839e+02,
+       6.337839e+02, 6.437839e+02, 6.537839e+02, 6.637839e+02, 6.737839e+02,
+       6.837839e+02, 6.937839e+02, 7.037839e+02, 7.137839e+02, 7.237839e+02,
+       7.337839e+02, 7.437839e+02])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-94a4d8bf-982c-4d9a-a440-8397e2a11ce6' class='xr-section-summary-in' type='checkbox'  checked><label for='section-94a4d8bf-982c-4d9a-a440-8397e2a11ce6' class='xr-section-summary' >Data variables: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>press</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>7.931e+04 7.931e+04 ... 1.267e+04</div><input id='attrs-777074d4-ac3c-4752-9048-39189bfd5bdd' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-777074d4-ac3c-4752-9048-39189bfd5bdd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8e6f31ac-fca0-43fb-bf3b-03cb70f22117' class='xr-var-data-in' type='checkbox'><label for='data-8e6f31ac-fca0-43fb-bf3b-03cb70f22117' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([79310.        , 79308.41859301, 79292.47431112, 79244.56862311,
+       79193.80028175, 79139.43394974, 79080.6855207 , 79016.71134682,
+       78946.59670416, 78869.34334973, 78783.85601593, 78688.92767919,
+       78583.22342934, 78465.26275595, 78333.40005729, 78185.8031672 ,
+       78020.42968639, 77835.00089749, 77626.97304021, 77392.77201197,
+       77129.22405282, 76834.44840894, 76505.57083043, 76150.87992253,
+       75756.07388254, 75317.04330851, 74829.32104238, 74288.06842964,
+       73691.49174984, 73051.69233709, 72343.23971168, 71559.09029657,
+       70696.37346091, 69764.60544951, 68781.50187957, 67723.32675656,
+       66588.26026199, 65404.18230418, 64154.28577237, 62824.47304962,
+       61417.80776212, 59959.59220596, 58445.7246164 , 56873.41437277,
+       55274.64175848, 53624.61881464, 51921.05227754, 50151.72940126,
+       48340.0441871 , 46509.41509743, 44646.91332996, 42777.47471245,
+       40935.06856309, 39093.16749846, 37273.06412729, 35473.8154306 ,
+       33712.85559983, 31991.83366127, 30318.4796622 , 28679.01700318,
+       27108.01403393, 25619.47114784, 24161.0827308 , 22757.7668053 ,
+       21411.92353796, 20148.94733758, 18975.76234576, 17941.22602421,
+       16955.33590543, 16016.62973683, 15177.23913599, 14456.81174615,
+       13838.78855051, 13350.81242063, 12999.61188189, 12769.59464264,
+       12668.13879057])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wvel</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.5 0.5007 0.5084 ... 7.746 1.859</div><input id='attrs-02cee9a4-1628-4e49-a4e5-7d4f7b5a1794' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-02cee9a4-1628-4e49-a4e5-7d4f7b5a1794' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-be305605-d68e-40a7-8ed4-b3279e4605f6' class='xr-var-data-in' type='checkbox'><label for='data-be305605-d68e-40a7-8ed4-b3279e4605f6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([ 0.5       ,  0.50071877,  0.5083833 ,  0.53568769,  0.57076738,
+        0.61409694,  0.66626454,  0.72797949,  0.80008131,  0.88355043,
+        0.97952068,  1.08929347,  1.21435407,  1.35638987,  1.51731077,
+        1.69927197,  1.90469901,  2.1363153 ,  2.39717206,  2.6898322 ,
+        3.01201065,  3.36535074,  3.75291843,  4.17942272,  4.64989937,
+        5.16825665,  5.73857474,  6.36506652,  7.0520871 ,  7.80970876,
+        8.64636017,  9.56744698, 10.55506937, 11.46583942, 12.36350778,
+       13.28473822, 14.22630314, 15.19889826, 16.33452664, 17.68127291,
+       18.94207873, 20.00369708, 21.19629987, 22.27468313, 23.41211049,
+       24.72915525, 26.2493138 , 27.85574905, 29.29843764, 30.59659134,
+       32.03289825, 33.21219347, 34.01590958, 34.96412184, 35.99376416,
+       36.81889383, 37.47748944, 38.14076847, 38.7077181 , 39.17070743,
+       39.51050775, 39.72536835, 39.79890785, 39.8164193 , 39.61225758,
+       39.1402214 , 37.99650301, 36.50553518, 34.88625408, 33.0770702 ,
+       31.03568053, 28.23652681, 23.98984263, 18.92764045, 13.47630118,
+        7.74573257,  1.85850672])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>cloud_height</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>2.134e+03 2.134e+03 ... 1.526e+04</div><input id='attrs-b99a111c-a45a-4d86-8981-9ddb95794f78' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b99a111c-a45a-4d86-8981-9ddb95794f78' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-37806e8b-4016-486b-a68c-3ed571f754bf' class='xr-var-data-in' type='checkbox'><label for='data-37806e8b-4016-486b-a68c-3ed571f754bf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([ 2134.        ,  2134.17211999,  2135.9074921 ,  2141.1215366 ,
+        2146.64715165,  2152.56437122,  2158.95853725,  2165.9214722 ,
+        2173.55273441,  2181.96097243,  2191.26539495,  2201.59737414,
+        2213.10220134,  2225.94101496,  2240.29292194,  2256.35733484,
+        2274.35654795,  2294.53857635,  2317.18028236,  2342.5892876 ,
+        2371.07376399,  2402.93335378,  2438.49483396,  2478.12147386,
+        2522.22984096,  2571.27904429,  2625.76816193,  2686.23777618,
+        2753.27092007,  2827.51629969,  2909.728526  ,  3000.72496932,
+        3101.33438504,  3211.52357436,  3330.6496447 ,  3458.87239557,
+        3596.4123407 ,  3743.47747647,  3900.97564931,  4070.88119175,
+        4254.25005958,  4448.92979732,  4654.93158713,  4872.33957432,
+        5100.68539777,  5341.22366295,  5595.94742136,  5866.55091071,
+        6152.50662667,  6451.94650892,  6764.94053049,  7091.77639515,
+        7427.86237816,  7772.57180456,  8127.63831329,  8491.84091778,
+        8863.26818504,  9241.45577113,  9625.79423871, 10015.27460857,
+       10408.78749184, 10805.07939178, 11202.76029005, 11600.94730089,
+       11998.32036949, 12392.33685197, 12778.67373013, 13151.27021683,
+       13508.3619652 , 13848.36357449, 14169.1043456 , 14466.67948496,
+       14728.90993912, 14943.86698743, 15106.1642061 , 15212.46005151,
+       15260.55004826])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>thetae_cloud</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>346.6 346.6 346.6 ... 346.1 346.1</div><input id='attrs-e7500165-7e48-4479-802d-5d97cc7db2e1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-e7500165-7e48-4479-802d-5d97cc7db2e1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a437d09d-9d55-4c23-8a67-78ade0da6f5d' class='xr-var-data-in' type='checkbox'><label for='data-a437d09d-9d55-4c23-8a67-78ade0da6f5d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([346.55257075, 346.55265428, 346.55348312, 346.55582504,
+       346.55806261, 346.56018978, 346.56219902, 346.56408127,
+       346.56582581, 346.56742014, 346.56884987, 346.57009854,
+       346.57114746, 346.57197553, 346.57255901, 346.57287136,
+       346.57288294, 346.57256085, 346.57186866, 346.57070738,
+       346.56862366, 346.56543413, 346.56103978, 346.5552939 ,
+       346.5480448 , 346.53918077, 346.52859066, 346.51616627,
+       346.50180484, 346.48537682, 346.4667723 , 346.44591413,
+       346.42305412, 346.40012833, 346.37728492, 346.35445609,
+       346.33172485, 346.309093  , 346.28564784, 346.26115686,
+       346.23769492, 346.21573308, 346.19180114, 346.16570899,
+       346.13683133, 346.10634402, 346.0761174 , 346.04417487,
+       346.01242884, 345.98030631, 345.94932107, 345.9294181 ,
+       345.9045785 , 345.88175522, 345.86648702, 345.85794936,
+       345.8500722 , 345.84199361, 345.83555904, 345.83036642,
+       345.82628627, 345.82334588, 345.82166456, 345.82061223,
+       345.82140565, 345.82431558, 345.83220523, 345.84270536,
+       345.85420464, 345.86714735, 345.88182465, 345.90216692,
+       345.93353888, 345.97126302, 346.01206023, 346.05508002,
+       346.09935511])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>rt_cloud</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.01405 0.01405 ... 0.01292 0.01289</div><input id='attrs-4726a8d3-d9e2-4cbf-97df-7d7e5746fc26' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-4726a8d3-d9e2-4cbf-97df-7d7e5746fc26' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ce37b1c6-13b5-4fea-b118-7a5856b6ee79' class='xr-var-data-in' type='checkbox'><label for='data-ce37b1c6-13b5-4fea-b118-7a5856b6ee79' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.01404938, 0.0140493 , 0.01404855, 0.01404633, 0.01404408,
+       0.01404179, 0.01403946, 0.01403709, 0.01403466, 0.01403219,
+       0.01402965, 0.01402705, 0.01402438, 0.01402162, 0.01401877,
+       0.01401582, 0.01401275, 0.01400955, 0.01400621, 0.01400268,
+       0.01399879, 0.01399445, 0.01398963, 0.01398426, 0.0139783 ,
+       0.01397168, 0.01396437, 0.0139563 , 0.01394742, 0.0139377 ,
+       0.01392709, 0.01391553, 0.01390304, 0.01388992, 0.01387635,
+       0.01386237, 0.01384796, 0.01383311, 0.01381779, 0.013802  ,
+       0.01378571, 0.01376878, 0.01375077, 0.01373102, 0.01370974,
+       0.01368757, 0.01366516, 0.0136416 , 0.01361696, 0.01359114,
+       0.0135652 , 0.01354135, 0.01351453, 0.01348787, 0.0134629 ,
+       0.01343885, 0.01341405, 0.01338868, 0.01336314, 0.01333737,
+       0.01331137, 0.01328522, 0.01325897, 0.01323266, 0.01320635,
+       0.01318006, 0.01315379, 0.01312756, 0.01310137, 0.01307521,
+       0.01304911, 0.01302305, 0.01299705, 0.01297109, 0.01294519,
+       0.01291934, 0.01289354])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-acd0bbbf-9b55-41bc-963a-bf119cebec25' class='xr-section-summary-in' type='checkbox'  ><label for='section-acd0bbbf-9b55-41bc-963a-bf119cebec25' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-a6c6efa6-5556-4bdf-b988-269aa9dd90ac' class='xr-index-data-in' type='checkbox'/><label for='index-a6c6efa6-5556-4bdf-b988-269aa9dd90ac' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([                0.0, 0.34399321976514396,   3.783925417416584,
+        13.783925417416583,  23.783925417416583,   33.78392541741658,
+         43.78392541741658,   53.78392541741658,   63.78392541741658,
+         73.78392541741658,   83.78392541741658,   93.78392541741658,
+        103.78392541741658,  113.78392541741658,  123.78392541741658,
+        133.78392541741658,  143.78392541741658,  153.78392541741658,
+        163.78392541741658,  173.78392541741658,  183.78392541741658,
+        193.78392541741658,  203.78392541741658,  213.78392541741658,
+        223.78392541741658,  233.78392541741658,  243.78392541741658,
+        253.78392541741658,   263.7839254174166,   273.7839254174166,
+         283.7839254174166,   293.7839254174166,   303.7839254174166,
+         313.7839254174166,   323.7839254174166,   333.7839254174166,
+         343.7839254174166,   353.7839254174166,   363.7839254174166,
+         373.7839254174166,   383.7839254174166,   393.7839254174166,
+         403.7839254174166,   413.7839254174166,   423.7839254174166,
+         433.7839254174166,   443.7839254174166,   453.7839254174166,
+         463.7839254174166,   473.7839254174166,   483.7839254174166,
+         493.7839254174166,   503.7839254174166,   513.7839254174166,
+         523.7839254174166,   533.7839254174166,   543.7839254174166,
+         553.7839254174166,   563.7839254174166,   573.7839254174166,
+         583.7839254174166,   593.7839254174166,   603.7839254174166,
+         613.7839254174166,   623.7839254174166,   633.7839254174166,
+         643.7839254174166,   653.7839254174166,   663.7839254174166,
+         673.7839254174166,   683.7839254174166,   693.7839254174166,
+         703.7839254174166,   713.7839254174166,   723.7839254174166,
+         733.7839254174166,   743.7839254174166],
+      dtype=&#x27;float64&#x27;, name=&#x27;time&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0622130d-2cdc-4f7c-b3d7-7c72e9335f53' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-0622130d-2cdc-4f7c-b3d7-7c72e9335f53' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</div>
+</section>
+<section id="add-units-to-the-variables-plus-dataset-attributes">
+<h2>Add units to the variables plus dataset attributes<a class="headerlink" href="#add-units-to-the-variables-plus-dataset-attributes" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">the_ds</span> <span class="o">=</span> <span class="n">the_ds</span><span class="o">.</span><span class="n">set_coords</span><span class="p">([</span><span class="s1">&#39;press&#39;</span><span class="p">,</span><span class="s1">&#39;cloud_height&#39;</span><span class="p">])</span>
+<span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;press&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;press&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;Pa&#39;</span><span class="p">)</span>
+<span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;cloud_height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;cloud_height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;wvel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;wvel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;thetae_cloud&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;thetae_cloud&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;K&#39;</span><span class="p">)</span>
+<span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;rt_cloud&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;rt_cloud&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;kg/kg&#39;</span><span class="p">)</span>
+<span class="n">the_ds</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;history&#39;</span><span class="p">:</span> <span class="s1">&#39; written by entraining_plume.ipynb&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;sounding_dir&#39;</span><span class="p">:</span><span class="n">sounding_dir</span><span class="p">,</span>
+                <span class="s1">&#39;sounding_time&#39;</span><span class="p">:</span><span class="n">the_time</span><span class="p">,</span>
+                <span class="s1">&#39;station&#39;</span><span class="p">:</span><span class="n">station</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">the_ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:       (time: 77)
+Coordinates:
+  * time          (time) float64 0.0 0.344 3.784 13.78 ... 723.8 733.8 743.8
+    press         (time) float64 7.931e+04 7.931e+04 ... 1.277e+04 1.267e+04
+    cloud_height  (time) float64 2.134e+03 2.134e+03 ... 1.521e+04 1.526e+04
+Data variables:
+    wvel          (time) float64 0.5 0.5007 0.5084 0.5357 ... 13.48 7.746 1.859
+    thetae_cloud  (time) float64 346.6 346.6 346.6 346.6 ... 346.0 346.1 346.1
+    rt_cloud      (time) float64 0.01405 0.01405 0.01405 ... 0.01292 0.01289
+Attributes:
+    history:         written by entraining_plume.ipynb
+    sounding_dir:   littlerock
+    sounding_time:  (2012, 7, 9, 0)
+    station:        72340</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-dbf18b46-5c36-470e-ab17-ff5985d0ef5e' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-dbf18b46-5c36-470e-ab17-ff5985d0ef5e' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 77</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-d888bef7-b751-4c52-8127-982e136decfc' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d888bef7-b751-4c52-8127-982e136decfc' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.344 3.784 ... 733.8 743.8</div><input id='attrs-db54e61a-5265-493b-8eac-afc2adb4fa2e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-db54e61a-5265-493b-8eac-afc2adb4fa2e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-81aea2a7-27e3-4f7b-9637-72f06525c77d' class='xr-var-data-in' type='checkbox'><label for='data-81aea2a7-27e3-4f7b-9637-72f06525c77d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.000000e+00, 3.439932e-01, 3.783925e+00, 1.378393e+01, 2.378393e+01,
+       3.378393e+01, 4.378393e+01, 5.378393e+01, 6.378393e+01, 7.378393e+01,
+       8.378393e+01, 9.378393e+01, 1.037839e+02, 1.137839e+02, 1.237839e+02,
+       1.337839e+02, 1.437839e+02, 1.537839e+02, 1.637839e+02, 1.737839e+02,
+       1.837839e+02, 1.937839e+02, 2.037839e+02, 2.137839e+02, 2.237839e+02,
+       2.337839e+02, 2.437839e+02, 2.537839e+02, 2.637839e+02, 2.737839e+02,
+       2.837839e+02, 2.937839e+02, 3.037839e+02, 3.137839e+02, 3.237839e+02,
+       3.337839e+02, 3.437839e+02, 3.537839e+02, 3.637839e+02, 3.737839e+02,
+       3.837839e+02, 3.937839e+02, 4.037839e+02, 4.137839e+02, 4.237839e+02,
+       4.337839e+02, 4.437839e+02, 4.537839e+02, 4.637839e+02, 4.737839e+02,
+       4.837839e+02, 4.937839e+02, 5.037839e+02, 5.137839e+02, 5.237839e+02,
+       5.337839e+02, 5.437839e+02, 5.537839e+02, 5.637839e+02, 5.737839e+02,
+       5.837839e+02, 5.937839e+02, 6.037839e+02, 6.137839e+02, 6.237839e+02,
+       6.337839e+02, 6.437839e+02, 6.537839e+02, 6.637839e+02, 6.737839e+02,
+       6.837839e+02, 6.937839e+02, 7.037839e+02, 7.137839e+02, 7.237839e+02,
+       7.337839e+02, 7.437839e+02])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>press</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>7.931e+04 7.931e+04 ... 1.267e+04</div><input id='attrs-cff05d65-27c3-426e-85a7-511ce460ba4c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-cff05d65-27c3-426e-85a7-511ce460ba4c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6c0bb4d0-b343-402e-ac9b-075f7bd65e16' class='xr-var-data-in' type='checkbox'><label for='data-6c0bb4d0-b343-402e-ac9b-075f7bd65e16' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd></dl></div><div class='xr-var-data'><pre>array([79310.        , 79308.41859301, 79292.47431112, 79244.56862311,
+       79193.80028175, 79139.43394974, 79080.6855207 , 79016.71134682,
+       78946.59670416, 78869.34334973, 78783.85601593, 78688.92767919,
+       78583.22342934, 78465.26275595, 78333.40005729, 78185.8031672 ,
+       78020.42968639, 77835.00089749, 77626.97304021, 77392.77201197,
+       77129.22405282, 76834.44840894, 76505.57083043, 76150.87992253,
+       75756.07388254, 75317.04330851, 74829.32104238, 74288.06842964,
+       73691.49174984, 73051.69233709, 72343.23971168, 71559.09029657,
+       70696.37346091, 69764.60544951, 68781.50187957, 67723.32675656,
+       66588.26026199, 65404.18230418, 64154.28577237, 62824.47304962,
+       61417.80776212, 59959.59220596, 58445.7246164 , 56873.41437277,
+       55274.64175848, 53624.61881464, 51921.05227754, 50151.72940126,
+       48340.0441871 , 46509.41509743, 44646.91332996, 42777.47471245,
+       40935.06856309, 39093.16749846, 37273.06412729, 35473.8154306 ,
+       33712.85559983, 31991.83366127, 30318.4796622 , 28679.01700318,
+       27108.01403393, 25619.47114784, 24161.0827308 , 22757.7668053 ,
+       21411.92353796, 20148.94733758, 18975.76234576, 17941.22602421,
+       16955.33590543, 16016.62973683, 15177.23913599, 14456.81174615,
+       13838.78855051, 13350.81242063, 12999.61188189, 12769.59464264,
+       12668.13879057])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>cloud_height</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>2.134e+03 2.134e+03 ... 1.526e+04</div><input id='attrs-49c385c0-6136-4e99-8368-07db97b4c73a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-49c385c0-6136-4e99-8368-07db97b4c73a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-674b2b3c-5061-43fb-b034-1aa8d087ee28' class='xr-var-data-in' type='checkbox'><label for='data-674b2b3c-5061-43fb-b034-1aa8d087ee28' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd></dl></div><div class='xr-var-data'><pre>array([ 2134.        ,  2134.17211999,  2135.9074921 ,  2141.1215366 ,
+        2146.64715165,  2152.56437122,  2158.95853725,  2165.9214722 ,
+        2173.55273441,  2181.96097243,  2191.26539495,  2201.59737414,
+        2213.10220134,  2225.94101496,  2240.29292194,  2256.35733484,
+        2274.35654795,  2294.53857635,  2317.18028236,  2342.5892876 ,
+        2371.07376399,  2402.93335378,  2438.49483396,  2478.12147386,
+        2522.22984096,  2571.27904429,  2625.76816193,  2686.23777618,
+        2753.27092007,  2827.51629969,  2909.728526  ,  3000.72496932,
+        3101.33438504,  3211.52357436,  3330.6496447 ,  3458.87239557,
+        3596.4123407 ,  3743.47747647,  3900.97564931,  4070.88119175,
+        4254.25005958,  4448.92979732,  4654.93158713,  4872.33957432,
+        5100.68539777,  5341.22366295,  5595.94742136,  5866.55091071,
+        6152.50662667,  6451.94650892,  6764.94053049,  7091.77639515,
+        7427.86237816,  7772.57180456,  8127.63831329,  8491.84091778,
+        8863.26818504,  9241.45577113,  9625.79423871, 10015.27460857,
+       10408.78749184, 10805.07939178, 11202.76029005, 11600.94730089,
+       11998.32036949, 12392.33685197, 12778.67373013, 13151.27021683,
+       13508.3619652 , 13848.36357449, 14169.1043456 , 14466.67948496,
+       14728.90993912, 14943.86698743, 15106.1642061 , 15212.46005151,
+       15260.55004826])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-6415e0a0-7835-4ca2-bc5f-af0d98ce0607' class='xr-section-summary-in' type='checkbox'  checked><label for='section-6415e0a0-7835-4ca2-bc5f-af0d98ce0607' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>wvel</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.5 0.5007 0.5084 ... 7.746 1.859</div><input id='attrs-35015059-51bc-4593-84cc-cf0810a88354' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-35015059-51bc-4593-84cc-cf0810a88354' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-273e9ced-448f-4c5e-916e-cf4738671702' class='xr-var-data-in' type='checkbox'><label for='data-273e9ced-448f-4c5e-916e-cf4738671702' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m/s</dd></dl></div><div class='xr-var-data'><pre>array([ 0.5       ,  0.50071877,  0.5083833 ,  0.53568769,  0.57076738,
+        0.61409694,  0.66626454,  0.72797949,  0.80008131,  0.88355043,
+        0.97952068,  1.08929347,  1.21435407,  1.35638987,  1.51731077,
+        1.69927197,  1.90469901,  2.1363153 ,  2.39717206,  2.6898322 ,
+        3.01201065,  3.36535074,  3.75291843,  4.17942272,  4.64989937,
+        5.16825665,  5.73857474,  6.36506652,  7.0520871 ,  7.80970876,
+        8.64636017,  9.56744698, 10.55506937, 11.46583942, 12.36350778,
+       13.28473822, 14.22630314, 15.19889826, 16.33452664, 17.68127291,
+       18.94207873, 20.00369708, 21.19629987, 22.27468313, 23.41211049,
+       24.72915525, 26.2493138 , 27.85574905, 29.29843764, 30.59659134,
+       32.03289825, 33.21219347, 34.01590958, 34.96412184, 35.99376416,
+       36.81889383, 37.47748944, 38.14076847, 38.7077181 , 39.17070743,
+       39.51050775, 39.72536835, 39.79890785, 39.8164193 , 39.61225758,
+       39.1402214 , 37.99650301, 36.50553518, 34.88625408, 33.0770702 ,
+       31.03568053, 28.23652681, 23.98984263, 18.92764045, 13.47630118,
+        7.74573257,  1.85850672])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>thetae_cloud</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>346.6 346.6 346.6 ... 346.1 346.1</div><input id='attrs-2fe9b506-2e2a-4fab-ac82-19628a732be1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2fe9b506-2e2a-4fab-ac82-19628a732be1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6e6d46b3-4456-4065-9d6f-13fd7c89b2c4' class='xr-var-data-in' type='checkbox'><label for='data-6e6d46b3-4456-4065-9d6f-13fd7c89b2c4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd></dl></div><div class='xr-var-data'><pre>array([346.55257075, 346.55265428, 346.55348312, 346.55582504,
+       346.55806261, 346.56018978, 346.56219902, 346.56408127,
+       346.56582581, 346.56742014, 346.56884987, 346.57009854,
+       346.57114746, 346.57197553, 346.57255901, 346.57287136,
+       346.57288294, 346.57256085, 346.57186866, 346.57070738,
+       346.56862366, 346.56543413, 346.56103978, 346.5552939 ,
+       346.5480448 , 346.53918077, 346.52859066, 346.51616627,
+       346.50180484, 346.48537682, 346.4667723 , 346.44591413,
+       346.42305412, 346.40012833, 346.37728492, 346.35445609,
+       346.33172485, 346.309093  , 346.28564784, 346.26115686,
+       346.23769492, 346.21573308, 346.19180114, 346.16570899,
+       346.13683133, 346.10634402, 346.0761174 , 346.04417487,
+       346.01242884, 345.98030631, 345.94932107, 345.9294181 ,
+       345.9045785 , 345.88175522, 345.86648702, 345.85794936,
+       345.8500722 , 345.84199361, 345.83555904, 345.83036642,
+       345.82628627, 345.82334588, 345.82166456, 345.82061223,
+       345.82140565, 345.82431558, 345.83220523, 345.84270536,
+       345.85420464, 345.86714735, 345.88182465, 345.90216692,
+       345.93353888, 345.97126302, 346.01206023, 346.05508002,
+       346.09935511])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>rt_cloud</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.01405 0.01405 ... 0.01292 0.01289</div><input id='attrs-dc173389-b09e-4bce-9ee4-a85468ac5eb5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-dc173389-b09e-4bce-9ee4-a85468ac5eb5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bcd4d584-1a6d-44dd-8158-5f83e2c1e093' class='xr-var-data-in' type='checkbox'><label for='data-bcd4d584-1a6d-44dd-8158-5f83e2c1e093' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>kg/kg</dd></dl></div><div class='xr-var-data'><pre>array([0.01404938, 0.0140493 , 0.01404855, 0.01404633, 0.01404408,
+       0.01404179, 0.01403946, 0.01403709, 0.01403466, 0.01403219,
+       0.01402965, 0.01402705, 0.01402438, 0.01402162, 0.01401877,
+       0.01401582, 0.01401275, 0.01400955, 0.01400621, 0.01400268,
+       0.01399879, 0.01399445, 0.01398963, 0.01398426, 0.0139783 ,
+       0.01397168, 0.01396437, 0.0139563 , 0.01394742, 0.0139377 ,
+       0.01392709, 0.01391553, 0.01390304, 0.01388992, 0.01387635,
+       0.01386237, 0.01384796, 0.01383311, 0.01381779, 0.013802  ,
+       0.01378571, 0.01376878, 0.01375077, 0.01373102, 0.01370974,
+       0.01368757, 0.01366516, 0.0136416 , 0.01361696, 0.01359114,
+       0.0135652 , 0.01354135, 0.01351453, 0.01348787, 0.0134629 ,
+       0.01343885, 0.01341405, 0.01338868, 0.01336314, 0.01333737,
+       0.01331137, 0.01328522, 0.01325897, 0.01323266, 0.01320635,
+       0.01318006, 0.01315379, 0.01312756, 0.01310137, 0.01307521,
+       0.01304911, 0.01302305, 0.01299705, 0.01297109, 0.01294519,
+       0.01291934, 0.01289354])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3f1e2842-b6c1-4b15-9978-7daa5aef8b1c' class='xr-section-summary-in' type='checkbox'  ><label for='section-3f1e2842-b6c1-4b15-9978-7daa5aef8b1c' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-914572a6-f5c5-4b37-9a13-a95c9b2baf71' class='xr-index-data-in' type='checkbox'/><label for='index-914572a6-f5c5-4b37-9a13-a95c9b2baf71' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([                0.0, 0.34399321976514396,   3.783925417416584,
+        13.783925417416583,  23.783925417416583,   33.78392541741658,
+         43.78392541741658,   53.78392541741658,   63.78392541741658,
+         73.78392541741658,   83.78392541741658,   93.78392541741658,
+        103.78392541741658,  113.78392541741658,  123.78392541741658,
+        133.78392541741658,  143.78392541741658,  153.78392541741658,
+        163.78392541741658,  173.78392541741658,  183.78392541741658,
+        193.78392541741658,  203.78392541741658,  213.78392541741658,
+        223.78392541741658,  233.78392541741658,  243.78392541741658,
+        253.78392541741658,   263.7839254174166,   273.7839254174166,
+         283.7839254174166,   293.7839254174166,   303.7839254174166,
+         313.7839254174166,   323.7839254174166,   333.7839254174166,
+         343.7839254174166,   353.7839254174166,   363.7839254174166,
+         373.7839254174166,   383.7839254174166,   393.7839254174166,
+         403.7839254174166,   413.7839254174166,   423.7839254174166,
+         433.7839254174166,   443.7839254174166,   453.7839254174166,
+         463.7839254174166,   473.7839254174166,   483.7839254174166,
+         493.7839254174166,   503.7839254174166,   513.7839254174166,
+         523.7839254174166,   533.7839254174166,   543.7839254174166,
+         553.7839254174166,   563.7839254174166,   573.7839254174166,
+         583.7839254174166,   593.7839254174166,   603.7839254174166,
+         613.7839254174166,   623.7839254174166,   633.7839254174166,
+         643.7839254174166,   653.7839254174166,   663.7839254174166,
+         673.7839254174166,   683.7839254174166,   693.7839254174166,
+         703.7839254174166,   713.7839254174166,   723.7839254174166,
+         733.7839254174166,   743.7839254174166],
+      dtype=&#x27;float64&#x27;, name=&#x27;time&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f074cba3-c4ef-4e3f-a718-ba939100fd6f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f074cba3-c4ef-4e3f-a718-ba939100fd6f' class='xr-section-summary' >Attributes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>history :</span></dt><dd> written by entraining_plume.ipynb</dd><dt><span>sounding_dir :</span></dt><dd>littlerock</dd><dt><span>sounding_time :</span></dt><dd>(2012, 7, 9, 0)</dd><dt><span>station :</span></dt><dd>72340</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">the_ds</span><span class="p">[</span><span class="s1">&#39;press&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;press&#x27; (time: 77)&gt;
+array([79310.        , 79308.41859301, 79292.47431112, 79244.56862311,
+       79193.80028175, 79139.43394974, 79080.6855207 , 79016.71134682,
+       78946.59670416, 78869.34334973, 78783.85601593, 78688.92767919,
+       78583.22342934, 78465.26275595, 78333.40005729, 78185.8031672 ,
+       78020.42968639, 77835.00089749, 77626.97304021, 77392.77201197,
+       77129.22405282, 76834.44840894, 76505.57083043, 76150.87992253,
+       75756.07388254, 75317.04330851, 74829.32104238, 74288.06842964,
+       73691.49174984, 73051.69233709, 72343.23971168, 71559.09029657,
+       70696.37346091, 69764.60544951, 68781.50187957, 67723.32675656,
+       66588.26026199, 65404.18230418, 64154.28577237, 62824.47304962,
+       61417.80776212, 59959.59220596, 58445.7246164 , 56873.41437277,
+       55274.64175848, 53624.61881464, 51921.05227754, 50151.72940126,
+       48340.0441871 , 46509.41509743, 44646.91332996, 42777.47471245,
+       40935.06856309, 39093.16749846, 37273.06412729, 35473.8154306 ,
+       33712.85559983, 31991.83366127, 30318.4796622 , 28679.01700318,
+       27108.01403393, 25619.47114784, 24161.0827308 , 22757.7668053 ,
+       21411.92353796, 20148.94733758, 18975.76234576, 17941.22602421,
+       16955.33590543, 16016.62973683, 15177.23913599, 14456.81174615,
+       13838.78855051, 13350.81242063, 12999.61188189, 12769.59464264,
+       12668.13879057])
+Coordinates:
+  * time          (time) float64 0.0 0.344 3.784 13.78 ... 723.8 733.8 743.8
+    press         (time) float64 7.931e+04 7.931e+04 ... 1.277e+04 1.267e+04
+    cloud_height  (time) float64 2.134e+03 2.134e+03 ... 1.521e+04 1.526e+04
+Attributes:
+    units:    Pa</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'press'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 77</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-a029d17d-36cf-429c-946d-9b7237f86d9e' class='xr-array-in' type='checkbox' checked><label for='section-a029d17d-36cf-429c-946d-9b7237f86d9e' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>7.931e+04 7.931e+04 7.929e+04 ... 1.3e+04 1.277e+04 1.267e+04</span></div><div class='xr-array-data'><pre>array([79310.        , 79308.41859301, 79292.47431112, 79244.56862311,
+       79193.80028175, 79139.43394974, 79080.6855207 , 79016.71134682,
+       78946.59670416, 78869.34334973, 78783.85601593, 78688.92767919,
+       78583.22342934, 78465.26275595, 78333.40005729, 78185.8031672 ,
+       78020.42968639, 77835.00089749, 77626.97304021, 77392.77201197,
+       77129.22405282, 76834.44840894, 76505.57083043, 76150.87992253,
+       75756.07388254, 75317.04330851, 74829.32104238, 74288.06842964,
+       73691.49174984, 73051.69233709, 72343.23971168, 71559.09029657,
+       70696.37346091, 69764.60544951, 68781.50187957, 67723.32675656,
+       66588.26026199, 65404.18230418, 64154.28577237, 62824.47304962,
+       61417.80776212, 59959.59220596, 58445.7246164 , 56873.41437277,
+       55274.64175848, 53624.61881464, 51921.05227754, 50151.72940126,
+       48340.0441871 , 46509.41509743, 44646.91332996, 42777.47471245,
+       40935.06856309, 39093.16749846, 37273.06412729, 35473.8154306 ,
+       33712.85559983, 31991.83366127, 30318.4796622 , 28679.01700318,
+       27108.01403393, 25619.47114784, 24161.0827308 , 22757.7668053 ,
+       21411.92353796, 20148.94733758, 18975.76234576, 17941.22602421,
+       16955.33590543, 16016.62973683, 15177.23913599, 14456.81174615,
+       13838.78855051, 13350.81242063, 12999.61188189, 12769.59464264,
+       12668.13879057])</pre></div></div></li><li class='xr-section-item'><input id='section-cce4be0a-492a-4b8f-91e0-7114d27598cd' class='xr-section-summary-in' type='checkbox'  checked><label for='section-cce4be0a-492a-4b8f-91e0-7114d27598cd' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.344 3.784 ... 733.8 743.8</div><input id='attrs-7bdddc97-1d3e-42c1-a241-a2cee2a5c354' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7bdddc97-1d3e-42c1-a241-a2cee2a5c354' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e7809db6-9059-441a-9213-f70367e11a20' class='xr-var-data-in' type='checkbox'><label for='data-e7809db6-9059-441a-9213-f70367e11a20' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.000000e+00, 3.439932e-01, 3.783925e+00, 1.378393e+01, 2.378393e+01,
+       3.378393e+01, 4.378393e+01, 5.378393e+01, 6.378393e+01, 7.378393e+01,
+       8.378393e+01, 9.378393e+01, 1.037839e+02, 1.137839e+02, 1.237839e+02,
+       1.337839e+02, 1.437839e+02, 1.537839e+02, 1.637839e+02, 1.737839e+02,
+       1.837839e+02, 1.937839e+02, 2.037839e+02, 2.137839e+02, 2.237839e+02,
+       2.337839e+02, 2.437839e+02, 2.537839e+02, 2.637839e+02, 2.737839e+02,
+       2.837839e+02, 2.937839e+02, 3.037839e+02, 3.137839e+02, 3.237839e+02,
+       3.337839e+02, 3.437839e+02, 3.537839e+02, 3.637839e+02, 3.737839e+02,
+       3.837839e+02, 3.937839e+02, 4.037839e+02, 4.137839e+02, 4.237839e+02,
+       4.337839e+02, 4.437839e+02, 4.537839e+02, 4.637839e+02, 4.737839e+02,
+       4.837839e+02, 4.937839e+02, 5.037839e+02, 5.137839e+02, 5.237839e+02,
+       5.337839e+02, 5.437839e+02, 5.537839e+02, 5.637839e+02, 5.737839e+02,
+       5.837839e+02, 5.937839e+02, 6.037839e+02, 6.137839e+02, 6.237839e+02,
+       6.337839e+02, 6.437839e+02, 6.537839e+02, 6.637839e+02, 6.737839e+02,
+       6.837839e+02, 6.937839e+02, 7.037839e+02, 7.137839e+02, 7.237839e+02,
+       7.337839e+02, 7.437839e+02])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>press</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>7.931e+04 7.931e+04 ... 1.267e+04</div><input id='attrs-2d7fc2ce-b7f3-4345-96ec-52ca884a2ae1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2d7fc2ce-b7f3-4345-96ec-52ca884a2ae1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7560c73d-9de4-427c-b940-aa19643593d6' class='xr-var-data-in' type='checkbox'><label for='data-7560c73d-9de4-427c-b940-aa19643593d6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd></dl></div><div class='xr-var-data'><pre>array([79310.        , 79308.41859301, 79292.47431112, 79244.56862311,
+       79193.80028175, 79139.43394974, 79080.6855207 , 79016.71134682,
+       78946.59670416, 78869.34334973, 78783.85601593, 78688.92767919,
+       78583.22342934, 78465.26275595, 78333.40005729, 78185.8031672 ,
+       78020.42968639, 77835.00089749, 77626.97304021, 77392.77201197,
+       77129.22405282, 76834.44840894, 76505.57083043, 76150.87992253,
+       75756.07388254, 75317.04330851, 74829.32104238, 74288.06842964,
+       73691.49174984, 73051.69233709, 72343.23971168, 71559.09029657,
+       70696.37346091, 69764.60544951, 68781.50187957, 67723.32675656,
+       66588.26026199, 65404.18230418, 64154.28577237, 62824.47304962,
+       61417.80776212, 59959.59220596, 58445.7246164 , 56873.41437277,
+       55274.64175848, 53624.61881464, 51921.05227754, 50151.72940126,
+       48340.0441871 , 46509.41509743, 44646.91332996, 42777.47471245,
+       40935.06856309, 39093.16749846, 37273.06412729, 35473.8154306 ,
+       33712.85559983, 31991.83366127, 30318.4796622 , 28679.01700318,
+       27108.01403393, 25619.47114784, 24161.0827308 , 22757.7668053 ,
+       21411.92353796, 20148.94733758, 18975.76234576, 17941.22602421,
+       16955.33590543, 16016.62973683, 15177.23913599, 14456.81174615,
+       13838.78855051, 13350.81242063, 12999.61188189, 12769.59464264,
+       12668.13879057])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>cloud_height</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>2.134e+03 2.134e+03 ... 1.526e+04</div><input id='attrs-ee97f253-b832-479a-8b94-0b15fe02489a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ee97f253-b832-479a-8b94-0b15fe02489a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7bb54082-7d80-49d8-a1f6-f0caf5bb3fe7' class='xr-var-data-in' type='checkbox'><label for='data-7bb54082-7d80-49d8-a1f6-f0caf5bb3fe7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd></dl></div><div class='xr-var-data'><pre>array([ 2134.        ,  2134.17211999,  2135.9074921 ,  2141.1215366 ,
+        2146.64715165,  2152.56437122,  2158.95853725,  2165.9214722 ,
+        2173.55273441,  2181.96097243,  2191.26539495,  2201.59737414,
+        2213.10220134,  2225.94101496,  2240.29292194,  2256.35733484,
+        2274.35654795,  2294.53857635,  2317.18028236,  2342.5892876 ,
+        2371.07376399,  2402.93335378,  2438.49483396,  2478.12147386,
+        2522.22984096,  2571.27904429,  2625.76816193,  2686.23777618,
+        2753.27092007,  2827.51629969,  2909.728526  ,  3000.72496932,
+        3101.33438504,  3211.52357436,  3330.6496447 ,  3458.87239557,
+        3596.4123407 ,  3743.47747647,  3900.97564931,  4070.88119175,
+        4254.25005958,  4448.92979732,  4654.93158713,  4872.33957432,
+        5100.68539777,  5341.22366295,  5595.94742136,  5866.55091071,
+        6152.50662667,  6451.94650892,  6764.94053049,  7091.77639515,
+        7427.86237816,  7772.57180456,  8127.63831329,  8491.84091778,
+        8863.26818504,  9241.45577113,  9625.79423871, 10015.27460857,
+       10408.78749184, 10805.07939178, 11202.76029005, 11600.94730089,
+       11998.32036949, 12392.33685197, 12778.67373013, 13151.27021683,
+       13508.3619652 , 13848.36357449, 14169.1043456 , 14466.67948496,
+       14728.90993912, 14943.86698743, 15106.1642061 , 15212.46005151,
+       15260.55004826])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-cfe89bb1-f0bc-4fd5-852e-1e2808cb4a49' class='xr-section-summary-in' type='checkbox'  ><label for='section-cfe89bb1-f0bc-4fd5-852e-1e2808cb4a49' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-66bbd3b3-142d-4114-8971-abdb4333fd44' class='xr-index-data-in' type='checkbox'/><label for='index-66bbd3b3-142d-4114-8971-abdb4333fd44' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([                0.0, 0.34399321976514396,   3.783925417416584,
+        13.783925417416583,  23.783925417416583,   33.78392541741658,
+         43.78392541741658,   53.78392541741658,   63.78392541741658,
+         73.78392541741658,   83.78392541741658,   93.78392541741658,
+        103.78392541741658,  113.78392541741658,  123.78392541741658,
+        133.78392541741658,  143.78392541741658,  153.78392541741658,
+        163.78392541741658,  173.78392541741658,  183.78392541741658,
+        193.78392541741658,  203.78392541741658,  213.78392541741658,
+        223.78392541741658,  233.78392541741658,  243.78392541741658,
+        253.78392541741658,   263.7839254174166,   273.7839254174166,
+         283.7839254174166,   293.7839254174166,   303.7839254174166,
+         313.7839254174166,   323.7839254174166,   333.7839254174166,
+         343.7839254174166,   353.7839254174166,   363.7839254174166,
+         373.7839254174166,   383.7839254174166,   393.7839254174166,
+         403.7839254174166,   413.7839254174166,   423.7839254174166,
+         433.7839254174166,   443.7839254174166,   453.7839254174166,
+         463.7839254174166,   473.7839254174166,   483.7839254174166,
+         493.7839254174166,   503.7839254174166,   513.7839254174166,
+         523.7839254174166,   533.7839254174166,   543.7839254174166,
+         553.7839254174166,   563.7839254174166,   573.7839254174166,
+         583.7839254174166,   593.7839254174166,   603.7839254174166,
+         613.7839254174166,   623.7839254174166,   633.7839254174166,
+         643.7839254174166,   653.7839254174166,   663.7839254174166,
+         673.7839254174166,   683.7839254174166,   693.7839254174166,
+         703.7839254174166,   713.7839254174166,   723.7839254174166,
+         733.7839254174166,   743.7839254174166],
+      dtype=&#x27;float64&#x27;, name=&#x27;time&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8b6be78a-f714-4008-ab1d-2aada474db30' class='xr-section-summary-in' type='checkbox'  checked><label for='section-8b6be78a-f714-4008-ab1d-2aada474db30' class='xr-section-summary' >Attributes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</section>
+<section id="write-the-dataset-to-netcdf">
+<h2>write the dataset to netcdf<a class="headerlink" href="#write-the-dataset-to-netcdf" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;littlerock.nc&quot;</span>
+<span class="n">the_ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump<span class="w"> </span>-h<span class="w"> </span>littlerock.nc
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netcdf littlerock {
+dimensions:
+	time = 77 ;
+variables:
+	double time(time) ;
+		time:_FillValue = NaN ;
+	double press(time) ;
+		press:_FillValue = NaN ;
+		press:units = &quot;Pa&quot; ;
+	double wvel(time) ;
+		wvel:_FillValue = NaN ;
+		wvel:units = &quot;m/s&quot; ;
+		wvel:coordinates = &quot;cloud_height press&quot; ;
+	double cloud_height(time) ;
+		cloud_height:_FillValue = NaN ;
+		cloud_height:units = &quot;m&quot; ;
+	double thetae_cloud(time) ;
+		thetae_cloud:_FillValue = NaN ;
+		thetae_cloud:units = &quot;K&quot; ;
+		thetae_cloud:coordinates = &quot;cloud_height press&quot; ;
+	double rt_cloud(time) ;
+		rt_cloud:_FillValue = NaN ;
+		rt_cloud:units = &quot;kg/kg&quot; ;
+		rt_cloud:coordinates = &quot;cloud_height press&quot; ;
+
+// global attributes:
+		:history = &quot; written by entraining_plume.ipynb&quot; ;
+		:sounding_dir = &quot;littlerock&quot; ;
+		:sounding_time = 2012LL, 7LL, 9LL, 0LL ;
+		:station = 72340LL ;
+}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="worksheets/kohler_students.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Kohler Problem</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="entropy_theta_part2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-derivatives-wrt-time-of-each-of-the-4-variables">Find the derivatives wrt time of each of the 4 variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-buoyancy-from-the-cloud-and-environment-theta-e-and-r-t">Find the buoyancy from the cloud and environment <span class="math notranslate nohighlight">\(\theta_e\)</span> and <span class="math notranslate nohighlight">\(r_T\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrator">Integrator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-a-sounding-to-set-the-environment">Read in a sounding to set the environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-integration">Do the integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-the-dataframe-to-xarray">Convert the dataframe to xarray</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-units-to-the-variables-plus-dataset-attributes">Add units to the variables plus dataset attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-the-dataset-to-netcdf">write the dataset to netcdf</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Philip Austin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
