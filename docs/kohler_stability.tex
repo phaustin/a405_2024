@@ -1,0 +1,197 @@
+\documentclass[12pt]{article}
+\usepackage{xr,geometry,fancyhdr,hyperref,ifpdf,amsmath,rcs}
+\usepackage{color,lastpage,longtable,Ventry,url,paunits,shortcuts,smallsec,float}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+
+\pagestyle{fancy} 
+
+
+\RCS $Revision: 1.1 $
+\RCS $Date: 2006/03/08 17:38:15 $
+
+\fancypagestyle{first}{
+\lhead{\textbf{A405}}
+\chead{\textbf{Kohler stability}} 
+\rhead{p.~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+\externaldocument[lec1,]{lec1}
+\externaldocument[lec2,]{lec2}
+\externaldocument[lec3,]{lec3}
+\hyperbaseurl{http://www.eos.ubc.ca/courses/atsc405/}
+\begin{document}
+\pagestyle{first}
+
+\section{Stability of the Kohler equation}
+
+Recall that we had the following result for the derivative of the thermodynamic potential $G$ (which is called
+$G$ by Lohmann):
+
+
+\begin{equation}
+  \label{eq:dEdr}
+  \frac{\delta G}{\delta r} = \left [ -R_v T \rho_l 4 \pi r^2 \ln \left ( \frac{S}{a_w}
+    \right ) + 8 \pi r \sigma \right ]
+\end{equation}
+
+\noindent
+The K\"ohler curve consists of those values of droplet radius $r$ and
+saturation $S$ such that $G$ is at an extremum.  Setting $\delta G/\delta r$=0 in (\ref{eq:dEdr})
+and rearranging gives (you should show this):
+
+\begin{equation}
+  \label{eq:kohler}
+  S_{equil} = \frac{e_{\chi c}}{e_s(T)} =  a_w \exp \left [ \frac{2\sigma}{\rho_l R_v T r} \right ]
+\end{equation}
+and repeating this figure:
+
+
+\includegraphics[width=7.5in]{kohler_fig}
+
+
+In the problem set you find values for the maximum of $S_{equil}$, which occurs
+at radius $r_{crit}$ and equilibrium relative humidit $S_{crit}$.
+
+
+We can show explicitly that 
+that haze particles with $r < r_{crit}$ arte stable
+at a particular $S=e/e_s$, while cloud droplets with $r > r_{crit}$ grow
+rapidily. To see this, we need to check
+the sign of $\delta G^2/\delta r^2$.  To check this, first take apart the logarithm
+in (\ref{eq:dEdr}) and rewrite:
+
+\begin{equation}
+  \frac{\delta G}{\delta r} = \left [ -R_v T \rho_l 4 \pi r^2 \left ( \ln S - \ln a_w
+    \right ) + 8 \pi r \sigma \right ] 
+  \label{eq:nouse}
+\end{equation}
+Now use the chain rule:
+
+\begin{equation}
+  \frac{\delta ^2G}{\delta r^2} = - 4 \pi R_v T \rho_l \left [   2 r \ln S - 2 r\ln a_w
+    -\frac{r^2}{a_w} \frac{a_w}{dr} \right ]  + 8 \pi \sigma
+\label{eq:expand}
+\end{equation}
+Note that  $a_w$ varies with radius, but S does
+not, since it is given by the environment.
+
+
+To get the rest of the way, you need to recognize that we want to
+evaluate (\ref{eq:expand}) \textit{on the K\"ohler curve}, which means
+we want S given by (\ref{eq:kohler}), so that:
+
+\begin{equation}
+  \label{eq:newkoh}
+  \ln S = \ln a_w + \frac{a}{r}
+\end{equation}
+
+Plugging (\ref{eq:newkoh}) into (\ref{eq:expand}) gives:
+
+
+\begin{equation}
+  \label{eq:dg2dr2}
+\frac{\delta ^2 G}{\delta r^2} = -4 \pi R_v T \rho_l \left ( 2 r \left ( \ln(a_w)
+    + \frac{a}{r} \right ) -2 r \ln (a_w ) - \frac{r^2}{a_w}
+  \frac{da_w}{dr} \right ) + 8 \pi \sigma
+\end{equation}
+
+\noindent
+Where $a=\frac{2 \sigma}{\rho_l R_v T}$.
+
+
+If we define   $b= \frac{i m M_w}{ 4/3\pi \rho_s M_s}$
+and assume that the following approximations hold:
+
+\begin{equation}
+  \label{eq:approx}
+  a_w \approx 1 - \frac{b}{r^3},\  \frac{1}{a_w} \approx 1 +
+  \frac{b}{r^3},\  \frac{da_w}{dr}=\frac{3b}{r^4}
+\end{equation}
+
+\noindent
+then using this approximation yields:
+
+\begin{equation}
+  \label{eq:dg2dr2c}
+  \frac{\delta ^2G}{\delta r^2} = - 4 \pi R_v T \rho_l \left [ 2 a - r^2 \left ( 1 +
+    \frac{b}{r^3} \right ) \frac{3b}{r^4}  \right ] + 8 \pi \sigma
+\end{equation}
+
+Neglecting the $\frac{3 b^2}{r^5}$ term because it's tiny gives:
+
+
+
+
+\begin{equation}
+  \label{eq:dg2dr2b}
+  \frac{\delta ^2 G}{\delta r^2} \approx -4 \pi R_v T \rho_l \left ( 2a -
+    \frac{3b}{r^2} \right ) + 8 \pi \sigma
+\end{equation}
+
+Finally, setting (\ref{eq:dg2dr2b})=0 
+shows you that $\frac{\delta G^2}{\delta r^2}$ will change sign at $r_{crit}$ 
+given by: 
+
+
+\begin{equation}
+  \label{eq:rcrit}
+  r_{crit}  = \left ( \frac{3b}{a} \right )^\frac{1}{2}
+\end{equation}
+Testing $\frac{\delta ^2 G}{\delta r^2}$ with other $r$ values should show you that
+(\ref{eq:dg2dr2}) changes sign (switches from a stable to unstable
+equilibrium when $r > r_{crit}$.
+
+
+The critical radius $r_{crit}$ 
+distinguishes \textit{haze particles} from \textit{cloud droplets}.
+Haze particles have $r < r_{crit}$ and are in stable equilibrium at
+saturation $S$. Cloud droplets are \textit{activated} from haze
+particles when they grow enough so that $r > r_{crit}$.  This is how
+a thermal diffusion cloud chamber works (see figure below which is similar to 
+the last figure in Lohmann Chapter 6):
+
+ \begin{figure}[htbp]
+%   \centering
+  \includegraphics{chamber}
+%   \caption{Cloud chamber using a thermal gradient to control $S$}
+%   \label{fig:chamber}
+ \end{figure}
+
+This means that the equilibrium vapor curve given by (\ref{eq:kohler}) cannot
+be used by itself to predict the vapor pressure for a population of
+activated droplets with $r > r_{crit}$, because the unstable system will
+continue to grow larger and larger droplets, lowering its total
+G.  To track the growth of these droplets requires a more sophisticated
+model which we will develop next.
+
+The fact that aerosols start scattering much more light when they activate and grow
+means that a laser, shining through the cloud chamber, can measure the scattering
+as the supersaturation in the cloud chamber is increased.  The scattering will go up
+as smaller and smaller aerosols are activated at higher and higher saturations.
+The relationship between the critical supersaturation and the aerosol mass means
+that we can get a count of $N(D)$, the number of aerosols with diameters larger than
+D, and then use that to figure out $n(D)dD$, the number of aerosols in the size
+range $D \leftarrow D + dD$.
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

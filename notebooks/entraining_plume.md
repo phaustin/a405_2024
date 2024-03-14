@@ -11,6 +11,7 @@ kernelspec:
   name: python3
 ---
 
+(entrain_cloud)=
 # Modeling an entraining cloud updraft
 
 This notebook calculates the time evolution of four variables:
@@ -310,6 +311,8 @@ the_ds['wvel'] = the_ds['wvel'].assign_attrs(units = 'm/s')
 the_ds['thetae_cloud'] = the_ds['thetae_cloud'].assign_attrs(units = 'K')
 the_ds['rt_cloud'] = the_ds['rt_cloud'].assign_attrs(units = 'kg/kg')
 the_ds.attrs = {'history': ' written by entraining_plume.ipynb',
+                'entrainment_rate':entrain_rate,
+                'entrainment_units':'s^{-1}',
                 'sounding_dir':sounding_dir,
                 'sounding_time':the_time,
                 'station':station}

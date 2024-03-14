@@ -27,7 +27,7 @@ parts:
       title: Assignment 3 -- Taylor series problem due Sunday midnight
     - url: https://canvas.ubc.ca/courses/129111/assignments/1794948
       title: Assignment 4 --  Midterm review questions -- credit/no credit
-    - file: notebooks/kohler_probs.md
+    - file: assignments/assignment5_kohler_students.md
     - url: https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0
       title: kohler_problem.ipynb download
   - caption: Worksheets
@@ -65,7 +65,6 @@ parts:
     - url: https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&dl=0
       title: mixing_line_example.ipynb download
     - file: notebooks/worksheets/cape_part1.md
-    - file: notebooks/cape_part1.md
     - url: https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&dl=0
       title: cape notebook download
     - file: notebooks/convec_instability.md
@@ -77,7 +76,13 @@ parts:
     - file: notebooks/a405_mid_2024_solution.md
     - url: https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&dl=0
       title: a405 midterm solutons download
-    - file: notebooks/worksheets/kohler_students.md
+    - file: notebooks/worksheets/kohler_equilibrium_students.md
+    - url: https://www.dropbox.com/scl/fi/k0rwtddqk6d2147o0tjo3/kohler_equilibrium_students.ipynb?rlkey=0xtb32wffahirqc8qb9krk6lj&dl=0
+      title: kohler_equilibrium_studens.ipynb download
+    - file: notebooks/entraining_plume.md
+    - url: https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&dl=0
+      title: entraining_plume.ipynb download
+      
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
