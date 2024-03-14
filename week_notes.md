@@ -262,10 +262,10 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 
 ## Lecture 24, week 8 Friday
 
-- Worksheet: {ref}`kohler_equilbrium`
-- Download [kohler_equilirium_students.ipynb](https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0)
+- Worksheet: {ref}`kohler_equilibrium`
+- Download [kohler_equilibrium_students.ipynb](https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0)
 
-## Lecture 25, week 9 Monday
+## Lecture 25, week 9 Tuesday
 
 Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
 
@@ -321,4 +321,10 @@ Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
 
 ## Lecture 26, week 9 Thursday
 
-- 
+- Review my [droplet growth notes](https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&dl=0)
+
+- Worksheet
+
+### For Friday
+
+- Time permitting read: Lohmann Chapter 5.1-5.2 (p. 129) on atmospheric aerosols

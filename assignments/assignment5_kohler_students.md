@@ -12,90 +12,32 @@ kernelspec:
   name: python3
 ---
 
-(kohler_problem)=
-# Kohler Problem
-
-```{code-cell} ipython3
-import json
-from pathlib import Path
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy import optimize
-from a405.thermo.constants import constants as c
-import pooch
-```
-
-## Question 1
+(assignment_5)=
+# Assignment 5  -- Due Friday March 15 midnight
 
 +++
 
-Plot the Kohler curve (Thompkins equation 4.15, and Fig. 4.13) for an aerosol:
+## Problem 1: Taylor series
 
-$$
-\frac{e_\chi}{e_s^\infty} \approx 1 + \frac{a}{r} - \frac{b}{r^3}\tag{AT 4.15}
-$$
+Show using two Taylor series expansions (one for $a_w$ and one for
+$\exp \left [ \frac{2\sigma}{\rho_l R_v T r} \right ]$) show how to get  Thompkins 4.15:
 
-
-$$
-a = \frac{2\sigma}{\rho_l R_v T}
-$$
-
-$$
-b = \frac{imM_w}{4/3\pi \rho_s M_s}
-$$
+$S= a_w \exp \left [ \frac{2\sigma}{\rho_l R_v T r} \right ] \approx \left ( 1 + \frac{a}{r} - \frac{b}{r^3} \right )$
 
 +++
 
-Download this [aerosol_file](https://www.dropbox.com/scl/fi/oiqcf3e910cocd8kxcuah/ammonium_sulphate.json?rlkey=igkpf2oycvc27kquriuge78fm&dl=0) into the same folder as  your notebook
+## Problem 2: Term comparison  
 
-```{code-cell} ipython3
-# load the properties of ammonium sulphate from JSON file
-filename =  Path("ammonium_sulphate.json")
-with open(filename) as infile:
-    ammonium_sulphate = json.load(infile)
-print(ammonium_sulphate)
-```
+For the aerosol defined in the kohler.ipynb notebook ($10^{-19}$ kg, ammonium sulphate), inside a droplet of radius $r=1\ \mu m$
+      find the size of the smallest term you've kept (either $\frac{a}{r}$ or $\frac{b}{r^3}$ and compare it to
+      the size of the largest term you've dropped.   Repeat this for a droplet of radius   $r=0.1\ \mu m$
 
-```{code-cell} ipython3
-def find_S(r, aerosol, T):
-    """
-    calculates supersaturation S given an aerosol dictionary,
-    temperature T, and droplet radius r 
-    uses Thompkins 4.15
++++
 
-    Parameters
-    ----------
-    r: radius (me)
-    aerosol: dictionary with keys: Sigma (N/m^2), vanHoff (int), Mw (kg/kmole), Ms (kg/kmole), mass (kg)
-    T: temperature (K)
+## Problem 3: surface energy:
 
-    Returns
-    -------
-    S: supersaturation (unitless)
-    
-    """
-    # your code here
-  
-    return S
-```
-
-```{code-cell} ipython3
-# In this cell create a vector of radii r and use find_S to get the corresponding S values
-```
-
-```{code-cell} ipython3
-# In this cell make an (x,y) plot of (r,S)
-```
-
-## Question 2 -- rootfinding the equilibrium radius
-
-Use our rootfinder to find the equilibrium radius for a haze particle at a relative humidity of 90% and a temperature of 15 deg C
-
-```{code-cell} ipython3
-#In this cell write a function find_r that takes the arguments to find_S and a relative humidity RH
-# and changes sign when S crosses over that relative humidity 
-# then use optimize.brentq to find the radius where S(r) = RH
-```
+Suppose you have $r_l$ =1 g/kg of liquid water spread among N spherical drops of radius 10 $\mu m$.  Compare the surface energy of this
+      population (which we've been neglecting) with the enthalpy required to vaporize it:  $l_v r_l$.  Is it negligible in comparison?
 
 ```{code-cell} ipython3
 
