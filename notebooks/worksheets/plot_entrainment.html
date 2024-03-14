@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>week3: working with numpy arrays &#8212; ATSC 405 2024</title>
+    <title>Plotting the entraining plume &#8212; ATSC 405 2024</title>
   
   
   
@@ -64,12 +64,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week3/derivs_and_ints';</script>
-    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/week3/derivs_and_ints.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/worksheets/plot_entrainment';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/worksheets/plot_entrainment.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Adiabatic Box – preliminary" href="../../assignments/adiabatic_box.html" />
-    <link rel="prev" title="Week2: Hydrostatic balance" href="../week2/hydrostat.html" />
+    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="../entropy_theta_part2.html" />
+    <link rel="prev" title="Modeling an entraining cloud updraft" href="../entraining_plume.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,10 +176,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../week_notes.html">Week notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../week2/hydrostat.html">Week2: Hydrostatic balance</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">week3: working with numpy arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week3/derivs_and_ints.html">week3: working with numpy arrays</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
 <ul class="nav bd-sidenav">
@@ -192,9 +192,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment5_kohler_students.html">Assignment 5  – Due Friday March 15 midnight</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../week2/skew_coords_solution.html">Week2: Theromodynamic diagrams worksheet – solution</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&amp;dl=0">Download skew_coords_solution.ipynb</a></li>
 </ul>
@@ -204,19 +204,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../week4/tropical_clouds_profiles.html">Tropical cloud profiles</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../week5/moist_adiabats.html">Moist adiabats and the LCL</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tropical_engine.html">Tropical Heat Engine</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&amp;dl=0">tropical_engine_solution.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/mixing_line_example.html">Mixing line example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mixing_line_example.html">Mixing line example</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&amp;dl=0">mixing_line_example.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/cape_part1.html">Cape Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cape_part1.html">Cape Part 1</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../convec_instability.html">Convective instability – lifting demo</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
@@ -224,11 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../a405_mid_2024_solution.html">2024 midterm solutions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/kohler_equilibrium_students.html">Kohler Equilibrium Worksheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kohler_equilibrium_students.html">Kohler Equilibrium Worksheet</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/k0rwtddqk6d2147o0tjo3/kohler_equilibrium_students.ipynb?rlkey=0xtb32wffahirqc8qb9krk6lj&amp;dl=0">kohler_equilibrium_studens.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../entraining_plume.html">Modeling an entraining cloud updraft</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&amp;dl=0">entraining_plume.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../worksheets/plot_entrainment.html">Plotting the entraining plume</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Plotting the entraining plume</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&amp;dl=0">plot_entrainment.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
@@ -310,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/week3/derivs_and_ints.md" target="_blank"
+      <li><a href="../../_sources/notebooks/worksheets/plot_entrainment.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,9 +381,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -394,23 +392,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>week3: working with numpy arrays</h1>
+    <h1>Plotting the entraining plume</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-the-derivative-of-this-function-with-python">1) Take the derivative of this function with python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-going-on-above-at-x-0">What’s going on above at x=0?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-definite-integral-of-this-function-with-python">2) Find the definite integral of this function with python</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -420,113 +406,465 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="week3-working-with-numpy-arrays">
-<span id="derivs-ints"></span><h1>week3: working with numpy arrays<a class="headerlink" href="#week3-working-with-numpy-arrays" title="Permalink to this heading">#</a></h1>
-<p>This notebook demonstrates how to use differences and sums to calculate derivatives and integrals and make some simple plots using the matplotlib module.</p>
-<p>Coverage:  <a class="reference external" href="https://phaustin.github.io/Problem-Solving-with-Python/">Kazrinoff Chapter 6</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="plotting-the-entraining-plume">
+<span id="entrain-plot"></span><h1>Plotting the entraining plume<a class="headerlink" href="#plotting-the-entraining-plume" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Run the <a class="reference external" href="https://phaustin.github.io/a405_2024/notebooks/entraining_plume.html">entraining plume</a> notebook three times to produce three netcdf files with entrainment rates of <span class="math notranslate nohighlight">\(\lambda = 0\)</span>, <span class="math notranslate nohighlight">\(\lambda = 2 \times 10^{-4}\)</span> and <span class="math notranslate nohighlight">\(\lambda = 4 \times 10^{-4}\)</span> <span class="math notranslate nohighlight">\(S^{-1}\)</span></p></li>
+<li><p>Do you see a difference in the cloud top height and maximum updraft speed for the three runs?</p></li>
+<li><p>Make a plot, with a legend, that shows <span class="math notranslate nohighlight">\(\theta_e\)</span> vs. height for the three cases</p></li>
+<li><p>Repeat, but with vertical velocity</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
-
-<span class="k">def</span> <span class="nf">cubeit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    construct cubic polynomial of the form</span>
-<span class="sd">      y = ax^3 + b</span>
-<span class="sd">    </span>
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    </span>
-<span class="sd">    x: vector or float</span>
-<span class="sd">      x values </span>
-<span class="sd">      </span>
-<span class="sd">    a: float</span>
-<span class="sd">      coefficient to multiply</span>
-<span class="sd">      </span>
-<span class="sd">    b: float</span>
-<span class="sd">       coefficient to add</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="take-the-derivative-of-this-function-with-python">
-<h2>1) Take the derivative of this function with python<a class="headerlink" href="#take-the-derivative-of-this-function-with-python" title="Permalink to this heading">#</a></h2>
-<p>Find the first derivative of <span class="math notranslate nohighlight">\(y = 6x^3 + 5\)</span></p>
-<p>Answer: <span class="math notranslate nohighlight">\(\frac{dy}{dx} = 18x^2\)</span></p>
-<p>In first year you learned that the first derivative was:</p>
-<div class="math notranslate nohighlight" id="equation-eq-deriv">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq-deriv" title="Permalink to this equation">#</a></span>\[
-\frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}
-\]</div>
-<p>So calculate <span class="math notranslate nohighlight">\(\Delta y\)</span> and <span class="math notranslate nohighlight">\(\Delta x\)</span> in python using <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.diff.html">numpy.diff</a> and divide, does it agree with the calculus answer?</p>
-<p><a class="reference internal" href="#equation-eq-deriv">(9)</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="c1">#</span>
-<span class="c1"># create 1000 x values from -5 to 5</span>
-<span class="c1">#</span>
-<span class="n">spacing</span> <span class="o">=</span> <span class="mf">0.01</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">spacing</span><span class="p">)</span>
-<span class="c1">#</span>
-<span class="c1"># find dx and dy</span>
-<span class="c1">#</span>
-<span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">cubeit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">dy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-<span class="n">deriv</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">/</span> <span class="n">dx</span>
-<span class="c1">#</span>
-<span class="c1"># compare to the exact answer</span>
-<span class="c1"># note that deriv is one element shorter than x or y, so find</span>
-<span class="c1"># the average value for each interval so they line up</span>
-<span class="c1">#</span>
-<span class="n">exact</span> <span class="o">=</span> <span class="mi">18</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mf">2.0</span>
-<span class="n">exact</span> <span class="o">=</span> <span class="p">(</span><span class="n">exact</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">exact</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
-<span class="n">avgx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
-<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">avgx</span><span class="p">,</span> <span class="n">deriv</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">avgx</span><span class="p">,</span> <span class="n">exact</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;calculus&quot;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;dy/dx&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;approx and exact&quot;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">avgx</span><span class="p">,</span> <span class="p">(</span><span class="n">deriv</span> <span class="o">-</span> <span class="n">exact</span><span class="p">)</span> <span class="o">/</span> <span class="n">exact</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;(approx - exact)/exact&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;relative error&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">the_file</span> <span class="o">=</span> <span class="s1">&#39;littlerock.nc&#39;</span>
+<span class="n">the_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">the_file</span><span class="p">)</span>
+<span class="n">the_ds</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8d2ef685b2f30669728347b59348b1c27e388eee71392eec4cefa634d31bb4f2.png" src="../../_images/8d2ef685b2f30669728347b59348b1c27e388eee71392eec4cefa634d31bb4f2.png" />
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:       (time: 77)
+Coordinates:
+  * time          (time) float64 0.0 0.344 3.784 13.78 ... 723.8 733.8 743.8
+    press         (time) float64 ...
+    cloud_height  (time) float64 ...
+Data variables:
+    wvel          (time) float64 ...
+    thetae_cloud  (time) float64 ...
+    rt_cloud      (time) float64 ...
+Attributes:
+    history:             written by entraining_plume.ipynb
+    entrainment_rate:   0.0002
+    entrainment_units:  s^{-1}
+    sounding_dir:       littlerock
+    sounding_time:      [2012    7    9    0]
+    station:            72340</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-120a8303-0930-47ca-a1a2-2efe2d80f4b7' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-120a8303-0930-47ca-a1a2-2efe2d80f4b7' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 77</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-822517e1-b9b7-43a5-94fb-985d8ac82054' class='xr-section-summary-in' type='checkbox'  checked><label for='section-822517e1-b9b7-43a5-94fb-985d8ac82054' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.344 3.784 ... 733.8 743.8</div><input id='attrs-86ca390b-1216-454c-a32a-449c0730b079' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-86ca390b-1216-454c-a32a-449c0730b079' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-13ea7ba1-ad4c-4168-9911-150e40780525' class='xr-var-data-in' type='checkbox'><label for='data-13ea7ba1-ad4c-4168-9911-150e40780525' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.000000e+00, 3.439932e-01, 3.783925e+00, 1.378393e+01, 2.378393e+01,
+       3.378393e+01, 4.378393e+01, 5.378393e+01, 6.378393e+01, 7.378393e+01,
+       8.378393e+01, 9.378393e+01, 1.037839e+02, 1.137839e+02, 1.237839e+02,
+       1.337839e+02, 1.437839e+02, 1.537839e+02, 1.637839e+02, 1.737839e+02,
+       1.837839e+02, 1.937839e+02, 2.037839e+02, 2.137839e+02, 2.237839e+02,
+       2.337839e+02, 2.437839e+02, 2.537839e+02, 2.637839e+02, 2.737839e+02,
+       2.837839e+02, 2.937839e+02, 3.037839e+02, 3.137839e+02, 3.237839e+02,
+       3.337839e+02, 3.437839e+02, 3.537839e+02, 3.637839e+02, 3.737839e+02,
+       3.837839e+02, 3.937839e+02, 4.037839e+02, 4.137839e+02, 4.237839e+02,
+       4.337839e+02, 4.437839e+02, 4.537839e+02, 4.637839e+02, 4.737839e+02,
+       4.837839e+02, 4.937839e+02, 5.037839e+02, 5.137839e+02, 5.237839e+02,
+       5.337839e+02, 5.437839e+02, 5.537839e+02, 5.637839e+02, 5.737839e+02,
+       5.837839e+02, 5.937839e+02, 6.037839e+02, 6.137839e+02, 6.237839e+02,
+       6.337839e+02, 6.437839e+02, 6.537839e+02, 6.637839e+02, 6.737839e+02,
+       6.837839e+02, 6.937839e+02, 7.037839e+02, 7.137839e+02, 7.237839e+02,
+       7.337839e+02, 7.437839e+02])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>press</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-59aedb2b-eb98-4a36-b94a-2b48fc33aada' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-59aedb2b-eb98-4a36-b94a-2b48fc33aada' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ee80f6bc-df41-4f55-a4e7-a15e498f969d' class='xr-var-data-in' type='checkbox'><label for='data-ee80f6bc-df41-4f55-a4e7-a15e498f969d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd></dl></div><div class='xr-var-data'><pre>[77 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>cloud_height</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-21df2d74-bdae-4508-92ca-7b2aeea39c34' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-21df2d74-bdae-4508-92ca-7b2aeea39c34' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-250c651d-7be9-4904-8efb-f65b98749454' class='xr-var-data-in' type='checkbox'><label for='data-250c651d-7be9-4904-8efb-f65b98749454' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd></dl></div><div class='xr-var-data'><pre>[77 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2f546463-a46d-405a-80f5-7486a7002c75' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2f546463-a46d-405a-80f5-7486a7002c75' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>wvel</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ca13d149-1a25-4b13-92d6-ed9cb757d406' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ca13d149-1a25-4b13-92d6-ed9cb757d406' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ab414d77-03aa-4047-8fef-25ad15bb81f3' class='xr-var-data-in' type='checkbox'><label for='data-ab414d77-03aa-4047-8fef-25ad15bb81f3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m/s</dd></dl></div><div class='xr-var-data'><pre>[77 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>thetae_cloud</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-619c8558-388a-492f-9fc5-53ed0482ae9a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-619c8558-388a-492f-9fc5-53ed0482ae9a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-605d7ddc-4666-4bfc-9779-0b351f6bf0f5' class='xr-var-data-in' type='checkbox'><label for='data-605d7ddc-4666-4bfc-9779-0b351f6bf0f5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd></dl></div><div class='xr-var-data'><pre>[77 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>rt_cloud</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-166343c9-31d2-46ee-b97a-22a8826386ac' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-166343c9-31d2-46ee-b97a-22a8826386ac' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f2dbedb4-ae80-4b8b-aab5-e4a5427bd2e0' class='xr-var-data-in' type='checkbox'><label for='data-f2dbedb4-ae80-4b8b-aab5-e4a5427bd2e0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>kg/kg</dd></dl></div><div class='xr-var-data'><pre>[77 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-dd721239-d721-4aed-9144-b2c07b4f41a1' class='xr-section-summary-in' type='checkbox'  ><label for='section-dd721239-d721-4aed-9144-b2c07b4f41a1' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-a6e05ac5-0399-44f8-bcdf-2ea85d5dae75' class='xr-index-data-in' type='checkbox'/><label for='index-a6e05ac5-0399-44f8-bcdf-2ea85d5dae75' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([                0.0, 0.34399321976514396,   3.783925417416584,
+        13.783925417416583,  23.783925417416583,   33.78392541741658,
+         43.78392541741658,   53.78392541741658,   63.78392541741658,
+         73.78392541741658,   83.78392541741658,   93.78392541741658,
+        103.78392541741658,  113.78392541741658,  123.78392541741658,
+        133.78392541741658,  143.78392541741658,  153.78392541741658,
+        163.78392541741658,  173.78392541741658,  183.78392541741658,
+        193.78392541741658,  203.78392541741658,  213.78392541741658,
+        223.78392541741658,  233.78392541741658,  243.78392541741658,
+        253.78392541741658,   263.7839254174166,   273.7839254174166,
+         283.7839254174166,   293.7839254174166,   303.7839254174166,
+         313.7839254174166,   323.7839254174166,   333.7839254174166,
+         343.7839254174166,   353.7839254174166,   363.7839254174166,
+         373.7839254174166,   383.7839254174166,   393.7839254174166,
+         403.7839254174166,   413.7839254174166,   423.7839254174166,
+         433.7839254174166,   443.7839254174166,   453.7839254174166,
+         463.7839254174166,   473.7839254174166,   483.7839254174166,
+         493.7839254174166,   503.7839254174166,   513.7839254174166,
+         523.7839254174166,   533.7839254174166,   543.7839254174166,
+         553.7839254174166,   563.7839254174166,   573.7839254174166,
+         583.7839254174166,   593.7839254174166,   603.7839254174166,
+         613.7839254174166,   623.7839254174166,   633.7839254174166,
+         643.7839254174166,   653.7839254174166,   663.7839254174166,
+         673.7839254174166,   683.7839254174166,   693.7839254174166,
+         703.7839254174166,   713.7839254174166,   723.7839254174166,
+         733.7839254174166,   743.7839254174166],
+      dtype=&#x27;float64&#x27;, name=&#x27;time&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a4460c7f-62a8-40ba-a0b4-18c2e15f4bab' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a4460c7f-62a8-40ba-a0b4-18c2e15f4bab' class='xr-section-summary' >Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>history :</span></dt><dd> written by entraining_plume.ipynb</dd><dt><span>entrainment_rate :</span></dt><dd>0.0002</dd><dt><span>entrainment_units :</span></dt><dd>s^{-1}</dd><dt><span>sounding_dir :</span></dt><dd>littlerock</dd><dt><span>sounding_time :</span></dt><dd>[2012    7    9    0]</dd><dt><span>station :</span></dt><dd>72340</dd></dl></div></li></ul></div></div></div></div>
 </div>
-</div>
-<section id="what-s-going-on-above-at-x-0">
-<h3>What’s going on above at x=0?<a class="headerlink" href="#what-s-going-on-above-at-x-0" title="Permalink to this heading">#</a></h3>
-</section>
-</section>
-<section id="find-the-definite-integral-of-this-function-with-python">
-<span id="week2-numint"></span><h2>2) Find the definite integral of this function with python<a class="headerlink" href="#find-the-definite-integral-of-this-function-with-python" title="Permalink to this heading">#</a></h2>
-<p>In first year you learned that if you start with this sum:</p>
-<p><span class="math notranslate nohighlight">\(\sum\limits_{x= -5}^{x=+5} \left ( 6x^3 + 5 \right ) \Delta x\)</span></p>
-<p>and take <span class="math notranslate nohighlight">\(\lim_{\Delta x \to 0}\)</span>  you get the definite integral <span class="math notranslate nohighlight">\(I =\int_{-5}^5 \left ( 6 x^3 + 5 \right ) dx\)</span></p>
-<p>which Newton and Liebniz figured out resulted in <span class="math notranslate nohighlight">\(I=50\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\int_{-5}^5 6 x^3 + 5 dx = \left .\left (  (6/4)x^4 + 5x \right ) \right |_{-5}^5 = (6/4)*(5^4 - (-5)^4) + ((5\times 5) - ((-5)\times 5)) = 50\)</span></p>
-<p>So to do this integral in python, just use numpy.sum(I*dx).  The only trick is that np.diff(x) creates a vector that is 1 shorter than x.  So replace y with the average value of y in each dx inteval so that you can multiply vectors of the same length.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yavg</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
-<span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">yavg</span> <span class="o">*</span> <span class="n">dx</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;thetae_cloud&#39;</span><span class="p">,</span><span class="s1">&#39;cloud_height&#39;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">the_ds</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42.47245502984026
-</pre></div>
+<img alt="../../_images/93389ca6d8686e7aae0de449dced86d5cbf4d53b1bab5cbf24a81592baa6b970.png" src="../../_images/93389ca6d8686e7aae0de449dced86d5cbf4d53b1bab5cbf24a81592baa6b970.png" />
 </div>
 </div>
-</div>
-<p>This isn’t very close to the right answer, even though we are using 1000 x values when spacing=0.01.  Why is python struggling?</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -542,7 +880,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/week3"
+            path: "./notebooks/worksheets"
         },
         predefinedOutput: true
     }
@@ -560,20 +898,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../week2/hydrostat.html"
+       href="../entraining_plume.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Week2: Hydrostatic balance</p>
+        <p class="prev-next-title">Modeling an entraining cloud updraft</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../assignments/adiabatic_box.html"
+       href="../entropy_theta_part2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Adiabatic Box – preliminary</p>
+        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -584,24 +922,7 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-the-derivative-of-this-function-with-python">1) Take the derivative of this function with python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-going-on-above-at-x-0">What’s going on above at x=0?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-definite-integral-of-this-function-with-python">2) Find the definite integral of this function with python</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>

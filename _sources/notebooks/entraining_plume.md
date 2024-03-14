@@ -1,5 +1,6 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
@@ -11,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-(entraining_plume)=
+(entrain_cloud)=
 # Modeling an entraining cloud updraft
 
 This notebook calculates the time evolution of four variables:
@@ -156,11 +157,7 @@ def calcBuoy(height, thetae0, tinterp, tdinterp, pinterp):
 ## Integrator 
 
 
-Use [scipy.integrate.RK45](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.RK45.html) to integrate our system of 4 odes.  Since RK45 requires that the derivs function has the signature 
-
-       derivs(time, yvals)
-
-we need find a way to supply the three interpolators and the entrainment.  We can do this using [functools.partial](https://www.learnpython.org/en/Partial_functions)
+Use [scipy.integrate.RK45](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.RK45.html) to integrate our system of 4 odes
 
 ```{code-cell} ipython3
 def integ_entrain(df_sounding,entrain_rate):
@@ -315,6 +312,8 @@ the_ds['wvel'] = the_ds['wvel'].assign_attrs(units = 'm/s')
 the_ds['thetae_cloud'] = the_ds['thetae_cloud'].assign_attrs(units = 'K')
 the_ds['rt_cloud'] = the_ds['rt_cloud'].assign_attrs(units = 'kg/kg')
 the_ds.attrs = {'history': ' written by entraining_plume.ipynb',
+                'entrainment_rate':entrain_rate,
+                'entrainment_units':'s^{-1}',
                 'sounding_dir':sounding_dir,
                 'sounding_time':the_time,
                 'station':station}

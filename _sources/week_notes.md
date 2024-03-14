@@ -258,14 +258,14 @@ Read the rest of Thompkins Chapter 1 on bouyancy
 - Review Lohmann Chapter 6, [Thompkins section 4.2](https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&SS_jc=TC0001980404&title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate
 ) and [my Koehler notes](https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0)
 
-- - {ref}`assignment_5`
+- {ref}`assignment_5`
 
 ## Lecture 24, week 8 Friday
 
-- Worksheet: {ref}`kohler_problem`
-- Download [kohler_problem.ipynb](https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0)
+- Worksheet: {ref}`kohler_equilibrium`
+- Download [kohler_equilibrium_students.ipynb](https://www.dropbox.com/scl/fi/7xftvt0g6hf8rkewwps4g/kohler_students.ipynb?rlkey=3x97oa00f8etv5ocjc8uzr3ci&dl=0)
 
-## Lecture 25, week 9 Monday
+## Lecture 25, week 9 Tuesday
 
 Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
 
@@ -309,11 +309,22 @@ Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
      Hint -- first show that the second derivative is zero at the critical radius.  Then show that
      the third derivative is negative above and below the critical radius, which means that
      there has to be a sign change from + to -.
-
-- Run the {ref}`entraining_plume` notebook. [Dowload link](https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&dl=0) The Thursday worksheet will ask you to use the output to make a plot of the cloud and environment temperature as a function of height.
+     
+     
+- Run the {ref} Modeling an entraining cloud updraft notebook. Dowload link The Thursday worksheet will ask you to use the output to make a plot of the cloud and environment temperature as a function of height.
 
 ### For Thursday
 
-- Read [my droplet growth notes](https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&dl=0) and finish Thompkins Chapter 4.
+- Read my droplet growth notes and finish Thompkins Chapter 4.
 
 - Work on Assignment 5 (due Friday) and Assignment 6 (due Tuesday)
+
+## Lecture 26, week 9 Thursday
+
+- Review my [droplet growth notes](https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&dl=0)
+
+- Worksheet: {ref}`entrain_plot`
+
+### For Friday
+
+- Time permitting read: Lohmann Chapter 5.1-5.2 (p. 129) on atmospheric aerosols
