@@ -37,6 +37,7 @@ the_ds
 ```{code-cell} ipython3
 fig, ax = plt.subplots(1,1)
 ax.plot('thetae_cloud','cloud_height',data = the_ds)
+ax.plot('env_thetae','env_height',data = the_ds)
 ax.grid(True)
 ```
 

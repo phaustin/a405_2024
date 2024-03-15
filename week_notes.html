@@ -220,9 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/convec_instability.html">Convective instability – lifting demo</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/two_compartments.html">Two compartment problem`</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/a405_mid_2024_solution.html">2024 midterm solutions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/kohler_equilibrium_students.html">Kohler Equilibrium Worksheet</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/k0rwtddqk6d2147o0tjo3/kohler_equilibrium_students.ipynb?rlkey=0xtb32wffahirqc8qb9krk6lj&amp;dl=0">kohler_equilibrium_studens.ipynb download</a></li>
@@ -230,6 +228,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&amp;dl=0">entraining_plume.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/plot_entrainment.html">Plotting the entraining plume</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&amp;dl=0">plot_entrainment.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/aero_dist.html">Aerosol distributions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/1g31year7ez13jhp5abrr/aero_dist.ipynb?rlkey=ntwo3cjqu020538nuaw0cadz9&amp;dl=0">download aero_dist.ipynb</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -457,6 +457,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-friday">For Friday</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-27-week-9-friday">Lecture 27, week 9 Friday</a></li>
 </ul>
             </nav>
         </div>
@@ -496,8 +497,8 @@ document.write(`
 <h3>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2b2882c-d414-4d24-8254-86941dd64698">
-<span class="eqno">(1)<a class="headerlink" href="#equation-b2b2882c-d414-4d24-8254-86941dd64698" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a3f698ec-f9f1-4ac8-b4fc-2856e24e48ba">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a3f698ec-f9f1-4ac8-b4fc-2856e24e48ba" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -506,8 +507,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26ab0d0b-34eb-462f-951c-094b9ce2779b">
-<span class="eqno">(2)<a class="headerlink" href="#equation-26ab0d0b-34eb-462f-951c-094b9ce2779b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6b87fb05-6b13-449e-b0cf-585f70159b40">
+<span class="eqno">(2)<a class="headerlink" href="#equation-6b87fb05-6b13-449e-b0cf-585f70159b40" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -516,8 +517,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bdf6815d-b986-445c-9db2-d4d4c2811d81">
-<span class="eqno">(3)<a class="headerlink" href="#equation-bdf6815d-b986-445c-9db2-d4d4c2811d81" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-155ffa11-c8dc-472d-b253-87b4564cda3e">
+<span class="eqno">(3)<a class="headerlink" href="#equation-155ffa11-c8dc-472d-b253-87b4564cda3e" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -745,7 +746,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>Notes on entropy for a air/vapor/liquid/mixture -  <a class="reference internal" href="notebooks/entropy_theta_part2.html#entropy-part2"><span class="std std-ref">Entropy and potential temperature – including liquid and vapor</span></a></p></li>
 <li><p>Solutiions posted</p>
 <ul>
-<li><p><span class="xref std std-ref">tropical_heat_solution</span></p></li>
+<li><p><a class="reference internal" href="notebooks/worksheets/tropical_engine_solution.html#tropical-heat-solution"><span class="std std-ref">Tropical Heat Engine - Solution</span></a></p></li>
 <li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/6qs2cqcy07lmod49o4cyw/taylor_mix_answer.pdf?rlkey=2bfovdzckdzau5spysyrky3cb&amp;dl=0">taylor mixing solution</a></p></li>
 <li><p>Go over midterm solutions <a class="reference internal" href="notebooks/assign4_midterm_sols.html#assign4-midterm-sol"><span class="std std-ref">Assignment 4: midterm solutions</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/thompkins_practice_answers.html#thompkins-answers"><span class="std std-ref">Tompkins practice quesitons – solutions</span></a></p></li>
@@ -765,14 +766,14 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>Clouds in the news:  <a class="reference external" href="https://www.nytimes.com/2024/02/27/climate/scientists-are-freaking-out-about-ocean-temperatures.html">NYTimes article from Feb. 27 on North Atlantic temperatures</a></p></li>
 <li><p><a class="reference internal" href="notebooks/convec_instability.html#convec-instab"><span class="std std-ref">Convective instability – lifting demo</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/assign4_midterm_sols.html#assign4-midterm-sol"><span class="std std-ref">Assignment 4: midterm solutions</span></a></p></li>
-<li><p><a class="reference internal" href="notebooks/two_compartments.html#two-compartments"><span class="std std-ref">Two compartment problem`</span></a></p></li>
+<li><p><span class="xref std std-ref">two_compartments</span></p></li>
 <li><p>For Tuesday – read <a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">my Koehler notes</a> and  Lohmann Chapter 6 sections 6.1-6.4</p></li>
 </ul>
 </section>
 <section id="lecture-21-week-7-midterm">
 <h2>Lecture 21, week 7 midterm<a class="headerlink" href="#lecture-21-week-7-midterm" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="notebooks/a405_mid_2024_solution.html#midterm-solutions-2024"><span class="std std-ref">2024 midterm solutions</span></a></p></li>
+<li><p><span class="xref std std-ref">midterm_solutions_2024</span></p></li>
 </ul>
 </section>
 <section id="lecture-22-week-8-tuesday">
@@ -861,6 +862,13 @@ there has to be a sign change from + to -.</p>
 <li><p>Time permitting read: Lohmann Chapter 5.1-5.2 (p. 129) on atmospheric aerosols</p></li>
 </ul>
 </section>
+</section>
+<section id="lecture-27-week-9-friday">
+<h2>Lecture 27, week 9 Friday<a class="headerlink" href="#lecture-27-week-9-friday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added the environment sounding to <a class="reference internal" href="notebooks/entraining_plume.html#entrain-cloud"><span class="std std-ref">Modeling an entraining cloud updraft</span></a> and <a class="reference internal" href="notebooks/worksheets/plot_entrainment.html#entrain-plot"><span class="std std-ref">Plotting the entraining plume</span></a></p></li>
+<li><p>Introduce the <span class="xref std std-ref">aerosol_dists</span> for background on Lohmann Chapter 5.1-5.2</p></li>
+</ul>
 </section>
 </section>
 
@@ -981,6 +989,7 @@ there has to be a sign change from + to -.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-friday">For Friday</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-27-week-9-friday">Lecture 27, week 9 Friday</a></li>
 </ul>
   </nav></div>
 

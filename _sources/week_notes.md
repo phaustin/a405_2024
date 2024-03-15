@@ -328,3 +328,9 @@ Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
 ### For Friday
 
 - Time permitting read: Lohmann Chapter 5.1-5.2 (p. 129) on atmospheric aerosols
+
+## Lecture 27, week 9 Friday
+
+- Added the environment sounding to {ref}`entrain_cloud` and {ref}`entrain_plot`
+- Introduce the {ref}`aerosol_dists` for background on Lohmann Chapter 5.1-5.2
+

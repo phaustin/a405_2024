@@ -35,6 +35,7 @@ from scipy.interpolate import interp1d
 from scipy.integrate import RK45
 from a405.soundings.wyominglib import write_soundings, read_soundings
 import json
+import xarray as xr
 
 import matplotlib.pyplot as plt
 from a405.skewT.nudge import nudge
@@ -305,7 +306,7 @@ the_ds
 ## Add units to the variables plus dataset attributes
 
 ```{code-cell} ipython3
-the_ds = the_ds.set_coords(['press','cloud_height'])
+the_ds = the_ds.set_coords(['cloud_height','press'])
 the_ds['press'] = the_ds['press'].assign_attrs(units = 'Pa')
 the_ds['cloud_height'] = the_ds['cloud_height'].assign_attrs(units = 'm')
 the_ds['wvel'] = the_ds['wvel'].assign_attrs(units = 'm/s')
@@ -327,6 +328,21 @@ the_ds
 the_ds['press']
 ```
 
+## Add the environment variables
+
+```{code-cell} ipython3
+env_height = xr.DataArray(data = sounding['hght'], dims={'envlevs':len(sounding)})
+env_height = env_height.assign_attrs(units = 'm')
+the_ds["env_height"] = env_height
+env_thetae = xr.DataArray(data = sounding['thte'], dims={'envlevs':len(sounding)})
+env_thetae = env_thetae.assign_attrs(units = 'K')
+the_ds["env_thetae"] = env_thetae
+```
+
+```{code-cell} ipython3
+the_ds
+```
+
 ## write the dataset to netcdf
 
 ```{code-cell} ipython3
@@ -336,6 +352,10 @@ the_ds.to_netcdf(filename)
 
 ```{code-cell} ipython3
 !ncdump -h littlerock.nc
+```
+
+```{code-cell} ipython3
+
 ```
 
 ```{code-cell} ipython3
