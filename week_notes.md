@@ -323,7 +323,7 @@ Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
 
 - Review my [droplet growth notes](https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&dl=0)
 
-- Worksheet
+- Worksheet: {ref}`entrain_plot`
 
 ### For Friday
 

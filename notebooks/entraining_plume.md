@@ -1,5 +1,6 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
@@ -13,6 +14,8 @@ kernelspec:
 
 (entrain_cloud)=
 # Modeling an entraining cloud updraft
+
+March 14, 2024
 
 This notebook calculates the time evolution of four variables:
 
@@ -329,12 +332,20 @@ the_ds['press']
 ## write the dataset to netcdf
 
 ```{code-cell} ipython3
-filename = "littlerock.nc"
-the_ds.to_netcdf(filename)
+filename = "littlerock2.zarr"
+the_ds.to_zarr(filename,'w')
+```
+
+```{code-cell} ipython3
+help(the_ds.to_netcdf)
 ```
 
 ```{code-cell} ipython3
 !ncdump -h littlerock.nc
+```
+
+```{code-cell} ipython3
+!touch new.text
 ```
 
 ```{code-cell} ipython3
