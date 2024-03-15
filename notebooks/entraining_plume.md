@@ -15,8 +15,6 @@ kernelspec:
 (entrain_cloud)=
 # Modeling an entraining cloud updraft
 
-March 14, 2024
-
 This notebook calculates the time evolution of four variables:
 
 \[velocity, height, $\theta_{ecld}$, $r_{Tcloud}$ \]
@@ -37,6 +35,7 @@ from scipy.interpolate import interp1d
 from scipy.integrate import RK45
 from a405.soundings.wyominglib import write_soundings, read_soundings
 import json
+import xarray as xr
 
 import matplotlib.pyplot as plt
 from a405.skewT.nudge import nudge
@@ -307,7 +306,7 @@ the_ds
 ## Add units to the variables plus dataset attributes
 
 ```{code-cell} ipython3
-the_ds = the_ds.set_coords(['press','cloud_height'])
+the_ds = the_ds.set_coords(['cloud_height','press'])
 the_ds['press'] = the_ds['press'].assign_attrs(units = 'Pa')
 the_ds['cloud_height'] = the_ds['cloud_height'].assign_attrs(units = 'm')
 the_ds['wvel'] = the_ds['wvel'].assign_attrs(units = 'm/s')
@@ -329,15 +328,23 @@ the_ds
 the_ds['press']
 ```
 
+## Add the environment variables
+
+```{code-cell} ipython3
+new_ds = the_ds.expand_dims(dim = {'envlevs' : len(sounding)})
+env_height = xr.DataArray(data = sounding['hght'], dims=['envlevs'])
+env_height.assign_attrs(units = 'm')
+new_ds["env_height"] = env_height
+env_thetae = xr.DataArray(data = sounding['thte'], dims=['envlevs'])
+env_thetae.assign_attrs(units = 'K')
+new_ds["env_thetae"] = env_thetae
+```
+
 ## write the dataset to netcdf
 
 ```{code-cell} ipython3
-filename = "littlerock2.zarr"
-the_ds.to_zarr(filename,'w')
-```
-
-```{code-cell} ipython3
-help(the_ds.to_netcdf)
+filename = "littlerock.nc"
+new_ds.to_netcdf(filename)
 ```
 
 ```{code-cell} ipython3
@@ -345,7 +352,7 @@ help(the_ds.to_netcdf)
 ```
 
 ```{code-cell} ipython3
-!touch new.text
+
 ```
 
 ```{code-cell} ipython3
