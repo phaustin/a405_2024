@@ -16,6 +16,7 @@ kernelspec:
 
 ```
 
+(aerosol_dists)=
 # Aerosol distributions
 
 +++
