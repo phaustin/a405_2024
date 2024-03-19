@@ -371,6 +371,8 @@ for mass in center_mass:
 
 Produce plots of $n(r)$ and  $mdist(r)$ vs critical radius $r_{crit}$
 
+Make sure you include correct units for both x and y axes
+
 
 
 

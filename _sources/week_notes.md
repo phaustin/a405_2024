@@ -367,7 +367,8 @@ Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
   - Table 5.3 shows the importance of DMS, volcanoes and soils for aerosol production
 
 
-- Today's worksheet: {ref}`koehler2`
+- Today's worksheet: {ref}`koehler2` 
+  - [Download link](https://www.dropbox.com/scl/fi/4d1xiae00lfocvmnhmr1g/koehler2_worksheet.ipynb?rlkey=zshmwicjmv0ajnw4zenzqpyvc&dl=0)
 
 Assignment 7 due midnight Tuesday March 26
 
