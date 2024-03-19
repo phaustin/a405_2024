@@ -331,20 +331,23 @@ the_ds['press']
 ## Add the environment variables
 
 ```{code-cell} ipython3
-new_ds = the_ds.expand_dims(dim = {'envlevs' : len(sounding)})
-env_height = xr.DataArray(data = sounding['hght'], dims=['envlevs'])
-env_height.assign_attrs(units = 'm')
-new_ds["env_height"] = env_height
-env_thetae = xr.DataArray(data = sounding['thte'], dims=['envlevs'])
-env_thetae.assign_attrs(units = 'K')
-new_ds["env_thetae"] = env_thetae
+env_height = xr.DataArray(data = sounding['hght'], dims={'envlevs':len(sounding)})
+env_height = env_height.assign_attrs(units = 'm')
+the_ds["env_height"] = env_height
+env_thetae = xr.DataArray(data = sounding['thte'], dims={'envlevs':len(sounding)})
+env_thetae = env_thetae.assign_attrs(units = 'K')
+the_ds["env_thetae"] = env_thetae
+```
+
+```{code-cell} ipython3
+the_ds
 ```
 
 ## write the dataset to netcdf
 
 ```{code-cell} ipython3
 filename = "littlerock.nc"
-new_ds.to_netcdf(filename)
+the_ds.to_netcdf(filename)
 ```
 
 ```{code-cell} ipython3

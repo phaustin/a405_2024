@@ -83,6 +83,9 @@ parts:
     - file: notebooks/worksheets/plot_entrainment.md
     - url: https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&dl=0
       title: plot_entrainment.ipynb download
+    - file: notebooks/worksheets/aero_dist.md
+    - url: https://www.dropbox.com/scl/fi/1g31year7ez13jhp5abrr/aero_dist.ipynb?rlkey=ntwo3cjqu020538nuaw0cadz9&dl=0
+      title: download aero_dist.ipynb
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
