@@ -5,7 +5,7 @@ This worksheet defines a set of functions to compute the
 equilbrium radii for aerosols with a lognormal mass distribution
 
 ```python
-import a405.dropgrow.aerolib
+#import a405.dropgrow.aerolib
 import numpy as np
 from a405.thermo.constants import constants as c
 import json
@@ -383,22 +383,22 @@ initial_radius
 
 ```python
 from matplotlib import pyplot as plt
-plt.plot(initial_radius,mdist)
 ```
 
 ```python
 fig, ax = plt.subplots(1,1)
-ax.plot(initial_radius,ndist)
+ax.plot(initial_radius,mdist)
 ax.set_xlabel("radius (m)")
-ax.set_ylabel("m(r) $kg/m^3/m$");
+ax.set_ylabel("m(r) ($kg\,m^{-3}\,m^{-1}$)");
+ax.set_title("aerosol mass distribution");
 ```
 
 ```python
-ax = plt.gca()
+fig, ax = plt.subplots(1,1)
 ax.set_xlabel("radius (m)")
-ax.set_ylabel("n(r) $\#/m^3/m$");
-fig = plt.gcf()
-display(fig)
+ax.set_ylabel("n(r) ($\#\,m^{-3}\,m^{-1}$)");
+ax.plot(initial_radius,ndist);
+ax.set_title("aerosol number distribution");
 ```
 
 ```python

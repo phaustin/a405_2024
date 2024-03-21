@@ -87,6 +87,9 @@ parts:
     - file: notebooks/koehler2_worksheet.md
     - url: https://www.dropbox.com/scl/fi/4d1xiae00lfocvmnhmr1g/koehler2_worksheet.ipynb?rlkey=zshmwicjmv0ajnw4zenzqpyvc&dl=0
       title: koehler2_worksheet.ipynb download
+    - file: notebooks/dropgrow/dropgrow_2024.md
+    - url: https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&dl=0
+      title: download dropgrow_2024.ipynb
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
