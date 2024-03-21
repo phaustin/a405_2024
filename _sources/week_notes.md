@@ -361,6 +361,8 @@ Coverage: Finish Kohler curve  (Thompkins Chapter 4, Lohmann Chapter 6)
 
 ## Week 10
 
+### Tuesday
+
 - Lohmann Chapter 5.3 take home points
 
   - Clouds are predominately formed on secondary aerosols created by binary nucleation (exception -- salt particles in marine clouds are primary aerosols)
@@ -380,4 +382,43 @@ Assignment 7 due midnight Tuesday March 26
 3. Compare the droplet growth equation in Thompkins equation 4.24 with  with Lohmann 7.28 for 3 micron drop nucleated on a $1 \times 10^{-18}$ kg ammonium sulphate aerosol.  Show numerical values for all the terms, and the total percentage difference in the $dr/dt$ for the two equations.
 
 4. Derive $Q1$ and $Q2$ in Lohmann equations (7.31) and (7.32)
+
+
+   Problem 4 hints:
+   
+   - Start with this approximate relation between the vapor mixing ratio and the saturations
+   
+     $$
+     r_v = \frac{\rho_v}{\rho_d} = \frac{R_d}{R_v} \frac{e}{p - e} \approx \frac{R_d}{R_v} \frac{e}{p}=
+   \epsilon \frac{e}{p} = \frac{S \epsilon e_s}{p} 
+     $$
+     
+   - first show that with the chain rule wind up with this:
+   
+     $$
+  \label{eq:chain}
+  \frac{d r_v}{dt} = S \left [ \frac{-\epsilon e_s}{p^2} 
+\left ( \frac{-g p V}{R_d T} \right ) + \frac{\epsilon}{p} \left ( 
+\frac{\epsilon e_s L}{R_d T^2} \right ) \frac{dT}{dt} \right ]
++ \frac{\epsilon e_s}{p} \frac{dS}{dt}
+     $$
+     where $V$ is the vertical velocity $dz/dt$ and I've used the Clausius-Clapeyron equation and
+     assumed hydrostatic balance:
+     
+     $$
+     \begin{align}
+    \frac{de_s}{dT} &= \frac{\epsilon L e_s}{R_d T^2}\\
+    \frac{dp}{dt} & =  - \rho g \frac{dz}{dt} = -\frac{g p}{R_d T} V
+     \end{align}
+     $$
+
+   - To get Lohmann's coefficients, recognize that $dr_v/dt = - dr_l/dt$ if total water is conserved
+
+### Thursday
+
+- Worksheet: {ref}`constant_updraft`
+  - Download [dropgrow_2024.ipynb](https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&dl=0)
+  
+- For Tuesday -- read Lohmann Chapter 7 up to page 210.
+
 

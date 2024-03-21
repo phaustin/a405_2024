@@ -228,11 +228,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/kohler_equilibrium_students.html">Kohler Equilibrium Worksheet</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/k0rwtddqk6d2147o0tjo3/kohler_equilibrium_students.ipynb?rlkey=0xtb32wffahirqc8qb9krk6lj&amp;dl=0">kohler_equilibrium_studens.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/entraining_plume.html">Modeling an entraining cloud updraft</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&amp;dl=0">entraining_plume.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&amp;dl=0 l=0">entraining_plume.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/worksheets/plot_entrainment.html">Plotting the entraining plume</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&amp;dl=0">plot_entrainment.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/koehler2_worksheet.html">Koehler equilibrium worksheet II</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/4d1xiae00lfocvmnhmr1g/koehler2_worksheet.ipynb?rlkey=zshmwicjmv0ajnw4zenzqpyvc&amp;dl=0">koehler2_worksheet.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/dropgrow/dropgrow_2024.html">Parcel model integration, constant velocity case</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -492,7 +493,11 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-10">Week 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-10">Week 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuesday">Tuesday</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thursday">Thursday</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -534,8 +539,8 @@ document.write(`
 <h4>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h4>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7417aa92-342c-424d-aeda-1c40bcd0e9e2">
-<span class="eqno">(1)<a class="headerlink" href="#equation-7417aa92-342c-424d-aeda-1c40bcd0e9e2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dbb55253-0cdd-401f-857b-945bdd65ec5f">
+<span class="eqno">(1)<a class="headerlink" href="#equation-dbb55253-0cdd-401f-857b-945bdd65ec5f" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -544,8 +549,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-62588e9d-ac6f-4c3b-9ff1-0acdf2021889">
-<span class="eqno">(2)<a class="headerlink" href="#equation-62588e9d-ac6f-4c3b-9ff1-0acdf2021889" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f81ec3f0-de5f-4e8f-9a06-06564fd7bcfa">
+<span class="eqno">(2)<a class="headerlink" href="#equation-f81ec3f0-de5f-4e8f-9a06-06564fd7bcfa" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -554,8 +559,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-086db3c8-2bc6-47f4-a586-56bc4b5c46db">
-<span class="eqno">(3)<a class="headerlink" href="#equation-086db3c8-2bc6-47f4-a586-56bc4b5c46db" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-98a41548-222a-4a59-b39c-99083fc5a706">
+<span class="eqno">(3)<a class="headerlink" href="#equation-98a41548-222a-4a59-b39c-99083fc5a706" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -941,6 +946,8 @@ there has to be a sign change from + to -.</p>
 </section>
 <section id="week-10">
 <h2>Week 10<a class="headerlink" href="#week-10" title="Permalink to this heading">#</a></h2>
+<section id="tuesday">
+<h3>Tuesday<a class="headerlink" href="#tuesday" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Lohmann Chapter 5.3 take home points</p>
 <ul>
@@ -955,12 +962,55 @@ there has to be a sign change from + to -.</p>
 </li>
 </ul>
 <p>Assignment 7 due midnight Tuesday March 26</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Assuming that cloud condensation nuclei (CCN) are removed from the atmosphere by first serving as the centers on which cloud droplets form, and the droplets subsequently grow to form precipitation particles, estimate the residence time of a CCN in a column extending from the surface of the Earth to an altitude of 5 km. Assume that the annual rainfall is 100 cm/year and the cloud liquid water content is 0.30 <span class="math notranslate nohighlight">\(g/kg\)</span> .  <em>Hint:  Assume that all drops in the cloud droplets have  a radii of 10 microns and that every droplet contains exactly 1 CCN.   How many CCN are in 1 kg of air?  About how many kg of air are there in a 5 km column?  About how many CCN are taken out by a rain rate of 1 m/year?  Find the time constant for removal of the form  1/N dN/dt = 1/tau</em></p></li>
 <li><p>A drop with an initial radius of 100 µm falls through a cloud containing 100 droplets per cubic centimeter that it collects in a continuous manner with a collection efficiency of 0.800. If all the cloud droplets have a radius of 10 µm, how long will it take for the drop to reach a radius of 1 mm? You may assume that for the drops of the size considered in this problem the terminal fall speed v (in <span class="math notranslate nohighlight">\(m s^{-1}\)</span>) of a drop of radius r (in meters) is given by <span class="math notranslate nohighlight">\(v= 8 x 10^3\;r\)</span>. Assume that the cloud droplets are stationary and that the updraft velocity in the cloud is negligible.  Hint:  Integrate Thompkins equation 4.28</p></li>
 <li><p>Compare the droplet growth equation in Thompkins equation 4.24 with  with Lohmann 7.28 for 3 micron drop nucleated on a <span class="math notranslate nohighlight">\(1 \times 10^{-18}\)</span> kg ammonium sulphate aerosol.  Show numerical values for all the terms, and the total percentage difference in the <span class="math notranslate nohighlight">\(dr/dt\)</span> for the two equations.</p></li>
-<li><p>Derive <span class="math notranslate nohighlight">\(Q1\)</span> and <span class="math notranslate nohighlight">\(Q2\)</span> in Lohmann equations (7.31) and (7.32)</p></li>
+<li><p>Derive <span class="math notranslate nohighlight">\(Q1\)</span> and <span class="math notranslate nohighlight">\(Q2\)</span> in Lohmann equations (7.31) and (7.32)</p>
+<p>Problem 4 hints:</p>
+<ul>
+<li><p>Start with this approximate relation between the vapor mixing ratio and the saturations</p>
+<div class="math notranslate nohighlight">
+\[
+     r_v = \frac{\rho_v}{\rho_d} = \frac{R_d}{R_v} \frac{e}{p - e} \approx \frac{R_d}{R_v} \frac{e}{p}=
+   \epsilon \frac{e}{p} = \frac{S \epsilon e_s}{p} 
+     \]</div>
+</li>
+<li><p>first show that with the chain rule wind up with this:</p>
+<div class="math notranslate nohighlight">
+\[
+  \label{eq:chain}
+  \frac{d r_v}{dt} = S \left [ \frac{-\epsilon e_s}{p^2} 
+\left ( \frac{-g p V}{R_d T} \right ) + \frac{\epsilon}{p} \left ( 
+\frac{\epsilon e_s L}{R_d T^2} \right ) \frac{dT}{dt} \right ]
++ \frac{\epsilon e_s}{p} \frac{dS}{dt}
+     \]</div>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the vertical velocity <span class="math notranslate nohighlight">\(dz/dt\)</span> and I’ve used the Clausius-Clapeyron equation and
+assumed hydrostatic balance:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+     \begin{align}
+    \frac{de_s}{dT} &amp;= \frac{\epsilon L e_s}{R_d T^2}\\
+    \frac{dp}{dt} &amp; =  - \rho g \frac{dz}{dt} = -\frac{g p}{R_d T} V
+     \end{align}
+     \end{split}\]</div>
+</li>
+<li><p>To get Lohmann’s coefficients, recognize that <span class="math notranslate nohighlight">\(dr_v/dt = - dr_l/dt\)</span> if total water is conserved</p></li>
+</ul>
+</li>
 </ol>
+</section>
+<section id="thursday">
+<h3>Thursday<a class="headerlink" href="#thursday" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Worksheet: <a class="reference internal" href="notebooks/dropgrow/dropgrow_2024.html#constant-updraft"><span class="std std-ref">Parcel model integration, constant velocity case</span></a></p>
+<ul>
+<li><p>Download <a class="reference external" href="https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&amp;dl=0">dropgrow_2024.ipynb</a></p></li>
+</ul>
+</li>
+<li><p>For Tuesday – read Lohmann Chapter 7 up to page 210.</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -1112,7 +1162,11 @@ there has to be a sign change from + to -.</p>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-10">Week 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-10">Week 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuesday">Tuesday</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thursday">Thursday</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

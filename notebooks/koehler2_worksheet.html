@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/koehler2_worksheet.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="entropy_theta_part2.html" />
+    <link rel="next" title="Parcel model integration, constant velocity case" href="dropgrow/dropgrow_2024.html" />
     <link rel="prev" title="Plotting the entraining plume" href="worksheets/plot_entrainment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -228,10 +228,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="worksheets/kohler_equilibrium_students.html">Kohler Equilibrium Worksheet</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/k0rwtddqk6d2147o0tjo3/kohler_equilibrium_students.ipynb?rlkey=0xtb32wffahirqc8qb9krk6lj&amp;dl=0">kohler_equilibrium_studens.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="entraining_plume.html">Modeling an entraining cloud updraft</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&amp;dl=0">entraining_plume.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&amp;dl=0 l=0">entraining_plume.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="worksheets/plot_entrainment.html">Plotting the entraining plume</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&amp;dl=0">plot_entrainment.ipynb download</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Koehler equilibrium worksheet II</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/4d1xiae00lfocvmnhmr1g/koehler2_worksheet.ipynb?rlkey=zshmwicjmv0ajnw4zenzqpyvc&amp;dl=0">koehler2_worksheet.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropgrow/dropgrow_2024.html">Parcel model integration, constant velocity case</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -444,7 +446,7 @@ document.write(`
 <span id="koehler2"></span><h1>Koehler equilibrium worksheet II<a class="headerlink" href="#koehler-equilibrium-worksheet-ii" title="Permalink to this heading">#</a></h1>
 <p>This worksheet defines a set of functions to compute the
 equilbrium radii for aerosols with a lognormal mass distribution</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">a405.dropgrow.aerolib</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#import a405.dropgrow.aerolib</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">a405.thermo.constants</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
 <span class="kn">import</span> <span class="nn">json</span>
@@ -801,6 +803,26 @@ produce a new koehler_fun that only has radius and mass as arguments</p>
 <h3>Two plots<a class="headerlink" href="#two-plots" title="Permalink to this heading">#</a></h3>
 <p>Produce plots of <span class="math notranslate nohighlight">\(n(r)\)</span> and  <span class="math notranslate nohighlight">\(mdist(r)\)</span> vs critical radius <span class="math notranslate nohighlight">\(r_{crit}\)</span></p>
 <p>Make sure you include correct units for both x and y axes</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">initial_radius</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">initial_radius</span><span class="p">,</span><span class="n">mdist</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;radius (m)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;m(r) ($kg\,m^{-3}\,m^{-1}$)&quot;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;aerosol mass distribution&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;radius (m)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;n(r) ($\#\,m^{-3}\,m^{-1}$)&quot;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">initial_radius</span><span class="p">,</span><span class="n">ndist</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;aerosol number distribution&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -848,11 +870,11 @@ produce a new koehler_fun that only has radius and mass as arguments</p>
       </div>
     </a>
     <a class="right-next"
-       href="entropy_theta_part2.html"
+       href="dropgrow/dropgrow_2024.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
+        <p class="prev-next-title">Parcel model integration, constant velocity case</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
