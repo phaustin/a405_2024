@@ -378,5 +378,29 @@ Make sure you include correct units for both x and y axes
 
 
 ```python
+initial_radius
+```
+
+```python
+from matplotlib import pyplot as plt
+plt.plot(initial_radius,mdist)
+```
+
+```python
+fig, ax = plt.subplots(1,1)
+ax.plot(initial_radius,ndist)
+ax.set_xlabel("radius (m)")
+ax.set_ylabel("m(r) $kg/m^3/m$");
+```
+
+```python
+ax = plt.gca()
+ax.set_xlabel("radius (m)")
+ax.set_ylabel("n(r) $\#/m^3/m$");
+fig = plt.gcf()
+display(fig)
+```
+
+```python
 
 ```
