@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 (tompkins_practice)=
-# Tompkins practice quesitons
+# Tompkins practice quesitons 
 
 +++
 
