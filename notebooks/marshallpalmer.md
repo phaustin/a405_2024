@@ -14,8 +14,8 @@ kernelspec:
 
 +++ {"toc": true}
 
-(marshal_palmer)=
-# Marshall-Palmer Distribution Worksheet
+(marshall_palmer)=
+# Marshall-Palmer Distribution
 
 ```{code-cell} ipython3
 import numpy as np

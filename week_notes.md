@@ -419,9 +419,20 @@ Assignment 7 due midnight Tuesday March 26
 - Worksheet: {ref}`constant_updraft`
   - Download [dropgrow_2024.ipynb](https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&dl=0)
   
-- For Tuesday -- read Lohmann Chapter 7 up to page 210.
 
 ### Friday
 
-- Go over the origin of the Marshall-Palmer distribution 
+- Go over the origin of the Marshall-Palmer distribution -- Thompkins Figure 4.25 p. 81
+
+- Where do the straight lines in Figure 4.25 come from?  Look at this paper on [droplet fragmentation](http://ezproxy.library.ubc.ca/login?url=http://www.nature.com/doifinder/10.1038/nphys1340)
+
+- Do the {ref}`constant_updraft_2` worksheet
+  - Download [dropgrow_2024_2.ipynb]( https://www.dropbox.com/scl/fi/0u6y7ufkaq4mbr1zavb0c/dropgrow_2024_2.ipynb?rlkey=zizniwhtr93orybz6himzwk36&dl=0)
+
+- The {ref}`marshall_palmer` will be part of the next problem set
+  - Download [marshallpalmer.ipynb](https://www.dropbox.com/scl/fi/xkrtyffpt9ignyesgqmql/marshallpalmer.ipynb?rlkey=2li0db7er3apivzssb5z6j906&dl=0)
+
+#### For Tuesday
+
+- Read Lohmann Chapter 7 up to page 210, Thompkins Sections 4.6-4.9
 

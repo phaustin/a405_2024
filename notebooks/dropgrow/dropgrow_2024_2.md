@@ -12,11 +12,10 @@ kernelspec:
   name: python3
 ---
 
-(constant_updraft)=
-# Parcel model integration, constant velocity case
+(constant_updraft_2)=
+# Update: Parcel model compute additional variables
 
-This notebook takes the aerosols from {ref}`koehler2` and puts them into a constant velocity updraft
-The integrator calculates the growth of 30 aerosol bins, plus the
+I've added two problems to the Thursday worksheet that show how to compute additonal quantities about the parcel integration using pandas.DataFrame.apply
 
 ```{code-cell} ipython3
 from pathlib import Path
