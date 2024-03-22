@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Parcel model integration, constant velocity case &#8212; ATSC 405 2024</title>
+    <title>Update: Parcel model compute additional variables &#8212; ATSC 405 2024</title>
   
   
   
@@ -62,12 +62,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/dropgrow/dropgrow_2024';</script>
-    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/dropgrow/dropgrow_2024.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/dropgrow/dropgrow_2024_2';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/dropgrow/dropgrow_2024_2.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Update: Parcel model compute additional variables" href="dropgrow_2024_2.html" />
-    <link rel="prev" title="Koehler equilibrium worksheet II" href="../koehler2_worksheet.html" />
+    <link rel="next" title="Marshall-Palmer Distribution Worksheet" href="../marshallpalmer.html" />
+    <link rel="prev" title="Parcel model integration, constant velocity case" href="dropgrow_2024.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -231,9 +233,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&amp;dl=0">plot_entrainment.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../koehler2_worksheet.html">Koehler equilibrium worksheet II</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/4d1xiae00lfocvmnhmr1g/koehler2_worksheet.ipynb?rlkey=zshmwicjmv0ajnw4zenzqpyvc&amp;dl=0">koehler2_worksheet.ipynb download</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Parcel model integration, constant velocity case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropgrow_2024.html">Parcel model integration, constant velocity case</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&amp;dl=0">download dropgrow_2024.ipynb</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dropgrow_2024_2.html">Update: Parcel model compute additional variables</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Update: Parcel model compute additional variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../marshallpalmer.html">Marshall-Palmer Distribution Worksheet</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
@@ -317,7 +319,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/dropgrow/dropgrow_2024.md" target="_blank"
+      <li><a href="../../_sources/notebooks/dropgrow/dropgrow_2024_2.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -401,7 +403,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Parcel model integration, constant velocity case</h1>
+    <h1>Update: Parcel model compute additional variables</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -422,7 +424,13 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-parcel-supersaturation">Plot the parcel supersaturation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worksheet-problem-oscilating-updraft">Worksheet Problem: oscilating updraft</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worksheet-problem-1-oscilating-updraft">Worksheet Problem 1: oscilating updraft</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worksheet-problem-2-calculating-r-l-and-h-l">Worksheet problem 2 – calculating <span class="math notranslate nohighlight">\(r_l\)</span> and <span class="math notranslate nohighlight">\(h_l\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-example">simple example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-add-the-rl-column">now add the rl column</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-for-liquid-water-static-energy">repeat for liquid water static energy</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -434,10 +442,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="parcel-model-integration-constant-velocity-case">
-<span id="constant-updraft"></span><h1>Parcel model integration, constant velocity case<a class="headerlink" href="#parcel-model-integration-constant-velocity-case" title="Permalink to this heading">#</a></h1>
-<p>This notebook takes the aerosols from <a class="reference internal" href="../koehler2_worksheet.html#koehler2"><span class="std std-ref">Koehler equilibrium worksheet II</span></a> and puts them into a constant velocity updraft
-The integrator calculates the growth of 30 aerosol bins, plus the</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="update-parcel-model-compute-additional-variables">
+<span id="constant-updraft-2"></span><h1>Update: Parcel model compute additional variables<a class="headerlink" href="#update-parcel-model-compute-additional-variables" title="Permalink to this heading">#</a></h1>
+<p>I’ve added two problems to the Thursday worksheet that show how to compute additonal quantities about the parcel integration using pandas.DataFrame.apply</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
@@ -453,6 +460,23 @@ The integrator calculates the growth of 30 aerosol bins, plus the</p>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_wvel</span><span class="p">(</span><span class="n">the_time</span><span class="p">):</span>
+    <span class="n">period</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">200.</span>
+    <span class="n">wvel</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">the_time</span><span class="o">*</span><span class="n">period</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wvel</span>
+    
+<span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">wvel_out</span> <span class="o">=</span> <span class="p">[</span><span class="n">find_wvel</span><span class="p">(</span><span class="n">the_time</span><span class="p">)</span> <span class="k">for</span> <span class="n">the_time</span> <span class="ow">in</span> <span class="n">times</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="n">wvel_out</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/47e5d1ad5b1fec391c46d9e5afe0044706e0e1a5c63ef0b326ae55d53897565b.png" src="../../_images/47e5d1ad5b1fec391c46d9e5afe0044706e0e1a5c63ef0b326ae55d53897565b.png" />
 </div>
 </div>
 <section id="library-functions-from-the-week-10-koehler-worksheet">
@@ -604,6 +628,12 @@ The integrator calculates the growth of 30 aerosol bins, plus the</p>
 <span class="sd">         derivatives of each of var_vec</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">find_wvel</span><span class="p">(</span><span class="n">the_time</span><span class="p">):</span>
+        <span class="n">period</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">200.</span>
+        <span class="n">wvel</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">the_time</span><span class="o">*</span><span class="n">period</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">wvel</span>
+
+    <span class="n">the_wvel</span> <span class="o">=</span> <span class="n">find_wvel</span><span class="p">(</span><span class="n">the_time</span><span class="p">)</span>
     <span class="c1">#print(&#39;inside: &#39;,var_vec)</span>
     <span class="c1">#print(f&quot;{the_time=}&quot;)</span>
     <span class="n">temp</span><span class="p">,</span><span class="n">press</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="n">var_vec</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
@@ -628,15 +658,15 @@ The integrator calculates the growth of 30 aerosol bins, plus the</p>
     <span class="c1">#</span>
     <span class="c1"># moist adiabat</span>
     <span class="c1">#</span>
-    <span class="n">deriv_vec</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">find_lv</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="o">/</span><span class="n">c</span><span class="o">.</span><span class="n">cpd</span><span class="o">*</span><span class="n">rlderiv</span><span class="p">(</span><span class="n">var_vec</span><span class="p">,</span><span class="n">deriv_vec</span><span class="p">,</span><span class="n">cloud_tup</span><span class="p">)</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">g0</span><span class="o">/</span><span class="n">c</span><span class="o">.</span><span class="n">cpd</span><span class="o">*</span><span class="n">cloud_tup</span><span class="o">.</span><span class="n">wvel</span>
+    <span class="n">deriv_vec</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">find_lv</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="o">/</span><span class="n">c</span><span class="o">.</span><span class="n">cpd</span><span class="o">*</span><span class="n">rlderiv</span><span class="p">(</span><span class="n">var_vec</span><span class="p">,</span><span class="n">deriv_vec</span><span class="p">,</span><span class="n">cloud_tup</span><span class="p">)</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">g0</span><span class="o">/</span><span class="n">c</span><span class="o">.</span><span class="n">cpd</span><span class="o">*</span><span class="n">the_wvel</span>
     <span class="c1">#</span>
     <span class="c1"># hydrostatic balance  dp/dt = -rho g dz/dt</span>
     <span class="c1">#</span>
-    <span class="n">deriv_vec</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span> <span class="o">-</span><span class="mf">1.</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">g0</span><span class="o">*</span><span class="n">cloud_tup</span><span class="o">.</span><span class="n">wvel</span>
+    <span class="n">deriv_vec</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span> <span class="o">-</span><span class="mf">1.</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">g0</span><span class="o">*</span><span class="n">the_wvel</span>
     <span class="c1">#</span>
     <span class="c1"># how far up have we traveled?</span>
     <span class="c1">#</span>
-    <span class="n">deriv_vec</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cloud_tup</span><span class="o">.</span><span class="n">wvel</span>
+    <span class="n">deriv_vec</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_wvel</span>
     <span class="k">return</span> <span class="n">deriv_vec</span>
 </pre></div>
 </div>
@@ -945,7 +975,7 @@ end of the vector: the temperature, pressure and height.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cf55db805053016ba9084a8cdcb5846102b6665f49ec7c9427a520da4d0b10ff.png" src="../../_images/cf55db805053016ba9084a8cdcb5846102b6665f49ec7c9427a520da4d0b10ff.png" />
+<img alt="../../_images/e42a8ec501d24bffec5d2ab4787bd11e1e242ae42502d2f9b53eb864e4b61991.png" src="../../_images/e42a8ec501d24bffec5d2ab4787bd11e1e242ae42502d2f9b53eb864e4b61991.png" />
 </div>
 </div>
 </section>
@@ -965,13 +995,52 @@ end of the vector: the temperature, pressure and height.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/377b647353d1387d06589b1f619da9a1c5c88057da6af8ae768839f8e7cb7b22.png" src="../../_images/377b647353d1387d06589b1f619da9a1c5c88057da6af8ae768839f8e7cb7b22.png" />
+<img alt="../../_images/9dbe87600eaa37113584d460ed047b5e45f0f9665b7157dfebe4f9a31e9c247b.png" src="../../_images/9dbe87600eaa37113584d460ed047b5e45f0f9665b7157dfebe4f9a31e9c247b.png" />
 </div>
 </div>
 </section>
-<section id="worksheet-problem-oscilating-updraft">
-<h2>Worksheet Problem: oscilating updraft<a class="headerlink" href="#worksheet-problem-oscilating-updraft" title="Permalink to this heading">#</a></h2>
+<section id="worksheet-problem-1-oscilating-updraft">
+<h2>Worksheet Problem 1: oscilating updraft<a class="headerlink" href="#worksheet-problem-1-oscilating-updraft" title="Permalink to this heading">#</a></h2>
 <p>Replace the constant updraft with an oscillating updraft that cycles between -0.5 and 0.5 m/s over a period of 200 seconds. Is droplet grow/evaporation a reversible process?</p>
+</section>
+<section id="worksheet-problem-2-calculating-r-l-and-h-l">
+<h2>Worksheet problem 2 – calculating <span class="math notranslate nohighlight">\(r_l\)</span> and <span class="math notranslate nohighlight">\(h_l\)</span><a class="headerlink" href="#worksheet-problem-2-calculating-r-l-and-h-l" title="Permalink to this heading">#</a></h2>
+<p>Use <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html">pandas.DataFrame.apply</a>  and the function rlcalc above to get the time history of the liquid water path</p>
+<section id="simple-example">
+<h3>simple example<a class="headerlink" href="#simple-example" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>we want to apply a function along columns (axis=1) rather than rows (axis=0)</p></li>
+<li><p>we want to return the result as a new column in the dataframe, rather than a separate vector</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_fun</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="c1"># print(f&quot;{row.name=}, {row=}&quot;)</span>
+    <span class="n">full_vec</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">drops</span> <span class="o">=</span> <span class="n">full_vec</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">rad_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">drops</span><span class="p">)</span>
+    <span class="n">row</span><span class="p">[</span><span class="s2">&quot;testcol&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rad_sum</span>
+    <span class="k">return</span> <span class="n">row</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_df</span> <span class="o">=</span><span class="n">df_output</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">test_fun</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="now-add-the-rl-column">
+<h3>now add the rl column<a class="headerlink" href="#now-add-the-rl-column" title="Permalink to this heading">#</a></h3>
+<p>Note that you need the number distribution, which you can pass to the rlcalc function using the args parameter in apply</p>
+</section>
+<section id="repeat-for-liquid-water-static-energy">
+<h3>repeat for liquid water static energy<a class="headerlink" href="#repeat-for-liquid-water-static-energy" title="Permalink to this heading">#</a></h3>
+<p>How much <span class="math notranslate nohighlight">\(h_l = c_p T  - l_v r_l + gz\)</span> change during the integration?</p>
+</section>
 </section>
 </section>
 
@@ -1006,20 +1075,20 @@ end of the vector: the temperature, pressure and height.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../koehler2_worksheet.html"
+       href="dropgrow_2024.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Koehler equilibrium worksheet II</p>
+        <p class="prev-next-title">Parcel model integration, constant velocity case</p>
       </div>
     </a>
     <a class="right-next"
-       href="dropgrow_2024_2.html"
+       href="../marshallpalmer.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Update: Parcel model compute additional variables</p>
+        <p class="prev-next-title">Marshall-Palmer Distribution Worksheet</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1050,7 +1119,13 @@ end of the vector: the temperature, pressure and height.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-parcel-supersaturation">Plot the parcel supersaturation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worksheet-problem-oscilating-updraft">Worksheet Problem: oscilating updraft</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worksheet-problem-1-oscilating-updraft">Worksheet Problem 1: oscilating updraft</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worksheet-problem-2-calculating-r-l-and-h-l">Worksheet problem 2 – calculating <span class="math notranslate nohighlight">\(r_l\)</span> and <span class="math notranslate nohighlight">\(h_l\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-example">simple example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-add-the-rl-column">now add the rl column</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-for-liquid-water-static-energy">repeat for liquid water static energy</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

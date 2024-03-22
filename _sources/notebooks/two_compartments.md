@@ -26,7 +26,7 @@ the actual entropy of the mixture.
 - compartment 2, volume 1 $m^3$, pressure 3000 hPa, temperature 500 K
 
 ```{code-cell} ipython3
-import numpy as np 
+import numpy as np
 def rho_eqstate(press, temp):
     Rd = 287
     rho = press/(Rd*temp)

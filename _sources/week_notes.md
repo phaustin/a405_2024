@@ -377,7 +377,7 @@ Assignment 7 due midnight Tuesday March 26
 
 1. Assuming that cloud condensation nuclei (CCN) are removed from the atmosphere by first serving as the centers on which cloud droplets form, and the droplets subsequently grow to form precipitation particles, estimate the residence time of a CCN in a column extending from the surface of the Earth to an altitude of 5 km. Assume that the annual rainfall is 100 cm/year and the cloud liquid water content is 0.30 $g/kg$ .  *Hint:  Assume that all drops in the cloud droplets have  a radii of 10 microns and that every droplet contains exactly 1 CCN.   How many CCN are in 1 kg of air?  About how many kg of air are there in a 5 km column?  About how many CCN are taken out by a rain rate of 1 m/year?  Find the time constant for removal of the form  1/N dN/dt = 1/tau*
 
-2.  A drop with an initial radius of 100 µm falls through a cloud containing 100 droplets per cubic centimeter that it collects in a continuous manner with a collection efficiency of 0.800. If all the cloud droplets have a radius of 10 µm, how long will it take for the drop to reach a radius of 1 mm? You may assume that for the drops of the size considered in this problem the terminal fall speed v (in $m s^{-1}$) of a drop of radius r (in meters) is given by $v= 8 x 10^3\;r$. Assume that the cloud droplets are stationary and that the updraft velocity in the cloud is negligible.  Hint:  Integrate Thompkins equation 4.28
+2.  A drop with an initial radius of 100 µm falls through a cloud containing 100 droplets per cubic centimeter that it collects in a continuous manner with a collection efficiency of 0.800. If all the cloud droplets have a radius of 10 µm, how long will it take for the drop to reach a radius of 1 mm? You may assume that for the drops of the size considered in this problem the terminal fall speed v (in $m s^{-1}$) of a drop of radius r (in meters) is given by $v= 8 x 10^3\;r$. Assume that the cloud droplets are stationary and that the updraft velocity in the cloud is negligible.  Hint:  Integrate Thompkins equation 4.28 analytically -- youm can also check numerically with python
 
 3. Compare the droplet growth equation in Thompkins equation 4.24 with  with Lohmann 7.28 for 3 micron drop nucleated on a $1 \times 10^{-18}$ kg ammonium sulphate aerosol.  Show numerical values for all the terms, and the total percentage difference in the $dr/dt$ for the two equations.
 
@@ -419,6 +419,20 @@ Assignment 7 due midnight Tuesday March 26
 - Worksheet: {ref}`constant_updraft`
   - Download [dropgrow_2024.ipynb](https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&dl=0)
   
-- For Tuesday -- read Lohmann Chapter 7 up to page 210.
 
+### Friday
+
+- Go over the origin of the Marshall-Palmer distribution -- Thompkins Figure 4.25 p. 81
+
+- Where do the straight lines in Figure 4.25 come from?  Look at this paper on [droplet fragmentation](http://ezproxy.library.ubc.ca/login?url=http://www.nature.com/doifinder/10.1038/nphys1340)
+
+- Do the {ref}`constant_updraft_2` worksheet
+  - Download [dropgrow_2024_2.ipynb]( https://www.dropbox.com/scl/fi/0u6y7ufkaq4mbr1zavb0c/dropgrow_2024_2.ipynb?rlkey=zizniwhtr93orybz6himzwk36&dl=0)
+
+- The {ref}`marshall_palmer` will be part of the next problem set
+  - Download [marshallpalmer.ipynb](https://www.dropbox.com/scl/fi/xkrtyffpt9ignyesgqmql/marshallpalmer.ipynb?rlkey=2li0db7er3apivzssb5z6j906&dl=0)
+
+#### For Tuesday
+
+- Read Lohmann Chapter 7 up to page 210, Thompkins Sections 4.6-4.9
 
