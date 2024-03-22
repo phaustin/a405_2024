@@ -121,6 +121,8 @@ parts:
       title: wet bulb temperature notes
     - url: https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0
       title: Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)
+    - url: http://ezproxy.library.ubc.ca/login?url=http://www.nature.com/doifinder/10.1038/nphys1340
+      title: Single drop fragmentation: Villermaux and Bossa (2009)
   - caption: Mid term
     chapters:
     - file: notebooks/thompkins_practice.md
