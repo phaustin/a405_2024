@@ -277,7 +277,7 @@ mu=aero.themean
 sigma = aero.sd
 totmass = aero.totmass
 mdist = totmass*lognormal(mass_vals,np.log(mu),np.log(sigma))
-mdist = find_centers(mdist)*np.diff(mass_vals)  #kg/m^3 of aerosol in each bin
+mdist = find_centers(mdist)*np.diff(mass_vals)  #kg/m^3 of aerosol in each binlou
 center_mass = find_centers(mass_vals)
 ndist = mdist/center_mass  #number/m^3 of aerosol in each bin
 #save these in an ordered dictionary to pass to functions
@@ -456,7 +456,7 @@ Use [pandas.DataFrame.apply](https://pandas.pydata.org/docs/reference/api/pandas
 
 ```{code-cell} ipython3
 def test_fun(row):
-    # print(f"{row.name=}, {row=}")
+    #print(f"{row.name=}, {row=}")
     full_vec = row.to_numpy()
     drops = full_vec[:-3]
     rad_sum = np.sum(drops)
@@ -465,7 +465,49 @@ def test_fun(row):
 ```
 
 ```{code-cell} ipython3
-new_df =df_output.apply(test_fun,axis=1)
+def rlcalc(var_vec,ndist):
+    """
+    calculate the liquid water for the distribution
+
+    the last  3 variables in var_vec are temperature, pressure and height (mks)
+
+    Parameters
+    ----------
+
+    var_vec: vector(float)
+           vector of values to be integrated
+    cloud_top: namedtuple
+           tuple of necessary coefficients
+    """
+    wl=ndist*(var_vec[:-3]**3.)
+    wl=np.sum(wl)
+    wl=wl*4./3.*np.pi*c.rhol
+    return wl
+```
+
+```{code-cell} ipython3
+def hlcalc(var_vec):
+    var_vec = var_vec.to_numpy()
+    temp,press,z,rl = var_vec[-4:]
+    print(temp,press,z,rl)
+```
+
+```{code-cell} ipython3
+def find_rl(row,ndist):
+    var_vec = row.to_numpy()
+    rl = rlcalc(var_vec,ndist)
+    row['rl'] = rl
+    return row
+```
+
+```{code-cell} ipython3
+df_output.columns
+```
+
+```{code-cell} ipython3
+new_df =df_output.apply(find_rl,axis=1,args = (ndist,) )
+fig,ax = plt.subplots(1,1)
+ax.plot('rl','z',data = new_df);
 ```
 
 ### now add the rl column 
@@ -477,6 +519,10 @@ Note that you need the number distribution, which you can pass to the rlcalc fun
 ### repeat for liquid water static energy
 
 How much $h_l = c_p T  - l_v r_l + gz$ change during the integration?
+
+```{code-cell} ipython3
+new_df.apply(hlcalc,axis=1)
+```
 
 ```{code-cell} ipython3
 

@@ -16,7 +16,7 @@ kernelspec:
 # Parcel model integration, constant velocity case
 
 This notebook takes the aerosols from {ref}`koehler2` and puts them into a constant velocity updraft
-The integrator calculates the growth of 30 aerosol bins, plus the 
+The integrator calculates the growth of 30 aerosol bins, plus the
 
 ```{code-cell} ipython3
 from pathlib import Path

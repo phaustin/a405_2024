@@ -175,11 +175,11 @@ Thompkins derives this in equation 2.18.  Since $l_v = h_v - l_l$:
   \label{eq:lvtemp}
   l_v = h_v - h_l = c_{pv}T  - c_l T
 \end{equation}
-We know that at $T_0$ =0 \degc (273.15 K), $l_v = l_0 = 2.501 \times 10^{6}$ J/kg, so rewrite \eqref{eq:lvtemp} as:
+We know that at the triple point $T_p$ = 273.16 K), $l_v = l_0 = 2.501 \times 10^{6}$ J/kg, so rewrite \eqref{eq:lvtemp} as:
 
 \begin{equation}
   \label{eq:lvtemp2}
-  l_v = h_v - h_l = (c_{pv} - c_l) (T - T_0) + l_0
+  l_v = h_v - h_l = (c_{pv} - c_l) (T - T_p) + l_0
 \end{equation}
 where as Thompkins notes, $c_{pv} = 1870\ J\,kg^{-1}\,K^{-1}$ and $c_l=4187\ J\,kg^{-1}\,K^{-1}$.  So for a particular temperature T,
 we can insert \eqref{eq:lvtemp2},  \eqref{eq:sl} and \eqref{eq:int} into \eqref{eq:secondd} 
@@ -224,9 +224,10 @@ In (2.12) and (2.13) he integrates that to get the usual form of the Clausius-Cl
 Here's a way to get \eqref{eq:derives} straight from (\ref{eq:secondd}):
 
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:2ndlaw}
 \frac{l_v }{T}  = c_{pv} \log \frac{T }{T_p} - R_v \log \frac{ e_{sat} }{e_{s0}} + \phi_0 - c_l \log \frac{T }{T_p} 
-\end{equation*}
+\end{equation}
 
 Now rearrange to show $e_{sat}$:
 
