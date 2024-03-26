@@ -436,3 +436,39 @@ Assignment 7 due midnight Tuesday March 26
 
 - Read Lohmann Chapter 7 up to page 210, Thompkins Sections 4.6-4.9
 
+## Week 11
+
+### Tuesday
+
+- Go over  the [equilibrium supersaturation notes](https://www.dropbox.com/scl/fi/3nvjbh208o5ndeq8io3e1/equil_super.pdf?rlkey=zot8e90vynl5mvpul194tud3w&dl=0) which analyze the growth of supersaturation in the parcel model (p. 196, Fig 7.4)
+
+- Start on Thompkins Section 4.7-4.9 using new notebook on {ref}`ice_saturation`
+  - Take home points
+    - The atmosphere has relatively few ice condensation nuclei
+    - Because of this, liquid water drops can exist at temperatures below -20 deg C
+    - This means that crystals and drops can coexist in cold clouds
+    - When crystals are mixed with supercooled drops, they rapidily consume the drops' liquid water
+      and begin to fall as precipitation
+    - This is the main precipitation mechanism in mid-latitude cyclones (our weather)
+    
+- Go over the [crystal diffusion notes](https://www.dropbox.com/scl/fi/aeva3yk68w8j7u69wmvhx/crystal_diffusion.pdf?rlkey=ruatsjms61izb06ef5opm3q42&dl=0).  Why is there a capacitance in the crystal growth equation (Lohmann 8.11)
+
+### For Thursday
+
+Read Lohmann Section 8.3 on crystal growth
+
+
+### Assignment 8: Due Tuesday April 2, 11:59pm
+
+
+Questions 1 and 2: The two problems at the bottom of the {ref}`marshall_palmer` notebook
+
+
+Question 3: Lohmann problem 4 page 250:
+
+4. Mixed-phase clouds contain ice crystals as well as liquid droplets. Consider such a cloud at a temperature $T=-4^{\circ} \mathrm{C}$, pressure $p=800 \mathrm{hPa}$ and a humidity which corresponds to supersaturations with respect to ice of $5 \%$ and with respect to water of $1 \%$. In the cloud, an ice crystal and a droplet both grow by diffusion, each starting from mass $m_0=10^{-8} \mathrm{~g}$. The ice crystal is a thin hexagonal plate, so that its capacitance can be approximated by $C=2 r_i / \pi$, where $r_i$ is the radius of the ice crystal.
+(a) Determine the times it takes for the droplet and the ice crystal to grow to a total mass $m_1=1.1 \times 10^{-8} \mathrm{~g}$. You can neglect solution and curvature effects when calculating the droplet growth. For the ice crystal, you can assume that its mass $m_i$ and diameter $d_i$ are related by $m_i=\alpha d_i^3$, with $\alpha=1.9 \times 10^{-2} \mathrm{~g} \mathrm{~cm}^{-3}$.
+(b) Which of the two cloud particles grows faster? Explain the main reason for the difference in growth speed.
+(c) How would the situation in the mixed-phase cloud change for supersaturation with respect to ice but subsaturation with respect to water? Explain qualitatively in a few sentences.
+
+
