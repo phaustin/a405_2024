@@ -482,14 +482,19 @@ def rlcalc(var_vec,ndist):
     wl=ndist*(var_vec[:-3]**3.)
     wl=np.sum(wl)
     wl=wl*4./3.*np.pi*c.rhol
+    #print(f"{wl=}")
     return wl
 ```
 
 ```{code-cell} ipython3
-def hlcalc(var_vec):
+def hlcalc(var_vec,z0):
     var_vec = var_vec.to_numpy()
     temp,press,z,rl = var_vec[-4:]
-    print(temp,press,z,rl)
+    hlout = c.cpd*temp - c.lv0*rl + c.g0*(z - z0)
+    #print(f"{(rl,temp,z,hlout)=}")
+    row['hl'] = hlout
+    return row
+    #print(temp,press,z,rl)
 ```
 
 ```{code-cell} ipython3
@@ -501,13 +506,13 @@ def find_rl(row,ndist):
 ```
 
 ```{code-cell} ipython3
-df_output.columns
-```
-
-```{code-cell} ipython3
 new_df =df_output.apply(find_rl,axis=1,args = (ndist,) )
 fig,ax = plt.subplots(1,1)
 ax.plot('rl','z',data = new_df);
+```
+
+```{code-cell} ipython3
+new_df.columns
 ```
 
 ### now add the rl column 
@@ -521,7 +526,14 @@ Note that you need the number distribution, which you can pass to the rlcalc fun
 How much $h_l = c_p T  - l_v r_l + gz$ change during the integration?
 
 ```{code-cell} ipython3
-new_df.apply(hlcalc,axis=1)
+z0 = new_df['z'][0]
+new_df2 = new_df.apply(hlcalc,args=(z0,),axis=1)
+fig,ax = plt.subplots(1,1)
+ax.plot('hl','z',data = new_df2);
+```
+
+```{code-cell} ipython3
+new_df2.columns
 ```
 
 ```{code-cell} ipython3

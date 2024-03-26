@@ -29,6 +29,7 @@ parts:
       title: Assignment 4 --  Midterm review questions -- credit/no credit
     - file: assignments/assignment5_kohler_students.md
     - file: assignments/assignment6_stability.md
+    - file: assignments/assignment7_droplets.md
   - caption: Worksheets
     chapters:
     - file: notebooks/worksheets/worksheet1_solution.ipynb
@@ -91,7 +92,14 @@ parts:
     - url: https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&dl=0
       title: download dropgrow_2024.ipynb
     - file: notebooks/dropgrow/dropgrow_2024_2.md
+    - url: https://www.dropbox.com/scl/fi/0u6y7ufkaq4mbr1zavb0c/dropgrow_2024_2.ipynb?rlkey=zizniwhtr93orybz6himzwk36&dl=0
+      title: dropgrow_2024_2.ipynb download
     - file: notebooks/marshallpalmer.md
+    - url: https://www.dropbox.com/scl/fi/xkrtyffpt9ignyesgqmql/marshallpalmer.ipynb?rlkey=2li0db7er3apivzssb5z6j906&dl=0
+      title: marshall_palmer.ipynb download
+    - file: notebooks/ice_saturation.md
+    - url: https://www.dropbox.com/scl/fi/y88fsha1hnt424erg4rdf/ice_saturation.ipynb?rlkey=wqahwrgah05xifrjbwti1sits&dl=0
+      title: ice_satuation.ipynb download
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
@@ -125,6 +133,10 @@ parts:
       title: Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)
     - url: http://ezproxy.library.ubc.ca/login?url=http://www.nature.com/doifinder/10.1038/nphys1340
       title: Single drop fragmentation - Villermaux and Bossa (2009)
+    - url: https://www.dropbox.com/scl/fi/3nvjbh208o5ndeq8io3e1/equil_super.pdf?rlkey=zot8e90vynl5mvpul194tud3w&dl=0
+      title: equilibrium supersaturation in a constant updraft
+    - url: https://www.dropbox.com/scl/fi/aeva3yk68w8j7u69wmvhx/crystal_diffusion.pdf?rlkey=ruatsjms61izb06ef5opm3q42&dl=0
+      title: crystal growth via vapor diffusion
   - caption: Mid term
     chapters:
     - file: notebooks/thompkins_practice.md

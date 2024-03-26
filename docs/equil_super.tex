@@ -1,0 +1,350 @@
+\documentclass[12pt]{article}
+\usepackage{xr,geometry,fancyhdr,hyperref,ifpdf,rcs}
+\usepackage{color,lastpage,Ventry,url,paunits,shortcuts,smallsec,float,amsmath}
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+
+\pagestyle{fancy} 
+
+\let\rlh\rightleftharpoons
+\RCS $Revision: 1.1 $
+\RCS $Date: 2002/01/11 03:49:21 $
+
+\fancypagestyle{first}{
+\lhead{\textbf{C535}}
+\chead{\textbf{Notes on time constants}} 
+\rhead{p.~\thepage/\pageref{LastPage}}
+\lfoot{} 
+\cfoot{} 
+\rfoot{}
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx} 
+    \usepackage{hyperref}
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+\externaldocument[lec1,]{lec1}
+\externaldocument[lec2,]{lec2}
+\externaldocument[lec3,]{lec3}
+\hyperbaseurl{http://www.eos.ubc.ca/courses/atsc405/}
+
+\begin{document}
+\pagestyle{first}
+
+\begin{center}
+ATSC 405 Summary:  Time constants for droplet growth\\
+\end{center}
+
+
+
+\section{Timescale for the droplet growth equation (Lohmann page 204)}
+\label{sec:drop}
+
+Suppose we want to determine how the time-scale for
+the response of an individual droplet to a change in supersaturation
+compares with the time-scale for the change in supersaturation for the
+ascending parcel.  In other words, are the droplets adjusting rapidly
+to changing conditions, or are they lagging?
+
+To construct a time-scale 
+start with the simplified droplet growth equation (Lohmann eq. 7.8):
+
+\begin{equation}
+  \label{finala}
+  \frac{dm}{dt} = 4 \pi \rho_l r^2 \frac{dr}{dt} = 4 \pi r D (\rho_{v \infty} - \rho_{v r})
+\end{equation}
+
+If we neglect the solution and curvature terms then $\rho_{v r}=\rho_{v s}$,  dividing through
+by $\rho_{v s}$ gives:
+
+\begin{equation}
+  \label{finalb}
+  \frac{1}{r}\frac{dr}{dt} = \frac{D\, \rho_{v s}}{r^2 \rho_l} \left (\frac{\rho_{v \infty}}{\rho_{v s}} - 1 \right )
+      = \frac{D\,\rho_{v s}}{r^2 \rho_l } \left (\frac{e}{e_s} - 1 \right ) =\frac{D\,\rho_{v s}}{r^2 \rho_l }(S - 1)
+\end{equation}
+What have I gained from doing this?  Notice that the rhs of
+(\ref{finalb}) has units of 1/time.  If I freeze the rhs by selecting
+a particular radius $r_0$ and saturation S, then I can consider the
+rhs constant and  write it in terms of a time scale as $1/\tau$, where
+
+\begin{equation}
+  \label{eq:tau}
+  \frac{dr}{r} = \frac{1}{\tau} \,dt  = \frac{D\,\rho_{v s}\,SS}{r_0^2 \rho_l }\,dt
+\end{equation}
+where I've written the supersaturation as $SS=(S-1)$.
+
+I can then
+integrate (\ref{eq:tau}) to get  a time constant:
+
+
+\begin{equation}
+  \label{eq:integ}
+  r = r_0 \exp(t/\tau)
+\end{equation}
+where $\tau=(r_0^2 \rho_l)/(\rho_{vs}\, D\,SS)$. Note that I need to
+remember that (\ref{eq:integ}) is only valid for small perturbations
+of $r$ in the neighborhood of $r_0$.
+
+How big is $\tau$?  Choose $\rho_l=1000\ \kgmmm$, $D=2.36 \times 10^{-5}\ \un{m^2\,s^{-1}}$,
+$r_0=5 \mum$, $p=9 \times 10^5$ Pa, $T=280\ \un{K}$,
+$\rho_{vs}=e_s/(R_v T) = e_s(T)/(R_v \cdot 280\ \un{K}) = 990/(461 \cdot 280\ \un{K})%
+=7.7\ \gkg$,  $SS=0.002$, I get: $\tau = 1/1.89 \approx 0.5\ \un{s}$.  This tells
+me that 5 \mum droplets respond within about a second to fluctuations in supersaturation or
+temperature.  Note that 50 \mum drops are much less responsive, because of the $r_0^2$ term
+in the expression for $\tau$.  Substituting $r_0=50\ \mum$ into (\ref{eq:tau}) I get
+$\tau \approx 53\ s$.
+
+
+\section{Timescale for the supersaturation equation}
+\label{sec:supersat}
+
+The curve for the supersaturation shown in the Lohmann Figure 7.7:
+shows 1) that S decays exponentially after the aerosols activate and 2) that S
+approaches an equilibrium value different from 0 in a constant velocity updraft.
+It is possible to derive (fairly) simple expressions for both the timescale for
+the exponential decay, $\tau$ and the long-time equilibrium value of the supersaturation,
+$S_\infty$.
+
+Start with an approximate expression for the mixing ratio:
+
+\begin{equation}
+  \label{eq:mix}
+  w_v = \frac{\rho_v}{\rho_d} = \frac{R_d}{R_v} \frac{e}{p - e} \approx \frac{R_d}{R_v} \frac{e}{p}=
+\epsilon \frac{e}{p} = \frac{S \epsilon e_s}{p} = (1 + SS) \frac{\epsilon e_s}{p}
+\end{equation}
+where $SS=(S-1)$ defines the supersaturation.
+
+To get an equation for $\frac{d\,SS}{dt}$, we need to differentiate (\ref{eq:mix}).  Do this
+and show that using the chain rule gives Lohmann 7.24 and 7.25:
+
+\begin{equation}
+  \label{eq:chain}
+  \frac{d w_v}{dt} = \left (1 + SS \right )  \left [ \frac{-\epsilon e_s}{p^2} 
+\left ( \frac{-g p V}{R_d T} \right ) + \frac{\epsilon}{p} \left ( 
+\frac{\epsilon e_s L}{R_d T^2} \right ) \frac{dT}{dt} \right ]
++ \frac{\epsilon e_s}{p} \frac{dSS}{dt}
+\end{equation}
+where $V$ is the vertical velocity $dz/dt$ and I've used the Clausius-Clapeyron equation and
+assumed hydrostatic balance:
+
+\begin{subequations}
+  \begin{eqnarray}
+    \label{eq:various}
+    \frac{de_s}{dT} &=& \frac{\epsilon L e_s}{R_d T^2}\\
+    \frac{dp}{dt} & = & - \rho g \frac{dz}{dt} = -\frac{g p}{R_d T} V
+  \end{eqnarray}
+\end{subequations}
+
+From conservation of moist static energy also have an expression for $\frac{dT}{dt}$ in the ascending parcel:
+
+\begin{equation}
+  \label{eq:adia}
+  \frac{dT}{dt} = \frac{-L}{c_p} \frac{dw_v}{dt} - \frac{g V}{c_p}
+\end{equation}
+and as usual from conservation of total water $w_t$ we can relate the change in $w_v$ to the change
+in $w_l$:
+
+\begin{equation}
+  \label{eq:conserv}
+  \frac{d w_v}{dt} = - \frac{d w_l}{dt} = - \frac{d}{dt} \left [ \frac{4}{3} \pi \rho_l
+  \int_0^\infty n(r) r^3 dr \right ] = -4 \pi \rho_l \int_0^\infty n(r) r^2 \frac{dr}{dt} dr
+\end{equation}
+where I neglect the fact that $n(r)$ is really a function of time as well (since the entire
+drop size distribution is shifting to larger $r$ during the ascent.
+
+I can rewrite (\ref{finalb}) to get and expression for $r \frac{dr}{dt}$ using the supersaturation:
+
+\begin{equation}
+  \label{eq:rdr}
+  r \frac{dr}{dt} = \frac{D\,\rho_{v s}}{ \rho_l }(SS) = G\,SS
+\end{equation}
+where $G=\frac{D  \rho_{v s}}{ \rho_l}$ is assumed constant during the ascent
+(not a great assumption, because of the temperature dependence of $\rho_{v s}$)
+
+So substituting (\ref{eq:rdr}) into (\ref{eq:conserv}) gives a new form for the rate of vapor change:
+
+\begin{equation}
+  \label{eq:newvap}
+    \frac{d w_v}{dt} = - 4 \pi \rho_l G\, SS\, \int_0^\infty n(r) \, r dr
+\end{equation}
+
+This simplifies things because the mean droplet radius is defined by:
+
+\begin{equation}
+  \label{eq:mean}
+\overline{r} = \frac{\int_0^\infty n(r) \, r dr}{\int_0^\infty n(r)  dr} = 
+\frac{\int_0^\infty n(r) \, r dr}{N}
+\end{equation}
+where $N$ is the total droplet number per unit volume.
+
+So finally, we've got a simple expression for the change in $w_v$ wrt the
+dropsize distribution:
+
+\begin{equation}
+  \label{eq:simple}
+  \frac{d w_v}{dt} = - 4\pi \rho_l G\,SS\,N\,\overline{r}
+\end{equation}
+
+Plugging  (\ref{eq:adia}) into (\ref{eq:chain}) and rearrange to get:
+
+\begin{equation}
+  \label{eq:dSS}
+  \frac{d SS}{dt} = - \frac{g V}{R_d T} - \frac{L}{R_v T^2}  \left [- \frac{L}{c_p} \frac{dw_v}{dt}
+- \frac{g V}{c_p} \right ] + \frac{p }{\epsilon e_s} \frac{dw_v}{dt}
+\end{equation}
+where I've made the approximation that $(1 + SS) \approx 1$ in the first term of (\ref{eq:adia}).
+The justification for this is the fact that we know that $SS \approx 0.002$ from
+our cloud model runs.
+
+Inserting (\ref{eq:simple}) gives:
+
+\begin{equation}
+  \label{eq:dSSb}
+  \frac{d SS}{dt} =  \frac{g }{T}  \left [ \frac{L}{c_p R_v T} 
+- \frac{1}{R_d} \right ] V  - \left [ \frac{p}{e_s \epsilon} + \frac{L^2}{R_v c_p T^2} \right ]
+4 \pi \rho_l G N \overline{r} SS
+\end{equation}
+The physical interpretation of  (\ref{eq:dSSb}) is that the rate of change of SS depends
+on two terms: a source ($SS$ increases due to adiabatic cooling) and a sink ($SS$ decreases
+due to droplet growth).
+
+Equation (\ref{eq:dSSb}) has the general form of an exponential decay with timescale $\tau$
+to a limiting value $SS_\infty$:
+
+\begin{equation}
+  \label{eq:general}
+  \frac{d SS}{dt} = - \frac{SS}{\tau} + C
+\end{equation}
+where:
+
+\begin{subequations}
+\label{eq:coeffs}
+  \begin{eqnarray}
+    \label{eq:various2}
+    1/\tau &=& \left [ \frac{p}{e_s \epsilon} + \frac{L^2}{R_v c_p T^2} \right ]
+                    4 \pi \rho_l G N \overline{r} \\
+    C &=& \frac{g }{T}  \left [ \frac{L}{c_p R_v T} 
+            - \frac{1}{R_d} \right ] V
+  \end{eqnarray}
+\end{subequations}
+
+To solve (\ref{eq:general}) multiply it by the integrating factor $\exp(t/\tau)$:
+
+\begin{equation}
+  \label{eq:general2}
+\exp(t/\tau)  \frac{d SS}{dt} + \exp(t/\tau) \frac{SS}{\tau} =   C \exp(t/\tau)
+\end{equation}
+and use the chain rule:
+
+\begin{equation}
+  \label{eq:generalb}
+ \frac{d}{dt} \left ( \exp(t/\tau) \, SS \right ) =   C \exp(t/\tau)
+\end{equation}
+Starting at $t=0$ and $SS=SS_0$ integrate (\ref{eq:generalb}) to get
+
+\begin{equation}
+  \label{eq:generalc}
+SS(t) = (SS_0 - C \tau) \exp \left (- \frac{t}{\tau} \right )  + C \tau
+\end{equation}
+Since $C\,\tau$ is the value of $SS(t)$ at $t=\infty$, it's clearer to
+give it the symbol $S_\infty$ for the equilibrium supersaturation in the updraft:
+
+\begin{equation}
+  \label{eq:generald}
+SS(t) = (SS_0 - S_{\infty}) \exp \left (- \frac{t}{\tau} \right )  + S_{\infty}
+\end{equation}
+
+
+What does (\ref{eq:generalc}) tell us about the supersaturation history? Looking at
+(\ref{eq:coeffs}), we can see:  1) that the timeconstant $\tau$ decreases as
+$N \overline{r}$ increases.  We can think of $N \overline{r}$ (also called the ``integral radius'')
+as a measure of the ability of droplets to decrease the vapor mixing ratio.  2)
+the assymptotic value $SS_\infty$ increases with the updraft velocity $V$ (which sets
+the cooling rate).
+
+Choosing $V=0.2\ \ms$, $N=80\ \ccm$ and $\overline{r}=5\ \mum$, with $T$, $p$ as before
+I get a time constant for the supersaturation decay of $\tau \approx 3.5\ \un{s}$, and
+an assymptotic supersaturation of $SS_\infty=0.04\%$ (my neglect of thermal diffusion
+makes these wrong by about a factor of 2, see Rogers and Yau Chapter 7 for the full
+treatment).  The fact that the supersaturation and moderately-sized cloud droplets have
+about the same response times means that you do have to solve the temperature, vapor,
+and droplet growth equations simultaneously.
+
+
+What would the next step be?  In order to decide what to include next
+in the droplet growth model, we would need to calculate time/space
+scales for other processes we're currently neglecting:
+1) fluctuations in the vertical velocity  2) mixing between parcel
+and environment  3) radiative cooling at the edges of the cloud
+4) droplet sedimentation and turbulent trajectories  5) the
+effect of organic solutes on the equilibrium supersaturation
+6) the effect of black carbon on the absorption of solar
+radiation by the droplet 7) etc.
+
+\end{document}
+
+%matlab script
+%T=280;
+%p=90000.
+%g=9.8;
+%esatPa(T)
+%Rv=461.;
+%Rd=287.;
+%rhovs=esatPa(T)/(Rv*T)
+%D=2.36e-5;
+%r=5.e-6;
+%rhol=1000.;
+%rho=p/(Rd*T);
+%SS=0.002;
+%onetau=D*SS*rhovs/(r^2*rhol*rhovs)
+%tau=1./onetau
+%eps=0.622
+%V=0.2 %updraft in m/s
+
+%es=esatPa(T)
+%L=2.5e6
+%cp=1004
+%G=D*rhovs/rhol
+%N=80.e6
+%rbar=5.e-6
+%newonetau=(p/(es*eps) + L^2./(Rv*cp*T^2))*4*pi*rhol*G*N*rbar
+%newtau=1/newonetau
+
+%%Yau Fig 7.2
+%Q1a = eps*L*g/(Rd*cp*T);
+%Q1b= g/Rd;
+%Q1=(1./T)*(Q1a - Q1b)
+%Q2a=(Rd*T/(eps*es));
+%Q2b=eps*L^2./(p*T*cp);
+%Q2=rho*(Q2a + Q2b)
+%%P=80000
+%%T=253
+%%Q2 =  274.3914
+%%Q1 =  6.9126e-04
+%%Q2 = 1.2507e+03
+
+%%PA 
+%Q1a = L/(Rv*cp*T);
+%Q1b= 1/Rd;
+%Q1=(g/T)*(Q1a - Q1b)
+%Q2=(p/(es*eps)) + (L^2/(Rv*cp*T^2))
+%SSonetau=Q2*4*pi*rhol*G*N*rbar
+%SStau=1/SSonetau
+%C=Q1*V
+%SSinf=C*SStau
+
+
+%drdt=D*rhovs/(rhol*r)*0.001
+
+%dwvdt = -4*pi*rhol*G*SS*1.e8*8.e-6
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
