@@ -174,6 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../python_install.html">Python links</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&amp;dl=0">Thompkins text</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&amp;dl=0">Wallace and Hobbs chapter 6</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
 <ul class="nav bd-sidenav">
@@ -242,6 +243,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/xkrtyffpt9ignyesgqmql/marshallpalmer.ipynb?rlkey=2li0db7er3apivzssb5z6j906&amp;dl=0">marshall_palmer.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ice_saturation.html">saturation vapor pressure over ice</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/y88fsha1hnt424erg4rdf/ice_saturation.ipynb?rlkey=wqahwrgah05xifrjbwti1sits&amp;dl=0">ice_satuation.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyrcel/basic_run.html">Pyrcel Example: Basic Run</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/1f7n48b2vd7jwocsnov4n/basic_run.ipynb?rlkey=apws9hpk249fgcbrus80vrr6m&amp;dl=0">pyrcel basic_run.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyrcel/activate.html">Pyrcel example: Activation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&amp;dl=0">pyrcel activate.ipynb download</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -554,39 +559,39 @@ stages:</p>
 <p>To find <span class="math notranslate nohighlight">\(Q_{in}\)</span> from <span class="math notranslate nohighlight">\(C \rightarrow A\)</span> we need to use the first law and
 moist static energy since we are at constant pressure but not constant
 temperature:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-308ac759-2bbf-4ee3-96ae-349428ce03cb">
-<span class="eqno">(20)<a class="headerlink" href="#equation-308ac759-2bbf-4ee3-96ae-349428ce03cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5efde520-fc32-4cda-b2bb-df74dfca600b">
+<span class="eqno">(20)<a class="headerlink" href="#equation-5efde520-fc32-4cda-b2bb-df74dfca600b" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstIa}
   \Delta Q_{in} = \Delta h_m = c_p \Delta T  + l_v \Delta q_v
 \end{equation}\]</div>
 <p>At  point C we have <span class="math notranslate nohighlight">\(q_{vC} = q_{sat}\)</span> = 8.86 g/kg, tempC=10.44 deg C and at point A
 <span class="math notranslate nohighlight">\(q_{vA} = q_T\)</span>=14 g/kg, tempA=25 deg C.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b1d9ea3e-a1e0-490c-bbaa-ceff3d23031d">
-<span class="eqno">(21)<a class="headerlink" href="#equation-b1d9ea3e-a1e0-490c-bbaa-ceff3d23031d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7183e444-93a8-4719-93c9-7f1ff979d9bf">
+<span class="eqno">(21)<a class="headerlink" href="#equation-7183e444-93a8-4719-93c9-7f1ff979d9bf" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstI}
   \Delta Q_{in} = 1004 (25 - 10.44) + 2.5 \times 10^6 (14 - 8.86) \times 10^{-3} = 27468\ J/kg
 \end{equation}\]</div>
 <p>For <span class="math notranslate nohighlight">\(\Delta Q_{out}\)</span> we can use the fact that on a reversible isotherm the second law says:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d83c6b48-501b-44f2-990c-184e321146c3">
-<span class="eqno">(22)<a class="headerlink" href="#equation-d83c6b48-501b-44f2-990c-184e321146c3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9f8a7d6b-6069-4e2c-ac49-e018511ccc40">
+<span class="eqno">(22)<a class="headerlink" href="#equation-9f8a7d6b-6069-4e2c-ac49-e018511ccc40" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:secondI}
 \Delta s =   \frac{ \Delta q_{out} }{T}
 \end{equation}\]</div>
 <p>We know that:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a6ccfbfc-dd14-44f5-a45d-89367181f191">
-<span class="eqno">(23)<a class="headerlink" href="#equation-a6ccfbfc-dd14-44f5-a45d-89367181f191" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-17d86b6d-2828-420f-85b9-edf6f1a54fc4">
+<span class="eqno">(23)<a class="headerlink" href="#equation-17d86b6d-2828-420f-85b9-edf6f1a54fc4" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelate}
   \Delta s = c_{p} \Delta \log \theta_e = 1004*(\log(317.69) - \log(349.726)) = -96.66
 \end{equation}\]</div>
 <p>and since the isotherm is 10.44 \degc = 283.59 K</p>
-<div class="amsmath math notranslate nohighlight" id="equation-20f2556f-1761-40ff-9b62-1058f38a6e07">
-<span class="eqno">(24)<a class="headerlink" href="#equation-20f2556f-1761-40ff-9b62-1058f38a6e07" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-dbe4f5b3-d9e7-41c6-879c-d781e29429b3">
+<span class="eqno">(24)<a class="headerlink" href="#equation-dbe4f5b3-d9e7-41c6-879c-d781e29429b3" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelateI}
 \Delta q_{out} = T \Delta s = 283.59 \times  -96.66 = -27411.80
 \end{equation}\]</div>
 <p>and the efficiency is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4336588c-e9b7-4c92-96c2-9e16f132f5dc">
-<span class="eqno">(25)<a class="headerlink" href="#equation-4336588c-e9b7-4c92-96c2-9e16f132f5dc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8d7970ac-3bc3-41ae-972c-72602bf31081">
+<span class="eqno">(25)<a class="headerlink" href="#equation-8d7970ac-3bc3-41ae-972c-72602bf31081" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:efficiency}
 \eta =  \frac{ |Q_{in} | - |Q_{out}| }{|Q_{in}|} = \frac{ 27468 - 27411}{27468}  = 0.2\%
 \end{equation}\]</div>
