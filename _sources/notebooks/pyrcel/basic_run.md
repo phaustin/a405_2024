@@ -71,6 +71,8 @@ sulfate =  pm.AerosolSpecies('sulfate',
 sea_salt = pm.AerosolSpecies('sea salt',
                              pm.Lognorm(mu=0.85, sigma=1.2, N=10.),
                              kappa=1.2, bins=40)
+#help(sulfate)
+dir(sulfate)
 ```
 
 The :class:`AerosolSpecies` class automatically computes gridded/binned representations of the size distributions. Let's double check that the aerosol distribution in the model will make sense by plotting the number concentration in each bin.
