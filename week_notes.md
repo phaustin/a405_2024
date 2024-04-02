@@ -516,6 +516,15 @@ Question 3: Lohmann problem 4 page 250:
 
 ### Tuesday
 
-### Worksheet
+- Aerosol counter review
+
+- Lightning review
+
+#### Worksheet
 
 - Finish - {ref}`adiabatic_water`  -- [notebook download](https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&dl=0)
+
+#### Assignments
+
+- {ref}`assignment_8`  -- due today at midnight
+- {ref}`assignment_9`

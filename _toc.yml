@@ -32,6 +32,8 @@ parts:
     - file: assignments/assignment5_kohler_students.md
     - file: assignments/assignment6_stability.md
     - file: assignments/assignment7_droplets.md
+    - file: assignments/assignment8_cold_clouds.md
+    - file: assignments/assignment9_precipitation.md
   - caption: Worksheets
     chapters:
     - file: notebooks/worksheets/worksheet1_solution.ipynb
