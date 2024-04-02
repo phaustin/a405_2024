@@ -512,3 +512,10 @@ Question 3: Lohmann problem 4 page 250:
 - Read [Wallace and Hobbs chapter 6 section 6.7 pp 252-259](https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&dl=0) on thunderstorm electrification
 
 
+## week 12
+
+### Tuesday
+
+### Worksheet
+
+- Finish - {ref}`adiabatic_water`  -- [notebook download](https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&dl=0)

@@ -25,13 +25,12 @@ to the dataframe.
   - useful functions:  [find_thetaet](https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.find_thetaet) and
     [tinvert_thetae](https://phaustin.github.io/a405_lib/full_listing.html#a405.thermo.thermlib.tinvert_thetae)
 
-
 ```{code-cell} ipython3
 from pathlib import Path
 import numpy as np
 from a405.dropgrow.aerolib import lognormal,create_koehler
 from a405.utils.helper_funs import make_tuple, find_centers
-from a405.thermo.thermlib import find_esat
+from a405.thermo.thermlib import find_esat, find_rsat, find_thetaet, tinvert_thetae, find_Td
 from a405.thermo.rootfinder import find_interval, fzero
 from a405.dropgrow.drop_grow import find_diff
 from a405.thermo.constants import constants as c
@@ -495,16 +494,9 @@ def rlcalc(var_vec,ndist):
     return wl
 ```
 
-```{code-cell} ipython3
-def hlcalc(var_vec,z0):
-    var_vec = var_vec.to_numpy()
-    temp,press,z,rl = var_vec[-4:]
-    hlout = c.cpd*temp - c.lv0*rl + c.g0*(z - z0)
-    #print(f"{(rl,temp,z,hlout)=}")
-    row['hl'] = hlout
-    return row
-    #print(temp,press,z,rl)
-```
+### now add the rl column 
+
+Note that you need the number distribution, which you can pass to the rlcalc function using the args parameter in apply
 
 ```{code-cell} ipython3
 def find_rl(row,ndist):
@@ -520,32 +512,60 @@ fig,ax = plt.subplots(1,1)
 ax.plot('rl','z',data = new_df);
 ```
 
-```{code-cell} ipython3
-new_df.columns
-```
-
-### now add the rl column 
-
-Note that you need the number distribution, which you can pass to the rlcalc function using the args parameter in apply
-
-+++
-
 ### repeat for liquid water static energy
 
 How much $h_l = c_p T  - l_v r_l + gz$ change during the integration?
 
 ```{code-cell} ipython3
-z0 = new_df['z'][0]
-new_df2 = new_df.apply(hlcalc,args=(z0,),axis=1)
-fig,ax = plt.subplots(1,1)
-ax.plot('hl','z',data = new_df2);
+def hlcalc(var_vec,hlout0):
+    num_vec = var_vec.to_numpy()
+    temp,press,z,rl = num_vec[-4:]
+    lv=find_lv(temp)
+    hlout = c.cpd*temp - lv*rl + c.g0*z
+    hl_diff = hlout - hlout0
+    #print(f"{(rl,temp,z,hlout)=}")
+    var_vec['hl'] = hlout
+    var_vec['hl_diff'] = hl_diff
+    return var_vec
 ```
 
 ```{code-cell} ipython3
-new_df2.columns
+z0 = new_df['z'][0]
+temp = new_df['temp'][0]
+lv = find_lv(temp)
+hlout0 = c.cpd*temp + c.g0*z0
+new_df2 = new_df.apply(hlcalc,args=(hlout0,),axis=1)
+fig,ax = plt.subplots(1,1)
+ax.plot('hl_diff',data = new_df2)
+ax.set_title("hl - hl0")
+ax.set_xlabel("time (s)")
+ax.set_ylabel("hl difference (J/kg)");
 ```
 
-## New column: adiabatic liquid water content
+## Worksheet problem 3: adiabatic liquid water content
+
+### first calculate thetae and rv below cloud at z=1000
+
+```{code-cell} ipython3
+# your code here
+```
+
+### now write a function like hlcalc uses thetae0, rv0 with tinvert_thetae to find the adiabatic liquid water
+
+```{code-cell} ipython3
+def adia_calc(var_vec,thetae0, rt0):
+    # your code here
+    return var_vec
+   
+```
+
+### apply this function to the new_df dataframe
+
+- add a new column called 'adia_rl' and plot the diffence with rl
+
+```{code-cell} ipython3
+# your code here
+```
 
 ```{code-cell} ipython3
 
