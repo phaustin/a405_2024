@@ -10,6 +10,8 @@ parts:
       title: Thompkins text
     - url: https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&SS_jc=TC0001980404&title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate
       title: Lohmann et al. text
+    - url: https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&dl=0
+      title: Wallace and Hobbs chapter 6
   - caption: Weekly topics
     chapters:
     - file: week_notes.md
@@ -100,6 +102,15 @@ parts:
     - file: notebooks/ice_saturation.md
     - url: https://www.dropbox.com/scl/fi/y88fsha1hnt424erg4rdf/ice_saturation.ipynb?rlkey=wqahwrgah05xifrjbwti1sits&dl=0
       title: ice_satuation.ipynb download
+    - file: notebooks/pyrcel/basic_run.md
+    - url: https://www.dropbox.com/scl/fi/1f7n48b2vd7jwocsnov4n/basic_run.ipynb?rlkey=apws9hpk249fgcbrus80vrr6m&dl=0
+      title: pyrcel basic_run.ipynb download
+    - file: notebooks/pyrcel/activate.md
+    - url: https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&dl=0
+      title: pyrcel activate.ipynb download
+    - file: notebooks/dropgrow/dropgrow_2024_3.md
+    - url: https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&dl=0
+      title: adiabatic liquid water worksheet download
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0

@@ -453,7 +453,7 @@ Assignment 7 due midnight Tuesday March 26
     
 - Go over the [crystal diffusion notes](https://www.dropbox.com/scl/fi/aeva3yk68w8j7u69wmvhx/crystal_diffusion.pdf?rlkey=ruatsjms61izb06ef5opm3q42&dl=0).  Why is there a capacitance in the crystal growth equation (Lohmann 8.11)
 
-### For Thursday
+#### For Thursday
 
 Read Lohmann Section 8.3 on crystal growth
 
@@ -470,5 +470,45 @@ Question 3: Lohmann problem 4 page 250:
 (a) Determine the times it takes for the droplet and the ice crystal to grow to a total mass $m_1=1.1 \times 10^{-8} \mathrm{~g}$. You can neglect solution and curvature effects when calculating the droplet growth. For the ice crystal, you can assume that its mass $m_i$ and diameter $d_i$ are related by $m_i=\alpha d_i^3$, with $\alpha=1.9 \times 10^{-2} \mathrm{~g} \mathrm{~cm}^{-3}$.
 (b) Which of the two cloud particles grows faster? Explain the main reason for the difference in growth speed.
 (c) How would the situation in the mixed-phase cloud change for supersaturation with respect to ice but subsaturation with respect to water? Explain qualitatively in a few sentences.
+
+
+### Thursday
+
+#### Pyrcel
+
+- This is a parcel model designed for the development of GCM parameterizations for aerosol acitvation (see [this article](https://journals.ametsoc.org/view/journals/atsc/73/3/jas-d-15-0223.1.xml))
+
+- It uses an odesolver written in Python/numba/C/Fortran called [assimulo](https://github.com/modelon-community/Assimulo)
+
+- Here is its [droplet growth equation](https://github.com/darothen/pyrcel/blob/master/pyrcel/_parcel_aux_numba.py#L150-L165)
+
+- we want to run two example notebooks:
+
+  - {ref}`pyrcel_basic`
+  - {ref}`pyrcel_activation`
+
+- Installing [pyrcel](https://pyrcel.readthedocs.io/en/latest/)
+
+  - Download [pyrcel_conda.yml](https://www.dropbox.com/scl/fi/doazy5kcrfcpdsmp7u431/pyrcel_conda.yml?rlkey=53tutxvtza25dgbyer6troyzc&dl=0) to a folder
+  - in a terminal cd to that folder and do:
+  
+        conda activate base
+        mamba env create --name pyrcel --file pyrcel_conda.yml
+        conda activate pyrcel
+        pip install https://github.com/darothen/pyrcel.git
+  - Copy [basic_run.ipynb](https://www.dropbox.com/scl/fi/1f7n48b2vd7jwocsnov4n/basic_run.ipynb?rlkey=apws9hpk249fgcbrus80vrr6m&dl=0) and [activate.ipynb]( https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&dl=0) into the folder and run them with jupyter lab.
+
+### Worksheet
+
+- {ref}`adiabatic_water` and [notebook download](https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&dl=0)
+
+#### Final preparation
+
+- [2016 final exam](https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&dl=0) 
+
+#### For Tuesday
+
+- Read Lohamnn Section 6.6 on aerosol counters
+- Read [Wallace and Hobbs chapter 6 section 6.7 pp 252-259](https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&dl=0) on thunderstorm electrification
 
 
