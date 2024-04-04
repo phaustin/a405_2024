@@ -528,3 +528,9 @@ Question 3: Lohmann problem 4 page 250:
 
 - {ref}`assignment_8`  -- due today at midnight
 - {ref}`assignment_9`
+
+### Thursday
+
+- [NYtimes article on cloud brightening](https://www.nytimes.com/2024/04/02/climate/global-warming-clouds-solar-geoengineering.html)
+
+- {ref}`dropgrow_2024_3_solution.md`
