@@ -11,7 +11,8 @@ kernelspec:
   language: python
   name: python3
 ---
-(midterm_solutions_2024)=
+
+(mid_2024_solutions)=
 # 2024 midterm solutions
 
 +++

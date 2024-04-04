@@ -194,6 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment6_stability.html">Assignment 6  – Due Tuesday March 19 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment7_droplets.html">Assignment 7  – Due Tuesday March 26 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment8_cold_clouds.html">Assignment 8 – cold clouds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment9_precipitation.html">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="current nav bd-sidenav">
@@ -546,7 +547,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x150911bd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x122737dd0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/75e80f56628f7f569691a1b8f45ffcf800b875c49a83227dd6d221701ad5728f.png" src="../../_images/75e80f56628f7f569691a1b8f45ffcf800b875c49a83227dd6d221701ad5728f.png" />
@@ -572,7 +573,45 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">t_end</span> <span class="o">=</span> <span class="mf">250.</span><span class="o">/</span><span class="n">V</span> <span class="c1"># end time, seconds... 250 meter simulation </span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">model</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">ParcelModel</span><span class="p">(</span><span class="n">initial_aerosols</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">T0</span><span class="p">,</span> <span class="n">S0</span><span class="p">,</span> <span class="n">P0</span><span class="p">,</span> <span class="n">console</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">accom</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">parcel_trace</span><span class="p">,</span> <span class="n">aerosol_traces</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">t_end</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;cvode&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/repos/pyrcel/pyrcel/parcel.py:481,</span> in <span class="ni">ParcelModel.run</span><span class="nt">(self, t_end, output_dt, solver_dt, max_steps, solver, output_fmt, terminate, terminate_depth, **solver_args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span> <span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">389</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">390</span>     <span class="n">t_end</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">398</span>     <span class="o">**</span><span class="n">solver_args</span>
+<span class="g g-Whitespace">    </span><span class="mi">399</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">400</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Run the parcel model simulation.</span>
+<span class="g g-Whitespace">    </span><span class="mi">401</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">402</span><span class="sd">     Once the model has been instantiated, a simulation can immediately be</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">479</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">481</span>     <span class="kn">from</span> <span class="nn">.integrator</span> <span class="kn">import</span> <span class="n">Integrator</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span>     <span class="k">if</span> <span class="n">output_fmt</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;dataframes&quot;</span><span class="p">,</span> <span class="s2">&quot;arrays&quot;</span><span class="p">,</span> <span class="s2">&quot;smax&quot;</span><span class="p">]:</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span>         <span class="k">raise</span> <span class="n">ParcelModelError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">485</span>             <span class="s2">&quot;Invalid value (&#39;</span><span class="si">%s</span><span class="s2">&#39;) specified for output format.&quot;</span> <span class="o">%</span> <span class="n">output</span>
+<span class="g g-Whitespace">    </span><span class="mi">486</span>         <span class="p">)</span>
+
+<span class="n">File</span> <span class="o">~/</span><span class="n">repos</span><span class="o">/</span><span class="n">pyrcel</span><span class="o">/</span><span class="n">pyrcel</span><span class="o">/</span><span class="n">integrator</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">110</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>             <span class="c1"># solver name is not defined, or the module containing</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span>             <span class="c1"># it is unavailable</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;integrator for </span><span class="si">%s</span><span class="s2"> is not available&quot;</span> <span class="o">%</span> <span class="n">method</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">110</span> <span class="k">class</span> <span class="nc">ExtendedProblem</span><span class="p">(</span><span class="n">Explicit_Problem</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;This extension of the Assimulo &#39;Explicit_Problem&#39; class</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span><span class="sd">     encodes some of the logic particular to the parcel model simulation,</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span><span class="sd">     specifically rules for terminating the simulation and detecting</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span><span class="sd">     events such as the maximum supersaturation occurring&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">116</span>     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Parcel model ODEs&quot;</span>
+
+<span class="ne">NameError</span>: name &#39;Explicit_Problem&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -624,7 +663,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/59aa86fca38c0eca7740172bfef73a96ed287626fce29707e110db56ab4408ff.png" src="../../_images/59aa86fca38c0eca7740172bfef73a96ed287626fce29707e110db56ab4408ff.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="p">[</span><span class="n">axS</span><span class="p">,</span> <span class="n">axA</span><span class="p">]</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">axS</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">parcel_trace</span><span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">100.</span><span class="p">,</span> <span class="n">parcel_trace</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">axT</span> <span class="o">=</span> <span class="n">axS</span><span class="o">.</span><span class="n">twiny</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">axT</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">parcel_trace</span><span class="p">[</span><span class="s1">&#39;T&#39;</span><span class="p">],</span> <span class="n">parcel_trace</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;parcel_trace&#39; is not defined
+</pre></div>
+</div>
+<img alt="../../_images/fbe4271cbd18ac4a0cb7186a43195ecd38e06f9c3edb7f72af8b212342f47812.png" src="../../_images/fbe4271cbd18ac4a0cb7186a43195ecd38e06f9c3edb7f72af8b212342f47812.png" />
 </div>
 </div>
 <p>In this simple example, the sulfate aerosol population bifurcated into interstitial aerosol and cloud droplets, while the entire sea salt population activated. A peak supersaturation of about 0.63% was reached a few meters above cloud base, where the ambient relative humidity hit 100%.</p>
@@ -659,10 +709,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  CDNC(sulfate) = 146.9
- CDNC(sea salt) = 10.0
-------------------------
-          total = 156.9 / 860 ~ act frac = 0.18
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pyrcel</span> <span class="kn">import</span> <span class="n">binned_activation</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">sulf_trace</span> <span class="o">=</span> <span class="n">aerosol_traces</span><span class="p">[</span><span class="s1">&#39;sulfate&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">sea_trace</span> <span class="o">=</span> <span class="n">aerosol_traces</span><span class="p">[</span><span class="s1">&#39;sea salt&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ind_final</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">t_end</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="ne">NameError</span>: name &#39;aerosol_traces&#39; is not defined
 </pre></div>
 </div>
 </div>

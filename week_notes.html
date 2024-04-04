@@ -249,8 +249,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/1f7n48b2vd7jwocsnov4n/basic_run.ipynb?rlkey=apws9hpk249fgcbrus80vrr6m&amp;dl=0">pyrcel basic_run.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/pyrcel/activate.html">Pyrcel example: Activation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&amp;dl=0">pyrcel activate.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/dropgrow/dropgrow_2024_3.html">Parcel model: add adiabatic liquid water</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/dropgrow/dropgrow_2024_3_solution.html">Solution: Parcel model: add adiabatic liquid water</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">adiabatic liquid water worksheet download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/mixing_line_calc.html">Mixing line workbook</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -545,6 +547,11 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assignments">Assignments</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Thursday</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-tuesday">from Tuesday</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-worksheet">New worksheet</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -588,8 +595,8 @@ document.write(`
 <h4>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h4>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-150544dc-50e0-45c7-a0e2-2d03cec2bba4">
-<span class="eqno">(1)<a class="headerlink" href="#equation-150544dc-50e0-45c7-a0e2-2d03cec2bba4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-01cf8773-d740-4a68-9565-bd82caf740f7">
+<span class="eqno">(1)<a class="headerlink" href="#equation-01cf8773-d740-4a68-9565-bd82caf740f7" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -598,8 +605,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-da129f1e-516e-4d1d-a572-0bb931aee5e5">
-<span class="eqno">(2)<a class="headerlink" href="#equation-da129f1e-516e-4d1d-a572-0bb931aee5e5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c62c1af9-c2c4-4212-a813-1cbcfa541d61">
+<span class="eqno">(2)<a class="headerlink" href="#equation-c62c1af9-c2c4-4212-a813-1cbcfa541d61" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -608,8 +615,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-db3433f4-bb70-4af9-acc9-7c9f4b1d5090">
-<span class="eqno">(3)<a class="headerlink" href="#equation-db3433f4-bb70-4af9-acc9-7c9f4b1d5090" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-308ce778-358c-454c-ae7e-b7ebb4bddc98">
+<span class="eqno">(3)<a class="headerlink" href="#equation-308ce778-358c-454c-ae7e-b7ebb4bddc98" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -855,7 +862,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>Notes on entropy for a air/vapor/liquid/mixture -  <a class="reference internal" href="notebooks/entropy_theta_part2.html#entropy-part2"><span class="std std-ref">Entropy and potential temperature – including liquid and vapor</span></a></p></li>
 <li><p>Solutiions posted</p>
 <ul>
-<li><p><span class="xref std std-ref">tropical_heat_solution</span></p></li>
+<li><p><a class="reference internal" href="notebooks/worksheets/tropical_engine_solution.html#tropical-heat-solution"><span class="std std-ref">Tropical Heat Engine - Solution</span></a></p></li>
 <li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/6qs2cqcy07lmod49o4cyw/taylor_mix_answer.pdf?rlkey=2bfovdzckdzau5spysyrky3cb&amp;dl=0">taylor mixing solution</a></p></li>
 <li><p>Go over midterm solutions <a class="reference internal" href="notebooks/assign4_midterm_sols.html#assign4-midterm-sol"><span class="std std-ref">Assignment 4: midterm solutions</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/thompkins_practice_answers.html#thompkins-answers"><span class="std std-ref">Tompkins practice quesitons – solutions</span></a></p></li>
@@ -882,7 +889,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <section id="lecture-21-week-7-midterm">
 <h3>Lecture 21, week 7 midterm<a class="headerlink" href="#lecture-21-week-7-midterm" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="notebooks/a405_mid_2024_solution.html#midterm-solutions-2024"><span class="std std-ref">2024 midterm solutions</span></a></p></li>
+<li><p><span class="xref std std-ref">midterm_solutions_2024</span></p></li>
 </ul>
 </section>
 </section>
@@ -1155,7 +1162,7 @@ pip install https://github.com/darothen/pyrcel.git
 <section id="worksheet">
 <h3>Worksheet<a class="headerlink" href="#worksheet" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="notebooks/dropgrow/dropgrow_2024_3.html#adiabatic-water"><span class="std std-ref">Parcel model: add adiabatic liquid water</span></a> and <a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">notebook download</a></p></li>
+<li><p><span class="xref std std-ref">adiabatic_water</span> and <a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">notebook download</a></p></li>
 </ul>
 <section id="final-preparation">
 <h4>Final preparation<a class="headerlink" href="#final-preparation" title="Permalink to this heading">#</a></h4>
@@ -1183,14 +1190,32 @@ pip install https://github.com/darothen/pyrcel.git
 <section id="id10">
 <h4>Worksheet<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Finish - <a class="reference internal" href="notebooks/dropgrow/dropgrow_2024_3.html#adiabatic-water"><span class="std std-ref">Parcel model: add adiabatic liquid water</span></a>  – <a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">notebook download</a></p></li>
+<li><p>Finish - <span class="xref std std-ref">adiabatic_water</span>  – <a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">notebook download</a></p></li>
 </ul>
 </section>
 <section id="assignments">
 <h4>Assignments<a class="headerlink" href="#assignments" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference internal" href="assignments/assignment8_cold_clouds.html#assignment-8"><span class="std std-ref">Assignment 8 – cold clouds</span></a>  – due today at midnight</p></li>
-<li><p><a class="reference internal" href="assignments/assignment9_precipitation.html#assignment-9"><span class="std std-ref">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</span></a></p></li>
+<li><p><a class="reference internal" href="assignments/assignment9_precipitation.html#assignment-9"><span class="std std-ref">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</span></a>  – due Tuesday at midnight</p></li>
+</ul>
+</section>
+</section>
+<section id="id11">
+<h3>Thursday<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.nytimes.com/2024/04/02/climate/global-warming-clouds-solar-geoengineering.html">NYtimes article on cloud brightening</a></p></li>
+</ul>
+<section id="from-tuesday">
+<h4>from Tuesday<a class="headerlink" href="#from-tuesday" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="notebooks/dropgrow/dropgrow_2024_3_solution.html#adiabatic-water-solution"><span class="std std-ref">Solution: Parcel model: add adiabatic liquid water</span></a> with <a class="reference external" href="https://www.dropbox.com/scl/fi/ymrutl28tqw2mcrfz4c64/dropgrow_2024_3_solution.ipynb?rlkey=lcwqrvdzynfepyo5uyck3cpb2&amp;dl=0">download</a></p></li>
+</ul>
+</section>
+<section id="new-worksheet">
+<h4>New worksheet<a class="headerlink" href="#new-worksheet" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="notebooks/mixing_line_calc.html#mixing-line-calc"><span class="std std-ref">Mixing line workbook</span></a> and  <a class="reference external" href="https://www.dropbox.com/scl/fi/b9h5qne3eufs4r2s10q5x/mixing_line_calc.ipynb?rlkey=8072k8iiny4fuzqwx4b1jfre3&amp;dl=0">workbook download</a></p></li>
 </ul>
 </section>
 </section>
@@ -1375,6 +1400,11 @@ pip install https://github.com/darothen/pyrcel.git
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Tuesday</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Worksheet</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assignments">Assignments</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Thursday</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-tuesday">from Tuesday</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-worksheet">New worksheet</a></li>
 </ul>
 </li>
 </ul>

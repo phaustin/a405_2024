@@ -527,4 +527,16 @@ Question 3: Lohmann problem 4 page 250:
 #### Assignments
 
 - {ref}`assignment_8`  -- due today at midnight
-- {ref}`assignment_9`
+- {ref}`assignment_9`  -- due Tuesday at midnight
+
+### Thursday
+
+- [NYtimes article on cloud brightening](https://www.nytimes.com/2024/04/02/climate/global-warming-clouds-solar-geoengineering.html)
+
+#### from Tuesday
+
+- {ref}`adiabatic_water_solution` with [download](https://www.dropbox.com/scl/fi/ymrutl28tqw2mcrfz4c64/dropgrow_2024_3_solution.ipynb?rlkey=lcwqrvdzynfepyo5uyck3cpb2&dl=0)
+  
+#### New worksheet
+
+- {ref}`mixing_line_calc` and  [workbook download](https://www.dropbox.com/scl/fi/b9h5qne3eufs4r2s10q5x/mixing_line_calc.ipynb?rlkey=8072k8iiny4fuzqwx4b1jfre3&dl=0)

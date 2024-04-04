@@ -1,0 +1,871 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Mixing line workbook &#8212; ATSC 405 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/mixing_line_calc';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/mixing_line_calc.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="entropy_theta_part2.html" />
+    <link rel="prev" title="Parcel model: add adiabatic liquid water" href="dropgrow/dropgrow_2024_3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ATSC 405 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    ATSC 405 syllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics check2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../learning_goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html">Course schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_install.html">Python links</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&amp;dl=0">Thompkins text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&amp;dl=0">Wallace and Hobbs chapter 6</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_notes.html">Week notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2/hydrostat.html">Week2: Hydrostatic balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3/derivs_and_ints.html">week3: working with numpy arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../assignments/adiabatic_box.html">Adiabatic Box – preliminary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&amp;dl=0">adiabatic_box_handin.in -- download link for ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/hydrostatic_2024_handin.html">Assign 2: Scale heights for typical atmospheric soundings</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/assignment5_kohler_students.html">Assignment 5  – Due Friday March 15 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/assignment6_stability.html">Assignment 6  – Due Tuesday March 19 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/assignment7_droplets.html">Assignment 7  – Due Tuesday March 26 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/assignment8_cold_clouds.html">Assignment 8 – cold clouds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/assignment9_precipitation.html">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="week2/skew_coords_solution.html">Week2: Theromodynamic diagrams worksheet – solution</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&amp;dl=0">Download skew_coords_solution.ipynb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ze49m63z5gbnombcgk2gh/xarray-intro.ipynb?rlkey=sa86yjsi3l05bq8v54j6yxjtz&amp;dl=0">download xarray-intro.ipynb</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4/tropical_clouds_profiles.html">Tropical cloud profiles</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5/moist_adiabats.html">Moist adiabats and the LCL</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&amp;dl=0">tropical_engine_solution.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/mixing_line_example.html">Mixing line example</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&amp;dl=0">mixing_line_example.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/cape_part1.html">Cape Part 1</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convec_instability.html">Convective instability – lifting demo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="two_compartments.html">Two compartment problem`</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a405_mid_2024_solution.html">2024 midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/kohler_equilibrium_students.html">Kohler Equilibrium Worksheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/k0rwtddqk6d2147o0tjo3/kohler_equilibrium_students.ipynb?rlkey=0xtb32wffahirqc8qb9krk6lj&amp;dl=0">kohler_equilibrium_studens.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entraining_plume.html">Modeling an entraining cloud updraft</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&amp;dl=0 l=0">entraining_plume.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worksheets/plot_entrainment.html">Plotting the entraining plume</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&amp;dl=0">plot_entrainment.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="koehler2_worksheet.html">Koehler equilibrium worksheet II</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/4d1xiae00lfocvmnhmr1g/koehler2_worksheet.ipynb?rlkey=zshmwicjmv0ajnw4zenzqpyvc&amp;dl=0">koehler2_worksheet.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropgrow/dropgrow_2024.html">Parcel model integration, constant velocity case</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&amp;dl=0">download dropgrow_2024.ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropgrow/dropgrow_2024_2.html">Update: Parcel model compute additional variables</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/0u6y7ufkaq4mbr1zavb0c/dropgrow_2024_2.ipynb?rlkey=zizniwhtr93orybz6himzwk36&amp;dl=0">dropgrow_2024_2.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marshallpalmer.html">Marshall-Palmer Distribution</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/xkrtyffpt9ignyesgqmql/marshallpalmer.ipynb?rlkey=2li0db7er3apivzssb5z6j906&amp;dl=0">marshall_palmer.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ice_saturation.html">saturation vapor pressure over ice</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/y88fsha1hnt424erg4rdf/ice_saturation.ipynb?rlkey=wqahwrgah05xifrjbwti1sits&amp;dl=0">ice_satuation.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyrcel/basic_run.html">Pyrcel Example: Basic Run</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/1f7n48b2vd7jwocsnov4n/basic_run.ipynb?rlkey=apws9hpk249fgcbrus80vrr6m&amp;dl=0">pyrcel basic_run.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyrcel/activate.html">Pyrcel example: Activation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&amp;dl=0">pyrcel activate.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropgrow/dropgrow_2024_3.html">Parcel model: add adiabatic liquid water</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">adiabatic liquid water worksheet download</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mixing line workbook</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&amp;dl=0">Week2 - Kinetic Temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&amp;dl=0">First law of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&amp;dl=0">Entropy and potential temperature</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&amp;dl=0">Weighted averages and scale heights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy_theta_part2.html">Entropy and potential temperature – including liquid and vapor</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&amp;dl=0">Buoyancy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/puuzbbzszhue73nrew726/maxwell.pdf?rlkey=fntdkgs90o4otc3s6lme85mz3&amp;dl=0">Maxwell relation notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/o7d278acumkgmwe4y6qlu/clausius.pdf?rlkey=ktd5fvdwaz7ishuxozwmf6kwa&amp;dl=0">Clausius-Clapyron notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&amp;dl=0">Schroeder pp. 159-162</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&amp;dl=0">virtural temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&amp;dl=0">Moist static energy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrainment notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&amp;dl=0">wet bulb temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ezproxy.library.ubc.ca/login?url=http://www.nature.com/doifinder/10.1038/nphys1340">Single drop fragmentation - Villermaux and Bossa (2009)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/3nvjbh208o5ndeq8io3e1/equil_super.pdf?rlkey=zot8e90vynl5mvpul194tud3w&amp;dl=0">equilibrium supersaturation in a constant updraft</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aeva3yk68w8j7u69wmvhx/crystal_diffusion.pdf?rlkey=ruatsjms61izb06ef5opm3q42&amp;dl=0">crystal growth via vapor diffusion</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mid term</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="thompkins_practice.html">Tompkins practice quesitons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/xkyzaeqr7fmyk9weci8ny/thompkins_practice.ipynb?rlkey=3ngg8tk7ynxsftlp57ov0wxtp&amp;dl=0">Thompkins practice problems download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/27kzivl2a0vt0qmw9hg7k/a405_mid_2016.pdf?rlkey=10rdsl2p1jgm5qefu1g0jbt6g&amp;dl=0">2016 midterm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assign4_midterm_sols.html">Assignment 4: midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/mixing_line_calc.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mixing line workbook</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mixing line workbook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-a-little-rock-sounding">Get a little rock sounding</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-theta-e-of-the-lcl">find the <span class="math notranslate nohighlight">\(\theta_{e}\)</span> of the  LCL</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-surface-values-to-mks">convert surface values to mks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-lcl-of-this-air">What is the LCL of this air?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-sfc-rv-values-and-check-that-they-match-lcl">find sfc rv values and check that they match lcl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-surface-theta-e">Find surface <span class="math notranslate nohighlight">\(\theta_e\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-density-of-100-mixtures-of-cloud-and-environment-at-600-hpa">find the density of 100 mixtures of cloud and environment at 600 hPa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-environmental-rv-and-theta-e-at-600-hpa">find the environmental rv and <span class="math notranslate nohighlight">\(\theta_e\)</span> at 600 hPa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1-make-100-mixtures">Problem 1: Make 100 mixtures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2-find-tv-for-each-mixture">Problem 2: Find Tv for each mixture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-plot-of-fenv-vs-tv">Make a plot of fenv vs. Tv</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="mixing-line-workbook">
+<span id="mixing-line-calc"></span><h1>Mixing line workbook<a class="headerlink" href="#mixing-line-workbook" title="Permalink to this heading">#</a></h1>
+<p>In the first part of the the term we calculated the temperature of a cloud-environment mixture using
+a tephigram.  In this notebook we calculate the virtural temperature of 100 different
+mixtures using the thermlim functions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">a405.thermo.constants</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a405.soundings.wyominglib</span> <span class="kn">import</span> <span class="n">write_soundings</span><span class="p">,</span> <span class="n">read_soundings</span>
+<span class="kn">from</span> <span class="nn">a405.thermo.thermlib</span> <span class="kn">import</span> <span class="p">(</span><span class="n">find_Tmoist</span><span class="p">,</span><span class="n">find_rsat</span><span class="p">,</span><span class="n">find_Tv</span><span class="p">,</span><span class="n">find_lcl</span><span class="p">,</span><span class="n">find_thetaet</span><span class="p">,</span>
+                                  <span class="n">tinvert_thetae</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="get-a-little-rock-sounding">
+<h2>Get a little rock sounding<a class="headerlink" href="#get-a-little-rock-sounding" title="Permalink to this heading">#</a></h2>
+<p>set get_data=True the first time through, then False for subsequent runs with the stored sounding in save_sounding.csv and metada.json</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_data</span><span class="o">=</span><span class="kc">False</span>
+<span class="n">metafile</span><span class="o">=</span><span class="s1">&#39;metadata.json&#39;</span>
+<span class="k">if</span> <span class="n">get_data</span><span class="p">:</span>
+    <span class="n">values</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;naconf&#39;</span><span class="p">,</span><span class="n">year</span><span class="o">=</span><span class="s1">&#39;2012&#39;</span><span class="p">,</span><span class="n">month</span><span class="o">=</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;0100&#39;</span><span class="p">,</span><span class="n">stop</span><span class="o">=</span><span class="s1">&#39;3000&#39;</span><span class="p">,</span><span class="n">station</span><span class="o">=</span><span class="s1">&#39;72340&#39;</span><span class="p">)</span>
+    <span class="n">write_soundings</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;littlerock&#39;</span><span class="p">)</span>
+    <span class="n">soundings</span><span class="o">=</span> <span class="n">read_soundings</span><span class="p">(</span><span class="s1">&#39;littlerock&#39;</span><span class="p">)</span>
+    <span class="n">the_time</span><span class="o">=</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">sounding</span><span class="o">=</span><span class="n">soundings</span><span class="p">[</span><span class="s1">&#39;sounding_dict&#39;</span><span class="p">][</span><span class="n">the_time</span><span class="p">]</span>
+    <span class="n">sounding</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">soundingfile</span><span class="p">)</span>
+    <span class="n">title_string</span><span class="o">=</span><span class="n">soundings</span><span class="p">[</span><span class="s1">&#39;attributes&#39;</span><span class="p">][</span><span class="s1">&#39;header&#39;</span><span class="p">]</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">title_string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39; Observations at&#39;</span><span class="p">)</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">title_string</span><span class="p">[:</span><span class="n">index</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;location: </span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">soundings</span><span class="o">=</span> <span class="n">read_soundings</span><span class="p">(</span><span class="s1">&#39;littlerock&#39;</span><span class="p">)</span>
+<span class="n">all_sounds</span> <span class="o">=</span> <span class="n">soundings</span><span class="p">[</span><span class="s1">&#39;sounding_dict&#39;</span><span class="p">]</span>
+<span class="n">all_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">all_sounds</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># all_keys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">the_sound</span> <span class="o">=</span> <span class="n">all_sounds</span><span class="p">[(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="find-the-theta-e-of-the-lcl">
+<h1>find the <span class="math notranslate nohighlight">\(\theta_{e}\)</span> of the  LCL<a class="headerlink" href="#find-the-theta-e-of-the-lcl" title="Permalink to this heading">#</a></h1>
+<section id="convert-surface-values-to-mks">
+<h2>convert surface values to mks<a class="headerlink" href="#convert-surface-values-to-mks" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># find thetae of the surface air, at index 0</span>
+<span class="c1">#</span>
+<span class="n">sfc_press</span><span class="p">,</span><span class="n">sfc_temp</span><span class="p">,</span><span class="n">sfc_td</span> <span class="o">=</span><span class="p">[</span><span class="n">the_sound</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;pres&#39;</span><span class="p">,</span><span class="s1">&#39;temp&#39;</span><span class="p">,</span><span class="s1">&#39;dwpt&#39;</span><span class="p">]]</span>
+<span class="c1">#</span>
+<span class="n">sfc_press</span><span class="p">,</span><span class="n">sfc_temp</span><span class="p">,</span><span class="n">sfc_td</span> <span class="o">=</span> <span class="n">sfc_press</span><span class="o">*</span><span class="mf">100.</span><span class="p">,</span><span class="n">sfc_temp</span><span class="o">+</span><span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">,</span><span class="n">sfc_td</span><span class="o">+</span><span class="n">c</span><span class="o">.</span><span class="n">Tc</span>
+<span class="n">sfc_press</span><span class="p">,</span> <span class="n">sfc_temp</span><span class="p">,</span><span class="n">sfc_td</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(98800.0, 309.95, 291.95)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-the-lcl-of-this-air">
+<h2>What is the LCL of this air?<a class="headerlink" href="#what-is-the-lcl-of-this-air" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tlcl</span><span class="p">,</span> <span class="n">plcl</span><span class="o">=</span><span class="n">find_lcl</span><span class="p">(</span><span class="n">sfc_td</span><span class="p">,</span> <span class="n">sfc_temp</span><span class="p">,</span><span class="n">sfc_press</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;found Tlcl=</span><span class="si">{</span><span class="n">Tlcl</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> K, plcl=</span><span class="si">{</span><span class="n">plcl</span><span class="o">*</span><span class="mf">1.e-2</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> hPa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>found Tlcl=287.87 K, plcl=761.92 hPa
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-sfc-rv-values-and-check-that-they-match-lcl">
+<h2>find sfc rv values and check that they match lcl<a class="headerlink" href="#find-sfc-rv-values-and-check-that-they-match-lcl" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sfc_rvap</span> <span class="o">=</span> <span class="n">find_rsat</span><span class="p">(</span><span class="n">sfc_td</span><span class="p">,</span><span class="n">sfc_press</span><span class="p">)</span>
+<span class="n">lcl_rvap</span> <span class="o">=</span> <span class="n">find_rsat</span><span class="p">(</span><span class="n">Tlcl</span><span class="p">,</span><span class="n">plcl</span><span class="p">)</span>
+<span class="n">sfc_rvap</span><span class="p">,</span> <span class="n">lcl_rvap</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.013959777747524393, 0.013967928461792234)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-surface-theta-e">
+<h2>Find surface <span class="math notranslate nohighlight">\(\theta_e\)</span><a class="headerlink" href="#find-surface-theta-e" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sfc_thetae</span><span class="o">=</span><span class="n">find_thetaet</span><span class="p">(</span><span class="n">sfc_td</span><span class="p">,</span><span class="n">sfc_rvap</span><span class="p">,</span><span class="n">sfc_temp</span><span class="p">,</span><span class="n">sfc_press</span><span class="p">)</span>
+<span class="n">sfc_thetae</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>351.24772810478737
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># find the index for 700 Pa/7 hPa pressure -- searchsorted requires</span>
+<span class="c1"># the pressure array to be increasing, so flip it for the search,</span>
+<span class="c1"># then flip the index.  Above 100 hPa thetae goes bananas, so</span>
+<span class="c1"># so trim so we only have good values</span>
+<span class="c1">#</span>
+<span class="n">press</span> <span class="o">=</span> <span class="n">the_sound</span><span class="p">[</span><span class="s1">&#39;pres&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">100.</span>
+<span class="n">toplim</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">press</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">press</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mf">.7e4</span><span class="p">)</span>
+<span class="n">clipped_press</span><span class="o">=</span><span class="n">press</span><span class="p">[:</span><span class="n">toplim</span><span class="p">]</span>
+<span class="c1">#</span>
+<span class="c1"># find temps along that adiabat</span>
+<span class="c1">#</span>
+<span class="n">adia_temps</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">find_Tmoist</span><span class="p">(</span><span class="n">sfc_thetae</span><span class="p">,</span><span class="n">the_press</span><span class="p">)</span> 
+                      <span class="k">for</span> <span class="n">the_press</span> <span class="ow">in</span> <span class="n">clipped_press</span><span class="p">])</span>
+<span class="c1">#</span>
+<span class="c1"># find the liquid water content for the adiabat by subtracting</span>
+<span class="c1"># the vapor mixing ratio from the sfc mixing ratio</span>
+<span class="c1">#</span>
+<span class="n">adia_rvaps</span> <span class="o">=</span> <span class="n">find_rsat</span><span class="p">(</span><span class="n">adia_temps</span><span class="p">,</span><span class="n">clipped_press</span><span class="p">)</span>
+<span class="n">adia_rls</span> <span class="o">=</span> <span class="n">sfc_rvap</span> <span class="o">-</span> <span class="n">adia_rvaps</span>
+<span class="n">env_temps</span> <span class="o">=</span> <span class="p">(</span><span class="n">the_sound</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">)[:</span><span class="n">toplim</span><span class="p">]</span>
+<span class="n">env_Td</span> <span class="o">=</span> <span class="p">(</span><span class="n">the_sound</span><span class="p">[</span><span class="s1">&#39;dwpt&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span><span class="p">)[:</span><span class="n">toplim</span><span class="p">]</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">the_sound</span><span class="p">[</span><span class="s1">&#39;hght&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[:</span><span class="n">toplim</span><span class="p">]</span>
+<span class="n">pairs</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">env_Td</span><span class="p">,</span><span class="n">clipped_press</span><span class="p">)</span>
+<span class="n">env_rvaps</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">find_rsat</span><span class="p">(</span><span class="n">td</span><span class="p">,</span><span class="n">the_press</span><span class="p">)</span> <span class="k">for</span> <span class="n">td</span><span class="p">,</span><span class="n">the_press</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">])</span>
+<span class="n">env_Tv</span> <span class="o">=</span> <span class="n">find_Tv</span><span class="p">(</span><span class="n">env_temps</span><span class="p">,</span><span class="n">env_rvaps</span><span class="p">)</span>
+<span class="n">adia_Tv</span> <span class="o">=</span> <span class="n">find_Tv</span><span class="p">(</span><span class="n">adia_temps</span><span class="p">,</span><span class="n">adia_rvaps</span><span class="p">,</span><span class="n">adia_rls</span><span class="p">)</span>
+<span class="n">press_hPa</span> <span class="o">=</span> <span class="n">clipped_press</span><span class="o">*</span><span class="mf">1.e-2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-the-density-of-100-mixtures-of-cloud-and-environment-at-600-hpa">
+<h2>find the density of 100 mixtures of cloud and environment at 600 hPa<a class="headerlink" href="#find-the-density-of-100-mixtures-of-cloud-and-environment-at-600-hpa" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="find-the-environmental-rv-and-theta-e-at-600-hpa">
+<h2>find the environmental rv and <span class="math notranslate nohighlight">\(\theta_e\)</span> at 600 hPa<a class="headerlink" href="#find-the-environmental-rv-and-theta-e-at-600-hpa" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mix_level</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">clipped_press</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mf">600.e2</span><span class="p">)</span>
+<span class="n">index</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">clipped_press</span><span class="p">)</span> <span class="o">-</span> <span class="n">mix_level</span>
+<span class="n">mix_press_600</span><span class="p">,</span> <span class="n">env_Td_600</span><span class="p">,</span> <span class="n">env_temp_600</span> <span class="o">=</span> <span class="n">clipped_press</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">env_Td</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">env_temps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pressure, </span><span class="si">{</span><span class="n">mix_press_600</span><span class="o">*</span><span class="mf">1.e-2</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> hPa  dewpoint </span><span class="si">{</span><span class="n">env_Td_600</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> K , temp </span><span class="si">{</span><span class="n">env_temp_600</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> K&quot;</span><span class="p">)</span>
+<span class="n">env_rvap</span> <span class="o">=</span> <span class="n">env_rvaps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="n">env_thetae</span> <span class="o">=</span> <span class="n">find_thetaet</span><span class="p">(</span><span class="n">env_Td_600</span><span class="p">,</span><span class="n">env_rvap</span><span class="p">,</span><span class="n">env_temp_600</span><span class="p">,</span><span class="n">mix_press_600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pressure, 597.0 hPa  dewpoint 264.8 K , temp 275.8 K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="problem-1-make-100-mixtures">
+<h2>Problem 1: Make 100 mixtures<a class="headerlink" href="#problem-1-make-100-mixtures" title="Permalink to this heading">#</a></h2>
+<p>In the cell below, construct a list of 100 pairs of (<span class="math notranslate nohighlight">\(\theta_e\)</span>, <span class="math notranslate nohighlight">\(r_T\)</span>) for 100 mixtures of
+cloud and environmental air at 600 hPa</p>
+<p>Find the virtual temperature for each mixture, and make a plot of fraction of environmental air vs virtual temperature</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cloud thetae </span><span class="si">{</span><span class="n">sfc_thetae</span><span class="si">:</span><span class="s1">5.3f</span><span class="si">}</span><span class="s1"> K, env_thetae </span><span class="si">{</span><span class="n">env_thetae</span><span class="si">:</span><span class="s1">5.3f</span><span class="si">}</span><span class="s1"> K&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cloud rt </span><span class="si">{</span><span class="n">sfc_rvap</span><span class="si">:</span><span class="s1">5.3f</span><span class="si">}</span><span class="s1"> g/kg, env rt </span><span class="si">{</span><span class="n">env_rvap</span><span class="si">:</span><span class="s1">5.3f</span><span class="si">}</span><span class="s1"> g/kg&#39;</span><span class="p">)</span>
+<span class="n">fenv</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1"># make 100 mixtures for the 100 fenv values</span>
+<span class="c1">#</span>
+<span class="c1"># your code here</span>
+<span class="c1">#</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cloud thetae 351.248 K, env_thetae 329.579 K
+cloud rt 0.014 g/kg, env rt 0.003 g/kg
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="problem-2-find-tv-for-each-mixture">
+<h2>Problem 2: Find Tv for each mixture<a class="headerlink" href="#problem-2-find-tv-for-each-mixture" title="Permalink to this heading">#</a></h2>
+<p>Create a list called Tvlist that holds Tv for each mixture</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># find the virtual temperature for each mixture and append</span>
+<span class="c1"># to a list called Tvlist</span>
+<span class="c1">#</span>
+<span class="n">Tvlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1">#</span>
+<span class="c1"># your code here</span>
+<span class="c1">#</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="make-a-plot-of-fenv-vs-tv">
+<h2>Make a plot of fenv vs. Tv<a class="headerlink" href="#make-a-plot-of-fenv-vs-tv" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig,ax = plt.subplots(1,1,figsize=(10,8))</span>
+<span class="c1"># ax.plot(fenv,Tvlist)</span>
+<span class="c1"># title=f&#39;cloud environment mixing at {mix_press_600*1.e-2:.1f} hPa&#39;</span>
+<span class="c1"># out=ax.set(xlabel=&#39;fraction of environmental air&#39;,ylabel=&#39;Mixture Tv (K)&#39;,title=title)</span>
+<span class="c1"># ax.grid(True,which=&#39;both&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="dropgrow/dropgrow_2024_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Parcel model: add adiabatic liquid water</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="entropy_theta_part2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mixing line workbook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-a-little-rock-sounding">Get a little rock sounding</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-theta-e-of-the-lcl">find the <span class="math notranslate nohighlight">\(\theta_{e}\)</span> of the  LCL</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-surface-values-to-mks">convert surface values to mks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-lcl-of-this-air">What is the LCL of this air?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-sfc-rv-values-and-check-that-they-match-lcl">find sfc rv values and check that they match lcl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-surface-theta-e">Find surface <span class="math notranslate nohighlight">\(\theta_e\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-density-of-100-mixtures-of-cloud-and-environment-at-600-hpa">find the density of 100 mixtures of cloud and environment at 600 hPa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-environmental-rv-and-theta-e-at-600-hpa">find the environmental rv and <span class="math notranslate nohighlight">\(\theta_e\)</span> at 600 hPa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1-make-100-mixtures">Problem 1: Make 100 mixtures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2-find-tv-for-each-mixture">Problem 2: Find Tv for each mixture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-plot-of-fenv-vs-tv">Make a plot of fenv vs. Tv</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Philip Austin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
