@@ -536,10 +536,9 @@ lv = find_lv(temp)
 hlout0 = c.cpd*temp + c.g0*z0
 new_df2 = new_df.apply(hlcalc,args=(hlout0,),axis=1)
 fig,ax = plt.subplots(1,1)
-ax.plot('hl_diff',data = new_df2)
-ax.set_title("hl - hl0")
-ax.set_xlabel("time (s)")
-ax.set_ylabel("hl difference (J/kg)");
+out=ax.set(title = "hl - hl0",xlabel="time (s)", 
+           ylabel = "hl difference (J/kg)")
+ax.plot('hl_diff',data = new_df2);
 ```
 
 ```{code-cell} ipython3
@@ -582,10 +581,10 @@ new_df3 = new_df.apply(adia_calc,args=(thetae0, rt0),axis=1)
 ```{code-cell} ipython3
 fig, ax =  plt.subplots(1,1)
 rl_diff = new_df3['rldiff'].to_numpy()*1.e3
-ax.plot(rl_diff)
 ax.set_title("rl - adiabatic liquid water")
 ax.set_xlabel("time (s)")
-ax.set_ylabel("rl difference (g/kg)");
+ax.set_ylabel("rl difference (g/kg)")
+ax.plot(rl_diff);
 ```
 
 ```{code-cell} ipython3

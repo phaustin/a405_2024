@@ -110,9 +110,10 @@ parts:
     - file: notebooks/pyrcel/activate.md
     - url: https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&dl=0
       title: pyrcel activate.ipynb download
-    - file: notebooks/dropgrow/dropgrow_2024_3.md
+    - file:  notebooks/dropgrow/dropgrow_2024_3_solution.md
     - url: https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&dl=0
       title: adiabatic liquid water worksheet download
+    - file: notebooks/mixing_line_calc.md
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
