@@ -42,29 +42,16 @@ set get_data=True the first time through, then False for subsequent runs with th
 
 ```{code-cell} ipython3
 get_data=False
-metafile='metadata.json'
 if get_data:
     values=dict(region='naconf',year='2012',month='7',start='0100',stop='3000',station='72340')
     write_soundings(values, 'littlerock')
     soundings= read_soundings('littlerock')
     the_time=(2012,7,17,0)
     sounding=soundings['sounding_dict'][the_time]
-    sounding.to_csv(soundingfile)
     title_string=soundings['attributes']['header']
     index=title_string.find(' Observations at')
     location=title_string[:index]
     print(f'location: {location}')
-    units=soundings['attributes']['units'].split(';')
-    units_dict={}
-    for count,var in enumerate(sounding.columns[1:]):
-        units_dict[var]=units[count]
-    soundings['attributes']['location']=location
-    soundings['attributes']['units']=units
-    soundings['attributes']['time']=the_time
-    soundings['attributes']['history']='written by mixing_line_calc'
-    with open(metafile,'w') as outfile:
-        json.dump(soundings['attributes'],outfile,indent=4)
-    attributes=soundings['attributes']
 else:
     soundings= read_soundings('littlerock')
 all_sounds = soundings['sounding_dict']
@@ -155,25 +142,19 @@ adia_Tv = find_Tv(adia_temps,adia_rvaps,adia_rls)
 press_hPa = clipped_press*1.e-2
 ```
 
-```{code-cell} ipython3
-from a405.thermo.thermlib import tinvert_thetae
-```
-
 ## find the density of 100 mixtures of cloud and environment at 600 hPa
 
 +++
 
-## find the enviromental rv and $\theta_e$ at 600 hPa
+## find the environmental rv and $\theta_e$ at 600 hPa
 
 ```{code-cell} ipython3
 mix_level=np.searchsorted(clipped_press[::-1],600.e2)
 index=len(clipped_press) - mix_level
-mix_press = clipped_press[index]
-mix_press_600, env_Td_600, env_temp_600 = clipped_press[index]*1.e-2,env_Td[index],env_temps[index]
-print(f"pressure, {mix_press_600:5.3g} hPa  dewpoint {env_Td_600:5.3g} K , temp {env_temp_600:5.3g} K")
+mix_press_600, env_Td_600, env_temp_600 = clipped_press[index],env_Td[index],env_temps[index]
+print(f"pressure, {mix_press_600*1.e-2:.1f} hPa  dewpoint {env_Td_600:.1f} K , temp {env_temp_600:.1f} K")
 env_rvap = env_rvaps[index]
-env_thetae = find_thetaet(env_Td[index],env_rvaps[index],env_temps[index],\
-                          clipped_press[index])
+env_thetae = find_thetaet(env_Td_600,env_rvap,env_temp_600,mix_press_600)
 ```
 
 ## Make 100 mixtures
@@ -207,7 +188,7 @@ Create a list called Tvlist that holds Tv for each mixture
 #
 Tvlist = []
 for thetae,rtot in pairs:
-    temp,rv,rl = tinvert_thetae(thetae,rtot,mix_press)
+    temp,rv,rl = tinvert_thetae(thetae,rtot,mix_press_600)
     Tvlist.append(find_Tv(temp,rv,rl))
 ```
 
@@ -216,7 +197,7 @@ for thetae,rtot in pairs:
 ```{code-cell} ipython3
 fig,ax = plt.subplots(1,1,figsize=(10,8))
 ax.plot(fenv,Tvlist)
-title=f'cloud environment mixing at {mix_press_600:.1f} hPa'
+title=f'cloud environment mixing at {mix_press_600*1.e-2:.1f} hPa'
 out=ax.set(xlabel='fraction of environmental air',ylabel='Mixture Tv (K)',title=title)
 ax.grid(True,which='both')
 ```
