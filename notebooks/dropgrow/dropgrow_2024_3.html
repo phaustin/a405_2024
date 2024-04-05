@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/dropgrow/dropgrow_2024_3.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Mixing line workbook" href="../mixing_line_calc.html" />
+    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="../entropy_theta_part2.html" />
     <link rel="prev" title="Pyrcel example: Activation" href="../pyrcel/activate.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -194,7 +194,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment6_stability.html">Assignment 6  – Due Tuesday March 19 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment7_droplets.html">Assignment 7  – Due Tuesday March 26 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment8_cold_clouds.html">Assignment 8 – cold clouds</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../assignments/assignment9_precipitation.html">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="current nav bd-sidenav">
@@ -251,8 +250,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&amp;dl=0">pyrcel activate.ipynb download</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Parcel model: add adiabatic liquid water</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">adiabatic liquid water worksheet download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mixing_line_calc.html">Mixing line workbook</a></li>
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -1011,7 +1008,7 @@ end of the vector: the temperature, pressure and height.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/92a078764ee1c8d3d2066ee144ddb0291b6306c0ab6def6a91239b6ac5bb3a94.png" src="../../_images/92a078764ee1c8d3d2066ee144ddb0291b6306c0ab6def6a91239b6ac5bb3a94.png" />
+<img alt="../../_images/e42a8ec501d24bffec5d2ab4787bd11e1e242ae42502d2f9b53eb864e4b61991.png" src="../../_images/e42a8ec501d24bffec5d2ab4787bd11e1e242ae42502d2f9b53eb864e4b61991.png" />
 </div>
 </div>
 </section>
@@ -1031,7 +1028,7 @@ end of the vector: the temperature, pressure and height.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/386abdd1ea5953e2cff353501fe5f2a40334cbc0763f1bfa1adb4958f8822c33.png" src="../../_images/386abdd1ea5953e2cff353501fe5f2a40334cbc0763f1bfa1adb4958f8822c33.png" />
+<img alt="../../_images/9dbe87600eaa37113584d460ed047b5e45f0f9665b7157dfebe4f9a31e9c247b.png" src="../../_images/9dbe87600eaa37113584d460ed047b5e45f0f9665b7157dfebe4f9a31e9c247b.png" />
 </div>
 </div>
 </section>
@@ -1110,7 +1107,7 @@ end of the vector: the temperature, pressure and height.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0d7bd8804ebd932d76a8408efa38e68485ef6a18abd93fc6fc27d62b66b70992.png" src="../../_images/0d7bd8804ebd932d76a8408efa38e68485ef6a18abd93fc6fc27d62b66b70992.png" />
+<img alt="../../_images/c6c290d8026efaf459b31af2d92b7eda8180e3e25467e72b5fe45c72b7e1b888.png" src="../../_images/c6c290d8026efaf459b31af2d92b7eda8180e3e25467e72b5fe45c72b7e1b888.png" />
 </div>
 </div>
 </section>
@@ -1149,7 +1146,7 @@ end of the vector: the temperature, pressure and height.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8acf9b60f1f2f1c08616da77d715e9b85bc4fe22ec49036cabcf1cad88144511.png" src="../../_images/8acf9b60f1f2f1c08616da77d715e9b85bc4fe22ec49036cabcf1cad88144511.png" />
+<img alt="../../_images/9cea2d96b1f93db1dbfb8c33be5e8a0a50f6ec456cec01afea092706375c5468.png" src="../../_images/9cea2d96b1f93db1dbfb8c33be5e8a0a50f6ec456cec01afea092706375c5468.png" />
 </div>
 </div>
 </section>
@@ -1235,11 +1232,11 @@ end of the vector: the temperature, pressure and height.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../mixing_line_calc.html"
+       href="../entropy_theta_part2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mixing line workbook</p>
+        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

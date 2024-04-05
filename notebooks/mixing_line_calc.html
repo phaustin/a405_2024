@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/notebooks/mixing_line_calc.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Entropy and potential temperature – including liquid and vapor" href="entropy_theta_part2.html" />
-    <link rel="prev" title="Parcel model: add adiabatic liquid water" href="dropgrow/dropgrow_2024_3.html" />
+    <link rel="next" title="Mixing line workbook" href="mixing_line_calc_solution.html" />
+    <link rel="prev" title="Solution: Parcel model: add adiabatic liquid water" href="dropgrow/dropgrow_2024_3_solution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -249,9 +249,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/1f7n48b2vd7jwocsnov4n/basic_run.ipynb?rlkey=apws9hpk249fgcbrus80vrr6m&amp;dl=0">pyrcel basic_run.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyrcel/activate.html">Pyrcel example: Activation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&amp;dl=0">pyrcel activate.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dropgrow/dropgrow_2024_3.html">Parcel model: add adiabatic liquid water</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropgrow/dropgrow_2024_3_solution.html">Solution: Parcel model: add adiabatic liquid water</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">adiabatic liquid water worksheet download</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Mixing line workbook</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="mixing_line_calc_solution.html">Mixing line workbook</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
@@ -283,6 +285,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assign4_midterm_sols.html">Assignment 4: midterm solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final exam</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&amp;dl=0">2016 final exam</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/whgxh7p3qyjkkhzrkp89u/a405_final_questions.pdf?rlkey=joifm7h14q6ns80wz9uzl4fzi&amp;dl=0">a405 final exam questions</a></li>
 </ul>
 
     </div>
@@ -500,11 +507,6 @@ mixtures using the thermlim functions</p>
     <span class="n">soundings</span><span class="o">=</span> <span class="n">read_soundings</span><span class="p">(</span><span class="s1">&#39;littlerock&#39;</span><span class="p">)</span>
     <span class="n">the_time</span><span class="o">=</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">sounding</span><span class="o">=</span><span class="n">soundings</span><span class="p">[</span><span class="s1">&#39;sounding_dict&#39;</span><span class="p">][</span><span class="n">the_time</span><span class="p">]</span>
-    <span class="n">sounding</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">soundingfile</span><span class="p">)</span>
-    <span class="n">title_string</span><span class="o">=</span><span class="n">soundings</span><span class="p">[</span><span class="s1">&#39;attributes&#39;</span><span class="p">][</span><span class="s1">&#39;header&#39;</span><span class="p">]</span>
-    <span class="n">index</span><span class="o">=</span><span class="n">title_string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39; Observations at&#39;</span><span class="p">)</span>
-    <span class="n">location</span><span class="o">=</span><span class="n">title_string</span><span class="p">[:</span><span class="n">index</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;location: </span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">soundings</span><span class="o">=</span> <span class="n">read_soundings</span><span class="p">(</span><span class="s1">&#39;littlerock&#39;</span><span class="p">)</span>
 <span class="n">all_sounds</span> <span class="o">=</span> <span class="n">soundings</span><span class="p">[</span><span class="s1">&#39;sounding_dict&#39;</span><span class="p">]</span>
@@ -764,20 +766,20 @@ cloud rt 0.014 g/kg, env rt 0.003 g/kg
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dropgrow/dropgrow_2024_3.html"
+       href="dropgrow/dropgrow_2024_3_solution.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Parcel model: add adiabatic liquid water</p>
+        <p class="prev-next-title">Solution: Parcel model: add adiabatic liquid water</p>
       </div>
     </a>
     <a class="right-next"
-       href="entropy_theta_part2.html"
+       href="mixing_line_calc_solution.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Entropy and potential temperature – including liquid and vapor</p>
+        <p class="prev-next-title">Mixing line workbook</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

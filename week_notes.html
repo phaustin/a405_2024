@@ -253,6 +253,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">adiabatic liquid water worksheet download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/mixing_line_calc.html">Mixing line workbook</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="notebooks/mixing_line_calc_solution.html">Mixing line workbook – solution</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
 <ul class="nav bd-sidenav">
@@ -283,6 +285,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/assign4_midterm_sols.html">Assignment 4: midterm solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final exam</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&amp;dl=0">2016 final exam</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/whgxh7p3qyjkkhzrkp89u/a405_final_questions.pdf?rlkey=joifm7h14q6ns80wz9uzl4fzi&amp;dl=0">a405 final exam questions</a></li>
 </ul>
 
     </div>
@@ -552,6 +559,10 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-worksheet">New worksheet</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Friday</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">For Tuesday</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -595,8 +606,8 @@ document.write(`
 <h4>Lecture 3 Reading notes<a class="headerlink" href="#lecture-3-reading-notes" title="Permalink to this heading">#</a></h4>
 <ul>
 <li><p>Thompkins equation 1.7</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01cf8773-d740-4a68-9565-bd82caf740f7">
-<span class="eqno">(1)<a class="headerlink" href="#equation-01cf8773-d740-4a68-9565-bd82caf740f7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-db6a2278-1a09-49b4-a81e-bb733a7e73af">
+<span class="eqno">(1)<a class="headerlink" href="#equation-db6a2278-1a09-49b4-a81e-bb733a7e73af" title="Permalink to this equation">#</a></span>\[\begin{align}
     pV &amp;= NkT \\
     p &amp;= \rho R_d T
     \end{align}\]</div>
@@ -605,8 +616,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.9 – first law for internal energy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c62c1af9-c2c4-4212-a813-1cbcfa541d61">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c62c1af9-c2c4-4212-a813-1cbcfa541d61" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-065a5e91-3b7a-4f44-9f74-8186f782e233">
+<span class="eqno">(2)<a class="headerlink" href="#equation-065a5e91-3b7a-4f44-9f74-8186f782e233" title="Permalink to this equation">#</a></span>\[\begin{align}
     du &amp;= dq + dw \\
     du &amp;= dq - p\,dv
     \end{align}\]</div>
@@ -615,8 +626,8 @@ document.write(`
 </ul>
 </li>
 <li><p>Thompkins equation 1.25 first law for enthalpy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-308ce778-358c-454c-ae7e-b7ebb4bddc98">
-<span class="eqno">(3)<a class="headerlink" href="#equation-308ce778-358c-454c-ae7e-b7ebb4bddc98" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-99e8e80e-4c9c-42d5-b8d8-04d4dc26fb67">
+<span class="eqno">(3)<a class="headerlink" href="#equation-99e8e80e-4c9c-42d5-b8d8-04d4dc26fb67" title="Permalink to this equation">#</a></span>\[\begin{align}
     dq &amp;= c_p\,dT - v\,dp \\
     dh &amp;= dq + v\,dp
     \end{align}\]</div>
@@ -862,7 +873,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <li><p>Notes on entropy for a air/vapor/liquid/mixture -  <a class="reference internal" href="notebooks/entropy_theta_part2.html#entropy-part2"><span class="std std-ref">Entropy and potential temperature – including liquid and vapor</span></a></p></li>
 <li><p>Solutiions posted</p>
 <ul>
-<li><p><a class="reference internal" href="notebooks/worksheets/tropical_engine_solution.html#tropical-heat-solution"><span class="std std-ref">Tropical Heat Engine - Solution</span></a></p></li>
+<li><p><span class="xref std std-ref">tropical_heat_solution</span></p></li>
 <li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/6qs2cqcy07lmod49o4cyw/taylor_mix_answer.pdf?rlkey=2bfovdzckdzau5spysyrky3cb&amp;dl=0">taylor mixing solution</a></p></li>
 <li><p>Go over midterm solutions <a class="reference internal" href="notebooks/assign4_midterm_sols.html#assign4-midterm-sol"><span class="std std-ref">Assignment 4: midterm solutions</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/thompkins_practice_answers.html#thompkins-answers"><span class="std std-ref">Tompkins practice quesitons – solutions</span></a></p></li>
@@ -889,7 +900,7 @@ Connect weighted averages and scale heights with the <a class="reference externa
 <section id="lecture-21-week-7-midterm">
 <h3>Lecture 21, week 7 midterm<a class="headerlink" href="#lecture-21-week-7-midterm" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span class="xref std std-ref">midterm_solutions_2024</span></p></li>
+<li><p><a class="reference internal" href="notebooks/a405_mid_2024_solution.html#midterm-solutions-2024"><span class="std std-ref">2024 midterm solutions</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -1167,7 +1178,8 @@ pip install https://github.com/darothen/pyrcel.git
 <section id="final-preparation">
 <h4>Final preparation<a class="headerlink" href="#final-preparation" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&amp;dl=0">2016 final exam</a></p></li>
+<li><p><a class="reference external" href="https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&amp;dl=0">2016 final exam</a>
+q</p></li>
 </ul>
 </section>
 <section id="id8">
@@ -1216,6 +1228,19 @@ pip install https://github.com/darothen/pyrcel.git
 <h4>New worksheet<a class="headerlink" href="#new-worksheet" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference internal" href="notebooks/mixing_line_calc.html#mixing-line-calc"><span class="std std-ref">Mixing line workbook</span></a> and  <a class="reference external" href="https://www.dropbox.com/scl/fi/b9h5qne3eufs4r2s10q5x/mixing_line_calc.ipynb?rlkey=8072k8iiny4fuzqwx4b1jfre3&amp;dl=0">workbook download</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id12">
+<h3>Friday<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="notebooks/mixing_line_calc_solution.html#mixing-line-calc-solution"><span class="std std-ref">Mixing line workbook – solution</span></a> and <a class="reference external" href="https://www.dropbox.com/scl/fi/1i99eulfugqe5qofn206z/mixing_line_calc_solution.ipynb?rlkey=qcwkf23fjm341mtncnmbw5gky&amp;dl=0">solution download</a></p></li>
+<li><p>Introduce <a class="reference external" href="https://www.dropbox.com/scl/fi/whgxh7p3qyjkkhzrkp89u/a405_final_questions.pdf?rlkey=joifm7h14q6ns80wz9uzl4fzi&amp;dl=0">a405 final exam practice questions</a></p></li>
+</ul>
+<section id="id13">
+<h4>For Tuesday<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Read <a class="reference external" href="https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&amp;dl=0">Wallace and Hobbs chapter 228-232 on collision-coalescence</a></p></li>
 </ul>
 </section>
 </section>
@@ -1405,6 +1430,10 @@ pip install https://github.com/darothen/pyrcel.git
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Thursday</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-tuesday">from Tuesday</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-worksheet">New worksheet</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Friday</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">For Tuesday</a></li>
 </ul>
 </li>
 </ul>

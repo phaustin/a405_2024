@@ -49,11 +49,6 @@ if get_data:
     soundings= read_soundings('littlerock')
     the_time=(2012,7,17,0)
     sounding=soundings['sounding_dict'][the_time]
-    sounding.to_csv(soundingfile)
-    title_string=soundings['attributes']['header']
-    index=title_string.find(' Observations at')
-    location=title_string[:index]
-    print(f'location: {location}')
 else:
     soundings= read_soundings('littlerock')
 all_sounds = soundings['sounding_dict']
