@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 (mixing_line_calc_solution)=
-# Mixing line workbook
+# Mixing line workbook -- solution
 
 In the first part of the the term we calculated the temperature of a cloud-environment mixture using
 a tephigram.  In this notebook we calculate the virtural temperature of 100 different

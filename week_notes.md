@@ -505,7 +505,7 @@ Question 3: Lohmann problem 4 page 250:
 #### Final preparation
 
 - [2016 final exam](https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&dl=0) 
-
+q
 #### For Tuesday
 
 - Read Lohamnn Section 6.6 on aerosol counters
@@ -540,3 +540,14 @@ Question 3: Lohmann problem 4 page 250:
 #### New worksheet
 
 - {ref}`mixing_line_calc` and  [workbook download](https://www.dropbox.com/scl/fi/b9h5qne3eufs4r2s10q5x/mixing_line_calc.ipynb?rlkey=8072k8iiny4fuzqwx4b1jfre3&dl=0)
+
+### Friday
+
+- {ref}`mixing_line_calc_solution` and [solution download](https://www.dropbox.com/scl/fi/1i99eulfugqe5qofn206z/mixing_line_calc_solution.ipynb?rlkey=qcwkf23fjm341mtncnmbw5gky&dl=0)
+
+- Introduce [a405 final exam practice questions](https://www.dropbox.com/scl/fi/whgxh7p3qyjkkhzrkp89u/a405_final_questions.pdf?rlkey=joifm7h14q6ns80wz9uzl4fzi&dl=0)
+
+#### For Tuesday 
+
+- Read [Wallace and Hobbs chapter 228-232 on collision-coalescence](https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&dl=0)
+

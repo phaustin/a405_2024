@@ -114,6 +114,7 @@ parts:
     - url: https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&dl=0
       title: adiabatic liquid water worksheet download
     - file: notebooks/mixing_line_calc.md
+    - file: notebooks/mixing_line_calc_solution.md
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
@@ -162,3 +163,10 @@ parts:
       title: 2012 midterm
     - file: notebooks/assign4_midterm_sols.md
     - file: notebooks/thompkins_practice_answers.md
+  - caption: Final exam
+    chapters:
+    - url: https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&dl=0
+      title: 2016 final exam
+    - url: https://www.dropbox.com/scl/fi/whgxh7p3qyjkkhzrkp89u/a405_final_questions.pdf?rlkey=joifm7h14q6ns80wz9uzl4fzi&dl=0
+      title: a405 final exam questions
+      
