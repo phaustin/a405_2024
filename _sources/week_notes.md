@@ -559,7 +559,7 @@ q
 
 - [Brief note on vapor time constant](https://www.dropbox.com/scl/fi/2ri6jr3ln9zxv2ukgkduq/vapor_timescale.pdf?rlkey=8l9pjj87cprocwfqddtlp6xus&dl=0)
 
-- {ref}`assign7_solution`
+- {ref}`assign7_solution` and [notebook download](https://www.dropbox.com/scl/fi/e24u5xjrmsiwdktomis35/assignment7_solution.ipynb?rlkey=2ssgmlaqe4ni90o3buytjx5qv&dl=0)
 
 - {ref}`large_eddy`
   - [notebook download](https://www.dropbox.com/scl/fi/hwkc4xk4sc0omc8q7fl65/large_eddy_simulation.ipynb?rlkey=prb7qvvzib3216sej7e1u9m33&dl=0)
