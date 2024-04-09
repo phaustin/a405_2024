@@ -1,0 +1,859 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Assignment 7 solution &#8212; ATSC 405 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/assignment7_solution';</script>
+    <link rel="canonical" href="https://phaustin.github.io/a405_2024/assignments/assignment7_solution.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Assignment 8 – cold clouds" href="assignment8_cold_clouds.html" />
+    <link rel="prev" title="Assignment 7 – Due Tuesday March 26 midnight" href="assignment7_droplets.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ATSC 405 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    ATSC 405 syllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics check2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../learning_goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html">Course schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_install.html">Python links</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fo/9grhb2cr0lpfc1d5jci4a/h?rlkey=shnjpq4kvndrcatbgrri44eyw&amp;dl=0">Thompkins text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/?sid=sersol&amp;SS_jc=TC0001980404&amp;title=An%20introduction%20to%20clouds%20%3A%20from%20the%20microscale%20to%20climate">Lohmann et al. text</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&amp;dl=0">Wallace and Hobbs chapter 6</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_notes.html">Week notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/week2/hydrostat.html">Week2: Hydrostatic balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/week3/derivs_and_ints.html">week3: working with numpy arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="adiabatic_box.html">Adiabatic Box – preliminary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qbzhdbhy67j0x25y3z6ui/adiabatic_box_handin.ipynb?rlkey=xpwa107bxnalwm8doe1z31t22&amp;dl=0">adiabatic_box_handin.in -- download link for ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hydrostatic_2024_handin.html">Assign 2: Scale heights for typical atmospheric soundings</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/f7nwkhtzd3nabdm85tl9j/hydrostatic_2024_handin.ipynb?rlkey=wpig3yghowkua3uu0kw765o5w&amp;dl=0">Assignment 2 download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment5_kohler_students.html">Assignment 5  – Due Friday March 15 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment6_stability.html">Assignment 6  – Due Tuesday March 19 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment7_droplets.html">Assignment 7  – Due Tuesday March 26 midnight</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 7 solution</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/e24u5xjrmsiwdktomis35/assignment7_solution.ipynb?rlkey=2ssgmlaqe4ni90o3buytjx5qv&amp;dl=0">assignment 7 solution download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment8_cold_clouds.html">Assignment 8 – cold clouds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment9_precipitation.html">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/worksheet1_solution.html">Week 1 worksheet solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/worksheet2_solution.html">Week 2 worksheet 2 solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../notebooks/week2/skew_coords_solution.html">Week2: Theromodynamic diagrams worksheet – solution</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://www.dropbox.com/scl/fi/ulzx7ro0ojqjoviu6yqql/skew_coords_solution.ipynb?rlkey=ygfzlib3n77z111n3db09jf2j&amp;dl=0">Download skew_coords_solution.ipynb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ze49m63z5gbnombcgk2gh/xarray-intro.ipynb?rlkey=sa86yjsi3l05bq8v54j6yxjtz&amp;dl=0">download xarray-intro.ipynb</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/dfj80s9q920ljni5aakfc/tropical_subset.nc?rlkey=2fc2wr2yb70e4i6l9c7gwcyj3&amp;dl=0">tropical_subset.nc download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tropical_clouds.html">Week 3 worksheet: Tropical clouds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sar8exr1y2ig2f0gqoyds/tropical_clouds.ipynb?rlkey=mdlkg5uti33s82em46yyhlq48&amp;dl=0">tropical_clouds.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/rootfind_week4.html">Week 4 worksheet:  Using a rootfinder to solve implicit equations</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nx079xzivlkfab9hq11rm/rootfind_week4.ipynb?rlkey=a4hcyok0znu36qwzdb77u9yn7&amp;dl=0">rootfind_week4.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/week4/tropical_clouds_profiles.html">Tropical cloud profiles</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/66ujjxoqh09pz5g9ditok/tropical_clouds_profiles.ipynb?rlkey=4avpmteian5nh8pwvh0yt2up8&amp;dl=0">tropical_cloud_profiles.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/week5/moist_adiabats.html">Moist adiabats and the LCL</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&amp;dl=0">tropical_engine_solution.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/mixing_line_example.html">Mixing line example</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&amp;dl=0">mixing_line_example.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/cape_part1.html">Cape Part 1</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j93nfeglo6hkks166f5gv/cape_part1.ipynb?rlkey=uxc78v4k8rhrc575868p95mqd&amp;dl=0">cape notebook download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/convec_instability.html">Convective instability – lifting demo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/30m69pqa2t4t4p5lmpo6l/convec_instability.ipynb?rlkey=8cbu1ebny3r9dgpccbmath2gh&amp;dl=0">convective_instability.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/two_compartments.html">Two compartment problem`</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aljqeatsvk8hv0l90lotd/two_compartments.ipynb?rlkey=veuf0hpry5200bsny4i28ke13&amp;dl=0">two_compartment.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/a405_mid_2024_solution.html">2024 midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uhmdhtca54n74abg298ea/a405_mid_2024_solution.ipynb?rlkey=7lhbf7hcameqd67nnfhtnfyka&amp;dl=0">a405 midterm solutons download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/kohler_equilibrium_students.html">Kohler Equilibrium Worksheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/k0rwtddqk6d2147o0tjo3/kohler_equilibrium_students.ipynb?rlkey=0xtb32wffahirqc8qb9krk6lj&amp;dl=0">kohler_equilibrium_studens.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/entraining_plume.html">Modeling an entraining cloud updraft</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/arzhjt5wt7xjp2sy8xyjr/entraining_plume.ipynb?rlkey=czorhab60zqh7w2ebr6gycuxk&amp;dl=0 l=0">entraining_plume.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/plot_entrainment.html">Plotting the entraining plume</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/w1x8s957vxq377k2r6o3w/plot_entrainment.ipynb?rlkey=810ful6mv583myrufcdebnzak&amp;dl=0">plot_entrainment.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/koehler2_worksheet.html">Koehler equilibrium worksheet II</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/4d1xiae00lfocvmnhmr1g/koehler2_worksheet.ipynb?rlkey=zshmwicjmv0ajnw4zenzqpyvc&amp;dl=0">koehler2_worksheet.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/dropgrow/dropgrow_2024.html">Parcel model integration, constant velocity case</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/d0y1kd0fbgcsch1ipruex/dropgrow_2024.ipynb?rlkey=4no8nmzl1o7us8n36tmo271y4&amp;dl=0">download dropgrow_2024.ipynb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/dropgrow/dropgrow_2024_2.html">Update: Parcel model compute additional variables</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/0u6y7ufkaq4mbr1zavb0c/dropgrow_2024_2.ipynb?rlkey=zizniwhtr93orybz6himzwk36&amp;dl=0">dropgrow_2024_2.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/marshallpalmer.html">Marshall-Palmer Distribution</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/xkrtyffpt9ignyesgqmql/marshallpalmer.ipynb?rlkey=2li0db7er3apivzssb5z6j906&amp;dl=0">marshall_palmer.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/ice_saturation.html">saturation vapor pressure over ice</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/y88fsha1hnt424erg4rdf/ice_saturation.ipynb?rlkey=wqahwrgah05xifrjbwti1sits&amp;dl=0">ice_satuation.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/pyrcel/basic_run.html">Pyrcel Example: Basic Run</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/1f7n48b2vd7jwocsnov4n/basic_run.ipynb?rlkey=apws9hpk249fgcbrus80vrr6m&amp;dl=0">pyrcel basic_run.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/pyrcel/activate.html">Pyrcel example: Activation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/gqsoqxbm14bbdlun7xsla/activate.ipynb?rlkey=nyb67su0tthwmr734cnvip2lu&amp;dl=0">pyrcel activate.ipynb download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/dropgrow/dropgrow_2024_3_solution.html">Solution: Parcel model: add adiabatic liquid water</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/eykr5q2pthqjbsqwp1ej8/dropgrow_2024_3.ipynb?rlkey=dp1d1feciml52zwtpuul7tbs2&amp;dl=0">adiabatic liquid water worksheet download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/mixing_line_calc.html">Mixing line workbook</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/mixing_line_calc_solution.html">Mixing line workbook – solution</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/large_eddy_simulation.html">Working with a 3D large eddy simulation of shallow convection</a></li>
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&amp;dl=0">Week2 - Kinetic Temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/j7bq6cc7r40vkx3og14qh/first_law_notes.pdf?rlkey=66r1y4umxtc1hgwfbylxlzoxt&amp;dl=0">First law of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/iknh9dm4iu1tfssa4724j/entropy.pdf?rlkey=buxyohh3w52ou6vk774s3xexq&amp;dl=0">Entropy and potential temperature</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/sosiyoxa9bzhecea5qas9/hydro.pdf?rlkey=7wll6s0yc4t0dlojzx56082iw&amp;dl=0">Weighted averages and scale heights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/entropy_theta_part2.html">Entropy and potential temperature – including liquid and vapor</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ygb2bi2riqo23ostxo8lw/buoyancy.pdf?rlkey=b80rbwtzartk4qp5dt9gjvsf6&amp;dl=0">Buoyancy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/puuzbbzszhue73nrew726/maxwell.pdf?rlkey=fntdkgs90o4otc3s6lme85mz3&amp;dl=0">Maxwell relation notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/o7d278acumkgmwe4y6qlu/clausius.pdf?rlkey=ktd5fvdwaz7ishuxozwmf6kwa&amp;dl=0">Clausius-Clapyron notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/qc44gc8j1t3vh6w4e15nl/schroeder_chap_5.pdf?rlkey=mpt2r7eeksre5xhi4guf96h7q&amp;dl=0">Schroeder pp. 159-162</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/5m7x5opmp5p6ooe86imlj/virtual_temperature.pdf?rlkey=yjmfkbt417gpjv0cwwfyoi0c4&amp;dl=0">virtural temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tfgz28syrhn1zk6y066nm/thermo.pdf?rlkey=eigclji5ypji0p12cfww6w2x1&amp;dl=0">Moist static energy notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tod6zhofnbap8di0c6x9z/carnot.pdf?rlkey=h2uxgthrnipsk1rbsxve7s1pz&amp;dl=0">carnot cycle notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/uj7sq0hcdbcgtxomly4vd/entrain.pdf?rlkey=feaufh1d7lixg5rtdlxj4vdzu&amp;dl=0">entrainment notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nlsiwvbpd7vh1jtxom5lr/wet_bulb.pdf?rlkey=kodlrslxslr0zd876srlidoiz&amp;dl=0">wet bulb temperature notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&amp;dl=0">Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&amp;dl=0">droplet growth notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ezproxy.library.ubc.ca/login?url=http://www.nature.com/doifinder/10.1038/nphys1340">Single drop fragmentation - Villermaux and Bossa (2009)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/3nvjbh208o5ndeq8io3e1/equil_super.pdf?rlkey=zot8e90vynl5mvpul194tud3w&amp;dl=0">equilibrium supersaturation in a constant updraft</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/aeva3yk68w8j7u69wmvhx/crystal_diffusion.pdf?rlkey=ruatsjms61izb06ef5opm3q42&amp;dl=0">crystal growth via vapor diffusion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/2ri6jr3ln9zxv2ukgkduq/vapor_timescale.pdf?rlkey=8l9pjj87cprocwfqddtlp6xus&amp;dl=0">vapor diffusion timescale notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mid term</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/thompkins_practice.html">Tompkins practice quesitons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/xkyzaeqr7fmyk9weci8ny/thompkins_practice.ipynb?rlkey=3ngg8tk7ynxsftlp57ov0wxtp&amp;dl=0">Thompkins practice problems download</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/27kzivl2a0vt0qmw9hg7k/a405_mid_2016.pdf?rlkey=10rdsl2p1jgm5qefu1g0jbt6g&amp;dl=0">2016 midterm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/oro8lum7ljlg09ok8nc8o/a405_mid_2012.pdf?rlkey=yyotedfg8rm40be22mcajk3za&amp;dl=0">2012 midterm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/assign4_midterm_sols.html">Assignment 4: midterm solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/thompkins_practice_answers.html">Tompkins practice quesitons – solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final exam</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/nw6qin974wovopcoxyt6f/a405_final_2016.pdf?rlkey=yyb8f8j9iqyf0ua6e14dlhubw&amp;dl=0">2016 final exam</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/whgxh7p3qyjkkhzrkp89u/a405_final_questions.pdf?rlkey=joifm7h14q6ns80wz9uzl4fzi&amp;dl=0">a405 final exam questions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/assignments/assignment7_solution.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div></div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Assignment 7 solution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-answer">Question 1 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-answer">Question 2 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-answer">Question 3 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-answer">Question 4 answer</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="assignment-7-solution">
+<span id="assign7-solution"></span><h1>Assignment 7 solution<a class="headerlink" href="#assignment-7-solution" title="Permalink to this heading">#</a></h1>
+<section id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Assuming that cloud condensation nuclei (CCN) are removed from the atmosphere by first serving as the centers on which cloud droplets form, and the droplets subsequently grow to form precipitation particles, estimate the residence time of a CCN in a column extending from the surface of the Earth to an altitude of 5 km. Assume that the annual rainfall is 100 cm/year and the cloud liquid water content is 0.30 <span class="math notranslate nohighlight">\(g/kg\)</span> .  <em>Hint:  Assume that all drops in the cloud droplets have  a radii of 10 microns and that every droplet contains exactly 1 CCN.   How many CCN are in 1 kg of air?  About how many kg of air are there in a 5 km column?  About how many CCN are taken out by a rain rate of 1 m/year?  Find the time constant for removal of the form  1/N dN/dt = 1/tau</em></p></li>
+</ol>
+<section id="question-1-answer">
+<h3>Question 1 answer<a class="headerlink" href="#question-1-answer" title="Permalink to this heading">#</a></h3>
+<p>First find <span class="math notranslate nohighlight">\(n\)</span>, the number of aersols/volume
+by assuming that the mean droplet size is
+<span class="math notranslate nohighlight">\(\overline{r}=10\ \mu m\)</span>  and
+that there is one aerosol in each droplet.</p>
+<div class="math notranslate nohighlight">
+\[
+  w_l = 0.3\ \ g\,m^{-3} = \frac{4}{3}\pi \rho_l N\overline{ r}^3  
+\]</div>
+<p>which gives <span class="math notranslate nohighlight">\(n=72\ \ cm^{-3} = 72\ \times 10^6\ \ {kg^{-1}}\)</span> if <span class="math notranslate nohighlight">\(\rho_{air} \approx 1\ \ kg\,m^{-3} \)</span></p>
+<p>If the column is well mixed, then <span class="math notranslate nohighlight">\(n=constant\)</span> between the surface
+and 5 km <span class="math notranslate nohighlight">\(\approx\)</span> 500 hPa.   Integrate
+the hydrostatic equation between those levels to find the mass of dry air:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M=  \int_0^{5000} \rho dz = \frac{1 }{g} \int_{50000}^{100000} dp \nonumber \\
+= \frac{ 1}{10} 5 \times 10^4 = 5000\ kg\,m^{-2}
+\end{split}\]</div>
+<p>So to get the total CCN in a column multiply <span class="math notranslate nohighlight">\(M \times n\)</span> =
+<span class="math notranslate nohighlight">\(N=3.6 \times 10^{11}\)</span> CCN in a <span class="math notranslate nohighlight">\(1 \ m^{2}\)</span> column.</p>
+<p>Now what about <span class="math notranslate nohighlight">\(dN/dt\)</span>?  If the rainfall is 1 m/year
+= 1000 <span class="math notranslate nohighlight">\(kg\,m^{-2}\,yr^{-1}\)</span> and <span class="math notranslate nohighlight">\(\overline{ r}=10\ \mu m\)</span>
+then the mass of an average drop is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{ 4}{3}\pi \rho_l N\overline{ r}^3
+\]</div>
+<p>and the drops removed in a year is:</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{1000 \ kg\,m^{-2}\,yr^{-1} }{\frac{ 4}{3}\pi \rho_l N (10^{-5})^3} = 2.39 \times 10^{14}\ drops/year
+\]</div>
+<p>So put these together:</p>
+<div class="math notranslate nohighlight">
+\[
+  \tau = \frac{N}{dN/dt} = \frac{ 3.6 \times 10 11}{ 2.39 \times 10^{14}} 
+= 0.0015\ years = 0.55\ days
+\]</div>
+</section>
+</section>
+<section id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h2>
+<p>A drop with an initial radius of 100 µm falls through a cloud containing 100 droplets per cubic centimeter that it collects in a continuous manner with a collection efficiency of 0.800. If all the cloud droplets have a radius of 10 µm, how long will it take for the drop to reach a radius of 1 mm? You may assume that for the drops of the size considered in this problem the terminal fall speed v (in <span class="math notranslate nohighlight">\(m s^{-1}\)</span>) of a drop of radius r (in meters) is given by <span class="math notranslate nohighlight">\(v= 8 x 10^3\;r\)</span>. Assume that the cloud droplets are stationary and that the updraft velocity in the cloud is negligible.  Hint:  Integrate Thompkins equation 4.30 (not 4.28) analytically – you  can also check numerically with python</p>
+<section id="question-2-answer">
+<h3>Question 2 answer<a class="headerlink" href="#question-2-answer" title="Permalink to this heading">#</a></h3>
+<p>Equation 4.30 (be sure you can derive this):</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{ dR}{dt}  = \frac{L V \epsilon E}{4\rho_l}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the radius of the collector drop in meters, <span class="math notranslate nohighlight">\(L\)</span> is the liquid water content in <span class="math notranslate nohighlight">\(kg\,m^{-3}\)</span>, <span class="math notranslate nohighlight">\(\rho_l\)</span> is the density of liquid water in <span class="math notranslate nohighlight">\(kg\,m^{-3}\)</span>, <span class="math notranslate nohighlight">\(V=6000R\)</span> is the differential fall speed in m/s, <span class="math notranslate nohighlight">\(\epsilon=1\)</span> is the coalescence efficiency and <span class="math notranslate nohighlight">\(E0.8\)</span> is the collection efficiency.</p>
+<p>For the <span class="math notranslate nohighlight">\(L\)</span>, we have 100 droplets <span class="math notranslate nohighlight">\(cm^{-3}\)</span> with <span class="math notranslate nohighlight">\(\overline{r }= 10^{-3}\)</span> cm, which gives a lwc of <span class="math notranslate nohighlight">\(4 \times 10^{-4} \ kg\,m^{-3}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a405.thermo.constants</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">N</span><span class="o">=</span><span class="mf">100e6</span>  <span class="c1"># number/m^3</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">1.e-5</span>  <span class="c1">#meters</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">rhol</span><span class="o">*</span><span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">N</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mf">3.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">L</span><span class="si">:</span><span class="s2">6.2g</span><span class="si">}</span><span class="s2"> kg/m^3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00042 kg/m^3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Taking
+E=0.8 and <span class="math notranslate nohighlight">\(V=6000 r\)</span> cm/s, with r in cm:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+  \frac{ dR}{dt} &amp;= \frac{ 6000 \times R \times 4.2 \times  10^{-4} \times 0.8}{4 \rho_l} \\
+\frac{ dR}{R}&amp; = 1.6 \pi 10^{-4} dt
+\end{align}
+\end{split}\]</div>
+<p>Integrating both sides:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\int_{100 \times 10^{-6}\ m}^{1000 \times 10^{-6}\ m} \frac{dR}{R} dR &amp; = 5.04 \times 10^{-4} \int_0^t dt = 5.04 \times 10^{-4} t \\
+\frac{\ln 1000- \ln 100 }{5.04 \times 10^{-4}} &amp;= t \\
+t = 4569\ seconds &amp;= 76.15\ minutes
+\end{align}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">6000</span><span class="o">*</span><span class="mf">4.2e-4</span><span class="o">*</span><span class="mf">0.8</span><span class="o">/</span><span class="p">(</span><span class="mf">4.</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">rhol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.000504
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span><span class="o">/</span><span class="mf">5.04e-4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4568.621216258026
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4569</span><span class="o">/</span><span class="mf">60.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>76.15
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="3">
+<li><p>Compare the droplet growth equation in Thompkins equation 4.24 with  with Lohmann 7.28 for 3 micron drop nucleated on a <span class="math notranslate nohighlight">\(1 \times 10^{-18}\)</span> kg ammonium sulphate aerosol.  Show numerical values for all the terms, and the total percentage difference in the <span class="math notranslate nohighlight">\(dr/dt\)</span> for the two equations.</p></li>
+</ol>
+<section id="question-3-answer">
+<h3>Question 3 answer<a class="headerlink" href="#question-3-answer" title="Permalink to this heading">#</a></h3>
+<p>Reuse some code from worksheets <a class="reference external" href="https://phaustin.github.io/a405_2024/notebooks/worksheets/kohler_equilibrium_students.html">koehler1</a> and  <a class="reference external" href="https://phaustin.github.io/a405_2024/notebooks/koehler2_worksheet.html">koehler2</a> to evaluate:</p>
+<p>Thompkins 4.24</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d r}{d t}=\frac{D e_s^{\infty}}{\rho_L r R_v T}\left(S-1-\frac{a}{r T}+\frac{b}{r^3}\right)
+\]</div>
+<p>Lohmann 7.28:</p>
+<div class="math notranslate nohighlight">
+\[
+r \frac{d r}{d t}=\frac{(S-1)-a / r+b / r^3}{F_k+F_d} .
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_k^l=\left(\frac{L_v}{R_v T}-1\right) \frac{L_v}{K T} \approx\left(\frac{L_v^2}{K R_v T^2}\right) ;
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_d^l=\frac{1}{D_v \rho_{v s}}=\frac{R_v T}{D_v e_{s, w}(T)}
+\]</div>
+<p>Note that Thompkins takes the temperature out of his <span class="math notranslate nohighlight">\(a\)</span> coefficient, but it’s identical to Lohmann if you move temperature into <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a405.thermo.thermlib</span> <span class="kn">import</span> <span class="n">find_esat</span><span class="p">,</span> <span class="n">find_lv</span>
+<span class="kn">from</span> <span class="nn">a405.utils.helper_funs</span> <span class="kn">import</span> <span class="n">make_tuple</span>
+<span class="kn">from</span> <span class="nn">a405.thermo.constants</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">280</span> <span class="c1">#K</span>
+<span class="n">press</span> <span class="o">=</span> <span class="mi">80000</span> <span class="c1">#Pa</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">2.8e-5</span> <span class="c1">#m^2/s</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mf">0.025</span> <span class="c1">#W/m/K</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">3.e-6</span> <span class="c1">#m</span>
+<span class="c1">#</span>
+<span class="c1"># from the koehler worksheets</span>
+<span class="c1">#</span>
+<span class="n">aero_specs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Ms&quot;</span><span class="p">:</span> <span class="mi">132</span><span class="p">,</span>
+    <span class="s2">&quot;Mw&quot;</span><span class="p">:</span> <span class="mf">18.0</span><span class="p">,</span>
+    <span class="s2">&quot;Sigma&quot;</span><span class="p">:</span> <span class="mf">0.075</span><span class="p">,</span>
+    <span class="s2">&quot;vanHoff&quot;</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span>
+    <span class="s2">&quot;rho&quot;</span><span class="p">:</span> <span class="mi">1775</span><span class="p">,</span>
+    <span class="s2">&quot;mass&quot;</span><span class="p">:</span> <span class="mf">1e-18</span><span class="p">,</span>
+    <span class="s2">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;ammonum sulfate (NH4)2SO4&quot;</span>
+<span class="p">}</span>
+
+<span class="n">aero</span> <span class="o">=</span> <span class="n">make_tuple</span><span class="p">(</span><span class="n">aero_specs</span><span class="p">)</span>
+<span class="n">lv</span> <span class="o">=</span> <span class="n">find_lv</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+
+<span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">aero</span><span class="o">.</span><span class="n">Sigma</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">Rv</span><span class="o">*</span><span class="n">temp</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">rhol</span><span class="p">)</span>  <span class="c1">#curvature term</span>
+<span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="n">aero</span><span class="o">.</span><span class="n">vanHoff</span><span class="o">*</span><span class="n">aero</span><span class="o">.</span><span class="n">Mw</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">rhol</span><span class="o">*</span><span class="n">aero</span><span class="o">.</span><span class="n">Ms</span><span class="p">)</span><span class="o">*</span><span class="n">aero</span><span class="o">.</span><span class="n">mass</span>
+<span class="n">esat</span> <span class="o">=</span> <span class="n">find_esat</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+
+<span class="n">a_over_r</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">r</span>
+<span class="n">b_over_r3</span> <span class="o">=</span> <span class="n">b</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mf">3.</span>
+<span class="n">thompkins_coefficient</span> <span class="o">=</span> <span class="n">D</span><span class="o">*</span><span class="n">esat</span><span class="o">/</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">rhol</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">Rv</span><span class="o">*</span><span class="n">temp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="n">a_over_r</span><span class="p">,</span><span class="w"> </span><span class="n">b_over_r3</span><span class="p">,</span><span class="n">thompkins_coefficient</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">lohmann_FK</span> <span class="o">=</span> <span class="n">lv</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">K</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">Rv</span><span class="o">*</span><span class="n">temp</span><span class="o">**</span><span class="mf">2.</span><span class="p">)</span>
+<span class="n">lohmann_FD</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">thompkins_coefficient</span>
+<span class="n">lohmann_coefficient</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">lohmann_FK</span> <span class="o">+</span> <span class="n">lohmann_FD</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lohmann_coefficient</span><span class="o">/</span><span class="n">thompkins_coefficient</span><span class="si">=:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(a_over_r, b_over_r3,thompkins_coefficient)=(0.0003869370066553165, 3.617157797543076e-06, 2.1477554290815467e-10)
+lohmann_coefficient/thompkins_coefficient=0.9985
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this heading">#</a></h2>
+<p>Derive Lohmann equations 7.31 and 7.32:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d S}{d t}=Q_1 \frac{d z}{d t}-Q_2 \frac{d r_l}{d t}
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned} 
+&amp; Q_1=\frac{1}{T}\left(\frac{\epsilon L_v g}{R_d c_p T}-\frac{g}{R_d}\right), \\
+&amp; Q_2=\rho\left(\frac{R_d T}{\epsilon e_{s}}+\frac{\epsilon L_v^2}{p T c_p}\right)
+\end{aligned}
+\end{split}\]</div>
+<p>Problem 4 hints:</p>
+<ul>
+<li><p>Start with this approximate relation between the vapor mixing ratio and the saturations</p>
+<div class="math notranslate nohighlight">
+\[
+        r_v = \frac{\rho_v}{\rho_d} = \frac{R_d}{R_v} \frac{e}{p - e} \approx \frac{R_d}{R_v} \frac{e}{p}=
+       \epsilon \frac{e}{p} = \frac{S \epsilon e_s}{p} 
+      \]</div>
+</li>
+<li><p>first show that with the chain rule wind up with this:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rv">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-rv" title="Permalink to this equation">#</a></span>\[
+        \frac{d r_v}{dt} = S \left [ \frac{-\epsilon e_s}{p^2} 
+        \left ( \frac{-g p V}{R_d T} \right ) + \frac{\epsilon}{p} \left ( 
+        \frac{\epsilon e_s l_v}{R_d T^2} \right ) \frac{dT}{dt} \right ]
+        + \frac{\epsilon e_s}{p} \frac{dS}{dt}
+        \]</div>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the vertical velocity <span class="math notranslate nohighlight">\(dz/dt\)</span> and I’ve used the Clausius-Clapeyron equation and
+assumed hydrostatic balance:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+     \begin{align}
+    \frac{de_s}{dT} &amp;= \frac{\epsilon l_v e_s}{R_d T^2}\\
+    \frac{dp}{dt} &amp; =  - \rho g \frac{dz}{dt} = -\frac{g p}{R_d T} V
+     \end{align}
+     \end{split}\]</div>
+</li>
+<li><p>To get Lohmann’s coefficients, recognize that <span class="math notranslate nohighlight">\(dr_v/dt = - dr_l/dt\)</span> if total water is conserved</p></li>
+</ul>
+<section id="question-4-answer">
+<h3>Question 4 answer<a class="headerlink" href="#question-4-answer" title="Permalink to this heading">#</a></h3>
+<p>We need to eliminate dT/dt from <a class="reference internal" href="#equation-eq-rv">(10)</a></p>
+<p>For <span class="math notranslate nohighlight">\(dT/dt\)</span> use the fact that <span class="math notranslate nohighlight">\(h_m = c_p T + l_v r_v + gz=constant\)</span> is conserved for adiatbatic ascent take the derivative to get</p>
+<div class="math notranslate nohighlight" id="equation-eq-hm">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-hm" title="Permalink to this equation">#</a></span>\[
+\frac{d T}{d t}=\frac{l_v}{c_p} \frac{d r_v}{d t}-\frac{g V}{c_p}
+\]</div>
+<p>Plug <a class="reference internal" href="#equation-eq-hm">(11)</a> into <a class="reference internal" href="#equation-eq-rv">(10)</a> and rearrange</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d S}{d t}=-\frac{g V}{R_d T}-\frac{l_v}{R_v T^2}\left[-\frac{l_v}{c_p} \frac{d r_v}{d t}-\frac{g V}{c_p}\right]+\frac{p}{\epsilon e_s} \frac{d r_v}{d t}
+\]</div>
+<p>where I’ve made the approximation that <span class="math notranslate nohighlight">\(S \approx 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d S}{d t}=\frac{g}{T}\left[\frac{l_v}{c_p R_v T}-\frac{1}{R_d}\right] V-\left[\frac{p}{e_s \epsilon}+\frac{l_v^2}{R_v c_p T^2}\right] \frac{dr_l}{dt}
+\]</div>
+<p>Finally, eliminate <span class="math notranslate nohighlight">\(R_v\)</span> using the defination <span class="math notranslate nohighlight">\(\epsilon = R_d/R_v\)</span> to get Lohmann’s <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="assignment7_droplets.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Assignment 7  – Due Tuesday March 26 midnight</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="assignment8_cold_clouds.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assignment 8 – cold clouds</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-answer">Question 1 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-answer">Question 2 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-answer">Question 3 answer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-answer">Question 4 answer</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Philip Austin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
