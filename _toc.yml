@@ -32,6 +32,9 @@ parts:
     - file: assignments/assignment5_kohler_students.md
     - file: assignments/assignment6_stability.md
     - file: assignments/assignment7_droplets.md
+    - file: assignments/assignment7_solution.md
+    - url:  https://www.dropbox.com/scl/fi/e24u5xjrmsiwdktomis35/assignment7_solution.ipynb?rlkey=2ssgmlaqe4ni90o3buytjx5qv&dl=0
+      title: assignment 7 solution download
     - file: assignments/assignment8_cold_clouds.md
     - file: assignments/assignment9_precipitation.md
   - caption: Worksheets
@@ -115,6 +118,7 @@ parts:
       title: adiabatic liquid water worksheet download
     - file: notebooks/mixing_line_calc.md
     - file: notebooks/mixing_line_calc_solution.md
+    - file: notebooks/large_eddy_simulation.md
   - caption: Readings
     chapters:
     - url: https://www.dropbox.com/scl/fi/uanlie1sdyiz4ezbclopt/temperature_notes.pdf?rlkey=leatk6yrhmw137i9dl6j8ojlq&dl=0
@@ -146,12 +150,16 @@ parts:
       title: wet bulb temperature notes
     - url: https://www.dropbox.com/scl/fi/jezup97ylvyit38jzjwm3/kohler_notes.pdf?rlkey=faqh51p0lf4rvd8e36r3hitvn&dl=0
       title: Notes on the Koehler equation  (Thompkins Section 4.2, Lohman 6.1-6.4)
+    - url: https://www.dropbox.com/scl/fi/lsqfvghey0o727ze9vn1w/drop_grow.pdf?rlkey=zohnawwe6tr1qfvusql97fwgc&dl=0
+      title: droplet growth notes
     - url: http://ezproxy.library.ubc.ca/login?url=http://www.nature.com/doifinder/10.1038/nphys1340
       title: Single drop fragmentation - Villermaux and Bossa (2009)
     - url: https://www.dropbox.com/scl/fi/3nvjbh208o5ndeq8io3e1/equil_super.pdf?rlkey=zot8e90vynl5mvpul194tud3w&dl=0
       title: equilibrium supersaturation in a constant updraft
     - url: https://www.dropbox.com/scl/fi/aeva3yk68w8j7u69wmvhx/crystal_diffusion.pdf?rlkey=ruatsjms61izb06ef5opm3q42&dl=0
       title: crystal growth via vapor diffusion
+    - url: https://www.dropbox.com/scl/fi/2ri6jr3ln9zxv2ukgkduq/vapor_timescale.pdf?rlkey=8l9pjj87cprocwfqddtlp6xus&dl=0
+      title: vapor diffusion timescale notes
   - caption: Mid term
     chapters:
     - file: notebooks/thompkins_practice.md

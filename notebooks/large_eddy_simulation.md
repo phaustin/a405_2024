@@ -29,15 +29,12 @@ and also with several large eddy models:
 
 * We started with the trade cumulus simulation, then perturbed it by raising the temperature to 300 K and 301 K.
 
-http://clouds.eos.ubc.ca/~phil/courses/atsc405/docs/cgils_ctl_s6_synthetic_albedo.mp4
+  - [cloud movie](https://www.dropbox.com/scl/fi/hvov84sqo3mtuggjrx8vo/cgils_ctl_s6_synthetic_albedo.mp4?rlkey=7hkd9n3k3mi834765kg8qp6kq&dl=0)
 
-http://clouds.eos.ubc.ca/~phil/courses/atsc405/docs/cgils_sst_300K_synthetic_albedo.mp4
-
-http://clouds.eos.ubc.ca/~phil/courses/atsc405/docs/cgils_sst_301K_synthetic_albedo.mp4
 
 +++
 
-##  The netcdf dataset 
+##  The netcdf dataset
 
 ```{code-cell} ipython3
 import glob

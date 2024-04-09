@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(assign7_solution)=
 # Assignment 7 solution
 
 +++
@@ -152,7 +153,71 @@ $$
 
 ### Question 3 answer
 
-+++
+Reuse some code from worksheets [koehler1](https://phaustin.github.io/a405_2024/notebooks/worksheets/kohler_equilibrium_students.html) and  [koehler2](https://phaustin.github.io/a405_2024/notebooks/koehler2_worksheet.html) to evaluate:
+
+Thompkins 4.24
+
+$$
+\frac{d r}{d t}=\frac{D e_s^{\infty}}{\rho_L r R_v T}\left(S-1-\frac{a}{r T}+\frac{b}{r^3}\right)
+$$
+
+Lohmann 7.28:
+
+$$
+r \frac{d r}{d t}=\frac{(S-1)-a / r+b / r^3}{F_k+F_d} .
+$$
+
+$$
+F_k^l=\left(\frac{L_v}{R_v T}-1\right) \frac{L_v}{K T} \approx\left(\frac{L_v^2}{K R_v T^2}\right) ;
+$$
+
+$$
+F_d^l=\frac{1}{D_v \rho_{v s}}=\frac{R_v T}{D_v e_{s, w}(T)}
+$$
+
+
+Note that Thompkins takes the temperature out of his $a$ coefficient, but it's identical to Lohmann if you move temperature into $a$.
+
+```{code-cell} ipython3
+from a405.thermo.thermlib import find_esat, find_lv
+from a405.utils.helper_funs import make_tuple
+from a405.thermo.constants import constants as c
+import numpy as np
+
+temp = 280 #K
+press = 80000 #Pa
+D = 2.8e-5 #m^2/s
+K = 0.025 #W/m/K
+r = 3.e-6 #m
+#
+# from the koehler worksheets
+#
+aero_specs = {
+    "Ms": 132,
+    "Mw": 18.0,
+    "Sigma": 0.075,
+    "vanHoff": 3.0,
+    "rho": 1775,
+    "mass": 1e-18,
+    "comments": "ammonum sulfate (NH4)2SO4"
+}
+
+aero = make_tuple(aero_specs)
+lv = find_lv(temp)
+
+a=(2.*aero.Sigma)/(c.Rv*temp*c.rhol)  #curvature term
+b=(aero.vanHoff*aero.Mw)/((4./3.)*np.pi*c.rhol*aero.Ms)*aero.mass
+esat = find_esat(temp)
+
+a_over_r = a/r
+b_over_r3 = b/r**3.
+thompkins_coefficient = D*esat/(c.rhol*c.Rv*temp)
+print(f"{(a_over_r, b_over_r3,thompkins_coefficient)=}")
+lohmann_FK = lv**2/(K*c.Rv*temp**2.)
+lohmann_FD = 1/thompkins_coefficient
+lohmann_coefficient = 1/(lohmann_FK + lohmann_FD)
+print(f"{lohmann_coefficient/thompkins_coefficient=:.4f}")
+```
 
 ## Question 4
 

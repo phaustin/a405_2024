@@ -551,3 +551,18 @@ q
 
 - Read [Wallace and Hobbs chapter 228-232 on collision-coalescence](https://www.dropbox.com/scl/fi/r7zhctw6usest2rirpe2f/wallace_hobbs_chap6.pdf?rlkey=oxdanppj9wkocmwe4nn4cc4fi&dl=0)
 
+## week 13
+
+### Tuesday
+
+- Review Wallace and Hobbs coalescence
+
+- [Brief note on vapor time constant](https://www.dropbox.com/scl/fi/2ri6jr3ln9zxv2ukgkduq/vapor_timescale.pdf?rlkey=8l9pjj87cprocwfqddtlp6xus&dl=0)
+
+- {ref}`assign7_solution`
+
+- {ref}`large_eddy`
+  - [notebook download](https://www.dropbox.com/scl/fi/hwkc4xk4sc0omc8q7fl65/large_eddy_simulation.ipynb?rlkey=prb7qvvzib3216sej7e1u9m33&dl=0)
+  - [netcdf file (1.2 Gbytes)](https://www.dropbox.com/s/g94ac4fcnknizbx/ENT_CGILS_CTL_S6_3D_384x384x194_25m_1s_96_0000014160.nc?dl=0)
+  
+

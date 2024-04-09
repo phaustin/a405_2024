@@ -333,6 +333,10 @@ print((f"for an aerosol with mass = {m} kg, "
 ```
 
 
+```python
+b
+```
+
 ### run the rootfinder for each aerosol
 
 Use python's [lambda function](https://realpython.com/python-lambda/) to 
