@@ -31,7 +31,7 @@
 
   \begin{itemize}
   \item Take the derivitive of the moist static energy and, using a tephigram
-  to get $dw_s/dT$
+  to get $dr_s/dT$
   estimate the moist adiabatic lapse rate:  $dT/dz$ at a point.
 
 
@@ -133,7 +133,7 @@ aerosols?
 \includegraphics{chamber}
 
 Why is the vapor pressure $e$ a linear function of distance between
-the plates?  (Hint:  what is the profile of $w_v$ between the top
+the plates?  (Hint:  what is the profile of $r_v$ between the top
 and bottom?)
 
 \item  Show using a Taylor's series expansion that the activity $a_w$ can be approximated as: 
@@ -205,7 +205,7 @@ How much energy, in Joules, could the system
 
 \begin{enumerate}
 \item[CA1]  How would you calculate the CAPE of a sounding given the
-matlab thermodynamics library developed in this course?
+python thermodynamics library developed in this course?
 \end{enumerate}
 
 \textbf{Droplet growth}
@@ -324,7 +324,7 @@ Derive equations (with unit conversions if necessary) for:
 \item[C3] Show that a simple model of the growth of rain drops
     (\ref{eq:collec}) predicts exponential growth of drop radius with
     time.  How large is the time constant for this growth? (assume a
-    droplet population with $w_l = 0.3\ g\,m^{-3}$ and state any other
+    droplet population with $r_l = 0.3\ g\,m^{-3}$ and state any other
     assumptions you make).  What processes need to be added to
     (\ref{eq:collec}) to make the description of rain formation more
     accurate? Explain.
@@ -335,18 +335,18 @@ Derive equations (with unit conversions if necessary) for:
 
 \end{enumerate}
 
-\textbf{Matlab}
+\textbf{Python}
 
 \begin{enumerate}
 \item[M1]  Suppose you put 1 kg of liquid water in a sealed 5 liter container 
-at 280 K.  Describe qualitatively how you would write a matlab
+at 280 K.  Describe qualitatively how you would write a python
 script to  accurately determine the mass of vapor and liquid at
 equilibrium.  (Hint:  think about using the fzero rootfinder, and
 conservation of mass and volume).
 
 
-\item[M2] Write matlab function that would evaluate derivatives needed to
-find  $w_l$ as with height assuming saturation, constant $\theta_e$,
+\item[M2] Write python function that would evaluate derivatives needed to
+find  $r_l$ as with height assuming saturation, constant $\theta_e$,
 conservation of water in a hydrostatic atmosphere.
 
 
@@ -370,7 +370,7 @@ insulated, the other is free to exchange energy with an
 infinite reservoir.  You put a liter of liquid water in each and
 seal them.   Describe qualitatively how you would find the
 equilibrium temperature and vapor pressure in each pot using
-(you could use matlab), and why they will be different, even if
+(you could use python), and why they will be different, even if
 the liquid water is starts at the same temperature in each.
 
 
@@ -420,12 +420,12 @@ h = u + p \,\alpha
 
 \begin{equation}
   \label{eq:tv}
-  T_v = T(1 + 0.608 w_v - w_l)
+  T_v = T(1 + 0.608 r_v - r_l)
 \end{equation}
 
 \begin{equation}
   \label{eq:wv}
-  w_v = \rho_s/\rho_d = \epsilon \frac{e_s}{p - e_s}
+  r_v = \rho_s/\rho_d = \epsilon \frac{e_s}{p - e_s}
 \end{equation}
 
 \begin{equation}
@@ -433,7 +433,7 @@ dh = c_{px}\, dT\ \mathrm(dry\ air\ or\ liquid)
 \end{equation}
 
 \begin{equation}
-dh = c_p\, dT\ + l_v\,dw_v\ \mathrm(air/water\ mixture)
+dh = c_p\, dT\ + l_v\,dr_v\ \mathrm(air/water\ mixture)
 \end{equation}
 
 
@@ -462,16 +462,16 @@ dp = - \rho\,g\,dz
 
 \begin{equation}
 \label{eq:moist}
-  dh_m = c_p\,dT + l_v\,dw_v + g\,dz
+  dh_m = c_p\,dT + l_v\,dr_v + g\,dz
 \end{equation}
 
 \begin{equation}
 \label{eq:theta}
-  ds = c_p \frac{d\theta_e}{\theta_e} = c_p \frac{d\theta}{\theta} + \frac{l_v\,dw_s}{T}
+  ds = c_p \frac{d\theta_e}{\theta_e} = c_p \frac{d\theta}{\theta} + \frac{l_v\,dr_s}{T}
 \end{equation}
 
 \begin{equation}
-  ds = c_p \frac{d\theta_l}{\theta_l} = c_p \frac{d\theta}{\theta} - \frac{l_v\,dw_l}{T}
+  ds = c_p \frac{d\theta_l}{\theta_l} = c_p \frac{d\theta}{\theta} - \frac{l_v\,dr_l}{T}
 \end{equation}
 
 \begin{multline}
@@ -492,7 +492,7 @@ dp = - \rho\,g\,dz
 
 \begin{equation}
   \label{eq:wdiff}
-  d w_v = \frac{w_v}{p-e} \left ( \frac{p}{e} de - dp \right )
+  d r_v = \frac{r_v}{p-e} \left ( \frac{p}{e} de - dp \right )
 \end{equation}
 
 \begin{eqnarray}
@@ -580,7 +580,7 @@ s_d = c_{pd} \log T - R_d \log p_d\\
 
 \begin{equation}
   \label{eq:collec}
-  \frac{dM}{dt} = \pi R^2 E (V(R) - V(r)) w_l
+  \frac{dM}{dt} = \pi R^2 E (V(R) - V(r)) r_l
 \end{equation}
 where V(r) $\approx$ 0 and V(R) $\approx$ JR (with J=6000 $s^{-1}, R in \un{m}$)
 

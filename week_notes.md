@@ -566,3 +566,31 @@ q
   - [netcdf file (1.2 Gbytes)](https://www.dropbox.com/s/g94ac4fcnknizbx/ENT_CGILS_CTL_S6_3D_384x384x194_25m_1s_96_0000014160.nc?dl=0)
   
 
+### Thursday
+
+- Review [a405 final exam practice questions](https://www.dropbox.com/scl/fi/whgxh7p3qyjkkhzrkp89u/a405_final_questions.pdf?rlkey=joifm7h14q6ns80wz9uzl4fzi&dl=0)
+
+- Interesting Figures
+
+  - Thompkins 3.33
+  - Thompkins 4.2
+  - Thompkins 4.8
+  - Thompkins 4.16
+  - Thompkins 4.22
+  - Thompkins 4.23
+  - Thompkins 4.24
+  - Thompkins 4.30
+  
+  - WH 6.15
+  - WH 6.16
+  - WH 6.17
+  - WH 6.27
+  - WH 6.35
+  - WH 6.39
+  - WH 6.52
+  - WH 6.53
+  - WH 6.55
+  
+  - Lohmann 7.4
+  - Lohmann 7.8
+  
