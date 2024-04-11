@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{color,xr,lastpage,geometry,fancyhdr,ifpdf,amsmath,rcs,paunits,shortcuts}
+\pagestyle{fancy}
+
+\lhead{A405}
+\chead{Day 28 problems} 
+\rhead{\thepage/\pageref{LastPage}}
+\lfoot{}
+\rfoot{}
+\cfoot{}
+
+\geometry{letterpaper,top=50pt,hmargin={20mm,20mm},headheight=15pt} 
+
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+
+% This helps prevent overly long lines that stretch beyond the margins
+
+\ifpdf
+  \usepackage[pdftex,  % needed for pdflatex
+   breaklinks=true,  % so long urls are correctly broken across lines
+   colorlinks=true,
+   urlcolor=blue,
+   linkcolor=darkorange,
+   citecolor=darkgreen,
+    ]{hyperref}
+    \usepackage[pdftex]{graphicx} 
+    \pdfcompresslevel=0
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+\else
+    \usepackage{hyperref}
+    \usepackage[dvips]{graphicx}
+    \DeclareGraphicsRule{.eps.gz}{eps}{.eps.bb}{`gzip -d #1}
+    \DeclareGraphicsExtensions{.eps,.eps.gz}
+\fi
+
+\sloppy
+
+
+
+\begin{document}
+
+\begin{center}\textbf{
+W\&H problems 6.21, 6.23 and 6.24}
+\end{center}
+
+\begin{enumerate}
+
+
+\item Wallace and Hobbs 6.21 (height)
+
+  \begin{gather}
+    \frac{ dh}{dt}  = w - v \label{one} \\
+  v = \frac{ 2 g \rho_l r^2}{9 \eta} \label{two}\\
+r \frac{ dr}{dt}  = G_l S \\
+\Rightarrow \frac{ 1}{2}\frac{dr^2 }{dt}   = G_l S \\
+\intertext{integrate from $(t^\prime=0,r^\prime=0)$ to $(t^\prime=t,r^\prime = r$)}
+r^2 = 2 G_l S t \label{two} \\
+\intertext{insert (\ref{two}) into (\ref{one}) and integrate:}
+    \frac{ dh}{dt}  = w - \frac{ 2 g \rho_l 2 G_l S t}{9 \eta} \label{three} \\
+\int_0^h  dh^\prime = \int_0^t \left [ w - \frac{ 2 g \rho_l 2 G_l S t^\prime}{9 \eta} \right ] dt^\prime \\
+h= wt - \frac{ 2 g \rho_l  G_l S t^2}{9 \eta}
+  \end{gather}
+
+\item Wallace and Hobbs 6.23 (drizzle)
+
+We know from the sweep-out equation (6.26) that
+
+\begin{gather}
+  \frac{ dm}{dt}  = \pi r^2 V E lwc
+\end{gather}
+where $lwc$ is the liquid water content in \un{kg\,m^{-3}}.
+
+Inserting $m=\frac{4 }{3}  \pi r^3 \rho_l$:
+
+ \begin{gather}
+   \rho_l \frac{ 4}{3} \pi r^2 \frac{dr}{dt}   = \pi r^2 V E lwc \\
+ \frac{ dr}{dt} = \frac{ V E}{4 \rho_l} lwc
+ \end{gather}
+For the lwc, we have 100 droplets \cc with $\overline{r }= 10^{-3}$ cm,which gives a lwc of $4/3 \pi 1. \times 10^{-7}$ \un{g\,cm^{-3}} .  Taking
+E=0.8 and $V=6000 r$ cm/s, with r in cm:
+
+\begin{gather}
+  \frac{ dr}{dt} = \frac{ 6000 \times r 4/3 \pi  10^{-7} \times 0.8}{4} \\
+\frac{ dr}{r} = 1.6 \pi 10^{-4} dt \\
+\text{integrating both sides} \nonumber 
+\int_{0.01\ cm}^{0.1\ cm} = 1.6 \pi 10^{-4} \int_0^t dt = 1.6 \pi 10^{-4} t \\
+\frac{\ln 0.1 - \ln 0.01 }{1.6 \pi 10^{-4}} = t \\
+t = 4579\ seconds = 76.3\ minutes
+\end{gather}
+
+
+\item WhH 6.24 -- see web page for matlab solution
+
+\end{enumerate}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
