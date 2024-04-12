@@ -23,10 +23,10 @@ How do we describe the observations given by measurements such as those in Lohma
 
 +++
 
-```{figure}  images/lohmann_f5_5.png
+```{figure}  images/lohmann_5_5.png
 ---
 width: 80%
-name: lohmann_f55
+name: lohmann_f5_5
 alt: pha
 ---
 Lohmann textbook figure 5.5
