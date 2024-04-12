@@ -70,7 +70,7 @@ change the equilibrium value of $g_v$ and $g_l$?
 
 Show using \ref{eq:G} is that for pure supersaturated water
 the equilibrium droplet radius found by setting
-$\frac{\partial E }{\partial r} = 0$ is unstable.
+$\frac{\partial G }{\partial r} = 0$ is unstable.
 
 
 \item Show that the energy difference between a sheet of polluted
@@ -346,7 +346,7 @@ conservation of mass and volume).
 
 
 \item[M2] Write python function that would evaluate derivatives needed to
-find  $r_l$ as with height assuming saturation, constant $\theta_e$,
+find  $r_l$  with height assuming saturation, constant $\theta_e$ and
 conservation of water in a hydrostatic atmosphere.
 
 
@@ -355,14 +355,14 @@ conservation of water in a hydrostatic atmosphere.
 \textbf{Thermo}
 
 \begin{enumerate}
-\item[T1]  We've seen equations for $\theta$, $h$, $\theta_e$, $\theta_{es}$, $s_{me}$, $G$,
+\item[T1]  We've seen equations for $\theta$, $h$, $\theta_e$, $\theta_{es}$, $s_{v}$, $G$,
 and $S$.  For each of these pick a situation in which it is the variable of choice to
 describe a system or process, and explain what it is about the variable that makes it
 particularly well suited to the problem.
 
 
 \item[T2]  We know that a plume of dry air is continually mixing in air from its environment,
-yet a balloon sounding will show that its temperature/pressure profile is very close
+yet a balloon sounding will show that the atmospheric temperature/pressure profile is very close
 to adiabatic.  How is this possible?
 
 \item[T3]  Two pots of water sit side by side.  One is completely
@@ -535,7 +535,7 @@ s_d = c_{pd} \log T - R_d \log p_d\\
 
   \begin{equation}
     \label{eq:G}
-    E = m_v g_v + m_l g_l + 4 \pi \sigma r^2
+    G = m_v g_v + m_l g_l + 4 \pi \sigma r^2
   \end{equation}
 
   \begin{equation}
