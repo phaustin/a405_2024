@@ -31,7 +31,6 @@ and also with several large eddy models:
 
   - [cloud movie](https://www.dropbox.com/scl/fi/hvov84sqo3mtuggjrx8vo/cgils_ctl_s6_synthetic_albedo.mp4?rlkey=7hkd9n3k3mi834765kg8qp6kq&dl=0)
 
-
 +++
 
 ##  The netcdf dataset

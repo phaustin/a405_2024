@@ -594,3 +594,7 @@ q
   - Lohmann 7.4
   - Lohmann 7.8
   
+### Friday
+
+- {ref}`assign8_solution`
+- {ref}`assign9_solution`

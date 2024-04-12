@@ -194,6 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../assignments/assignment6_stability.html">Assignment 6  – Due Tuesday March 19 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../assignments/assignment7_droplets.html">Assignment 7  – Due Tuesday March 26 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../assignments/assignment7_solution.html">Assignment 7 solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/assignment8_solution.html">Assignment 8 solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/assignment9_solution.html">Assignment 9 – solution</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/e24u5xjrmsiwdktomis35/assignment7_solution.ipynb?rlkey=2ssgmlaqe4ni90o3buytjx5qv&amp;dl=0">assignment 7 solution download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../assignments/assignment8_cold_clouds.html">Assignment 8 – cold clouds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../assignments/assignment9_precipitation.html">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</a></li>
@@ -581,39 +583,39 @@ stages:</p>
 <p>To find <span class="math notranslate nohighlight">\(Q_{in}\)</span> from <span class="math notranslate nohighlight">\(C \rightarrow A\)</span> we need to use the first law and
 moist static energy since we are at constant pressure but not constant
 temperature:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0ffadecb-fa18-400b-9efe-36c4c0ab1cfa">
-<span class="eqno">(22)<a class="headerlink" href="#equation-0ffadecb-fa18-400b-9efe-36c4c0ab1cfa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e94e2d63-2c99-4524-a091-854a47151442">
+<span class="eqno">(22)<a class="headerlink" href="#equation-e94e2d63-2c99-4524-a091-854a47151442" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstIa}
   \Delta Q_{in} = \Delta h_m = c_p \Delta T  + l_v \Delta q_v
 \end{equation}\]</div>
 <p>At  point C we have <span class="math notranslate nohighlight">\(q_{vC} = q_{sat}\)</span> = 8.86 g/kg, tempC=10.44 deg C and at point A
 <span class="math notranslate nohighlight">\(q_{vA} = q_T\)</span>=14 g/kg, tempA=25 deg C.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-40402bc9-2758-4ce3-932b-df21f9a3fd34">
-<span class="eqno">(23)<a class="headerlink" href="#equation-40402bc9-2758-4ce3-932b-df21f9a3fd34" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5d524c11-4cc5-4db8-acb2-33986c16e9b3">
+<span class="eqno">(23)<a class="headerlink" href="#equation-5d524c11-4cc5-4db8-acb2-33986c16e9b3" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:firstI}
   \Delta Q_{in} = 1004 (25 - 10.44) + 2.5 \times 10^6 (14 - 8.86) \times 10^{-3} = 27468\ J/kg
 \end{equation}\]</div>
 <p>For <span class="math notranslate nohighlight">\(\Delta Q_{out}\)</span> we can use the fact that on a reversible isotherm the second law says:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ff6413e1-3df2-4072-8afc-678faa11690b">
-<span class="eqno">(24)<a class="headerlink" href="#equation-ff6413e1-3df2-4072-8afc-678faa11690b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f636633a-9293-4f70-a394-b7045dede0e9">
+<span class="eqno">(24)<a class="headerlink" href="#equation-f636633a-9293-4f70-a394-b7045dede0e9" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:secondI}
 \Delta s =   \frac{ \Delta q_{out} }{T}
 \end{equation}\]</div>
 <p>We know that:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87b8bb45-3829-4ac1-b480-313592de13f2">
-<span class="eqno">(25)<a class="headerlink" href="#equation-87b8bb45-3829-4ac1-b480-313592de13f2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d322b714-b31d-40ab-aee7-8e9574851579">
+<span class="eqno">(25)<a class="headerlink" href="#equation-d322b714-b31d-40ab-aee7-8e9574851579" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelate}
   \Delta s = c_{p} \Delta \log \theta_e = 1004*(\log(317.69) - \log(349.726)) = -96.66
 \end{equation}\]</div>
 <p>and since the isotherm is 10.44 \degc = 283.59 K</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a853eac6-4a15-4ff7-90e0-54c3e948d750">
-<span class="eqno">(26)<a class="headerlink" href="#equation-a853eac6-4a15-4ff7-90e0-54c3e948d750" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-89cb2039-f6ee-47ca-952f-d1c8a10a67f9">
+<span class="eqno">(26)<a class="headerlink" href="#equation-89cb2039-f6ee-47ca-952f-d1c8a10a67f9" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:thetaerelateI}
 \Delta q_{out} = T \Delta s = 283.59 \times  -96.66 = -27411.80
 \end{equation}\]</div>
 <p>and the efficiency is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b003c28-c427-4a2f-9be0-2a66c949ba07">
-<span class="eqno">(27)<a class="headerlink" href="#equation-0b003c28-c427-4a2f-9be0-2a66c949ba07" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-300ef134-a936-41e2-9942-a2431bb7c888">
+<span class="eqno">(27)<a class="headerlink" href="#equation-300ef134-a936-41e2-9942-a2431bb7c888" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \label{eq:efficiency}
 \eta =  \frac{ |Q_{in} | - |Q_{out}| }{|Q_{in}|} = \frac{ 27468 - 27411}{27468}  = 0.2\%
 \end{equation}\]</div>
