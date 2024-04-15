@@ -31,6 +31,7 @@ parts:
       title: Assignment 4 --  Midterm review questions -- credit/no credit
     - file: assignments/assignment5_kohler_students.md
     - file: assignments/assignment6_stability.md
+    - file: assignments/assignment6_solution.md
     - file: assignments/assignment7_droplets.md
     - file: assignments/assignment7_solution.md
     - url:  https://www.dropbox.com/scl/fi/e24u5xjrmsiwdktomis35/assignment7_solution.ipynb?rlkey=2ssgmlaqe4ni90o3buytjx5qv&dl=0
