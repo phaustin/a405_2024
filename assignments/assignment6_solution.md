@@ -91,37 +91,11 @@ Scoeff=((4*a**3)/(27*bnomass))**0.5  #units  kg^{-0.5}
 print(f'Scrit coeff without aerosol mass: {Scoeff:6.3e} kg**0.5')
 ```
 
-- Suppose a diffusion chamber measures a cumluative number concentration
-as a function of saturation and finds:
-
-$$
-  N = 10^9 (S^* -1)^{0.5}
-$$(dist)
-where:
-
-\begin{equation}
-  \label{cumnum}
-  N(D)= \int_D^\infty n_d(D^\prime)\, dD^\prime = \int_D^\infty n_l(D^\prime)\,\mathrm{dlog} D^\prime
-\end{equation}
-
-where
-N(D) is the cumulative number distribution, i.e.  the concentration
-(units: $m^{-3}$ of all activated
-aerosols with dry diameters greater than D measured in (\ref{dist}), 
-$n_d = - dN/dD$ and $n_l(D)$= - dN/dlog(D).
-
-
-Use {eq}`dist` and {ref}`scrit2` to find an equation for the 
-aerosol number distribution $n_d$ or
-(alternatively $n_l(D)$= - dN/dlog(D)).
+## Problem 2 answer
 
 +++
 
-
-
-+++
-
-5) First confirm that $\frac{\delta^2 E}{\delta r^2}=0$ at the critical radius:
+ First confirm that $\frac{\delta^2 E}{\delta r^2}=0$ at the critical radius:
 Inserting $\Gamma^*=\left(\frac{3 b}{a}\right)^{1 / 2}$ conto (8) on $p^2$
 $$
 \begin{aligned}
@@ -149,35 +123,3 @@ $$
 & =-\delta \pi R_V T \rho_l \frac{3 b}{\Gamma^3}<0 \text { at } r=i_* .
 \end{aligned}
 $$
-
-+++
-
-- Given the critical supersaturation:
-
-$$
-  S^* - 1= \left ( \frac{4 a^3}{27b} \right )^{1/2}
-$$
-
-show that this implies, for $(NH_4)_2 SO_4$, density $\rho_{aer}$= 1775
-$kg\ m^{-3}$, i=3, that:
-
-\begin{equation}
-  \label{scrit2}
-  S^* -1 \approx 1.54 \times 10^{-12}~ m_{aer}^{-0.5}
-\end{equation}
-where $m_{aer}$ is the ammonium sulphate aerosol mass in kg.
-
-+++
-
-- Assume $S^* - 1$ goes from 0.1 to 1\%, and use 5 size bins in dlog(D)
-that span the diameter range ($0.01 < D < 0.15\ \mum$) to get number
-and mass concentrations in 5 different size classes. 
-
-(To check
-your answer, note that I get a total aerosol mass with $0.01 < D < 0.1\ \mum$
-of $\approx 0.02\ \un{\mu g \, m^{-3}}$ and total aerosol number concentration in the
-same size range of $\approx 185 \times 10^6\ \un{m^{-3}}$).
-
-```{code-cell} ipython3
-
-```
