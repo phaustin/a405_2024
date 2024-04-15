@@ -162,7 +162,7 @@ for name,U in Udict.items():
     binwidth = np.diff(diam)[0]*1.e3 #mm
     R=np.sum(ndist*np.pi*(diam**3)/6*U*binwidth) #flux in m/s
     R=R*1000*3600. #mm/hour
-    print(f'\nfor {name} with R=15 mm/hour integration gives {R:.2f} mm/hour\n')
+    print(f'\nfor {name} with R=15 mm/hour integration gives {R:8.2f} mm/hour\n')
 ```
 
 ```{code-cell} ipython3
@@ -173,77 +173,29 @@ ax.legend(loc='best')
 out=ax.set(xlabel='diam (m)',ylabel='fall speed (m/s)')
 ```
 
-## Question 3: Lohmann problem 4 page 250:
+### Question 3: Lohmann problem 4 page 250:
 
   - Mixed-phase clouds contain ice crystals as well as liquid droplets. Consider such a cloud at a temperature $T=-4^{\circ} \mathrm{C}$, pressure $p=800 \mathrm{hPa}$ and a humidity which corresponds to supersaturations with respect to ice of $5 \%$ and with respect to water of $1 \%$. In the cloud, an ice crystal and a droplet both grow by diffusion, each starting from mass $m_0=10^{-8} \mathrm{~g}$. The ice crystal is a thin hexagonal plate, so that its capacitance can be approximated by $C=2 r_i / \pi$, where $r_i$ is the radius of the ice crystal.
-
-(8.11)
 
 $$
 \frac{dm_i}{dt}=\alpha_m \frac{4 \pi C\left(S_i-1\right)}{F_k^i+F_d^i}
 $$
 
 $$
-F_k^i \approx \left(\frac{L_s^2}{K R_v T^2}\right) 
+F_k^i=\left(\frac{L_s}{R_v T}-1\right) \frac{L_s}{K T}
 $$
 
 $$
 F_d^i=\frac{R_v T}{D_v e_{s, i}(T)}
 $$
 
-Insert the relations for C and $r_i$:
-
-$$
-\frac{d( \alpha 8 r_i^3)}{dt} = 24 \alpha r_i^2 \frac{dr_i}{dt} = \alpha_m \frac{8 r_i\left(S_i-1\right)}{F_k^i+F_d^i}
-$$
-
 +++
 
-Ice crystal growth:
-
-$$
-r_i \frac{dr_i}{dt} = \frac{\alpha_m}{3\alpha } \frac{\left(S_i-1\right)}{F_k^i+F_d^i}
-$$
-
-Integrate from $r_{i0}$ to $r_{i1}$
-
-$$
-r^2_{i1} - r^2_{i0} = \left ( \frac{2 \alpha_m}{3\alpha } \frac{\left(S_i-1\right)}{F_k^i+F_d^i} \right ) t = K_{i} (S_i  -1 )t
-$$
-
-+++
-
-Droplet growth:   (7.22)
-
-$$
-F_k^l \approx \left(\frac{L_v^2}{K R_v T^2}\right) 
-$$
-
-$$
-F_d^l=\frac{R_v T}{D_v e_{s, l}(T)}
-$$
-
-
-
-$$
-r_l \frac{dr_l}{dt} =  \frac{\left(S_l-1\right)}{\rho_l (F_k^l +F_d^l)}
-$$
-
-$$
-r^2_{l1} - r^2_{l0} =  \left ( \frac{2}{\rho_l(F_k^i+F_d^i)} \right ) (S_l - 1 ) t = K_{l} (S_l  -1 )t
-$$
-
-+++
-
-(a) Determine the times it takes for the droplet and the ice crystal to grow to a total mass $m_1=1.1 \times 10^{-8} \mathrm{~g}$. You can neglect solution and curvature effects when calculating the droplet growth. For the ice crystal, you can assume that its mass $m_i$ and diameter $d_i$ are related by $m_i=\alpha d_i^3$, with $\alpha=1.9 \times 10^{-2} \mathrm{~g} \mathrm{~cm}^{-3} = 19\ kg\,m^{-3}$.
+(a) Determine the times it takes for the droplet and the ice crystal to grow to a total mass $m_1=1.1 \times 10^{-8} \mathrm{~g}$. You can neglect solution and curvature effects when calculating the droplet growth. For the ice crystal, you can assume that its mass $m_i$ and diameter $d_i$ are related by $m_i=\alpha d_i^3$, with $\alpha=1.9 \times 10^{-2} \mathrm{~g} \mathrm{~cm}^{-3}$.
 
 +++
 
 Borrow code from Week 11:  {ref}`ice_saturation`
-
-+++
-
-### saturation over ice
 
 ```{code-cell} ipython3
 from a405.thermo.constants import constants as c
@@ -279,7 +231,7 @@ def eice_new(T):
     return eice_out
 ```
 
-### Ice crystal coefficients
+### Ice crystal dmdt
 
 ```{code-cell} ipython3
 temp = c.Tc - 4
@@ -287,27 +239,24 @@ lsval = ls(temp)
 esice = eice_new(temp)
 K = 0.024  #W/m/K
 D = 2.6e-5 #m^2/s
-rho_i = 900 #kg/m^3
 alpham = 0.05
-alpha = 19 #kg/m^3
+alpha = 1.9e-2  #g/cm^3
+mass1 = 1.1e-8 #g
+radius1 = (mass1/(8*alpha))**(1./3.)
+C=2*radius1/np.pi  #cm
 thompkins_coefficient = D*esice/(c.rhol*c.Rv*temp)
-FKice = lsval**2/(K*c.Rv*temp**2.)
-FDice = c.Rv*temp/(D*esice)
-Kice = 2*alpham/(3*alpha)/(FKice + FDice)
+lohmann_FK = lsval**2/(K*c.Rv*temp**2.)
+lohmann_FD = 1/thompkins_coefficient
 S=1.05
-Kice
+dmdt = alpham*4*np.pi*C*(S-1)/(lohmann_FK + lohmann_FD)
+dmdt
 ```
 
-### Saturation over water
+#### Water drop dmdt
 
-```{code-cell} ipython3
-def lv(temp):
-    cl_cpv = 2180  #J/kg/K
-    lv = -cl_cpv*(temp - c.Tp) + c.lv0
-    ls0 = 2.834e6
-    lsval = -cl_cpv*(temp - c.Tp) + ls0
-    return lsval
-```
+$$
+\frac{d M}{d t}=4 \pi D r\left(\rho_v(\infty)-\rho_v(r)\right)
+$$
 
 ```{code-cell} ipython3
 def esat_new(T):
@@ -331,10 +280,6 @@ def esat_new(T):
     term3 = lv/(c.Rv*T)
     esat_out=term1*np.exp((term2 - term3))
     return esat_out
-```
-
-```{code-cell} ipython3
-esat_new(273.15), lv(273.15)
 ```
 
 (b) Which of the two cloud particles grows faster? Explain the main reason for the difference in growth speed.

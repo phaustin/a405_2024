@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/assignments/assignment8_solution.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Assignment 9 – solution" href="assignment9_solution.html" />
-    <link rel="prev" title="Assignment 7 solution" href="assignment7_solution.html" />
+    <link rel="next" title="Assignment 9 – precipitation. Due 11:59pm Tuesday April 9" href="assignment9_precipitation.html" />
+    <link rel="prev" title="Assignment 8 – cold clouds" href="assignment8_cold_clouds.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,14 +191,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment5_kohler_students.html">Assignment 5  – Due Friday March 15 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment5_solution.html">Assignment 5 solution: Koehler curve terms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment6_stability.html">Assignment 6  – Due Tuesday March 19 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment6_solution.html">Assignment 6 solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment7_droplets.html">Assignment 7  – Due Tuesday March 26 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment7_solution.html">Assignment 7 solution</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 8 solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="assignment9_solution.html">Assignment 9 – solution</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/e24u5xjrmsiwdktomis35/assignment7_solution.ipynb?rlkey=2ssgmlaqe4ni90o3buytjx5qv&amp;dl=0">assignment 7 solution download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment8_cold_clouds.html">Assignment 8 – cold clouds</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 8 solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment9_precipitation.html">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment9_solution.html">Assignment 9 – solution</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="nav bd-sidenav">
@@ -221,7 +223,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&amp;dl=0">tropical_engine_solution.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/mixing_line_example.html">Mixing line example</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&amp;dl=0">mixing_line_example.ipynb download</a></li>
@@ -459,12 +460,11 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-answer">Question 2 answer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-lohmann-problem-4-page-250">Question 3: Lohmann problem 4 page 250:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ice-crystal-dmdt">Ice crystal dmdt</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#water-drop-dmdt">Water drop dmdt</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-lohmann-problem-4-page-250">Question 3: Lohmann problem 4 page 250:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-over-ice">saturation over ice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ice-crystal-coefficients">Ice crystal coefficients</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-over-water">Saturation over water</a></li>
 </ul>
 </li>
 </ul>
@@ -635,15 +635,15 @@ that you get about R=15 mm/hour back from this calculation if you use the <span 
     <span class="n">binwidth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">diam</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">1.e3</span> <span class="c1">#mm</span>
     <span class="n">R</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ndist</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">diam</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">U</span><span class="o">*</span><span class="n">binwidth</span><span class="p">)</span> <span class="c1">#flux in m/s</span>
     <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="o">*</span><span class="mi">1000</span><span class="o">*</span><span class="mf">3600.</span> <span class="c1">#mm/hour</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> with R=15 mm/hour integration gives </span><span class="si">{</span><span class="n">R</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> mm/hour</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> with R=15 mm/hour integration gives </span><span class="si">{</span><span class="n">R</span><span class="si">:</span><span class="s1">8.2f</span><span class="si">}</span><span class="s1"> mm/hour</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>for Unature with R=15 mm/hour integration gives 12.40 mm/hour
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>for Unature with R=15 mm/hour integration gives    12.40 mm/hour
 
 
-for Uthompkins with R=15 mm/hour integration gives 14.80 mm/hour
+for Uthompkins with R=15 mm/hour integration gives    14.80 mm/hour
 </pre></div>
 </div>
 </div>
@@ -663,61 +663,25 @@ for Uthompkins with R=15 mm/hour integration gives 14.80 mm/hour
 </div>
 </div>
 </section>
-</section>
 <section id="question-3-lohmann-problem-4-page-250">
-<h2>Question 3: Lohmann problem 4 page 250:<a class="headerlink" href="#question-3-lohmann-problem-4-page-250" title="Permalink to this heading">#</a></h2>
+<h3>Question 3: Lohmann problem 4 page 250:<a class="headerlink" href="#question-3-lohmann-problem-4-page-250" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mixed-phase clouds contain ice crystals as well as liquid droplets. Consider such a cloud at a temperature <span class="math notranslate nohighlight">\(T=-4^{\circ} \mathrm{C}\)</span>, pressure <span class="math notranslate nohighlight">\(p=800 \mathrm{hPa}\)</span> and a humidity which corresponds to supersaturations with respect to ice of <span class="math notranslate nohighlight">\(5 \%\)</span> and with respect to water of <span class="math notranslate nohighlight">\(1 \%\)</span>. In the cloud, an ice crystal and a droplet both grow by diffusion, each starting from mass <span class="math notranslate nohighlight">\(m_0=10^{-8} \mathrm{~g}\)</span>. The ice crystal is a thin hexagonal plate, so that its capacitance can be approximated by <span class="math notranslate nohighlight">\(C=2 r_i / \pi\)</span>, where <span class="math notranslate nohighlight">\(r_i\)</span> is the radius of the ice crystal.</p></li>
 </ul>
-<p>(8.11)</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{dm_i}{dt}=\alpha_m \frac{4 \pi C\left(S_i-1\right)}{F_k^i+F_d^i}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-F_k^i \approx \left(\frac{L_s^2}{K R_v T^2}\right) 
+F_k^i=\left(\frac{L_s}{R_v T}-1\right) \frac{L_s}{K T}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
 F_d^i=\frac{R_v T}{D_v e_{s, i}(T)}
 \]</div>
-<p>Insert the relations for C and <span class="math notranslate nohighlight">\(r_i\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{d( \alpha 8 r_i^3)}{dt} = 24 \alpha r_i^2 \frac{dr_i}{dt} = \alpha_m \frac{8 r_i\left(S_i-1\right)}{F_k^i+F_d^i}
-\]</div>
-<p>Ice crystal growth:</p>
-<div class="math notranslate nohighlight">
-\[
-r_i \frac{dr_i}{dt} = \frac{\alpha_m}{3\alpha } \frac{\left(S_i-1\right)}{F_k^i+F_d^i}
-\]</div>
-<p>Integrate from <span class="math notranslate nohighlight">\(r_{i0}\)</span> to <span class="math notranslate nohighlight">\(r_{i1}\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-r^2_{i1} - r^2_{i0} = \left ( \frac{2 \alpha_m}{3\alpha } \frac{\left(S_i-1\right)}{F_k^i+F_d^i} \right ) t = K_{i} (S_i  -1 )t
-\]</div>
-<p>Droplet growth:   (7.22)</p>
-<div class="math notranslate nohighlight">
-\[
-F_k^l \approx \left(\frac{L_v^2}{K R_v T^2}\right) 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-F_d^l=\frac{R_v T}{D_v e_{s, l}(T)}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-r_l \frac{dr_l}{dt} =  \frac{\left(S_l-1\right)}{\rho_l (F_k^l +F_d^l)}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-r^2_{l1} - r^2_{l0} =  \left ( \frac{2}{\rho_l(F_k^i+F_d^i)} \right ) (S_l - 1 ) t = K_{l} (S_l  -1 )t
-\]</div>
-<p>(a) Determine the times it takes for the droplet and the ice crystal to grow to a total mass <span class="math notranslate nohighlight">\(m_1=1.1 \times 10^{-8} \mathrm{~g}\)</span>. You can neglect solution and curvature effects when calculating the droplet growth. For the ice crystal, you can assume that its mass <span class="math notranslate nohighlight">\(m_i\)</span> and diameter <span class="math notranslate nohighlight">\(d_i\)</span> are related by <span class="math notranslate nohighlight">\(m_i=\alpha d_i^3\)</span>, with <span class="math notranslate nohighlight">\(\alpha=1.9 \times 10^{-2} \mathrm{~g} \mathrm{~cm}^{-3} = 19\ kg\,m^{-3}\)</span>.</p>
+<p>(a) Determine the times it takes for the droplet and the ice crystal to grow to a total mass <span class="math notranslate nohighlight">\(m_1=1.1 \times 10^{-8} \mathrm{~g}\)</span>. You can neglect solution and curvature effects when calculating the droplet growth. For the ice crystal, you can assume that its mass <span class="math notranslate nohighlight">\(m_i\)</span> and diameter <span class="math notranslate nohighlight">\(d_i\)</span> are related by <span class="math notranslate nohighlight">\(m_i=\alpha d_i^3\)</span>, with <span class="math notranslate nohighlight">\(\alpha=1.9 \times 10^{-2} \mathrm{~g} \mathrm{~cm}^{-3}\)</span>.</p>
 <p>Borrow code from Week 11:  <a class="reference internal" href="../notebooks/ice_saturation.html#ice-saturation"><span class="std std-ref">saturation vapor pressure over ice</span></a></p>
-<section id="saturation-over-ice">
-<h3>saturation over ice<a class="headerlink" href="#saturation-over-ice" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a405.thermo.constants</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
@@ -756,8 +720,8 @@ r^2_{l1} - r^2_{l0} =  \left ( \frac{2}{\rho_l(F_k^i+F_d^i)} \right ) (S_l - 1 )
 </div>
 </div>
 </section>
-<section id="ice-crystal-coefficients">
-<h3>Ice crystal coefficients<a class="headerlink" href="#ice-crystal-coefficients" title="Permalink to this heading">#</a></h3>
+<section id="ice-crystal-dmdt">
+<h3>Ice crystal dmdt<a class="headerlink" href="#ice-crystal-dmdt" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">Tc</span> <span class="o">-</span> <span class="mi">4</span>
@@ -765,39 +729,32 @@ r^2_{l1} - r^2_{l0} =  \left ( \frac{2}{\rho_l(F_k^i+F_d^i)} \right ) (S_l - 1 )
 <span class="n">esice</span> <span class="o">=</span> <span class="n">eice_new</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="mf">0.024</span>  <span class="c1">#W/m/K</span>
 <span class="n">D</span> <span class="o">=</span> <span class="mf">2.6e-5</span> <span class="c1">#m^2/s</span>
-<span class="n">rho_i</span> <span class="o">=</span> <span class="mi">900</span> <span class="c1">#kg/m^3</span>
 <span class="n">alpham</span> <span class="o">=</span> <span class="mf">0.05</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="mi">19</span> <span class="c1">#kg/m^3</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.9e-2</span>  <span class="c1">#g/cm^3</span>
+<span class="n">mass1</span> <span class="o">=</span> <span class="mf">1.1e-8</span> <span class="c1">#g</span>
+<span class="n">radius1</span> <span class="o">=</span> <span class="p">(</span><span class="n">mass1</span><span class="o">/</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">alpha</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
+<span class="n">C</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">radius1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>  <span class="c1">#cm</span>
 <span class="n">thompkins_coefficient</span> <span class="o">=</span> <span class="n">D</span><span class="o">*</span><span class="n">esice</span><span class="o">/</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">rhol</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">Rv</span><span class="o">*</span><span class="n">temp</span><span class="p">)</span>
-<span class="n">FKice</span> <span class="o">=</span> <span class="n">lsval</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">K</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">Rv</span><span class="o">*</span><span class="n">temp</span><span class="o">**</span><span class="mf">2.</span><span class="p">)</span>
-<span class="n">FDice</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">Rv</span><span class="o">*</span><span class="n">temp</span><span class="o">/</span><span class="p">(</span><span class="n">D</span><span class="o">*</span><span class="n">esice</span><span class="p">)</span>
-<span class="n">Kice</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">alpham</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">alpha</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">FKice</span> <span class="o">+</span> <span class="n">FDice</span><span class="p">)</span>
+<span class="n">lohmann_FK</span> <span class="o">=</span> <span class="n">lsval</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">K</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">Rv</span><span class="o">*</span><span class="n">temp</span><span class="o">**</span><span class="mf">2.</span><span class="p">)</span>
+<span class="n">lohmann_FD</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">thompkins_coefficient</span>
 <span class="n">S</span><span class="o">=</span><span class="mf">1.05</span>
-<span class="n">Kice</span>
+<span class="n">dmdt</span> <span class="o">=</span> <span class="n">alpham</span><span class="o">*</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">C</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">lohmann_FK</span> <span class="o">+</span> <span class="n">lohmann_FD</span><span class="p">)</span>
+<span class="n">dmdt</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.377101011855662e-11
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.620612516305804e-15
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="saturation-over-water">
-<h3>Saturation over water<a class="headerlink" href="#saturation-over-water" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lv</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
-    <span class="n">cl_cpv</span> <span class="o">=</span> <span class="mi">2180</span>  <span class="c1">#J/kg/K</span>
-    <span class="n">lv</span> <span class="o">=</span> <span class="o">-</span><span class="n">cl_cpv</span><span class="o">*</span><span class="p">(</span><span class="n">temp</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tp</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="n">lv0</span>
-    <span class="n">ls0</span> <span class="o">=</span> <span class="mf">2.834e6</span>
-    <span class="n">lsval</span> <span class="o">=</span> <span class="o">-</span><span class="n">cl_cpv</span><span class="o">*</span><span class="p">(</span><span class="n">temp</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">Tp</span><span class="p">)</span> <span class="o">+</span> <span class="n">ls0</span>
-    <span class="k">return</span> <span class="n">lsval</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="water-drop-dmdt">
+<h4>Water drop dmdt<a class="headerlink" href="#water-drop-dmdt" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+\frac{d M}{d t}=4 \pi D r\left(\rho_v(\infty)-\rho_v(r)\right)
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esat_new</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
@@ -825,20 +782,9 @@ r^2_{l1} - r^2_{l0} =  \left ( \frac{2}{\rho_l(F_k^i+F_d^i)} \right ) (S_l - 1 )
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esat_new</span><span class="p">(</span><span class="mf">273.15</span><span class="p">),</span> <span class="n">lv</span><span class="p">(</span><span class="mf">273.15</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(610.7562368784037, 2834021.8000000003)
-</pre></div>
-</div>
-</div>
-</div>
 <p>(b) Which of the two cloud particles grows faster? Explain the main reason for the difference in growth speed.</p>
 <p>(c) How would the situation in the mixed-phase cloud change for supersaturation with respect to ice but subsaturation with respect to water? Explain qualitatively in a few sentences.</p>
+</section>
 </section>
 </section>
 </section>
@@ -874,20 +820,20 @@ r^2_{l1} - r^2_{l0} =  \left ( \frac{2}{\rho_l(F_k^i+F_d^i)} \right ) (S_l - 1 )
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="assignment7_solution.html"
+       href="assignment8_cold_clouds.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Assignment 7 solution</p>
+        <p class="prev-next-title">Assignment 8 – cold clouds</p>
       </div>
     </a>
     <a class="right-next"
-       href="assignment9_solution.html"
+       href="assignment9_precipitation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Assignment 9 – solution</p>
+        <p class="prev-next-title">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -917,12 +863,11 @@ r^2_{l1} - r^2_{l0} =  \left ( \frac{2}{\rho_l(F_k^i+F_d^i)} \right ) (S_l - 1 )
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-answer">Question 2 answer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-lohmann-problem-4-page-250">Question 3: Lohmann problem 4 page 250:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ice-crystal-dmdt">Ice crystal dmdt</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#water-drop-dmdt">Water drop dmdt</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-lohmann-problem-4-page-250">Question 3: Lohmann problem 4 page 250:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-over-ice">saturation over ice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ice-crystal-coefficients">Ice crystal coefficients</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-over-water">Saturation over water</a></li>
 </ul>
 </li>
 </ul>

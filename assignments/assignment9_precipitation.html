@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://phaustin.github.io/a405_2024/assignments/assignment9_precipitation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Week 1 worksheet solutions" href="../notebooks/worksheets/worksheet1_solution.html" />
-    <link rel="prev" title="Assignment 8 – cold clouds" href="assignment8_cold_clouds.html" />
+    <link rel="next" title="Assignment 9 – solution" href="assignment9_solution.html" />
+    <link rel="prev" title="Assignment 8 solution" href="assignment8_solution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,14 +191,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/ybvghklr4oojf9br5v5yk/taylor_mix.pdf?rlkey=qwnhefjo9koll9h6m6crx3stg&amp;dl=0">Assignment 3 -- Taylor series problem due Sunday midnight</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://canvas.ubc.ca/courses/129111/assignments/1794948">Assignment 4 --  Midterm review questions -- credit/no credit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment5_kohler_students.html">Assignment 5  – Due Friday March 15 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment5_solution.html">Assignment 5 solution: Koehler curve terms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment6_stability.html">Assignment 6  – Due Tuesday March 19 midnight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment6_solution.html">Assignment 6 solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment7_droplets.html">Assignment 7  – Due Tuesday March 26 midnight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment7_solution.html">Assignment 7 solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="assignment8_solution.html">Assignment 8 solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="assignment9_solution.html">Assignment 9 – solution</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/e24u5xjrmsiwdktomis35/assignment7_solution.ipynb?rlkey=2ssgmlaqe4ni90o3buytjx5qv&amp;dl=0">assignment 7 solution download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment8_cold_clouds.html">Assignment 8 – cold clouds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment8_solution.html">Assignment 8 solution</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 9 – precipitation. Due 11:59pm Tuesday April 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignment9_solution.html">Assignment 9 – solution</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Worksheets</span></p>
 <ul class="nav bd-sidenav">
@@ -221,7 +223,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/tj330es6oo4bzijzzcu6i/moist_adiabats.ipynb?rlkey=kdc54rnncw8u0mew71i7v67fr&amp;dl=0">Moist adiabat notebook ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/tropical_engine.html">Tropical Heat Engine</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/guygw8ejzvllpw8gmgq9f/tropical_engine.ipynb?rlkey=whrny1bcmk47xkt4iq00bqlqn&amp;dl=0">tropical_engine.ipynb download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/tropical_engine_solution.html">Tropical Heat Engine - Solution</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/rmpk0cc72x6usnswhyazp/tropical_engine_solution.ipynb?rlkey=0jvhi53f3z3quck0s9deckwc9&amp;dl=0">tropical_engine_solution.ipynb download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/worksheets/mixing_line_example.html">Mixing line example</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/scl/fi/l2fup3rbfuf8mwcrd9qgx/mixing_line_example.ipynb?rlkey=613hyuudtx0or15ep2dz8xl0k&amp;dl=0">mixing_line_example.ipynb download</a></li>
@@ -496,21 +497,6 @@ ventilation effects.]</p>
 </li>
 <li><p>For each problem, show  in cells below that this agrees with the numerical solution using the scipy odeint package</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{gather}
-    \frac{ dh}{dt}  = w - v \label{one} \\
-  v = \frac{ 2 g \rho_l r^2}{9 \eta} \label{two}\\
-r \frac{ dr}{dt}  = G_l S \\
-\Rightarrow \frac{ 1}{2}\frac{dr^2 }{dt}   = G_l S \\
-\intertext{integrate from $(t^\prime=0,r^\prime=0)$ to $(t^\prime=t,r^\prime = r$)}
-r^2 = 2 G_l S t \label{two} \\
-\intertext{insert (\ref{two}) into (\ref{one}) and integrate:}
-    \frac{ dh}{dt}  = w - \frac{ 2 g \rho_l 2 G_l S t}{9 \eta} \label{three} \\
-\int_0^h  dh^\prime = \int_0^t \left [ w - \frac{ 2 g \rho_l 2 G_l S t^\prime}{9 \eta} \right ] dt^\prime \\
-h= wt - \frac{ 2 g \rho_l  G_l S t^2}{9 \eta}
-  \end{gather}
-\end{split}\]</div>
 </section>
 </section>
 
@@ -545,20 +531,20 @@ h= wt - \frac{ 2 g \rho_l  G_l S t^2}{9 \eta}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="assignment8_cold_clouds.html"
+       href="assignment8_solution.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Assignment 8 – cold clouds</p>
+        <p class="prev-next-title">Assignment 8 solution</p>
       </div>
     </a>
     <a class="right-next"
-       href="../notebooks/worksheets/worksheet1_solution.html"
+       href="assignment9_solution.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Week 1 worksheet solutions</p>
+        <p class="prev-next-title">Assignment 9 – solution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

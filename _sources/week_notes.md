@@ -594,7 +594,8 @@ q
   - Lohmann 7.4
   - Lohmann 7.8
   
-### Friday
+## Review session
 
-- {ref}`assign8_solution`
-- {ref}`assign9_solution`
+- [Extra size distribution notes](https://www.dropbox.com/scl/fi/l6m07ytwpg5w6q31x8qnj/size_distributions.pdf?rlkey=2nnrcmh3nekt46vd4kjaghwr4&dl=0)
+- [Final exam equation sheet](https://www.dropbox.com/scl/fi/ymcy2so9lbqdidxdam1tf/final_2024_equations.pdf?rlkey=pncee5bn3148l5pce2a6yodfa&dl=0)
+

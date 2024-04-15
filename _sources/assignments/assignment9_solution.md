@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-(assign9_solution)=
+(assignment9_solution)=
 # Assignment 9 -- solution
 
 +++
@@ -27,9 +27,21 @@ supersaturation S. [Hint: Use (6.24) for the
 terminal fall speed of a droplet together
 with (6.21).]
 
-```{code-cell} ipython3
++++
+  \begin{gather}
+    \frac{ dh}{dt}  = w - v  \\
+  v = \frac{ 2 g \rho_l r^2}{9 \eta} \\
+r \frac{ dr}{dt}  = G_l S \\
+\Rightarrow \frac{ 1}{2}\frac{dr^2 }{dt}   = G_l S \\
+\text{integrate from $(t^\prime=0,r^\prime=0)$ to $(t^\prime=t,r^\prime = r$)}
+r^2 = 2 G_l S t \label{two} \\
+\text{insert (2) into (1) and integrate:}
+    \frac{ dh}{dt}  = w - \frac{ 2 g \rho_l 2 G_l S t}{9 \eta} \\
+\int_0^h  dh^\prime = \int_0^t \left [ w - \frac{ 2 g \rho_l 2 G_l S t^\prime}{9 \eta} \right ] dt^\prime \\
+h= wt - \frac{ 2 g \rho_l  G_l S t^2}{9 \eta}
+  \end{gather}
 
-```
++++
 
 6.24: If a raindrop has a radius of 1 mm at cloud
 base, which is located 5 km above the ground,
@@ -58,35 +70,6 @@ Solve these problems twice:
    where h is the height, w is the updraft speed and v is the droplet fall speed
 
 2. For each problem, show  in cells below that this agrees with the numerical solution using the scipy odeint package
-
-+++
-
-$$
-\frac{ dh}{dt}  = w - v 
-$$
-$$
-  v = \frac{ 2 g \rho_l r^2}{9 \eta} 
-$$
-$$
-r \frac{ dr}{dt}  = G_l S 
-\Rightarrow \frac{ 1}{2}\frac{dr^2 }{dt}   = G_l S 
-$$
-
-integrate from $(t^\prime=0,r^\prime=0) to (t^\prime=t,r^\prime = r)$
-
-$$
-r^2 = 2 G_l S t 
-$$
-
-insert (2) into (1) and integrate:
-
-$$
-    \frac{ dh}{dt}  = w - \frac{ 2 g \rho_l 2 G_l S t}{9 \eta} 
-$$
-$$
-\int_0^h  dh^\prime = \int_0^t \left [ w - \frac{ 2 g \rho_l 2 G_l S t^\prime}{9 \eta} \right ] dt^\prime \\
-h= wt - \frac{ 2 g \rho_l  G_l S t^2}{9 \eta}
-$$
 
 ```{code-cell} ipython3
 
