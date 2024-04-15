@@ -17,10 +17,6 @@ kernelspec:
 
 +++
 
-
-
-+++
-
 ## Question 1
 
 - Confirm that the mean diameter of the Marshall Palmer distribution is $1/\Lambda$
@@ -84,7 +80,6 @@ print('approx diameter = {:6.3g} cm'.format(approx_diam))
 Start with the definition of the mean:
 
 +++
-
 
 $$
 \overline{x}  = \frac{\int_0^\infty x e^{c x}\,dx}{\int_0^\infty e^{c x}\,dx}
@@ -176,7 +171,6 @@ ax.plot(diam,Uthompkins,label='thompkins U (m/s)')
 ax.plot(diam,Unature,label='nature U (m/s)')
 ax.legend(loc='best')
 out=ax.set(xlabel='diam (m)',ylabel='fall speed (m/s)')
-
 ```
 
 ### Question 3: Lohmann problem 4 page 250:
@@ -287,10 +281,6 @@ def esat_new(T):
     esat_out=term1*np.exp((term2 - term3))
     return esat_out
 ```
-
-  
-
-+++
 
 (b) Which of the two cloud particles grows faster? Explain the main reason for the difference in growth speed.
 
